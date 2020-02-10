@@ -47,7 +47,7 @@ e. `mass_index` =
 
 ```
 
-4. What type of data is `my_fruit`? Use a function discussed in lesson 03 to have R show the answer to this question.
+4. What type of data is `my_fruit`? Use a function discussed in lesson 04 to have R show the answer to this question.
 ```{r}
 
 ```

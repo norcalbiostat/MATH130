@@ -1,15 +1,15 @@
 ---
-title: "Lesson 04 - Intro to R Markdown"
+title: "Lesson 03 - Intro to R Markdown"
 date: "Last Updated `r format(Sys.Date(), '%m-%d-%Y')`"
 output:
+  pdf_document:
+    toc: no
   html_document:
     highlight: tango
     theme: yeti
     toc: yes
     toc_float: yes
     css: ../css/yeti.css
-  pdf_document:
-    toc: no
 ---
 
 
