@@ -145,7 +145,7 @@ ames <- read.csv("https://norcalbiostat.netlify.com/data/ames.csv")
 4. What is the maximum number of Full bathrooms (`Full.bath`) in this housing data set? 
 
 
-5. Do any houses have more than 2 fireplaces (`Fireplaces`)?
+5. Do any houses have more than 2 fireplaces (`Fireplaces`)? _Hint: Use the `table()` function._
 
 
 
