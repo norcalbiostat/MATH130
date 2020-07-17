@@ -85,11 +85,15 @@ ggplot(df, aes(marital)) + geom_bar()
 
 
 
-3. A barchart of the type of plane (`planes$type`) with the levels displayed in increasing frequency order. 
+3. A barchart of the type of plane (`planes$engine`) with the levels displayed in increasing frequency order. 
 
 ```{r}
-ggplot(planes, aes(forcats::fct_rev(type))) + geom_bar()
+library(forcats)
+ggplot(planes, aes(engine)) + geom_bar() 
+ggplot(planes, aes(fct_infreq(engine))) + geom_bar() # re-order by freq
+ggplot(planes, aes(fct_rev(fct_infreq(engine)))) + geom_bar() # re-order by DECREASING freq
 ```
+
 
 
 4. A histogram of mothers age (`mage`) with an overlaid density plot in a different color. Be sure that both density curve and histogram can be seen. 
