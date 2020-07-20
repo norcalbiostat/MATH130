@@ -1,0 +1,231 @@
+---
+title: "Lesson 02"
+subtitle: "Introduction to your new tools"
+date: "_Last updated: `r Sys.Date()`_"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, metropolis, metropolis-fonts]
+    contentSlideClass: ["left", "center"]
+    nature:
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+# Learning Objectives
+
+After completing this lesson learners will be able to:
+
+* Use R and R Studio on their personal computer. 
+* Describe the purpose of the RStudio Script, Console, Environment, and Plots panes.
+* Organize files and directories for a set of analyses as an R Project, and understand the purpose of the working directory.
+* Execute simple commands in the console
+* Use the built-in RStudio help interface to search for more information on R functions.
+* Demonstrate how to provide sufficient information for troubleshooting with the R user community.
+
+## Icon Definitions
+* `r emo::ji("arrow_forward")` Forward arrow: Task for you to do
+* `r emo::ji("arrow_down_small")` Down arrow: A download link is present. 
+* `r emo::ji("x")` Red X: Something you should NOT do
+* `r emo::ji("warning")` Warning triangle: this is something you should be aware of or pay attention to. 
+
+---
+
+# Installing programs
+
+`r emo::ji("warning")` If you are using a tablet, Chromebook or otherwise do not have a computer that you can install programs on, head over to http://rstudio.cloud.com, make an account and start a new project. [Then skip to slide #6](#intro_rstudio) to learn how to navigate RStudio. 
+
+While the cloud is easier to initially setup, I want you to only use it if you absolutely have to. Having your own installation on your computer ensures that
+
+* you likely want to customize your programs
+* you will be able to put your files under version control
+* you always have access to your code even with unstable or no internet
+
+R is the programming language that we will be using. R Studio is the program we will _use_ R through. 
+
+You must install both. 
+
+
+---
+background-image: url('../static/img/R.png')
+background-position: top right
+background-size: 180px 150px
+
+# Download and install R 
+
+## `r emo::ji("arrow_down_small")` Download R v 4.0+
+* Windows 10 https://cran.r-project.org/bin/windows/base/ 
+* Mac OS X page - https://cran.r-project.org/bin/macosx/ 
+  - First link under "Latest Release" and looks like **R-4.0.2.pkg**. 
+* Choose to save the file, do not open or run. 
+    
+## `r emo::ji("arrow_forward")` Install
+* Install R by double clicking on the downloaded file and following the prompts.
+  - Default settings are OK. 
+  - Delete any desktop shortcuts that was created (looks like the icon above.)
+
+
+## `r emo::ji("cinema")` Video Tutorials for both R and R Studio. 
+* [Windows](https://www.youtube.com/watch?v=gx7A7C_wdyE)
+* [Mac](https://www.youtube.com/watch?v=by5HyJX6H1I)
+
+---
+background-image: url('../static/img/RStudio.png')
+background-position: top right
+background-size: 180px 150px
+
+# Download and install R Studio
+
+## `r emo::ji("arrow_down_small")` Download v1.3 + 
+* Download R Studio (v 1.3+) from https://www.rstudio.com/products/rstudio/download/#download
+* Choose the download link that corresponds to your operating system. 
+
+## `r emo::ji("arrow_forward")` Install
+* Windows: Double click on the downloaded file to run the installer program. 
+* Mac: Double click on the downloaded file, then drag the R Studio Icon into your Applications folder.
+  - After you are done, eject the "Drive" that you downloaded by dragging the icon to your trash. 
+
+---
+name: intro_rstudio
+
+# Navigating R Studio
+
+`r emo::ji("arrow_forward")` Watch the following short video to learn how to navigate R Studio.
+
+<br><br>
+
+.center[
+<a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij"><img src="https://embedwistia-a.akamaihd.net/deliveries/260e6e980f526abaedf8ef3378270c899da74f08.jpg?origin_v2=1&amp;image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=71a5d4e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij">RStudio IDE Overview</a>
+]
+
+
+---
+
+# Setting preferences in R Studio
+
+##  Retain sanity while troubleshooting
+
+`r emo::ji("arrow_forward")` 
+
+* Open R Studio and go to the file menu go to _Tools_ then _Global Options_.
+* Uncheck "Restore .RData into workspace at startup" 
+* Where it says "Save workspace to .RData on exit:" Select "Never""
+* Click apply then ok to close that window.
+  
+This will ensure that when you restart R you do not "carry forward" objects such as data sets that you were working on in a prior assignment. 
+
+---
+class: inverse, middle, center
+
+# Downloading class materials
+
+---
+
+# Setup your folder for success!
+
+Using a consistent folder structure across your projects will help keep things
+organized, and will also make it easy to find/file things in the future. This
+can be especially helpful when you have multiple projects.
+
+
+.pull-left[
+<br><br>
+`r emo::ji("arrow_forward")` On your computer, in an easy to find place, create a new folder named `math130`. Then create three subfolders: `data`, `homework`, `notes`.  ]
+
+.pull-right[
+<img src="../static/img/folder_org.png" width="250px">
+]
+
+
+You need to choose a naming convention for your class folder and stick with it. Recommended options are: 
+
+* ALL CAPS (`MATH130`)
+* no caps (`math130`)
+* snake_case (`math_130`) 
+* CamelCase (`Math130`) 
+
+
+---
+
+# Adding files into your class folder
+
+When you download a file, right click and "Save as" or "Save target as" and **actively choose** where to download this file.
+
+`r emo::ji("x")` Do not let files live in your downloads folder. 
+
+`r emo::ji("x")` Do not open any files from your browser window after downloading.
+
+
+`r emo::ji("arrow_down_small")` Right click [[this link]](../hw/hw1.Rmd) to download and save Assignment 1 into your `homework` folder now.  
+
+---
+class: inverse, middle, center
+
+# Programming with R
+
+---
+
+# Terminology
+
+The basis of programming is that we write down instructions for the computer to
+follow, and then we tell the computer to follow those instructions. 
+
+We write, or *code*, instructions in R because it is a common language that both the computer and we can understand. 
+
+We call the instructions *commands* and we tell the computer to follow the instructions by *executing* (also called *running*) those commands.
+
+The **console** pane is the place where commands written in the R
+language can be typed and executed immediately by the computer. It is also where
+the results will be shown for commands that have been executed. 
+
+You can type commands directly into the console and press <kbd>`Enter`</kbd> to execute those commands, but they will be forgotten when you close the session.
+
+---
+# Doing Math
+
+`r emo::ji("arrow_forward")` In the console type the following code.
+
+```{r, eval=FALSE}
+2+2
+```
+
+You can do basic arithmetic this way. R is basically an overgrown calculator. 
+Try a more complicated equation next. 
+
+```r
+2 + 5*(8^3)- 3*log10)
+```
+
+Uh oh, we got an <span style="color:red">Error</span>. Let's try to fix it. 
+
+```r
+2 + 5*(8^3)- 3*log(10
+```
+
+Notice the console shows a `+` prompt. This means that you haven't finished entering
+a complete command. This is because you have not 'closed' a parenthesis or
+quotation, i.e. you don't have the same number of left-parentheses as
+right-parentheses, or the same number of opening and closing quotation marks.
+When this happens, and you thought you finished typing your command, click
+inside the console window and press <kbd>`Esc`</kbd>; this will cancel the incomplete
+command and return you to the `>` prompt.
+
+---
+
+`r emo::ji("arrow_forward")` Fix the math expression by closing the parenthesis. 
+
+---
+# Final Tips 
+
+## Saving and closing your work. 
+
+Unless you're returning to work in R Studio in a short while, You should make a habit to save all open tabs and completely shut down R studio when you are done working. This ensures your environment is cleared. _This is a good thing._
+
+## Restart R
+
+To restart R without shutting the entire window down, go to the file menu bar in the top, 
+
+> _Session_ --> Restart R and Clear Output
+
+This is good to do when switching between projects/classes. 

@@ -1,34 +1,56 @@
-\documentclass[11pt,]{article}
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+]{article}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-\else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-% use upquote if available, for straight quotes in verbatim environments
+% Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Math 130: Introduction to R - Fall 20},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
-\usepackage{hyperref}
-\hypersetup{unicode=true,
-            pdftitle={Math 130: Introduction to R - Fall 19},
-            pdfborder={0 0 0},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
 \usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -38,53 +60,21 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{0}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
-
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
-
-%%% Change title format to be more compact
-\usepackage{titling}
-
-% Create subtitle command for use in maketitle
-\providecommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
-}
-
-\setlength{\droptitle}{-2em}
-
-  \title{Math 130: Introduction to R - Fall 19}
-    \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-    \author{}
-    \preauthor{}\postauthor{}
-    \date{}
-    \predate{}\postdate{}
-  
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \RequirePackage{accsupp}
 \RequirePackage{pdfcomment}
 \newcommand{\AccTool}[2]{\BeginAccSupp{method=pdfstringdef,unicode,Alt={{#1}}}\pdftooltip{{#2}}{{#1}}\EndAccSupp{}}
+
+\title{Math 130: Introduction to R - Fall 20}
+\author{}
+\date{\vspace{-2.5em}}
 
 \begin{document}
 \maketitle
@@ -122,17 +112,15 @@ pre-specified data set or your data set of choice.
 & Section 01 & Section 02\tabularnewline
 \midrule
 \endhead
-\textbf{Meeting Days} & 8/26/19 - 9/23/19 & 8/26/19 -
-9/23/19\tabularnewline
-\textbf{Meeting Times} & MWF 2:00-2:50 & MWF 11-11:50\tabularnewline
-\textbf{Meeting Location} & Holt 155 & Holt 155\tabularnewline
-\textbf{Instructor} & Edward Roualdes & Katharine Gray\tabularnewline
-\textbf{Office Location} & Holt 204 & Holt 108\tabularnewline
-\textbf{Office Phone} & 898-5807 & 898-4095\tabularnewline
+\textbf{Meeting Days} & 8/24/20 - 9/25/20 & Not Offered\tabularnewline
+\textbf{Meeting Times} & MWF 9:00-9:50 &\tabularnewline
+\textbf{Meeting Location} & Online &\tabularnewline
+\textbf{Instructor} & Nicholas Lytal &\tabularnewline
+\textbf{Office Location} & N/A &\tabularnewline
+\textbf{Office Phone} & N/A &\tabularnewline
 \textbf{E-mail} &
-\href{mailto:eroualdes@csuchico.edu}{\nolinkurl{eroualdes@csuchico.edu}}
-&
-\href{mailto:klgray@csuchico.edu}{\nolinkurl{klgray@csuchico.edu}}\tabularnewline
+\href{mailto:nyltal@csuchico.edu}{\nolinkurl{nyltal@csuchico.edu}}
+&\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -147,8 +135,7 @@ pre-specified data set or your data set of choice.
   \url{http://datascience.csuchico.edu} for more information and a
   schedule of events.
 \item
-  Community Coding: TR 2-4pm in MLIB 442 and W 2-4pm in PHSC 213
-  \href{cc_flyer.pdf}{{[}flyer{]}}
+  Community Coding: Times TBD. \href{cc_flyer.pdf}{{[}flyer{]}}
 
   \begin{itemize}
   \tightlist
@@ -156,13 +143,58 @@ pre-specified data set or your data set of choice.
     Students, staff, faculty, and the public are invited to join our
     Community Coding sessions. Bring your computer, coding projects, and
     your questions to this open working environment.
-  \item
-    Commit to studying 1 hr. per week for your (not necessarily CS)
-    programming course and earn credit. Enroll in MATH 290-02 (5837), a
-    1 unit credit/no-credit course. Credit is earned by attending at
-    least 10 times.
   \end{itemize}
 \end{itemize}
+
+\hypertarget{everyone-is-welcome-here}{%
+\subsection{Everyone is welcome here}\label{everyone-is-welcome-here}}
+
+It is my intent that students from all diverse backgrounds and
+perspectives be well-served by this course, that students' learning
+needs be addressed both in and out of class, and that the diversity that
+the students bring to this class be viewed as a resource, strength and
+benefit. It is my intent to present materials and activities that are
+respectful of diversity: gender identity, sexuality, disability, age,
+socioeconomic status, ethnicity, race, nationality, religion, and
+culture. Your suggestions are encouraged and appreciated. Please let me
+know ways to improve the effectiveness of the course for you personally,
+or for other students or student groups.
+
+I would like to create a learning environment that supports a diversity
+of thoughts, perspectives and experiences, and honors your identities
+(including race, gender, class, sexuality, religion, ability, etc.) To
+help accomplish this:
+
+\begin{itemize}
+\tightlist
+\item
+  If you have a name and/or set of pronouns that differ from those that
+  appear in your official Chico records, please let me know!
+\item
+  If you feel like your performance in the class is being impacted by
+  your experiences outside of class, please don't hesitate to come and
+  talk with me. I want to be a resource for you. Remember that you can
+  also submit anonymous feedback (which will lead to me making a general
+  announcement to the class, if necessary to address your concerns).
+\item
+  If you prefer to speak with someone outside of the course, the Office
+  of Diversity and Inclusion is here to assist. Their number is
+  530-898-4764, and email
+  \href{mailto:diversityoffice@csuchico.edu}{\nolinkurl{diversityoffice@csuchico.edu}}
+\item
+  I (like many people) am still in the process of learning about diverse
+  perspectives and identities. If something was said in class (by
+  anyone) that made you feel uncomfortable, please talk to me about it.
+  (Again, anonymous feedback is always an option).
+\end{itemize}
+
+\emph{Adapted from
+\href{https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements}{Monica
+Linden at Brown University}}.
+
+Furthermore, I would like to acknowledge that we are meeting on the
+traditional lands of the Mechoopda people. Without them, we would not
+have access to this campus or our education.
 
 \hypertarget{learning-outcomes}{%
 \section{Learning Outcomes}\label{learning-outcomes}}
@@ -204,19 +236,19 @@ By the end of the course, students will be able to
 \hypertarget{software}{%
 \paragraph{Software}\label{software}}
 
-During this class you will install R and R Studio on your personal
-computer (Mac/PC/*nix only). That way you can take what you've learned
-in this class and apply it to other classes. Both are free. Walk through
-installation instructions can be found here:
+If you have your own PC/Mac/*nix computer, you are advised to install R
+and R Studio on your personal computer. That way you can take what
+you've learned in this class and apply it to other classes. Both are
+free. Walk through installation instructions can be found here:
 \url{https://norcalbiostat.netlify.com/post/software-overview/}
 
 \begin{itemize}
 \tightlist
 \item
-  R version 3.5.0 or later. Download from
+  R version 4.0.0 or later. Download from
   \url{https://cran.r-project.org/}
 \item
-  R Studio version 1.2 or later. Download the desktop version from
+  R Studio version 1.39 or later. Download the desktop version from
   \url{https://www.rstudio.com/products/rstudio/download/\#download}
 \end{itemize}
 
@@ -224,6 +256,10 @@ If you are unable to obtain a laptop that has the ability to install
 program (i.e.~a iPad or Chromebook) then a cloud version of R and R
 Studio is available to you at no charge. Learn more and make an account
 here: \url{https://rstudio.cloud/}.
+
+\begin{quote}
+This is pending
+\end{quote}
 
 \hypertarget{time-commitment}{%
 \section{Time Commitment}\label{time-commitment}}
@@ -299,7 +335,7 @@ date schedule can be found on the course website.
   \tightlist
   \item
     Intro to the R language and the R Studio Integrated Development
-    Environment.
+    Environment
   \item
     Conducting reproducible research with R Markdown
   \end{itemize}
@@ -309,9 +345,9 @@ date schedule can be found on the course website.
   \begin{itemize}
   \tightlist
   \item
-    Getting data into R
+    How to use functions to get things done
   \item
-    Managing spreadsheet-like data using functions
+    Introduction to data processing
   \end{itemize}
 \item
   Week 3
@@ -319,10 +355,10 @@ date schedule can be found on the course website.
   \begin{itemize}
   \tightlist
   \item
-    Basic data management
-  \item
     Univariate Data Visualization using base, and \texttt{ggplot2}
     graphics
+  \item
+    Streamlined Data processing and Aggregation with \texttt{dplyr}
   \end{itemize}
 \item
   Week 4
@@ -330,15 +366,15 @@ date schedule can be found on the course website.
   \begin{itemize}
   \tightlist
   \item
-    Data Manipulation and Aggregation with \texttt{dplyr}
-  \item
     Bivariate and Multivariate Data Visualization using \texttt{ggplot2}
+  \item
+    Importing data into R from external files
   \end{itemize}
 \item
   Week 5: Exploratory Data Analysis (individual project)
 \end{itemize}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \hypertarget{university-policies-and-campus-resources}{%
 \section{University Policies and Campus
@@ -351,8 +387,8 @@ course}\label{adding-and-dropping-the-course}}
 This course only runs for a few weeks and all materials are available on
 the course website. It will be difficult to get caught up if you add the
 class after the first week. The last day to add or drop classes without
-special permission by the instructor is 9/6/19. No adds or drops are
-allowed after 9/20/19 without a serious and compelling reason approved
+special permission by the instructor is 9/4/20. No adds or drops are
+allowed after 9/18/20 without a serious and compelling reason approved
 by the instructor, department chair, and college dean.
 
 \hypertarget{academic-integrity}{%
@@ -371,12 +407,12 @@ Student Judicial Affairs web site at
 \hypertarget{it-support-services}{%
 \subsubsection{IT Support Services}\label{it-support-services}}
 
-Computer labs for student use are located on the first and fourth floor
-of the Meriam Library, Room 116 and 450, Tehama Hall Room 131, and the
-Bell Memorial Union (BMU) basement. You can get help using your computer
-from IT Support Services; contact them through the ITSS web site at
-\url{http://www.csuchico.edu/itss}. Additional labs may be available to
-students in your department or college.
+During the COVID-19 pandemic, the physical office for ITSS is closed
+until further notice. However, most services are still available via
+phone, online, or in a
+\href{https://csuchico.zoom.us/j/5308984357?pwd=WUwwaXJQUTNPSnJqc1hTemxPY0ZiQT09}{Zoom
+Lobby} during business hours. See the
+\href{https://www.csuchico.edu/itss/}{ITSS webpage} for futher details.
 
 \hypertarget{americans-with-disabilities-act}{%
 \subsubsection{Americans with Disabilities
@@ -423,6 +459,5 @@ Students may speak to someone confidentially by contacting the
 Counseling and Wellness Center (898-6345) or Safe Place (898-3030).
 Information on campus reporting obligations and other Title IX related
 resources are available here: www.csuchico.edu/title-ix.
-
 
 \end{document}

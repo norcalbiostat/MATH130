@@ -1,0 +1,23 @@
+
+/* 
+blue primary: 008cba
+grey secondary:e3e6ea
+light blue info:5bc0de
+green success: 43ac6a
+orange warning : e99002 
+red danger : d32a0e 
+
+*/
+
+code { /* changes inline code highlighting */
+  background: #A1A29E;
+  border-radius: 3px;
+  padding: 4px;
+} 
+
+h5 {
+  font-size:8;
+  font-weight: bold;
+  color: #008cba;
+  background-color: #e3e6ea;
+}

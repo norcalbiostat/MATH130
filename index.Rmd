@@ -14,9 +14,9 @@ See the [syllabus](syllabus.html) for details about the current class offerings.
 
 --------------------------------
 
-# Announcements (Fall 19)
+# Announcements (Fall 20)
 
-_This site is currently being updated for Fall 19._
+_This site is currently being updated for Fall 20._
 
 --------------------------------
 
@@ -38,9 +38,12 @@ Click each weekly header below to expand and see the materials for that week.
 `r emo::ji("books")` Notes:
 
 * lec01-Introduction to the class   [[HTML]](notes/01_intro.html) [[PDF]](notes/01_intro.pdf) 
-* lec02-Introduction to your new tools  [[HTML]](notes/02_setup.html) [[PDF]](notes/02_setup.pdf)
+* lec02-Introduction to your new tools  [[HTML]](notes/02_setup.html) [[PDF]](notes/02_setup.pdf) [[Slides]](notes/02_setup_slides.html)
 * lec03-Introduction to R Markdown  [[HTML]](notes/03_rmd.html)   [[PDF]](notes/03_rmd.pdf) 
 * lec04-Introduction to R           [[HTML]](notes/04_r.html)     [[PDF]](notes/04_r.pdf)  
+
+`r emo::ji("cinema")` Videos: 
+
 
 `r emo::ji("pencil2")` Assignments: 
 
@@ -56,6 +59,40 @@ Click each weekly header below to expand and see the materials for that week.
 
 `r emo::ji("memo")` Prepare:
 
+* Install the `nycflights13` package. This data set is on all flights out of the three major airports in NYC from 2013. There are multiple data sets contained within this package that are used in the homework. 
+
+`r emo::ji("books")` Notes:
+
+* lec06 - Working with data   [[HTML]](notes/06_dm.html)     [[PDF]](notes/06_dm.pdf)     [[RMD]](notes/06_dm_notes.Rmd)
+* lec07 - Wrangling factors  [[HTML]](notes/07_factors.html) [[PDF]](notes/07_factors.pdf) [[RMD]](notes/07_factors_notes.Rmd) 
+
+
+`r emo::ji("pencil2")` Assignment [[HW 2]](hw/hw2.Rmd). 
+
+</div>
+
+### <a href="#week3" data-toggle="collapse">Week 3: Factors and Making pretty pictures to win friends and influence people.</a>
+
+<div id="week3" class="collapse">
+
+
+`r emo::ji("books")` Notes:
+
+* lec08 - Basic Graphing     [[HTML]](notes/08_plots.html)   [[PDF]](notes/08_plots.pdf)   [[RMD]](notes/08_plots_notes.Rmd)
+* lec09 - More data management and aggregation `dplyr` [[HTML]](notes/09_dplyr.html)  [[PDF]](notes/09_dplyr.pdf)  [[RMD]](notes/09_dplyr_notes.Rmd) 
+
+
+`r emo::ji("pencil2")` Assignment [[HW 3]](hw/hw3.Rmd).  
+
+
+</div>
+
+### <a href="#week4" data-toggle="collapse">Week 4: Intermediate graphing & Importing external data</a>
+
+<div id="week4" class="collapse">
+
+`r emo::ji("memo")` Prepare:
+
 * Right click each link and save the following data sets **into the `data` subfolder in your MATH130 folder**. 
 
 `r emo::ji("sign")` **DO NOT RENAME ANYTHING** If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder. 
@@ -67,38 +104,10 @@ Click each weekly header below to expand and see the materials for that week.
 
 `r emo::ji("books")` Notes:
 
+
+`r emo::ji("books")` Notes:
+
 * lec05 - Getting data into R [[HTML]](notes/05_import.html) [[PDF]](notes/05_import.pdf) [[RMD]](notes/05_import_notes.Rmd)
-* lec06 - Working with data   [[HTML]](notes/06_dm.html)     [[PDF]](notes/06_dm.pdf)     [[RMD]](notes/06_dm_notes.Rmd)
-
-`r emo::ji("pencil2")` Assignment [[HW 2]](hw/hw2.Rmd). 
-
-</div>
-
-### <a href="#week3" data-toggle="collapse">Week 3: Factors and Making pretty pictures to win friends and influence people.</a>
-
-<div id="week3" class="collapse">
-
-`r emo::ji("memo")` Prepare:
-
-* Install the `nycflights13` package. This data set is on all flights out of the three major airports in NYC from 2013. There are multiple data sets contained within this package that are used in the homework. 
-
-`r emo::ji("books")` Notes:
-
-* lec07 - Wrangling factors  [[HTML]](notes/07_factors.html) [[PDF]](notes/07_factors.pdf) [[RMD]](notes/07_factors_notes.Rmd) 
-* lec08 - Basic Graphing     [[HTML]](notes/08_plots.html)   [[PDF]](notes/08_plots.pdf)   [[RMD]](notes/08_plots_notes.Rmd)
-
-`r emo::ji("pencil2")` Assignment [[HW 3]](hw/hw3.Rmd).  
-
-
-</div>
-
-### <a href="#week4" data-toggle="collapse">Week 4: Better data management! Better plots!</a>
-
-<div id="week4" class="collapse">
-
-`r emo::ji("books")` Notes:
-
-* lec09 - More data management and aggregation `dplyr` [[HTML]](notes/09_dplyr.html)  [[PDF]](notes/09_dplyr.pdf)  [[RMD]](notes/09_dplyr_notes.Rmd) 
 * lec10 - Intermediate Graphing                        [[HTML]](notes/10_plots2.html) [[PDF]](notes/10_plots2.pdf) [[RMD]](notes/10_plots2_notes.Rmd)
 * (not quite) [[All the graphing things]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html) (optional)
 
