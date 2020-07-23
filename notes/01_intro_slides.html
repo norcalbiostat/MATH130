@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lesson 01</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Math 130" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lesson 01
+## Introduction to the class
+### Math 130
+### California State University, Chico
+### <em>Last updated: 2020-07-22</em>
+
+---
+
+
+
+# Course Overview
+
+This course is designed as a primer to get the complete novice up and running with the basic knowledge of how to use the statistical programming language R in an environment that emphasizes reproducible research and literate programming for data analysis.
+
+The target audience is anyone who wants to do their own data analysis. The course will culminate with an peer-evaluated exploratory data analysis on either a pre-specified data set or your data set of choice.
+
+---
+
+# Schedule of Topics
+
+* Intro to the R language and it's packages
+* R Studio suite of awesomeness
+* Reproducible Research with R Markdown
+* Getting things done using functions (🎩 + ⚡ = 🕊)
+* Getting data into R
+* Managing the spreadsheet-like data frame
+* Data Visualization
+* Data Manipulation and Aggregation
+* Exploratory Data Analysis
+
+---
+
+# Logistics
+
+### Course materials
+
+* All content is fully online on [the course website](https://norcalbiostat.github.io/MATH130/)
+* Class time is spent expanding on ideas and concepts, working through assignments as a class or in pairs. 
+
+### Grading
+
+* Credit / No Credit. There are 100 points available in this course through attendance, assignments, and a final project.
+* You must earn 70 points to receive credit for the course.
+* The [syllabus](../syllabus.html) provides specific details on points per assignment.
+
+### Time Commitment
+* Fast paced, we're hitting the ground running and only have 5 weeks. 
+* Expect to spend at least 10h/week on this class. 
+* Not designed to teach you everything about R, just enough to get going. 
+* Daily practice will pay off, results can be very rewarding
+
+---
+# Warning: Effort and patience required!
+
+* Minimal effort --&gt; frustration and tendency to give up
+* Work hard --&gt; results out --&gt;  satisfaction + rewarding + confidence boosting
+
+&lt;br&gt;
+&lt;center&gt;&lt;img src="../static/img/hard.JPG" width="350px"&gt;&lt;/center&gt;
+&lt;br&gt;
+
+We've all been there. It will get easier...
+
+.center[...but you have to ask for help and use the resources available]
+---
+
+# Tool choices
+
+The term "`R`" is used to refer to both the programming language and the
+software that interprets the scripts written using it.
+
+&lt;br&gt; 
+[RStudio](https://rstudio.com) is currently a very popular way to not only write
+your R scripts but also to interact with the R software. 
+
+&lt;br&gt; 
+We will be programming in the R language, using the R Studio platform. 
+You will have to install both onto your computer. 
+Setup instructions are in [lesson 02](02_setup_slides.html). 
+
+---
+# Why use R?
+
+* Open source, cross-platform, and free
+* Great for reproducibility
+* Interdisciplinary and extensible
+    - Examples in [Data Science](https://r4ds.had.co.nz/), [Economics](https://www.core-econ.org/why-doing-economics-has-embraced-r/), [Natural Sciences](https://www.nature.com/news/programming-tools-adventures-with-r-1.16609), [Psychology](https://personality-project.org/r/).
+* Tons of learning resources
+* Currently R is used in all of Chico's upper division Statistics &amp; Data Science courses, as well as in some Biology, Geology, Economics, Finance, and at least one graduate level Political Science course. 
+* Does not involve lots of pointing and clicking (that's a good thing!)
+* Works on data of all shapes and sizes
+* Produces high-quality graphics
+* Large and welcoming community
+
+---
+# Why use R Studio?
+
+- Customizable workspace that docks all windows together.
+- Notebook formats that allow for easy sharing of code and output, and integration with other languages (Python, C++, SQL, Stan)
+- Syntax highlighting, warning errors when missing a closing parentheses.
+- Cross-platform interface. Also works on Windows/iOS/Linux.
+- Tab completion for functions. Forget the syntax or a variable name? Popup helpers are available.
+- Free training videos available from the developers directly.
+- Built in version control
+- One button publishing of reproducible documents such as reports, interactive visualizations, presentations (like this one!), websites.
+
+&lt;br&gt;
+
+[Examples of things you can do in RStudio](https://rmarkdown.rstudio.com/gallery.html)
+
+---
+background-image: url('../static/img/orly-changestuff.jpg')
+background-position: right
+
+
+# Programming is scary!
+
+Learning to program has other benefits
+
+.pull-left[
+* Improves your logical skills and critical problem solving
+* Increases your attention to detail
+* Increases your self reliance and empowers you to control your own research.
+* Your PI will love your awesome graphics and reports.
+* Some people think what you do is magic.
+* Thinking graduate school? [[expect to learn this on your own]](http://www.nature.com/nature/journal/v541/n7638/full/nj7638-563a.html)
+* [[A few]](https://skillcrush.com/2015/01/28/laurence-bradford-10-reasons/) [[other lists]](https://careerfoundry.com/en/blog/web-development/7-benefits-of-learning-to-code/) [[of reasons]](https://skillcrush.com/2017/01/30/learn-to-code-benefits/)
+
+]
+
+
+---
+
+# Why no point and click?
+
+Because it's not reproducible.
+
+* Which boxes did you click last time?
+* New data? Gotta do it all over.
+* Need to expand your model? Gotta do it all over.
+* Made a mistake in the data coding? Gotta do it all over...
+
+---
+class: center, inverse, middle
+
+# Questions?
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "zenburn",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -21,6 +20,7 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -218,6 +218,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -302,14 +303,14 @@ $(document).ready(function () {
 <p>See the <a href="syllabus.html">syllabus</a> for details about the current class offerings.</p>
 <hr />
 </div>
-<div id="announcements-fall-19" class="section level1">
-<h1>Announcements (Fall 19)</h1>
-<p><em>This site is currently being updated for Fall 19.</em></p>
+<div id="announcements-fall-20" class="section level1">
+<h1>Announcements (Fall 20)</h1>
+<p><em>This site is currently being updated for Fall 20.</em></p>
 <hr />
 </div>
 <div id="schedule" class="section level1">
 <h1>Schedule</h1>
-<p><em>Last Updated: 09/16/2019 </em></p>
+<p><em>Last Updated: 07/22/2020 </em></p>
 <p>Click each weekly header below to expand and see the materials for that week.</p>
 <div id="week-1-getting-started-with-r-and-r-studio" class="section level3">
 <h3><a href="#week1" data-toggle="collapse">Week 1: Getting started with R and R Studio</a></h3>
@@ -320,11 +321,12 @@ $(document).ready(function () {
 </ul>
 <p>📚 Notes:</p>
 <ul>
-<li>lec01-Introduction to the class <a href="notes/01_intro.html">[HTML]</a> <a href="notes/01_intro.pdf">[PDF]</a></li>
-<li>lec02-Introduction to your new tools <a href="notes/02_setup.html">[HTML]</a> <a href="notes/02_setup.pdf">[PDF]</a></li>
+<li>lec01-Introduction to the class <a href="notes/01_intro.html">[HTML]</a> <a href="notes/01_intro.pdf">[PDF]</a> <a href="notes/01_intro_slides.html">[Slides]</a></li>
+<li>lec02-Introduction to your new tools <a href="notes/02_setup.html">[HTML]</a> <a href="notes/02_setup.pdf">[PDF]</a> <a href="notes/02_setup_slides.html">[Slides]</a></li>
 <li>lec03-Introduction to R Markdown <a href="notes/03_rmd.html">[HTML]</a> <a href="notes/03_rmd.pdf">[PDF]</a></li>
 <li>lec04-Introduction to R <a href="notes/04_r.html">[HTML]</a> <a href="notes/04_r.pdf">[PDF]</a></li>
 </ul>
+<p>🎦 Videos:</p>
 <p>✏️ Assignments:</p>
 <ul>
 <li>Download the <a href="hw/hw1.Rmd">[Assignment 1]</a> file. Save this in your Math 130 folder. You will write your answers directly in this file.
@@ -339,6 +341,32 @@ $(document).ready(function () {
 <div id="week2" class="collapse">
 <p>📝 Prepare:</p>
 <ul>
+<li>Install the <code>nycflights13</code> package. This data set is on all flights out of the three major airports in NYC from 2013. There are multiple data sets contained within this package that are used in the homework.</li>
+</ul>
+<p>📚 Notes:</p>
+<ul>
+<li>lec06 - Working with data <a href="notes/06_dm.html">[HTML]</a> <a href="notes/06_dm.pdf">[PDF]</a> <a href="notes/06_dm_notes.Rmd">[RMD]</a></li>
+<li>lec07 - Wrangling factors <a href="notes/07_factors.html">[HTML]</a> <a href="notes/07_factors.pdf">[PDF]</a> <a href="notes/07_factors_notes.Rmd">[RMD]</a></li>
+</ul>
+<p>✏️ Assignment <a href="hw/hw2.Rmd">[HW 2]</a>.</p>
+</div>
+</div>
+<div id="week-3-factors-and-making-pretty-pictures-to-win-friends-and-influence-people." class="section level3">
+<h3><a href="#week3" data-toggle="collapse">Week 3: Factors and Making pretty pictures to win friends and influence people.</a></h3>
+<div id="week3" class="collapse">
+<p>📚 Notes:</p>
+<ul>
+<li>lec08 - Basic Graphing <a href="notes/08_plots.html">[HTML]</a> <a href="notes/08_plots.pdf">[PDF]</a> <a href="notes/08_plots_notes.Rmd">[RMD]</a></li>
+<li>lec09 - More data management and aggregation <code>dplyr</code> <a href="notes/09_dplyr.html">[HTML]</a> <a href="notes/09_dplyr.pdf">[PDF]</a> <a href="notes/09_dplyr_notes.Rmd">[RMD]</a></li>
+</ul>
+<p>✏️ Assignment <a href="hw/hw3.Rmd">[HW 3]</a>.</p>
+</div>
+</div>
+<div id="week-4-intermediate-graphing-importing-external-data" class="section level3">
+<h3><a href="#week4" data-toggle="collapse">Week 4: Intermediate graphing &amp; Importing external data</a></h3>
+<div id="week4" class="collapse">
+<p>📝 Prepare:</p>
+<ul>
 <li>Right click each link and save the following data sets <strong>into the <code>data</code> subfolder in your MATH130 folder</strong>.</li>
 </ul>
 <p>🛑 <strong>DO NOT RENAME ANYTHING</strong> If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder.</p>
@@ -348,34 +376,9 @@ $(document).ready(function () {
 <li><a href="https://norcalbiostat.netlify.com/data/fatal-police-shootings-data.xlsx">Police Shootings</a></li>
 </ul>
 <p>📚 Notes:</p>
+<p>📚 Notes:</p>
 <ul>
 <li>lec05 - Getting data into R <a href="notes/05_import.html">[HTML]</a> <a href="notes/05_import.pdf">[PDF]</a> <a href="notes/05_import_notes.Rmd">[RMD]</a></li>
-<li>lec06 - Working with data <a href="notes/06_dm.html">[HTML]</a> <a href="notes/06_dm.pdf">[PDF]</a> <a href="notes/06_dm_notes.Rmd">[RMD]</a></li>
-</ul>
-<p>✏️ Assignment <a href="hw/hw2.Rmd">[HW 2]</a>.</p>
-</div>
-</div>
-<div id="week-3-factors-and-making-pretty-pictures-to-win-friends-and-influence-people." class="section level3">
-<h3><a href="#week3" data-toggle="collapse">Week 3: Factors and Making pretty pictures to win friends and influence people.</a></h3>
-<div id="week3" class="collapse">
-<p>📝 Prepare:</p>
-<ul>
-<li>Install the <code>nycflights13</code> package. This data set is on all flights out of the three major airports in NYC from 2013. There are multiple data sets contained within this package that are used in the homework.</li>
-</ul>
-<p>📚 Notes:</p>
-<ul>
-<li>lec07 - Wrangling factors <a href="notes/07_factors.html">[HTML]</a> <a href="notes/07_factors.pdf">[PDF]</a> <a href="notes/07_factors_notes.Rmd">[RMD]</a></li>
-<li>lec08 - Basic Graphing <a href="notes/08_plots.html">[HTML]</a> <a href="notes/08_plots.pdf">[PDF]</a> <a href="notes/08_plots_notes.Rmd">[RMD]</a></li>
-</ul>
-<p>✏️ Assignment <a href="hw/hw3.Rmd">[HW 3]</a>.</p>
-</div>
-</div>
-<div id="week-4-better-data-management-better-plots" class="section level3">
-<h3><a href="#week4" data-toggle="collapse">Week 4: Better data management! Better plots!</a></h3>
-<div id="week4" class="collapse">
-<p>📚 Notes:</p>
-<ul>
-<li>lec09 - More data management and aggregation <code>dplyr</code> <a href="notes/09_dplyr.html">[HTML]</a> <a href="notes/09_dplyr.pdf">[PDF]</a> <a href="notes/09_dplyr_notes.Rmd">[RMD]</a></li>
 <li>lec10 - Intermediate Graphing <a href="notes/10_plots2.html">[HTML]</a> <a href="notes/10_plots2.pdf">[PDF]</a> <a href="notes/10_plots2_notes.Rmd">[RMD]</a></li>
 <li>(not quite) <a href="https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html">[All the graphing things]</a> (optional)</li>
 </ul>

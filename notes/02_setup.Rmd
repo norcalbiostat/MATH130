@@ -12,7 +12,7 @@ output:
     toc: no
 ---
 
-## Learning Objectives
+# Learning Objectives
 
 After completing this lesson learners will be able to:
 
@@ -23,146 +23,224 @@ After completing this lesson learners will be able to:
 * Use the built-in RStudio help interface to search for more information on R functions.
 * Demonstrate how to provide sufficient information for troubleshooting with the R user community.
 
+## Icon Definitions
+* `r emo::ji("arrow_forward")` Forward arrow: Task for you to do
+* `r emo::ji("arrow_down_small")` Down arrow: A download link is present. 
+* `r emo::ji("x")` Red X: Something you should NOT do
+* `r emo::ji("warning")` Warning triangle: this is something you should be aware of or pay attention to. 
+
+---
+
 # Installing programs
 
-> If you are using an iPad or Chromebook or otherwise do not have a computer that you can install programs on, head over to http://rstudio.cloud.com, make an account and start a new project. Then go watch the video below on how to navigate R studio. 
+`r emo::ji("warning")` If you are using a tablet, Chromebook or otherwise do not have a computer that you can install programs on, head over to http://rstudio.cloud.com, make an account and start a new project. [Then skip to slide #6](#intro_rstudio) to learn how to navigate RStudio. 
 
 While the cloud is easier to initially setup, I want you to only use it if you absolutely have to. Having your own installation on your computer ensures that
 
 * you likely want to customize your programs
 * you will be able to put your files under version control
 * you always have access to your code even with unstable or no internet
-* Honestly, it may not always be free. This is an alpha testing stage for the company. 
 
 R is the programming language that we will be using. R Studio is the program we will _use_ R through. 
-You need to install both. 
+
+You must install both. 
 
 
-### 1. Download and install R 
-<center><img src="../static/img/R.png" width="200px"></center>
+---
+background-image: url('../static/img/R.png')
+background-position: top right
+background-size: 180px 150px
 
-* Download R (v3.5+) from https://cran.r-project.org/ 
-    - Direct link for Mac OS X El Capitan or higher: https://cran.r-project.org/bin/macosx/R-3.6.0.pkg 
-    - Direct link for Windows 10 https://cran.r-project.org/bin/windows/base/R-3.6.0-win.exe 
+# Download and install R 
+
+## `r emo::ji("arrow_down_small")` Download R v 4.0+
+* Windows 10 https://cran.r-project.org/bin/windows/base/ 
+* Mac OS X page - https://cran.r-project.org/bin/macosx/ 
+  - First link under "Latest Release" and looks like **R-4.0.2.pkg**. 
+* Choose to save the file, do not open or run. 
     
-* Install R by double clicking on the downloaded file and following the prompts. Default settings are OK. 
-    - Delete any desktop shortcut that was created (looks like the icon above.)
+## `r emo::ji("arrow_forward")` Install
+* Install R by double clicking on the downloaded file and following the prompts.
+  - Default settings are OK. 
+  - Delete any desktop shortcuts that was created (looks like the icon above.)
 
 
-### 2. Download and install R Studio
-<center><img src="../static/img/RStudio.png" width="200px"></center>
+## `r emo::ji("cinema")` Video Tutorials for both R and R Studio. 
+* [Windows](https://www.youtube.com/watch?v=gx7A7C_wdyE)
+* [Mac](https://www.youtube.com/watch?v=by5HyJX6H1I)
 
-* Download R Studio (v 1.2+) from https://www.rstudio.com/products/rstudio/download/#download
-    - Choose the download link that corresponds to your operating system. 
+---
+background-image: url('../static/img/RStudio.png')
+background-position: top right
+background-size: 180px 150px
 
-* Install R Studio
-    * Windows: Double click on the downloaded file to run the installer program. 
-    * Mac: Double click on the downloaded file, then drag the R Studio Icon into your Applications folder.
-        - After you are done, eject the "Drive" that you downloaded by dragging it to your trash. 
+# Download and install R Studio
 
-* Watch the following short video to learn how to navigate R Studio. 
+## `r emo::ji("arrow_down_small")` Download v1.3 + 
+* Download R Studio (v 1.3+) from https://www.rstudio.com/products/rstudio/download/#download
+* Choose the download link that corresponds to your operating system. 
 
-<p><a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij"><img src="https://embedwistia-a.akamaihd.net/deliveries/260e6e980f526abaedf8ef3378270c899da74f08.jpg?origin_v2=1&amp;image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=71a5d4e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij">RStudio IDE Overview</a></p>
+## `r emo::ji("arrow_forward")` Install
+* Windows: Double click on the downloaded file to run the installer program. 
+* Mac: Double click on the downloaded file, then drag the R Studio Icon into your Applications folder.
+  - After you are done, eject the "Drive" that you downloaded by dragging the icon to your trash. 
 
-   
+---
+name: intro_rstudio
 
-### 3. Setting preferences in R Studio to retain sanity while debugging
+# Navigating R Studio
 
-* Open R Studio and go to the file menu go to Tools then Global Options.
+`r emo::ji("arrow_forward")` Watch the following short video to learn how to navigate R Studio.
+
+<br><br>
+
+.center[
+<a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij"><img src="https://embedwistia-a.akamaihd.net/deliveries/260e6e980f526abaedf8ef3378270c899da74f08.jpg?origin_v2=1&amp;image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=71a5d4e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij">RStudio IDE Overview</a>
+]
+
+
+---
+
+# Setting preferences in R Studio
+
+##  Retain sanity while troubleshooting
+
+`r emo::ji("arrow_forward")` 
+
+* Open R Studio and go to the file menu go to _Tools_ then _Global Options_.
 * Uncheck "Restore .RData into workspace at startup" 
 * Where it says "Save workspace to .RData on exit:" Select "Never""
 * Click apply then ok to close that window.
   
 This will ensure that when you restart R you do not "carry forward" objects such as data sets that you were working on in a prior assignment. 
 
-You should make a habit to completely shut down R studio when you are done working. 
-Your open tabs will be saved, but your environment will be cleared. _This is a good thing._
-    
- 
-### 4. Organizing your working directory
+---
+class: inverse, middle, center
+
+# Downloading class materials
+
+---
+
+# Setup your folder for success!
 
 Using a consistent folder structure across your projects will help keep things
 organized, and will also make it easy to find/file things in the future. This
-can be especially helpful when you have multiple projects. In general, you may
-create directories (folders) for **scripts**, **data**, and **documents**.
+can be especially helpful when you have multiple projects.
+
+
+.pull-left[
+<br><br>
+`r emo::ji("arrow_forward")` On your computer, in an easy to find place, create a new folder named `math130`. Then create three subfolders: `data`, `homework`, `notes`.  ]
+
+.pull-right[
+<img src="../static/img/folder_org.png" width="250px">
+]
+
 
 You need to choose a naming convention for your class folder and stick with it. Recommended options are: 
 
-* ALL CAPS (MATH130)
-* no caps (math130)
-* snake_case (math_130) 
-* CamelCase (Math130) 
-
-Call this working directory `math130`, and create the three subfolders: `data`, `homework`, `documents`.  
-
-You will put all files related to this class in here. For example lecture notes go in the document folder, assignments in the `homework` folder, and data in, you guessed it, the `data` folder. 
-
-This means when you download a file, right click and "Save as" or "Save target as" and **actively choose** where to download this file. Do not let files live in your downloads folder. 
-
-<span style="color:red"> Do not open any files from your browser window after downloading.</span>
+* ALL CAPS (`MATH130`)
+* no caps (`math130`)
+* snake_case (`math_130`) 
+* CamelCase (`Math130`) 
 
 
-Your working directory should now look like this:
+---
 
-<center><img src="../static/img/folder_org.png" width="350px"></center>
+# Adding files into your class folder
 
-Right click [[this link]](../hw/hw1.Rmd) to download and save Assignment 1 into your `homework` folder now.  
+When you download a file, right click and "Save as" or "Save target as" and **actively choose** where to download this file.
 
-----
+`r emo::ji("x")` Do not let files live in your downloads folder. 
 
-# Interacting with R
+`r emo::ji("x")` Do not open any files from your browser window after downloading.
+
+
+`r emo::ji("arrow_down_small")` Right click [[this link]](../hw/hw1.Rmd) to download and save Assignment 1 into your `homework` folder now.  
+
+---
+class: inverse, middle, center
+
+# Programming with R
+
+---
+
+# Terminology
 
 The basis of programming is that we write down instructions for the computer to
-follow, and then we tell the computer to follow those instructions. We write, or
-*code*, instructions in R because it is a common language that both the computer
-and we can understand. We call the instructions *commands* and we tell the
-computer to follow the instructions by *executing* (also called *running*) those
-commands.
+follow, and then we tell the computer to follow those instructions. 
 
-The console pane is the place where commands written in the R
+We write, or *code*, instructions in R because it is a common language that both the computer and we can understand. 
+
+We call the instructions *commands* and we tell the computer to follow the instructions by *executing* (also called *running*) those commands.
+
+The **console** pane is the place where commands written in the R
 language can be typed and executed immediately by the computer. It is also where
-the results will be shown for commands that have been executed. You can type
-commands directly into the console and press <kbd>`Enter`</kbd> to execute those commands,
-but they will be forgotten when you close the session.
+the results will be shown for commands that have been executed. 
 
+You can type commands directly into the console and press <kbd>`Enter`</kbd> to execute those commands, but they will be forgotten when you close the session.
 
-##### Text written like this are instructions for you to do it.
+---
+# Code appearance
 
-##### In the console type the following code.
+In these notes, code is displayed like this: 
 
-```
+```{r}
 2+2
 ```
 
-You can do basic arithmetic this way. R is basically an overgrown calculator. 
-Try a more complicated equation next. 
+where the output or result of the code is displayed with two pound signs (`##`)
 
+---
+# R is an overgrown calculator
+
+`r emo::ji("arrow_forward")` In the console type the following code, then press `Enter`.
+
+```{r}
+2+2
 ```
+
+Now try a more complicated equation. 
+
+```{r, error=TRUE}
 2 + 5*(8^3)- 3*log10)
 ```
 
-Uh oh, we got an <span style="color:red">Error</span>. Let's try to fix it. 
+Uh oh, we got an Error. Nothing to worry about, errors happen all the time. 
 
-```
+
+`r emo::ji("arrow_forward")` Put a open parenthesis `(` before `log10` to fix it and try again. 
+
+---
+# > R is waiting on you...
+
+`r emo::ji("arrow_forward")` In the console type the following code, then press `Enter`.
+
+```r
 2 + 5*(8^3)- 3*log(10
 ```
 
 Notice the console shows a `+` prompt. This means that you haven't finished entering
-a complete command. This is because you have not 'closed' a parenthesis or
+a complete command. 
+
+This is because you have not 'closed' a parenthesis or
 quotation, i.e. you don't have the same number of left-parentheses as
 right-parentheses, or the same number of opening and closing quotation marks.
+
 When this happens, and you thought you finished typing your command, click
-inside the console window and press <kbd>`Esc`</kbd>; this will cancel the incomplete
+inside the console window and press `Esc`; this will cancel the incomplete
 command and return you to the `>` prompt.
 
-##### Fix the math expression above by closing the parenthesis. 
+---
+class: inverse, middle, center
 
+# Packages
 
-We'll get into how R sees and uses data this week. 
+.footnote[[_Where the real money from the movie is made._](https://spaceballs.fandom.com/wiki/Spaceballs:_The%E2%80%A6)]
 
-----
+---
 
-# Installing Packages
+# All the fun functions are in packages
 
 R is considered an **Open Source** software program. That means many (thousands) of people contribute to the software. They do this by writing commands (called functions) to make a particular analysis easier, or to make a graphic prettier.
 
@@ -170,69 +248,100 @@ When you download R, you get access to a lot of functions that we will use. Howe
 
 For example we will be creating graphics using functions like `boxplot()` and `hist()` that exist in base R. But we will quickly move on to creating graphics using functions contained in the `ggplot2` package. We will be managing data using functions in `dplyr` and reading in Excel files using `readxl`. Installing packages will become your favorite past-time. 
 
-To get started type in the console the following command to install the `rmarkdown` package. 
+
+---
+
+# Installing Packages
+
+`r emo::ji("arrow_forward")`  Start by typing the following in the console to install the `ggplot2` package. 
 
 ```r
 install.packages("ggplot2")
 ```
 
-When the console returns to showing a `>` (and the stop sign in the top right corner of the Console window goes away), R is done doing what you asked it to do and ready for you to give it another command. You should get a message that looks similar to the message below. 
+When the download and install is complete, you should see a message simliar to: 
 
-```
+```r
 The downloaded binary packages are in
 	C:\Users\Robin\AppData\Local\Temp\Rtmpi8NAym\downloaded_packages
 ```
 
-Some packages use functions that live in other packages. These are called dependencies and will be automatically installed when you tell R to install a new package. 99% of the time you will not have to install them manually on your own. 
 
-
-> You only have to install packages once. To access commands within the functions you must load the package first using the code `library(package name)`. We will start to use various packages next week. 
-
-
-Now that you're a package installing pro, go ahead and install the following packages that we will be using in the next few weeks. Type these commands into the console one at a time and wait for it to finish before entering the next command. **R is case sensitive**.
+`r emo::ji("warning")` R is case sensitive and spelling matters. If you get an error message like the following: 
 
 ```r
-install.packages("rmarkdown")
-install.packages("knitr")
-install.packages("forcats")
-install.packages("readxl")
-install.packages("dplyr")
-```
-
-Note in this last package that is a lower case letter L at the end. For read EXCELL. It is not the number 1 (one). 
-
-<span style="color:red">If you see a message such as the one below, check for a typo.</span>
-
-```
 Warning in install.packages :
   package ‘ggplot’ is not available (for R version 3.5.1)
 ```
 
 The correct package name is `ggplot2`, not `ggplot`.
 
+---
+background-image: url('../static/img/allthethings.jpg')
+background-position: 100% 80% 
+background-size: 180px 150px
 
-> Alternative Method of installing Packages: Use the Package tab in the lower right corner. 
+# Install all the things!
 
+Now that you're a package installing pro, go ahead and install the following packages that we will be using in the next few weeks. 
 
-### Creating PDF files directly
-To create a PDF directly from your source code you will have to install a lightweight version of $LaTeX$ (a document processing program). This allows you to make professional looking reports. If you plan to enroll in any classes taught by Dr. Donatello, this is required. 
+.pull-left[<br>
+`r emo::ji("arrow_forward")` Type these commands into the console one at a time and wait for it to finish before entering the next command.
+]
 
-Run the following code lines one at a time, waiting for the first one to finish before starting the next. This process can take up to 10 minutes. 
-```{r, eval=FALSE}
-install.packages("tinytex")
-tinytex::install_tinytex()
+.pull-right[
+```r
+install.packages("rmarkdown")
+install.packages("dplyr")
+install.packages("knitr")
+install.packages("forcats")
+install.packages("readxl")
 ```
+]
 
-If at any time it asks you to update or install any other packages, say yes to all of them. 
+Note in this last package that is a lower case letter L at the end. For read EXCELL. It is not the number 1 (one). 
 
-----
+<br> 
+
+**Alternative Method of installing Packages:**  
+Use the Package tab in the lower right pane in R Studio. 
+
+---
+class: inverse, top, center
+background-image: url('https://bcgov.github.io/ds-cop-intro-to-r/fig/help-me-help-you.png')
+background-position: 50% 75%
+background-size: 50%
+
+# Seeking Help
+
+<center><img src="../static/img/debugging.jpg" width="350px"></center>
+_Sometimes a second pair of eyeballs is all you need_
 
 
-# Seeking help
+.footnote[[Image credit: Intro to DS using R Workshop](https://bcgov.github.io/ds-cop-intro-to-r/seeking-help-from-others-with-reprex.html)]
 
-### Use the built-in RStudio help interface to search for more information on R functions
+---
+# Advice on asking for help
 
-One of the fastest ways to get help, is to use the RStudio help interface. This panel by default can be found at the lower right hand panel of RStudio. As seen in the screenshot, by typing the word "Mean", RStudio tries to also give a number of suggestions that you might be interested in. The description is then shown in the display window.
+The key to receiving help from someone is for them to rapidly grasp your problem. You should make it as easy as possible to pinpoint where the issue might be.
+
+Try to use the correct words to describe your problem. For instance, a package is not the same thing as a library. Most people will understand what you meant, but it can make things confusing for people trying to help you. Be as precise as possible when describing your problem.
+
+`r emo::ji("warning")` Don't let not knowing exactly how to describe your problem prevent you from asking. Screenshots help temendously
+
+**When asking someone for help try to**
+1. Explain what thing you are trying to do
+2. Explain/show the code you wrote to try to do that thing
+3. Explain/show your result, and if it's not obvious explain why you feel it's not the correct result. (E.g. you expected the answer to be 5, but instead it's 10. )
+
+`r emo::ji("warning")` Don't spend more than 20 minutes banging your head on the wall before you ask the instructor for help!
+
+---
+# Help from inside R Studio
+
+## Use the built-in RStudio help interface to search for more information on R functions
+
+One of the fastest ways to get help, is to use the RStudio help interface. This panel by default can be found at the lower right hand panel of RStudio. As seen in the screenshot, by typing the word `mean`, RStudio tries to also give a number of suggestions that you might be interested in. The description is then shown in the display window.
 
 ### I know the name of the function I want to use, but I'm not sure how to use it
 
@@ -247,6 +356,9 @@ If you just need to remind yourself of the names of the arguments, you can use:
 ```{r, eval=FALSE, purl=FALSE}
 args(lm)
 ```
+
+---
+# Help from inside R Studio cont.
 
 ### I want to use a function that does X, there must be a function for it but I don't know which one...
 
@@ -267,60 +379,42 @@ Finally, a generic Google or internet search "R \<task\>" will often either send
 you to the appropriate package documentation or a helpful forum where someone
 else has already asked your question.
 
-### I am stuck... I get an error message that I don't understand
+---
+# I'm stuck
 
-Start by googling the error message. However, this doesn't always work very well
-because often, package developers rely on the error catching provided by R. You
-end up with general error messages that might not be very helpful to diagnose a
-problem (e.g. "subscript out of bounds"). If the message is very generic, you
-might also include the name of the function or package you're using in your
-query.
+### I get an error message that I don't understand
 
-However, you should check Stack Overflow. Search using the `[r]` tag. Most
-questions have already been answered, but the challenge is to use the right
-words in the search to find the
-answers:
-[http://stackoverflow.com/questions/tagged/r](http://stackoverflow.com/questions/tagged/r)
+Start by googling the error message. However, this doesn't always work very well because often, package developers rely on the error catching provided by R. You end up with general error messages that might not be very helpful to diagnose a problem (e.g. "subscript out of bounds"). If the message is very generic, you might also include the name of the function or package you're using in your query.
 
-----
+If you check Stack Overflow, search using the `[r]` tag. Most questions have already been answered, but the challenge is to use the right words in the search to find the answers: [http://stackoverflow.com/questions/tagged/r](http://stackoverflow.com/questions/tagged/r)
 
-# Where to get help
+`r emo::ji("warning")` Development of R moves pretty fast. When at all possible, use results from the past 1-2 years. Anything over 5 years old for packages such as `ggplot`, `dplyr`, and `forcats` are likely obsolete. 
 
-The key to receiving help from someone is for them to rapidly grasp your
-problem. You should make it as easy as possible to pinpoint where the issue
-might be.
 
-Try to use the correct words to describe your problem. For instance, a package
-is not the same thing as a library. Most people will understand what you meant,
-but others have really strong feelings about the difference in meaning. The key
-point is that it can make things confusing for people trying to help you. Be as
-precise as possible when describing your problem.
 
-## In Person
+---
+# "In Person" help
 
-* The person sitting next to you. Don't hesitate to talk to your neighbor, 
-  compare your answers, and ask for help.
+Unfortunately in person `r emo::ji("busts_in_silhouette")` help not available during Fall 20 due to COVID19 `r emo::ji("mask")`
+
+However, Zoom is the next best thing. 
+
+<!--* The person sitting next to you. Don't hesitate to talk to your neighbor, 
+  compare your answers, and ask for help.-->
 * Your friendly classmates: if you know someone with more experience than you,
   they might be able and willing to help you.
-* Data Science Initiative
-    - http://datascience.csuchico.edu What the Data Science community at Chico is up to.
-    - Community Coding. 
-        - Drop in work session & dedicated space to work on coding projects.
-        - Collaborate with your peers and learn from experts.
-        - Need 1 unit? Enroll in Math 290-02 and attend at least 10 times.
-        - You DON'T need to be enrolled to attend!
-    - Weekly seminars and workshops in a variety of languages and topics.
+* Attend Community Coding.
+  - Hours can be found here: [bit.ly/cc_hours](bit.ly/cc_hours)
+  - Drop in work session & dedicated space to work on coding projects.
+  - Collaborate with your peers and learn from experts.
 * The [R Users Meetup group](https://www.meetup.com/Chico-R-Users-Group/) useful if you want to stay connected to the community and learn about upcoming events.
     - https://www.meetup.com/Chico-R-Users-Group/
 
-<br>
-<center><img src="../static/img/debugging.jpg" width="350px"></center>
-_Sometimes a second pair of eyeballs is all you need_
-
-
-## Online
+---
+# Other Online
 
 * In RStudio go to `Help` --> `Cheatsheets`   
+* R Studio Cloud interactive lessons: https://rstudio.cloud/learn/primers
 * [Stack Overflow](http://stackoverflow.com/questions/tagged/r): if your question
   hasn't been answered before and is well crafted, chances are you will get an
   answer in less than 5 min. Remember to follow their guidelines on [how to ask
@@ -335,8 +429,8 @@ _Sometimes a second pair of eyeballs is all you need_
   code repository (e.g., GitHub).
 * Twitter: #rstats @Rstudio
 
-
-## Written
+---
+# Written
 
 If you're a book kinda person, there is plenty of help available as well. Many have online versions or free PDF's.
 
@@ -350,8 +444,8 @@ If you're a book kinda person, there is plenty of help available as well. Many h
     - SAS and SPSS Users http://r4stats.com/books/r4sas-spss/
     - STATA Users http://r4stats.com/books/r4stata/
 
-
-## More resources
+---
+# Moar resources!
 
 * The [Posting Guide](http://www.r-project.org/posting-guide.html) for the R
   mailing lists.
@@ -361,6 +455,24 @@ If you're a book kinda person, there is plenty of help available as well. Many h
   has quite comprehensive advice on how to ask programming questions.
 
 
-----
+---
+# Final Tips 
+
+## Saving and closing your work. 
+
+Unless you're returning to work in R Studio in a short while, You should make a habit to save all open tabs and completely shut down R studio when you are done working. This ensures your environment is cleared. _This is a good thing._
+
+## Restart R
+
+To restart R without shutting the entire window down, go to the file menu bar in the top, 
+
+> _Session_ --> Restart R and Clear Output
+
+This is good to do when switching between projects/classes. 
+
+---
+class: inverse, middle, center
+
+# Credits
 
 Some of this material is a derivation from work that is Copyright © Software Carpentry (http://software-carpentry.org/) which is under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/) which allows for adaptations and reuse of the work. 
