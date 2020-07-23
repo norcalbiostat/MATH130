@@ -37,8 +37,8 @@ Click each weekly header below to expand and see the materials for that week.
 
 `r emo::ji("books")` Notes:
 
-* lec01-Introduction to the class   [[HTML]](notes/01_intro.html) [[PDF]](notes/01_intro.pdf) 
-* lec02-Introduction to your new tools  [[HTML]](notes/02_setup.html) [[PDF]](notes/02_setup.pdf) [[Slides]](notes/02_setup_slides.html)
+* lec01-Introduction to the class   [[Slides]](notes/01_intro_slides.html) [[PDF]](notes/01_intro.pdf)  
+* lec02-Introduction to your new tools  [[Slides]](notes/02_setup_slides.html) [[PDF]](notes/02_setup.pdf) 
 * lec03-Introduction to R Markdown  [[HTML]](notes/03_rmd.html)   [[PDF]](notes/03_rmd.pdf) 
 * lec04-Introduction to R           [[HTML]](notes/04_r.html)     [[PDF]](notes/04_r.pdf)  
 
