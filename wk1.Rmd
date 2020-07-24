@@ -30,6 +30,7 @@ opts_knit$set(width=75)
 
 * Follow the [[lec02]](notes/02_setup_slides.html) notes to install the necessary programs.
 
+<br> 
 
 # `r emo::ji("books")` Notes
 
@@ -38,14 +39,20 @@ opts_knit$set(width=75)
 * lec03-Introduction to R Markdown  [[Slides]](notes/03_rmd_slides.html)   [[PDF]](notes/03_rmd_slides.pdf) 
 * lec04-Introduction to R           [[HTML]](notes/04_r.html)     [[PDF]](notes/04_r_slides.pdf)  
 
+<br> 
+
 # `r emo::ji("cinema")` Videos
 
 * Setup your folder for success! (lec02)
+
+<br> 
 
 # `r emo::ji("pencil2")` Assignments
 
 * Download the [[Assignment 1]](hw/hw1.Rmd) file. Save this in your Math 130 folder. You will write your answers directly in this file. 
     - Submit the `.RMD file` for this assignment as instructed by the due date.  
+
+<br> 
 
 # `r emo::ji("thinking_face")` Additional Resources
 

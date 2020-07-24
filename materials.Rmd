@@ -44,7 +44,7 @@ nf.rmd  <- sprintf("[%s](%s)", gsub(".Rmd",  "", note.rmd.files),
                                gsub(".html", ".Rmd", note.rmd.files))
 ```
 
-### Notes as HTML Slide decks
+### Notes as HTML files
 
 ```{r}
 pander(as.list(nf.html))

@@ -13,6 +13,8 @@ navbar:
     href: wk4.html
   - text: Week5
     href: wk5.html
+  - text: All Materials
+    href: materials.html
       
   right:
     - text: "Data"
