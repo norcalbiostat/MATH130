@@ -3,14 +3,14 @@ title: "Lesson 05 - Getting data into R"
 author: "Robin Donatello"
 date: "Last Updated `r format(Sys.Date(), '%m-%d-%Y')`"
 output:
-  pdf_document:
-    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 
@@ -151,9 +151,11 @@ The `read_excel()` function is what we are going to use. Note the use of the und
 
 ```{r}
 library(readxl)
-police  <- read_excel("../data/WashPost Police Shootings 2015.xlsx", sheet=1, col_names=TRUE)
+police  <- read_excel("../data/fatal-police-shootings-data.xlsx", sheet=1, col_names=TRUE)
 police[1:10,1:5]
 ```
+
+> This is currently not working
 
 * The variable `date` is a `dttm` or _date-time_ variable. This means `R` recognizes it directly as a date, not some string of numbers. 
 * Categorical variables such as `manner_of_death` and `city` are read in as `character` instead of factor. We may or may not want to change that later.

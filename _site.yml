@@ -3,9 +3,9 @@ output_dir: "."
 navbar:
   title: "Intro to R"
   left:
-  - text: Materials 
+  - text: Week1 
     icon: fa-book
-    href: materials.html
+    href: notes/wk1.html
 
       
   right:
