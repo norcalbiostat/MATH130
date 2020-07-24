@@ -26,9 +26,9 @@ _Last Updated: `r format(Sys.Date(), '%m/%d/%Y')` _
 
 Click each weekly header below to expand and see the materials for that week. 
 
-### [Week 1: Getting started with R and R Studio](wk1.html){target="_blank"}
+### [Week 1: Getting started with R and R Studio (direct link to page)](wk1.html){target="_blank"}
 
-### <a href="#week1" data-toggle="collapse"> Week 1: Getting started with R and R Studio</a>
+### <a href="#week1" data-toggle="collapse"> Week 1: Getting started with R and R Studio (expand section)</a>
 
 <div id="week1" class="collapse">
 
