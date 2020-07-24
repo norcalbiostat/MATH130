@@ -1,54 +1,69 @@
 ---
-title: "Lesson 03 - Intro to R Markdown"
-date: "Last Updated `r format(Sys.Date(), '%m-%d-%Y')`"
+title: "Lesson 03"
+subtitle: "Introduction to R Markdown"
+date: "_Last updated: `r Sys.Date()`_"
 output:
-  pdf_document:
-    toc: no
-  html_document:
-    highlight: tango
-    theme: yeti
-    toc: yes
-    toc_float: yes
-    css: ../css/yeti.css
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, metropolis, metropolis-fonts]
+    contentSlideClass: ["left", "center"]
+    nature:
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
 ---
-
 
 # Introduction
 
 In this lesson you will learn to write a document using R markdown, integrate live R code into a literate statistical program, compile R markdown documents using `knitr` and related tools, and organize a data analysis sandbox so that it is reproducible and accessible to others.
 
-
-### Learning Objectives
+## Learning Objectives
 
 After completing this lesson learners will be able to create a new R markdown document, identify the components of a R Markdown document, and explain how R markdown files facilitates sharing of reproducible research. 
 
-
-### Pre-requisites
+## Pre-requisites
 * Have R and R Studio installed
 * Have the following packages installed: `rmarkdown`, `knitr`
 
+---
 
 # Document structure 
 
 R Markdown is an example of literate programming where the explanation of the program (or analysis) logic is presented in a natural language (such as English), with supporting pieces of code embedded in the document itself. R Markdown combines normal text such as this sentence, code and the output from the code all in one Rmarkdown (`.Rmd`) file. 
 
+<br>
 
-![Components of a markdown document](../static/img/rmarkdown_components.png)
+`r emo::ji("cinema")` Watch this 1 minute video on [What is R Markdown?](http://rmarkdown.rstudio.com/lesson-1.html)
 
-*Image credit: Data Visualization by Kieran Healy. Available at http://socviz.co/*
+  
+.left-column[.footnote[*Image credit on next page: Data Visualization by Kieran Healy. Available at http://socviz.co/*]]
+
+---
+background-image: url('../static/img/rmarkdown_components.png')
+background-position: center
+background-size: 75%
+
+# Components of a R Markdown document 
+
+---
+
+# Code Chunks 
+
+* Code chunks start with three back ticks (to the left of the 1) and an r in braces. Chunks close (end) with another three back ticks. Note the background color of this section has changed to a different shade. This helps you identify you have closed your code chunk properly. 
+
+* You can insert code chunks by using the button in the top right of an RMD file (Insert --> R), 
+or by typing  `CTRL+ALT+I`. 
+
+* Only code goes in code chunks. That's why they're called **code** chunks. 
+  - No normal text. 
+  - All explanatory text goes outside a code chunk.
 
 
-Code chunks start with three back ticks (to the left of the 1) and an r in braces. Chunks close (end) with another three back ticks. Note the background color of this section has changed to a different shade. This helps you identify you have closed your code chunk properly. 
-
-You can insert code chunks by using the button in the top right of an RMD file (Insert --> R), 
-or by typing  <kbd>`CTRL`</kbd>+<kbd>`ALT`</kbd>+<kbd>`I`</kbd>. 
-
-Only code goes in code chunks. That's why they're called **code** chunks. No normal text. All explanatory text goes outside a code chunk.
-
+---
 
 # Test your setup
 
-Let's create your first markdown file!
+`r emo::ji("pencil2")` Let's create your first markdown file!
 
 1. In R Studio go to _File_ --> _New File_ --> _R Markdown_
 2. Title this document **My First R Markdown Document**, then click OK.
@@ -61,8 +76,12 @@ Let's create your first markdown file!
 
 This is what we mean by reproducible. If you make a change in the code document, and re-knit (aka compile), your changes will be reflected in the generated document. 
 
+`r emo::ji("warning")` If you are asked to install additional packges, go ahead and say yes. Then go back to [lesson 02](02_setup_slides.html) and make sure you have all the necesary packages listed. 
+
+---
 # Make a change
-Play around with modifying the text and the R code.
+
+`r emo::ji("pencil2")`  Play around with modifying the text and the R code.
 
 1. Change the code from `summary(cars)` to `summary(iris)`.   
 2. Write a sentence below this code chunk. It could be "Hello world". 
@@ -70,6 +89,8 @@ Play around with modifying the text and the R code.
 4. Re-knit this document and observe your changes. 
 
 You are now ready to start the first assignment.  
+
+---
 
 # Start Assignment 1
 
@@ -81,9 +102,10 @@ You are now ready to start the first assignment.
 4. This `.Rmd` file is a template for you to use to write your assignment. Write your answers directly into this document. 
 5. After you answer each question, knit the file to ensure that your work is saved, and that your answers are being correctly displayed in the final document. 
 
+---
 
 # Additional Resources
 
-* Intro to R Markdown by R Studio (1 minute video): "[What is R Markdown?](http://rmarkdown.rstudio.com/lesson-1.html)"
+* On the same page as the video you watched earlier, there are additional lessons on using R Markdown. If you want to learn more from this site, here is the full URL http://rmarkdown.rstudio.com/lesson-1.html
     - Relevant portions in this tutorial are "How it works", "Code Chunks", and "Output Formats"
 * Gallery of the vast range of output and product types that you can create using R Markdown including PDF reports, interactive dashboards, maps, webpages like this one and more:  https://rmarkdown.rstudio.com/gallery.html

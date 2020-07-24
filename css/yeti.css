@@ -15,3 +15,8 @@ h5 {
   color: #008cba;
   background-color: #e3e6ea;
 }
+
+
+hr.new1 {
+  border-top: 1px solid red;
+}
