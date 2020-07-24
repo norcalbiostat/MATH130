@@ -2,14 +2,14 @@
 title: "Lesson 04 - Getting Started with R"
 date: "Last Updated `r format(Sys.Date(), '%m-%d-%y')`"
 output:
-  pdf_document:
-    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 

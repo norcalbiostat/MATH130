@@ -3,14 +3,14 @@ title: "Lesson 10 - Creating Intermediate graphics"
 author: "Robin Donatello"
 date: "Last Updated `r format(Sys.Date(), '%m-%d-%Y')`"
 output:
+  pdf_document:
+    toc: no
   html_document:
     highlight: tango
     css: ../css/yeti.css
     theme: yeti
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 ---
 
 # Introduction 
