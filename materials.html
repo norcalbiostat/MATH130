@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -20,6 +20,7 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -69,7 +70,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -218,6 +218,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -229,18 +230,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -316,35 +305,23 @@ $(document).ready(function () {
 </ul>
 <!-- end of list -->
 </div>
-<div id="notes-in-html-format" class="section level3">
-<h3>Notes in HTML format</h3>
+<div id="notes-as-html-slide-decks" class="section level3">
+<h3>Notes as HTML Slide decks</h3>
 <ul>
-<li><a href="notes/01_intro.html">01_intro</a></li>
+<li><a href="notes/01_intro_slides.html">01_intro_slides</a></li>
 <li><a href="notes/02_setup.html">02_setup</a></li>
-<li><a href="notes/03_rmd.html">03_rmd</a></li>
-<li><a href="notes/04_r.html">04_r</a></li>
-<li><a href="notes/05_import.html">05_import</a></li>
-<li><a href="notes/06_dm.html">06_dm</a></li>
-<li><a href="notes/07_factors.html">07_factors</a></li>
-<li><a href="notes/08_plots.html">08_plots</a></li>
-<li><a href="notes/09_dplyr.html">09_dplyr</a></li>
-<li><a href="notes/10_plots2.html">10_plots2</a></li>
+<li><a href="notes/02_setup_slides.html">02_setup_slides</a></li>
+<li><a href="notes/03_rmd_slides.html">03_rmd_slides</a></li>
 </ul>
 <!-- end of list -->
 </div>
 <div id="notes-in-pdf-format" class="section level3">
 <h3>Notes in PDF format</h3>
 <ul>
-<li><a href="notes/01_intro.pdf">01_intro</a></li>
+<li><a href="notes/01_intro_slides.pdf">01_intro_slides</a></li>
 <li><a href="notes/02_setup.pdf">02_setup</a></li>
-<li><a href="notes/03_rmd.pdf">03_rmd</a></li>
-<li><a href="notes/04_r.pdf">04_r</a></li>
-<li><a href="notes/05_import.pdf">05_import</a></li>
-<li><a href="notes/06_dm.pdf">06_dm</a></li>
-<li><a href="notes/07_factors.pdf">07_factors</a></li>
-<li><a href="notes/08_plots.pdf">08_plots</a></li>
-<li><a href="notes/09_dplyr.pdf">09_dplyr</a></li>
-<li><a href="notes/10_plots2.pdf">10_plots2</a></li>
+<li><a href="notes/02_setup_slides.pdf">02_setup_slides</a></li>
+<li><a href="notes/03_rmd_slides.pdf">03_rmd_slides</a></li>
 </ul>
 <!-- end of list -->
 </div>
@@ -379,6 +356,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
