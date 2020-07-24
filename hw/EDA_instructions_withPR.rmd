@@ -36,7 +36,7 @@ Use the grading rubric at the end of this document for guidance as to what you s
 
 You have a choice here. If you are currently working on some data that you would like to explore, talk with me to get your data set approved.
 
-If you do not have your own data, you can choose from one of the following data sets, all of which can be downloaded from the [Data](https://norcalbiostat.netlify.com/data/cleaned_data/) page of my teaching course website. Here are some viable choices:
+If you do not have your own data, you can choose from one of the following data sets, all of which can be downloaded from the [Data](https://norcalbiostat.netlify.com/teaching/data) page of my teaching course website. Here are some viable choices:
 
 * **Depression**: Level of depression (`cesd`), health care, and demographic characteristics.
 * **High School and Beyond**: Educational, vocational, and personal development of elementary and high school students.

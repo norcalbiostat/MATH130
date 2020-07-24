@@ -29,30 +29,32 @@ Taken from: http://blog.revolutionanalytics.com/2015/03/the-most-common-r-error-
 * R Examples repository http://dwoll.de/rexrepos/index.html 
 
 
-### In Person: 
+### In Person (via Zoom during COVID-19): 
 
-* **Community Coding Sessions** - F19 TBD
+* **Community Coding Sessions** - F20 TBD
 
 > _Come code with us! Bring your Data Science and coding questions, data, and projects. We aim to provide a helpful and friendly working environment where you can work, ask questions or discuss ideas related to R, Python, Data Science, or more generally data visualization and analysis._
 
 * **Robin Donatello** - Stat professor. Holt 202. rdonatello@csuchico.edu 
-    - Office Hours TBD
-    - Most community coding sessions. 
+    - No official OH for F20
+    - Some community coding sessions. 
 * **Edward Roualdes** - Stat professor. Holt 204. eroualdes@csuchico.edu
     - OH TBD
     - Most community coding sessions. 
+* **Kathy Gray** - Stat professor. Holt 108. klgray@csuchico.edu
+* **Jane Guo** - Stat professor. Holt xxx. jguo2@csuchico.edu
+* **Nicholas Lytal** - Stat professor. Holt xxx. nlytal@csuchico.edu
+    
+
 * **Peer Mentors** (possibly paid tutoring, some you can catch in the Math tutoring lab)
-    - Victoria Coia vcoia@mail.csuchico.edu
-    - Eduardo Gomez egomez42@mail.csuchico.edu
-    - Jerry Tucay jtucay@mail.csuchico.edu
-    - Ricardo Aguilar raguilar11@mail.csuchico.edu
-    - Mariby Cruz mcruz27@mail.csuchico.edu (available for personal tutoring, including weekends)
+    
 
 
 # What other computers on campus have R? 
 
-* The three reserve computers in the first floor library. You have to ask to use these. 
+* All campus computers should have R & R Studio installed on them. 
 * Butte 207 & 211 are open computer labs.
+
 
     
    

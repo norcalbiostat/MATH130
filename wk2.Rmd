@@ -1,0 +1,31 @@
+---
+title: "Week 2"
+output:
+  html_document:
+    highlight: tango
+    theme: yeti
+    css: ../css/yeti.css
+---
+
+---
+
+`r emo::ji("memo")` Prepare:
+
+* Install the `nycflights13` package. This data set is on all flights out of the three major airports in NYC from 2013. There are multiple data sets contained within this package that are used in the homework. 
+
+`r emo::ji("books")` Notes:
+ 
+* lec05 - Working with data  [[HTML]](notes/06_dm.html)      [[PDF]](notes/06_dm.pdf)     [[RMD]](notes/06_dm_notes.Rmd)
+* lec06 - Wrangling factors  [[HTML]](notes/07_factors.html) [[PDF]](notes/07_factors.pdf) [[RMD]](notes/07_factors_notes.Rmd) 
+
+
+`r emo::ji("pencil2")` Assignment [[HW 2]](hw/hw2.Rmd). 
+
+`r emo::ji("thinking_face")` Additional Resources: 
+
+* R Primer: 
+* [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Factors with forcats**
+
+
+---
+_Last Updated `r Sys.Date()`_

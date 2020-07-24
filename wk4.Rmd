@@ -1,0 +1,44 @@
+---
+title: "Week 4"
+output:
+  html_document:
+    highlight: tango
+    theme: yeti
+    css: ../css/yeti.css
+---
+
+---
+
+Interesting data doesn't live inside R. Lets get data from an external file into R, and learn how to make more complex plots. 
+
+
+`r emo::ji("memo")` Prepare:
+
+* Right click each link and save the following data sets **into the `data` subfolder in your MATH130 folder**. 
+
+`r emo::ji("sign")` **DO NOT RENAME ANYTHING** If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder. 
+
+
+* [NCBirths](https://norcalbiostat.netlify.com/data/NCbirths.csv)
+* [email](https://norcalbiostat.netlify.com/data/email.txt)
+* [Police Shootings](https://norcalbiostat.netlify.com/data/fatal-police-shootings-data.xlsx)
+
+`r emo::ji("books")` Notes:
+
+
+`r emo::ji("books")` Notes:
+
+* lec09 - Getting data into R [[HTML]](notes/05_import.html) [[PDF]](notes/05_import.pdf) [[RMD]](notes/05_import_notes.Rmd)
+* lec10 - Intermediate Graphing                        [[HTML]](notes/10_plots2.html) [[PDF]](notes/10_plots2.pdf) [[RMD]](notes/10_plots2_notes.Rmd)
+* (not quite) [[All the graphing things]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html) (optional)
+
+`r emo::ji("pencil2")` Assignment [[HW 4]](hw/hw4.Rmd).  
+
+
+`r emo::ji("thinking_face")` Additional Resources: 
+
+* R Primer: 
+* [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Import**
+
+---
+_Last Updated `r Sys.Date()`_

@@ -4,17 +4,26 @@ navbar:
   title: "Intro to R"
   left:
   - text: Week1 
-    icon: fa-book
-    href: notes/wk1.html
-
+    href: wk1.html
+  - text: Week2 
+    href: wk2.html
+  - text: Week3 
+    href: wk3.html
+  - text: Week4 
+    href: wk4.html
+  - text: Week5
+    href: wk5.html
       
   right:
-    - text: "Help/FAQ"
+    - text: "Data"
+      icon: fa-database
+      href: https://www.norcalbiostat.com/teaching/data/
+    - text: "Help!"
       icon: fa-question
       href: faq.html
     - text: "Syllabus"
       icon: fa-info-circle
-      href: syllabus.html
+      href: static/syllabus.html
       
 output:
   html_document:

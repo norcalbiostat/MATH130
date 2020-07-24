@@ -1,10 +1,10 @@
 ---
 title: "Week 1"
-date: "Last Updated `r Sys.Date()`"
 output:
-  rmdformats::readthedown:
-    highlight: kate
-    css: C:/GitHub/MATH130/css/rmdformts_mod.css
+  html_document:
+    highlight: tango
+    theme: yeti
+    css: ../css/yeti.css
 ---
 
 
@@ -53,3 +53,5 @@ opts_knit$set(width=75)
 * R Primer: Programming Basics https://rstudio.cloud/learn/primers/1.2
 * [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheets are **R Markdown**, **R Studio IDE**
 
+---
+_Last Updated `r Sys.Date()`_

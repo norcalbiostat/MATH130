@@ -1,0 +1,29 @@
+---
+title: "Week 3"
+output:
+  html_document:
+    highlight: tango
+    theme: yeti
+    css: ../css/yeti.css
+---
+
+---
+
+`r emo::ji("books")` Notes:
+
+* lec07 - Basic Graphing     [[HTML]](notes/08_plots.html)   [[PDF]](notes/08_plots.pdf)   [[RMD]](notes/08_plots_notes.Rmd)
+* lec08 - More data management and aggregation `dplyr` [[HTML]](notes/09_dplyr.html)  [[PDF]](notes/09_dplyr.pdf)  [[RMD]](notes/09_dplyr_notes.Rmd) 
+
+
+`r emo::ji("pencil2")` Assignment [[HW 3]](hw/hw3.Rmd).  
+
+`r emo::ji("thinking_face")` Additional Resources: 
+
+* R Primers: 
+    - Visualization Basics https://rstudio.cloud/learn/primers/1.1
+    - Isolating data with dplyr https://rstudio.cloud/learn/primers/2.2
+* [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheets are **Data Visualization**, **Data Transformation**
+
+
+---
+_Last Updated `r Sys.Date()`_
