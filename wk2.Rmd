@@ -7,6 +7,10 @@ output:
     css: ../css/yeti.css
 ---
 
+# Introduction to working with data in R and wrangling factors
+
+This week we'll learn how to work with spreadsheet-like data in R. We'll also spend some time on how to be the boss of your factors. 
+
 ---
 
 `r emo::ji("memo")` Prepare:

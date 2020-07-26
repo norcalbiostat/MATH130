@@ -7,24 +7,10 @@ output:
     css: ../css/yeti.css
 ---
 
+# Getting started with R and R Studio
 
-```{r setup, echo=FALSE, cache=FALSE, message=FALSE, warning=FALSE}
-library(knitr)
-library(rmdformats)
-
-## Global options
-options(max.print="75")
-opts_chunk$set(echo=FALSE,
-	             cache=TRUE,
-               prompt=FALSE,
-               tidy=TRUE,
-               comment=NA,
-               message=FALSE,
-               warning=FALSE)
-opts_knit$set(width=75)
-```
-
-
+This week we will introduce you to this short course, and how to use your new tools R and R Markdown. 
+---
 
 # `r emo::ji("memo")` Prepare
 
