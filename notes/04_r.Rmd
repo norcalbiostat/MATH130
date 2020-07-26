@@ -1,6 +1,6 @@
 ---
 title: "Lesson 04 - Getting Started with R"
-date: "Last Updated `r format(Sys.Date(), '%m-%d-%y')`"
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
   html_document:
     highlight: tango
@@ -40,7 +40,7 @@ In lesson 02 we saw that we could write R code in the console and get immediate 
 Because we want our code and workflow to be reproducible, and often your code may span several lines at a time, it is better to type the commands we want in a script, and save the script. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. It's also easier to fix mistakes this way, without having to retype in the entire command. 
 
 
-##### Start a new Rmarkdown file
+#### `r emo::ji("pencil2")` Start a new Rmarkdown file
 
 * Go to File --> New File --> R Markdown to open a new R markdown window.
 * Give this file a name such as "Lesson 04 notes", and put your name as the author. 
@@ -52,10 +52,10 @@ Now let's go back to that long expression from lesson 2 (corrected), but this ti
 2 + 5*(8^3)- 3*log(10)
 ```
 
-##### Make a change to the above expression and run the command again. 
+#### `r emo::ji("pencil2")`  Make a change to the above expression and run the command again. 
 
 
-For the rest of this lesson, when asked to try out some code type it into a new code chunk.
+For the rest of this lesson, retype each code chunk below into the notes file you just created. Be sure to annotate these notes as you would take notes in any other class. For you to retain what you are reading and learning, writing out what these pieces of code are doing (e.g. the assignment operator `<-`) in **your own words** is an effective learning technique.
 
 ----
 
@@ -72,7 +72,7 @@ weight_kg <- 55
 `<-` is the assignment operator. It assigns values on the right to objects on
 the left. So, after executing `x <- 3`, the value of `x` is `3`. 
 
-Objects can be given any name such as `x`, `current_temperature`, or `subject_id`. 
+`r emo::ji("warning")` Objects can be given any name such as `x`, `current_temperature`, or `subject_id`. However there are some naming guidelines you need to be aware of. 
 
 * You want your object names to be explicit and not too long. 
 * They cannot start with a number (`2x` is not valid, but `x2` is). 
@@ -349,73 +349,84 @@ This will come back to bug you when dealing with categorical data types called `
 
 # Data Frames
 
-Data frames are like spreadsheet data, rectangular with rows and columns. Ideally each row represents data on a single observation and each column contains data on a single variable, or characteristic, of the observation. This is called `tidy data`. We will start to learn some tools to look at the data, and for getting data from an external file into R for analysis. 
-
-We will use a data set called `iris` that comes with R for now, but in the next lesson learn how to import data from an external file into R. We can open a data viewer window to see the contents of this data frame by typing
-```r
-View(iris)
-```
+Data frames are like spreadsheet data, rectangular with rows and columns. Ideally each row represents data on a single observation and each column contains data on a single variable, or characteristic, of the observation. This is called `tidy data`. This is an important concept that you are encouraged to read more about if you will be doing your own data collection and research.
+[This article is a good place to start](https://www.jstatsoft.org/article/view/v059i10).
 
 A data frame is the representation of data in the format of a table where the columns are vectors that all have the same length. Because columns are vectors, each column must contain a single type of data (e.g., characters, integers, factors). For example, here is a figure depicting a data frame comprising a numeric, a character, and a logical vector.
 
-![figure depicting a data frame](../static/img/data-frame.png)
+![_figure depicting a data frame_](../static/img/data-frame.png)
 
-When data sets are very large, it may be difficult to see all columns or all rows. We can get an idea of the structure of the data frame including variable names and types by using the `str` function,
+
+For this part of the lesson we will use a data set called `diamonds` that comes with the `ggplot2` package that you installed as part of lesson 02. In a later lesson we will learn how to import data from an external file into R. We can load the `diamonds` data set into our global environment by typing 
 ```{r}
-str(iris)
+diamonds <- ggplot2::diamonds
 ```
 
-The iris data set has 5 variables, `Sepal.Length`, `Sepal.Width`, `Petal.Length`, and `Petal.Width` which are all numeric variables, and `Species` which is a factor. 
+`r emo::ji("pencil2")` To see the raw data values, click on the square spreadsheet icon to the right of the data set name in the top right panel of RStudio (circled in green in the image below).
 
+![_screenshot of dataset in the global environment_](../static/img/data.PNG)
+
+This area also tells us a little bit about the data set, specifically that it has 53,940 rows and 10 variables. 
+
+When data sets are very large such as this one, it may be difficult to see all columns or all rows. We can get an idea of the structure of the data frame including variable names and types by using the `str` function,
+```{r}
+str(diamonds)
+```
+
+The `diamonds` data set contains numeric variables such as `carat`, `depth`, and `price`, and ordered factor variables including the `cut`, `color`, and `clarity` of those diamonds. 
 
 ## Inspecting data.frame objects
 
-We already saw how the functions view() and str() can be useful to check the content and the structure of a data frame. Here is a non-exhaustive list of functions to get a sense of the content/structure of the data. Let’s try them out!
+Here is a non-exhaustive list of functions to get a sense of the content/structure of the data. Let’s try them out!
 
 * Size:
-    - `dim(iris)` - returns a vector with the number of rows in the first element, 
+    - `dim(diamonds)` - returns a vector with the number of rows in the first element, 
                        and the number of columns as the second element (the  dimensions of the object)
-    - `nrow(iris)` - returns the number of rows
-    - `ncol(iris)` - returns the number of columns
+    - `nrow(diamonds)` - returns the number of rows
+    - `ncol(diamonds)` - returns the number of columns
 * Content:
-    - `head(iris)` - shows the first 6 rows
-    - `tail(iris)` - shows the last 6 rows
+    - `head(diamonds)` - shows the first 6 rows
+    - `tail(diamonds)` - shows the last 6 rows
 * Names:
-    - `names(iris)` - returns the column names (synonym of colnames() for data.frame objects)
-    - `rownames(iris)` - returns the row names
+    - `names(diamonds)` - returns the column names (synonym of colnames() for data.frame objects)
+    - `rownames(diamonds)` - returns the row names
 * Summary:
-    - `str(iris)` - structure of the object and information about the class, length and content of each column
-    - `summary(iris)` - summary statistics for each column
+    - `str(diamonds)` - structure of the object and information about the class, length and content of each column
+    - `summary(diamonds)` - summary statistics for each column
 
 
-Note: most of these functions are “generic”, they can be used on other types of objects besides a data.frame
+Note: most of these functions are "generic", they can be used on other types of objects besides a data.frame
 
 ## Identifying variables
 
-Data frames can be subset by calling indices (as shown previously), but also by calling their column names directly:
+Data frames can be subset by specifying indices (as shown previously), but also by calling their column names directly:
 
 ```r
-iris[, "Petal.Length"]
-iris[, 3] 
-iris$Petal.Length 
+diamonds[, "depth"]
+diamonds[, 5] 
+diamonds$depth
 ```
 
-The `$` notation has the format `data$variable` and so can be thought of as specifying which data set the variable is in. 
-It is easy to imagine a situation where two different data sets have the same name. 
+The `$` notation has the format `data$variable` and so can be thought of as specifying which data set the variable is in. It is easy to imagine a situation where two different data sets have the same name. 
 
-This allows us to perform calculations on an individual variable. Below is an example of finding the mean Sepal length for all irises in the data set. 
+This allows us to perform calculations on an individual variable. Below is an example of finding the average price for all diamonds in the data set. 
 
 ```{r}
-mean(iris$Petal.Length)
+mean(diamonds$price)
 ```
 
-You can also subset a variable based on the value of a secondary variable. Here is an example of finding the average Sepal Length for the `setosa` species only. 
+You can also subset a variable based on the value of a secondary variable. Here is an example of finding the average price for `Good` quality diamonds. 
 ```{r}
-mean(iris$Petal.Length[iris$Species=="setosa"])
+mean(diamonds$price[diamonds$cut=="Good"])
 ```
 
 Note that the $ is used in both locations where we want to identify a variable. 
 
+That's all we're covering for this week. You are ready to start the homework!
+
+---
+
+# <a href="https://norcalbiostat.github.io/MATH130/wk1.html"><button type="button">Go Back to Week 1</button> </a>
 
 ----
 

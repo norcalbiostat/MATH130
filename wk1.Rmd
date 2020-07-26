@@ -45,6 +45,7 @@ This week we will introduce you to this short course, and how to use your new to
 * R Markdown from R Studio http://rmarkdown.rstudio.com/lesson-1.html
 * R Primer: Programming Basics https://rstudio.cloud/learn/primers/1.2
 * [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheets are **R Markdown**, **R Studio IDE**
+* A paper on [Tidy Data](https://www.jstatsoft.org/article/view/v059i10) concepts. Important read for graduate students or any student doing their own research. 
 
 ---
 _Last Updated `r Sys.Date()`_

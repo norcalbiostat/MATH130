@@ -19,7 +19,7 @@ This week we'll learn how to work with spreadsheet-like data in R. We'll also sp
 
 `r emo::ji("books")` Notes:
  
-* lec05 - Working with data  [[HTML]](notes/06_dm.html)      [[PDF]](notes/06_dm.pdf)     [[RMD]](notes/06_dm_notes.Rmd)
+* lec05 - Working with data  [[HTML]](notes/05_dm.html)      [[PDF]](notes/05_dm.pdf)     [[RMD]](notes/05_dm_notes.Rmd)
 * lec06 - Wrangling factors  [[HTML]](notes/07_factors.html) [[PDF]](notes/07_factors.pdf) [[RMD]](notes/07_factors_notes.Rmd) 
 
 
