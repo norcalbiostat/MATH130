@@ -1,18 +1,18 @@
 ---
-title: "Lesson 06 - Working with Data (notes)"
+title: "Lesson 05 - Working with Data (notes)"
 output: html_document
 ---
 
-
-# Introduction
+This notes file is a place for you to practice writing and executing the code found in the lecture notes. This is also a spot where you can (and should) write your own notes and thoughts. Explain what you are doing in each code chunk in your own words. 
 
 
 ## Preparation
-* Change the path below to import the `NCbirths` data set. 
-* load the `dplyr` library in this same code chunk
+Before class, run the following code chunk to make sure it works. 
+If it does not, try to understand what the error message is telling you. Refer to the [FAQ page](https://norcalbiostat.github.io/MATH130/faq.html) for assistance. 
 
 ```{r}
-NCbirths <- read.csv("../data/NCbirths.csv", header=TRUE)
+library(dplyr)
+ncbirths <- openintro::ncbirths
 ```
 
 ----- 
@@ -53,7 +53,7 @@ Summary statistics for the number of visits.
 
 -----
 
-# Recoding data
+# Data editing (recoding)
 
 
 

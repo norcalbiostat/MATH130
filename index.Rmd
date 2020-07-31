@@ -37,8 +37,6 @@ _Lectures 09-10: Interesting data doesn't live inside R. Lets get data from an e
 ### [Week 5: Putting it all together: Exploratory Project](wk5.html){target="_blank"}
 _Now it's time to put your new 1337 skillz to the test! You will conduct an exploratory data analysis project._
 
-
-
 ----
 
 

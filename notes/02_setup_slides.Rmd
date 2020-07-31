@@ -123,7 +123,6 @@ class: inverse, middle, center
 # Downloading class materials
 
 ---
-
 # Setup your folder for success! `r emo::ji("cinema")`
 
 Using a consistent folder structure across your projects will help keep things
@@ -132,20 +131,19 @@ can be especially helpful when you have multiple projects.
 
 
 .pull-left[
-<br><br>
-`r emo::ji("pencil2")` On your computer, in an easy to find place, create a new folder named `math130`. Then create three subfolders: `data`, `homework`, `notes`.  ]
+`r emo::ji("pencil2")` On your computer, in an easy to find place, create a new folder named `math130`. Then create three subfolders: `data`, `homework`, `notes`.  
 
-.pull-right[
-<img src="../static/img/folder_org.png" width="250px">
+<img src="../static/img/folder_org.PNG" width="250px">
 ]
 
+.pull-right[
+You also need to choose a naming convention for your class folder and stick with it. Recommended options are: 
 
-You need to choose a naming convention for your class folder and stick with it. Recommended options are: 
-
-* ALL CAPS (`MATH130`)
+* ALL CAPS (`MATH130`)  
 * no caps (`math130`)
 * snake_case (`math_130`) 
 * CamelCase (`Math130`) 
+]
 
 
 ---
@@ -299,6 +297,7 @@ install.packages("dplyr")
 install.packages("knitr")
 install.packages("forcats")
 install.packages("readxl")
+install.packages("openintro")
 ```
 ]
 

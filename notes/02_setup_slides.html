@@ -13,7 +13,7 @@ class: center, middle, inverse, title-slide
 
 # Lesson 02
 ## Introduction to your new tools
-### <em>Last updated: 2020-07-22</em>
+### <em>Last updated: 2020-07-31</em>
 
 ---
 
@@ -30,7 +30,7 @@ After completing this lesson learners will be able to:
 * Demonstrate how to provide sufficient information for troubleshooting with the R user community.
 
 ## Icon Definitions
-* ▶️ Forward arrow: Task for you to do
+* ✏️ Forward arrow: Task for you to do
 * 🔽 Down arrow: A download link is present. 
 * ❌ Red X: Something you should NOT do
 * ⚠️ Warning triangle: this is something you should be aware of or pay attention to. 
@@ -66,7 +66,7 @@ background-size: 180px 150px
   - ⚠️ You may later get a message about needing *X11* or *XQuartz*. The download for that program is also on this page. (Mac only)
 * Choose to save the file, do not open or run. 
     
-## ▶️ Install
+## ✏️ Install
 * Install R by double clicking on the downloaded file and following the prompts.
   - Default settings are OK. 
   - Delete any desktop shortcuts that was created (looks like the icon above.)
@@ -88,7 +88,7 @@ background-size: 180px 150px
 * Download R Studio (v 1.3+) from https://www.rstudio.com/products/rstudio/download/#download
 * Choose the download link that corresponds to your operating system. 
 
-## ▶️ Install
+## ✏️ Install
 * Windows: Double click on the downloaded file to run the installer program. 
 * Mac: Double click on the downloaded file, then drag the R Studio Icon into your Applications folder.
   - After you are done, eject the "Drive" that you downloaded by dragging the icon to your trash. 
@@ -98,7 +98,7 @@ name: intro_rstudio
 
 # Navigating R Studio
 
-▶️ Watch the following short video to learn how to navigate R Studio.
+✏️ Watch the following short video to learn how to navigate R Studio.
 
 &lt;br&gt;&lt;br&gt;
 
@@ -113,7 +113,7 @@ name: intro_rstudio
 
 ##  Retain sanity while troubleshooting
 
-▶️ 
+✏️ 
 
 * Open R Studio and go to the file menu go to _Tools_ then _Global Options_.
 * Uncheck "Restore .RData into workspace at startup" 
@@ -128,8 +128,7 @@ class: inverse, middle, center
 # Downloading class materials
 
 ---
-
-# Setup your folder for success!
+# Setup your folder for success! 🎦
 
 Using a consistent folder structure across your projects will help keep things
 organized, and will also make it easy to find/file things in the future. This
@@ -137,20 +136,19 @@ can be especially helpful when you have multiple projects.
 
 
 .pull-left[
-&lt;br&gt;&lt;br&gt;
-▶️ On your computer, in an easy to find place, create a new folder named `math130`. Then create three subfolders: `data`, `homework`, `notes`.  ]
+✏️ On your computer, in an easy to find place, create a new folder named `math130`. Then create three subfolders: `data`, `homework`, `notes`.  
 
-.pull-right[
-&lt;img src="../static/img/folder_org.png" width="250px"&gt;
+&lt;img src="../static/img/folder_org.PNG" width="250px"&gt;
 ]
 
+.pull-right[
+You also need to choose a naming convention for your class folder and stick with it. Recommended options are: 
 
-You need to choose a naming convention for your class folder and stick with it. Recommended options are: 
-
-* ALL CAPS (`MATH130`)
+* ALL CAPS (`MATH130`)  
 * no caps (`math130`)
 * snake_case (`math_130`) 
 * CamelCase (`Math130`) 
+]
 
 
 ---
@@ -207,7 +205,7 @@ where the output or result of the code is displayed with two pound signs (`##`)
 ---
 # R is an overgrown calculator
 
-▶️ In the console type the following code, then press `Enter`.
+✏️ In the console type the following code, then press `Enter`.
 
 
 ```r
@@ -234,12 +232,12 @@ Now try a more complicated equation.
 Uh oh, we got an Error. Nothing to worry about, errors happen all the time. 
 
 
-▶️ Put a open parenthesis `(` before `log10` to fix it and try again. 
+✏️ Put a open parenthesis `(` before `log10` to fix it and try again. 
 
 ---
 # &gt; R is waiting on you...
 
-▶️ In the console type the following code, then press `Enter`.
+✏️ In the console type the following code, then press `Enter`.
 
 ```r
 2 + 5*(8^3)- 3*log(10
@@ -278,7 +276,7 @@ For example we will be creating graphics using functions like `boxplot()` and `h
 
 # Installing Packages
 
-▶️  Start by typing the following in the console to install the `ggplot2` package. 
+✏️  Start by typing the following in the console to install the `ggplot2` package. 
 
 ```r
 install.packages("ggplot2")
@@ -311,7 +309,7 @@ background-size: 180px 150px
 Now that you're a package installing pro, go ahead and install the following packages that we will be using in the next few weeks. 
 
 .pull-left[&lt;br&gt;
-▶️ Type these commands into the console one at a time and wait for it to finish before entering the next command.
+✏️ Type these commands into the console one at a time and wait for it to finish before entering the next command.
 ]
 
 .pull-right[
@@ -321,6 +319,7 @@ install.packages("dplyr")
 install.packages("knitr")
 install.packages("forcats")
 install.packages("readxl")
+install.packages("openintro")
 ```
 ]
 
