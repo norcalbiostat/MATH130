@@ -13,22 +13,28 @@ This week we'll learn how to work with spreadsheet-like data in R. We'll also sp
 
 ---
 
-`r emo::ji("memo")` Prepare:
+# `r emo::ji("memo")` Prepare:
 
-* Install the `nycflights13` package. This data set is on all flights out of the three major airports in NYC from 2013. There are multiple data sets contained within this package that are used in the homework. 
+* Make sure all packages that were listed in ([lesson 02](https://norcalbiostat.github.io/MATH130/notes/02_setup_slides.html#19)) are installed. You can check this by typing `library(packagename)` in the console -- but replace `packagename` with the package name that you are checking 
 
-`r emo::ji("books")` Notes:
+<br>
+
+# `r emo::ji("books")` Notes:
  
 * lec05 - Working with data  [[HTML]](notes/05_dm.html)      [[PDF]](notes/05_dm.pdf)     [[RMD]](notes/05_dm_notes.Rmd)
 * lec06 - Wrangling factors  [[HTML]](notes/07_factors.html) [[PDF]](notes/07_factors.pdf) [[RMD]](notes/07_factors_notes.Rmd) 
 
+<br>
 
-`r emo::ji("pencil2")` Assignment [[HW 2]](hw/hw2.Rmd). 
+# `r emo::ji("pencil2")` Assignments
 
-`r emo::ji("thinking_face")` Additional Resources: 
+* [[HW 2]](hw/hw2.Rmd) - you will write your answers directly in here, and submit your assignment as instructed by the due date. 
 
-* R Primer: 
-* [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Factors with forcats**
+<br>
+
+# `r emo::ji("thinking_face")` Additional Resources: 
+
+* Cheat Sheet for [Forcats](https://github.com/rstudio/cheatsheets/raw/master/factors.pdf). _Need a translated version? See the bottom of the [RStudio resources page](https://rstudio.com/resources/cheatsheets/)_
 
 
 ---

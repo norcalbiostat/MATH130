@@ -276,24 +276,6 @@ The usefulness of this approach will be apparent before the class is finished.
 
 -----
 
-# Additional References
-
-This lesson was an introduction to typical basic data management tasks. In a later lesson you will learn how to use functions in the `dplyr` package to perform the same, and more different data management tasks, in a more streamline manner. Both levels of techniques are equally useful depending on the task. 
-
-There are always many ways to approach a problem in R. Our goal in this class is to provide you with a few ways to think of a problem. You will find what fits best for your coding style as you progress. 
-
-* Tidy Data - The [Journal](http://vita.had.co.nz/papers/tidy-data.pdf), and the 
-  [tutorial](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
-
-
-Resources for handling missing data
-
-* http://www.statmethods.net/input/missingdata.html
-* https://stats.idre.ucla.edu/r/faq/how-does-r-handle-missing-values/
-* http://faculty.nps.edu/sebuttre/home/R/missings.html
-
------
-
 # <a href="https://norcalbiostat.github.io/MATH130/wk2.html"><button type="button">Go Back to Week 2</button> </a>
 
 

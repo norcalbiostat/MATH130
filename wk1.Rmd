@@ -10,6 +10,7 @@ output:
 # Getting started with R and R Studio
 
 This week we will introduce you to this short course, and how to use your new tools R and R Markdown. 
+
 ---
 
 # `r emo::ji("memo")` Prepare
@@ -44,7 +45,8 @@ This week we will introduce you to this short course, and how to use your new to
 
 * R Markdown from R Studio http://rmarkdown.rstudio.com/lesson-1.html
 * R Primer: Programming Basics https://rstudio.cloud/learn/primers/1.2
-* [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheets are **R Markdown**, **R Studio IDE**
+* Cheat Sheets for [RStudio](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf), [R Markdown](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf), and [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf). _Need a translated version? See the bottom of the [RStudio resources page](https://rstudio.com/resources/cheatsheets/)_
+    
 * A paper on [Tidy Data](https://www.jstatsoft.org/article/view/v059i10) concepts. Important read for graduate students or any student doing their own research. 
 
 ---
