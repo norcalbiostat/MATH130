@@ -1,0 +1,298 @@
+---
+title: "Lesson 06 - Controlling your factors"
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
+output:
+  html_document:
+    highlight: tango
+    theme: yeti
+    css: ../css/yeti.css
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: no
+---
+
+
+# Introduction
+In this lesson we will discuss ways to organize and deal with categorical data, also known as factor data types. 
+
+
+### Student Learning Objectives
+After completing this lesson students will be able to
+
+* Convert a numeric variable to a factor variable. 
+* Apply and change labels to factor 
+* Understand and control the ordering of the factor. 
+* Combine multiple levels of a factor variable into one level
+
+
+## Preparation 
+
+`r emo::ji("pencil2")` Prior to this lesson learners should
+
+* Download the [[06_factors_notes.Rmd]](06_factors_notes.Rmd) R markdown file and save into your `notes/Math130` folder. 
+    - Open this in RStudio and ensure the first code chunk will run without error. 
+* Install the `forcats` package ([this was done as part of lesson 02](https://norcalbiostat.github.io/MATH130/notes/02_setup_slides.html#19)). 
+
+We're going to use two data sets from the `openintro` package. The `email` data set contains information on emails received by a specific account for the first three months in 2012, and the `fastfood` data set describes nutrition amounts in 515 fast food items. More information can be seen about these data sets by viewing the help files using `?email` and `?fastfood`. 
+```{r, warning=FALSE, message=FALSE}
+library(forcats)
+email <- openintro::email
+ff    <- openintro::fastfood
+```
+
+
+<img src="../static/img/forcats.png" align="left" style="margin: 0px 20px 0px 20px;"/><p> <br><br><br> The goal of the `forcats` package is to provide a suite of useful tools that solve common problems with factors. Often in R there are multiple ways to accomplish the same task. Some examples in this lesson will show how to perform a certain task using base R functions, as well as functions from the `forcats` package. </p>
+
+<br><br>
+
+----
+
+# What is a factor?
+The term factor refers to a data type used to store categorical variables. The difference between a categorical variable and a continuous variable is that a categorical variable corresponds to a limited number of categories, while a continuous variable can correspond to an infinite number of values.
+
+An example of a categorical variable is the `number` variable in the `email` data set. This variable contains data on whether there was no number, a small number (under 1 million), or a big number in the content of the email. 
+
+First we should confirm that R sees `number` as a factor. 
+```{r}
+class(email$number)
+```
+
+We can use the `levels()` function to get to know factor variables. 
+
+```{r}
+levels(email$number)
+```
+
+There are three levels: `big`, `none`, and `small`. 
+
+How many records are in each level? There are a few ways we can determine this, here are two: 
+
+**Base R**
+```{r}
+table(email$number)
+```
+
+**forcats**
+```{r}
+fct_count(email$number)
+```
+
+Note that `fct_count` also gives you the number of records with that factor level. This is yet another way to generate a frequency table. 
+
+----
+
+# Convert a number to Factor
+
+Sometimes data are entered into the computer using numeric codes such as 0 and 1. These codes stand for categories, such as "no" and "yes". Sometimes we want to analyze these binary variables in two ways: 
+
+* For statistical analyses, the data must be numeric 0/1.
+* For many graphics, the data must be a factor, "no/yes".
+
+**Example: Is the email flagged as spam?**
+The `spam` variable is recorded as an integer variable with values 0 and 1. 
+```{r}
+table(email$spam)
+class(email$spam)
+```
+
+We use the function `factor()` to convert the numeric variable `spam` to a factor, applying `lables` to convert 0 to "no" and 1 to "yes". 
+
+```{r}
+email$spam_fac <- factor(email$spam, labels=c("no", "yes"))
+```
+
+The ordering of the `labels` argument _must_ be in the same order (left to right) as the factor levels themselves. Look back at the order of columns in the `table` - it goes 0 then 1. Thus our labels need to go "no" then "yes". 
+
+**Always confirm your recode** 
+
+Here we confirm that the new variable was created corectly by creating a two-way contingency table by calling the `table(old variable, new variable)` function on both the old and new variables. 
+
+```{r}
+table(email$spam, email$spam_fac, useNA="always")
+```
+
+Here we see that all the 0's were recoded to 'no's, and all the 1's recoded to "yes"'s, and there are no new missing values. Success!
+
+----
+
+# Factor ordering
+Let's revisit the variable `number`, that contains the size of the number in the email. 
+
+```{r}
+table(email$number)
+```
+
+Specifically the ordering from left to right of the factors. Seem odd? This is ordinal data, in that `none` is inherently "smaller" than `small`, which is smaller than `big`. But the ordering goes `big` - `none` - `small`, which is in Alphabetical order!
+
+Gee thanks R. Exactly how I want my factors ordered (NOT!) Let's see a few ways of how to control the ordering. 
+
+## Manually specified 
+We need to take control of these factors! We can do that by re-factoring the existing factor variable, but this time specifying the `levels` of the factor (since it already has labels). 
+
+**Base R**
+```{r}
+factor(email$number, levels=c("none", "small", "big")) %>% table()
+```
+
+**forcats**
+```{r}
+email$number %>% fct_relevel("none", "small", "big") %>% table()
+```
+
+In each of these examples, I pipe (`%>%`) the `table()` function at the end so I can see the results of the reordering. 
+This helps me visually confirm that the code used changed the factor levels to be left to right in increasing content size order. This will be important for graphing. 
+
+`r emo::ji("warning")` Since I did not use the assignment operator (`<-`) here, these changes were not made to the variable in the `email` data set. The examples below demonstrate making an adjustmet to a factor variable and saving that adjustment as a new variable in the data set.
+
+<!---
+## Order by frequency
+The size of the number in an email is _ordinal_, meaning the levels have an internal order. _Nominal_ categorical
+data does not have a natural ordering. One preferrable way to order the levels of a nominal variable is by the frequency of the levels. The `forcats` function `fct_infreq()` accomplishes this task. 
+
+```{r}
+email$number %>% fct_infreq() %>% table()
+```
+
+There are more emails with small numbers in it than there are emails with no numbers, which shows up more often than emails with big numbers. 
+
+## Reversed order
+
+Again, `forcats` to the rescue here. Let's remind ourselves what the original ordering was: 
+
+```{r}
+table(email$number)
+```
+
+And now to reverse this ordering, 
+```{r}
+email$number %>% fct_rev() %>% table()
+```
+
+This just *happens* to be the same as in decreasing frequency order. 
+
+--->
+
+-----
+
+# Factor (re)naming
+Sometimes factors come to us in names we don't prefer. We want them to say something else. 
+
+**Base R**
+The easiest way here is to re-factor the variable and apply new `labels`. 
+```{r}
+email$my_new_number <- factor(email$number, labels=c("1M+", "None", "<1M"))
+```
+
+Ok, but did this work? Trust, but verify. 
+```{r}
+table(email$number, email$my_new_number, useNA="always")
+```
+
+The "big" factor is now labeled "1M+", "none" is named "None", and "small" is "<1M".
+
+**forcats**: use the `fct_recode("NEW" = "old")` function here. 
+```{r}
+email$my_forcats_number <- fct_recode(email$number, "BIG" = "big", "NONE" = "none", "SMALL" = "small")
+table(email$number, email$my_forcats_number, useNA="always")
+```
+
+
+-----
+
+# Collapsing factor levels. 
+
+For analysis purposes, sometimes you want to work with a smaller number of factor variables. Let's look at the restaurants that are included in the `fastfood` data set. 
+
+```{r}
+table(ff$restaurant)
+```
+
+Let's combine all the sandwich, and burger joints together. I am going to save this new variable as `restaurant_new`. 
+
+The syntax for the `fct_collapse` function is `new level` = `"old level"`, where the "old level" is in quotes. As always, it is good practice to create a two way table to make sure the code typed does what we expected it to do. 
+
+```{r}
+ff$restaurant_new <- fct_collapse(ff$restaurant, 
+                                    BurgerJoint = c("Burger King", "Mcdonalds", "Sonic"), 
+                                    Sammich = c("Arbys", "Subway"))
+
+table(ff$restaurant, ff$restaurant_new, useNA="always")
+```
+
+Let's take this one step further and shorten the factor names and rename the levels with spaces (like `Taco Bell`). 
+
+```{r}
+ff$restaurant_shortname <- fct_recode(ff$restaurant_new, 
+                                      "Ckn" = "Chick Fil-A", 
+                                      "DQ" = "Dairy Queen", 
+                                      "TB" = "Taco Bell", 
+                                      "Samm" = 'Sammich', 
+                                      "Burg"= "BurgerJoint")
+
+table(ff$restaurant, ff$restaurant_shortname, useNA="always")
+```
+
+##### `r emo::ji("star")` Let's chain this all together. 
+Sporadically throughout this lesson, and at the end of the last lesson i've used the pipe `%>%` operator as somewhat of a shortcut. This amazing piece of code lets us string together commands. Let's see how to accomplish both changes to the restaurant variable in one single step. 
+
+```{r}
+ff$restaurant %>% fct_collapse(BurgerJoint = c("Burger King", "Mcdonalds", "Sonic"), 
+                               Sammich     = c("Arbys", "Subway")) %>%
+                  fct_recode("Ckn"  = "Chick Fil-A", 
+                             "DQ"   = "Dairy Queen", 
+                             "TB"   = "Taco Bell", 
+                             "Samm" = 'Sammich', 
+                             "Burg "= "BurgerJoint") %>%
+                  table()
+```
+
+Few things to note when chaining commands together: 
+
+1. the first argument (the data or variable) is not included. 
+2. the pipe itself must be at the end of a "sentence"
+
+Don't worry if this doesn't make immediate sense right now. 
+We'll talk more on chaining commands together in a later lesson. 
+There is no harm in accomplishing a task in more than one step. 
+
+-----
+
+# Removing factor levels. 
+
+Sometimes, you don't even want to consider certain levels. This often occurs in survey data where the respondent provides an answer of "Refuse to answer" or the data is coded as the word "missing". The word "missing' is fundamentally different than the `NA` code for a missing value. 
+
+For demonstration purposes, let's get rid of the data from DQ. Who eats something other than ice cream at that place anyhow? 
+
+The most straight forward way to set a varible missing based on it's value is to use a logical statement to choose what rows the variable is set to missing. 
+
+```{r}
+ff$restaurant_shortname[ff$restaurant_shortname == "DQ"] <- NA
+table(ff$restaurant_shortname, useNA="always")
+```
+
+This table shows that there are 42 records missing `restaraunt_shortname`, and 0 records with the level `DQ`. Unfortunately, the level itself still is there. R does not assume just because there are no records with that level, that the named level itself should be removed. We can use the function `fct_drop` to drop the levels with no records. 
+
+```{r}
+fct_drop(ff$restaurant_shortname) %>% table()
+```
+
+If we knew ahead of time we wanted to drop DQ, we could have set that level to `NULL` when we did the initial recode. 
+
+```{r}
+ff$restaurant %>% fct_collapse(BurgerJoint = c("Burger King", "Mcdonalds", "Sonic"), 
+                               Sammich = c("Arbys", "Subway")) %>%
+                  fct_recode("Ckn"  = "Chick Fil-A", 
+                              NULL   = "Dairy Queen", 
+                             "TB"   = "Taco Bell", 
+                             "Samm" = 'Sammich', 
+                             "Burg "= "BurgerJoint") %>%
+                  table()
+```
+
+
+-----
+
+# <a href="https://norcalbiostat.github.io/MATH130/wk2.html"><button type="button">Go Back to Week 2</button> </a>
+
+

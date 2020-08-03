@@ -35,6 +35,9 @@ This week we'll learn how to work with spreadsheet-like data in R. We'll also sp
 # `r emo::ji("thinking_face")` Additional Resources: 
 
 * Cheat Sheet for [Forcats](https://github.com/rstudio/cheatsheets/raw/master/factors.pdf). _Need a translated version? See the bottom of the [RStudio resources page](https://rstudio.com/resources/cheatsheets/)_
+* STAT 133 UC Berkeley https://www.stat.berkeley.edu/classes/s133/factors.html
+* Be the boss of your factors using `dplyr` and `forcats`  http://stat545.com/block029_factors.html
+* R for Data Science - chapter on factors https://r4ds.had.co.nz/factors.html 
 
 
 ---

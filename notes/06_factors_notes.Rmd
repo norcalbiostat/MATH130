@@ -1,0 +1,88 @@
+---
+title: "Lesson 06 - Controlling your factors (notes)"
+output: html_document
+---
+
+This notes file is a place for you to practice writing and executing the code found in the lecture notes. This is also a spot where you can (and should) write your own notes and thoughts. Explain what you are doing in each code chunk in your own words. 
+
+
+## Preparation
+Before class, run the following code chunk to make sure it works. 
+If it does not, try to understand what the error message is telling you. Refer to the [FAQ page](https://norcalbiostat.github.io/MATH130/faq.html) for assistance. 
+
+```{r}
+library(forcats)
+email <- openintro::email
+```
+
+----
+
+# Introduction
+
+
+
+# What is a factor?
+
+First we should confirm that R sees `number` as a factor. 
+```{r}
+
+```
+
+We can use the `levels()` function to get to know factor variables. 
+
+```{r}
+
+```
+
+How many records are in each level?
+
+----
+
+# Convert a number to Factor
+
+**Example: Is the email flagged as spam?**
+
+Use the function `factor()` to convert the numeric variable `spam` to a factor, applying `lables` to convert 0 to "no" and 1 to "yes". 
+
+```{r}
+
+```
+
+**Always confirm your recode** 
+
+```{r}
+
+```
+
+----
+
+# Factor ordering
+
+
+## Manually specified 
+
+```{r}
+
+```
+
+
+-----
+
+# Factor (re)naming
+
+
+```{r}
+
+```
+
+
+# Collapsing factor levels. 
+
+
+## Chaining 
+
+
+----
+
+# Removing factor levels
+
