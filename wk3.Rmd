@@ -7,23 +7,41 @@ output:
     css: ../css/yeti.css
 ---
 
+# Introduction to wrangling data and graphing.
+
+This week you'll learn how to streamline your data processing steps so you can get to making pretty pictures to win friends and influence people faster, and more effectively. 
+
 ---
 
-`r emo::ji("books")` Notes:
+# `r emo::ji("books")` Notes:
 
 * lec07 - Basic Graphing     [[HTML]](notes/08_plots.html)   [[PDF]](notes/08_plots.pdf)   [[RMD]](notes/08_plots_notes.Rmd)
 * lec08 - More data management and aggregation `dplyr` [[HTML]](notes/09_dplyr.html)  [[PDF]](notes/09_dplyr.pdf)  [[RMD]](notes/09_dplyr_notes.Rmd) 
 
+<br>
 
-`r emo::ji("pencil2")` Assignment [[HW 3]](hw/hw3.Rmd).  
+# `r emo::ji("pencil2")` Assignment:
 
-`r emo::ji("thinking_face")` Additional Resources: 
+* [[HW 3]](hw/hw3.Rmd) - you will write your answers directly in here, and submit your assignment as instructed by the due date. 
 
-* R Primers: 
-    - Visualization Basics https://rstudio.cloud/learn/primers/1.1
-    - Isolating data with dplyr https://rstudio.cloud/learn/primers/2.2
-* [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheets are **Data Visualization**, **Data Transformation**
 
+<br> 
+
+# `r emo::ji("thinking_face")` Additional Resources: 
+
+### ggplot
+
+* Hands on learning with R Primers: Visualization Basics https://rstudio.cloud/learn/primers/1.1
+* [ggplot2 cheat sheet](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Visualization**
+
+* For a **full** , and comprehensive reference guide on how to do nearly anything in ggplot -- this is by far my favorite reference http://www.cookbook-r.com/Graphs/ I reference things in there (like how to remove or change the title of a legend) constantly. 
+* [[The full set of lecture notes from which these notes were extracted.]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html).
+* [R graph gallery](https://www.r-graph-gallery.com/) Hundreds of charts with fully reproducible code to help inspire your visualizations. 
+* STHDA: Statistical tools for high-throughput data analysis. http://www.sthda.com/english/
+
+### dplyr
+* Hands on learning with R Primers: Isolating data with dplyr https://rstudio.cloud/learn/primers/2.2
+* [dplyr cheat sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Transformation**
 
 ---
 _Last Updated `r Sys.Date()`_

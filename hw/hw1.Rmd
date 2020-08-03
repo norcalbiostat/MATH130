@@ -1,9 +1,10 @@
 ---
-title: "Assignment 1"
-author: "STUDENT NAME"
+title: "Homework 1"
+author: "NAME"
 date: "DATE"
-output: html_document
-linkcolor: blue
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 Here's your chance to demonstrate that you can integrate the topics and skills you learned so far into a literate report. 
@@ -28,52 +29,68 @@ The first question is done for you as an example.
 2. What are the values after each statement in the following?
 
 ```{r}
-mass <- 47.5            # a
-age  <- 122             # b
-mass <- mass * 2.0      # c
-age  <- age - 20        # d
-mass_index <- mass/age  # e
+(mass <- 47.5)            # a 
+(age  <- 122 )            # b
+(mass <- mass * 2.0)      # c 
+(age  <- age - 20)        # d
+(mass_index <- mass/age)  # e
 ```
 
 a. `mass` = 
-b. `age` = 
+b. `age` =
 c. `mass` = 
 d. `age` = 
 e. `mass_index` = 
 
+3. Assign a numeric value to the variable `my_apples`, assign a different numeric value to the variable `my_oranges`. Add these two together and assign the result to the variable `my_fruit`. Print the result of `my_fruit` to the report.
 
-3. Assign a numeric value to the variable `my_apples`, assign a different numeric value to the variable `my_oranges`. Add these two together and assign the result to the variable `my_fruit`. Print the result of `my_fruit` to the report. 
 ```{r}
 
 ```
 
-4. What type of data is `my_fruit`? Use a function discussed in lesson 04 to have R show the answer to this question.
+4. What is the data type of the variable `my_fruit`? 
+
 ```{r}
 
 ```
 
 
-5. A variable that classified as `logical` can hold only what two values? These are also called Boolean variables. 
+5. A variable that classified as `logical` can hold only what two values? These are also called Boolean variables. (You don't need to write code to answer this question.)
+
+
 
 
 6. Knit this document. 
 
+# Vectors()
 
-# Vectors
-
-1. The following vectors have been created for you. Use the `class()` function to identify the type of vector for each of these examples. Report your answer for each in a sentence below. 
+1. Fill in the blanks below to eplore what happens when you have vecotrs of different data types. Report your answer for each in a sentence below.
 
 ```{r}
-num_char <- c(1, 2, 3, "a")
-num_logical <- c(1, 2, 3, TRUE)
-char_logical <- c("a", "b", "c", TRUE)
-tricky <- c(1, 2, 3, "4")
+num_only <- c(1,2,3,4)                    #a
+char_only <- c("a","b","c","d")           #b
+num_char <- c(1, 2, 3, "a")               #c
+num_logical <- c(1, 2, 3, TRUE)           #d
+char_logical <- c("a", "b", "c", TRUE)    #e
+tricky <- c(1, 2, 3, "4")                 #f
+class() 
+class()
+class()
+class()
+class()
+class()
 ```
 
+* a. 
+* b. 
+* c. 
+* d. 
+* e. 
+* f. 
 
-Let's go to Vegas!
+## Let's go to Vegas!
 
-1. Create three vectors (`weekday`, `poker`, `roulette`) using the `c()` operator to describe the following outcome. 
+2. Create three vectors (`weekday`, `poker`, `roulette`) using the `c()` operator to describe the following outcome. 
 
 * `weekday`: The 5 weekdays. Use these three letter codes: mon, tue, wed, thu, fri.
 * `poker`: 
@@ -89,40 +106,37 @@ Let's go to Vegas!
     - Thursday you lost $350
     - Friday you won $10
 
-
 _Hint: If I won $30 on monday and lost $20 on tuesday, my vector would look like `c(30, -20)`_
+
 ```{r}
 
 ```
 
-2. Use the `sum()` function to calculate how much money did you gain/loose on each game.
+3. Use the `sum()` function to calculate how much money did you gain/lose on each game. What game did you do better on?
+
 ```{r}
 
 ```
 
-3. Add the results of both vectors together, then calculate your net gain over the weekend. Did you come out ahead? 
-```{r}
-
-```
-
-
-
-4. On which days did you make money on poker? _Hint: subset the `weekday` vector using a logical statement about `poker`_
-```{r}
-
-```
-
-
-
-
-5. On which days did you do better on poker than roulette? _Hint: compare the two vectors using a statement of inequality_
+4. Add the results of both vectors together, then calculate your net gain over the weekend. Did you come out ahead?
 
 ```{r}
 
 ```
 
 
-6. Knit this document to make sure it still works. 
+5. On which days did you make money on poker? _Hint: subset the `weekday` vector using a logical statement about `poker`_
+```{r}
+
+```
+
+6. On which days did you do better on poker than roulette? _Hint: compare the two vectors using a statement of inequality_
+
+```{r}
+
+``` 
+
+7. Knit this document to make sure it still works. 
 
 
 # Data Frames
@@ -130,26 +144,39 @@ _Hint: If I won $30 on monday and lost $20 on tuesday, my vector would look like
 Run the code chunk below to read in the Ames data set from the web. This data set is on all residential home sales in Ames, Iowa between 2006 and 2010. The data set contains many explanatory variables on the quality and quantity of physical attributes of residential homes in Iowa sold between 2006 and 2010. Most of the variables describe information a typical home buyer would like to know about a property (square footage, number of bedrooms and bathrooms, size of lot, etc.). A detailed discussion of variables can be found in the original paper: De Cock D. 2011. Ames, Iowa: Alternative to the Boston Housing Data as an End of Semester Regression Project. Journal of Statistics Education; 19(3).
 
 ```{r}
-ames <- read.csv("https://norcalbiostat.netlify.com/data/ames.csv")
+ames <- openintro::ames
+```
+```{r}
+View(ames)
 ```
 
+
 1. List out the variable name and data types for five different variables in the Ames data set
+
 
 
 2. How many observations does the ames data set have? How many variables? 
 
 
+
 3. Extract the variable that measures the overall condition of the house (`Overall.Cond`) by position (using bracket index notation `[]`), and by variable names (using `$` notation)
 
+```{r}
+
+```
 
 4. What is the maximum number of Full bathrooms (`Full.bath`) in this housing data set? 
 
+```{r}
+
+```
 
 5. Do any houses have more than 2 fireplaces (`Fireplaces`)? _Hint: Use the `summary()` function._
+```{r}
 
+```
 
+6. What is the average sale price (`price`) for houses sold in 2010? (`Yr.Sold`). Be sure to match the data type of your logical statement with the data type of `Yr.Sold`. The year should be written as 2010, not "2010". 
+```{r}
 
-6. What is the average sale price (`SalePrice`) for houses sold in 2010? (`Yr.Sold`). Be sure to match the data type of your logical statement with the data type of `Yr.Sold`. The year should be written as `2010`, not "2010". 
-
-
-
+```

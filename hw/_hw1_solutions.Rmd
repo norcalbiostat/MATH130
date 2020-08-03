@@ -1,31 +1,49 @@
 ---
-title: "Lab1"
-author: "SOLUTIONS"
+title: "Homework 1"
+author: "NAME"
 date: "DATE"
-output: html_document
-linkcolor: blue
+output:
+  pdf_document: default
+  html_document: default
 ---
 
-Here's your chance to demonstrate that you can integrate the topics and skills you learned through the Data Camp course into a literate report. Each section asks you to perform a few tasks based on each of the chapters in the Introduction to R course. 
+Here's your chance to demonstrate that you can integrate the topics and skills you learned so far into a literate report. 
 
 When the question asks you to perform a coding task, insert a code chunk after each question where you will write the code to answer that question. Knitting after each completed code chunk will help you to ensure your final product works as intended! That way if it breaks, you know exactly where the error lies. It's like saving after every answer!
 
 The first question is done for you as an example. 
 
-## Intro to basics
+# Object assignments
 
-0. Calculate 3 + 4. Put the answer in the grey area below and knit the document. 
+0. Calculate 3 + 4. Put the answer in the grey area below and knit the document. Make sure you can find this code and output in the resulting HTML file. 
 ```{r}
 3+4
 ```
 
 
-1. Calculate $2^5$, then knit the document. 
+1. Calculate $2^5$ by typing this mathematical expression in the code chunk below and then knit the document. 
 ```{r}
 2^5
 ```
 
-2. Assign a numeric value to the variable `my_apples`, assign a different numeric value to the variable `my_oranges`. Add these two together and assign the result to the variable `my_fruit`. Print the result of `my_fruit` to the report. 
+2. What are the values after each statement in the following?
+
+```{r}
+(mass <- 47.5)            # a 
+(age  <- 122 )            # b
+(mass <- mass * 2.0)      # c 
+(age  <- age - 20)        # d
+(mass_index <- mass/age)  # e
+```
+
+a. `mass` = 47.5 
+b. `age` = 122
+c. `mass` = 95
+d. `age` = 102
+e. `mass_index` = 0.9313725
+
+3. Assign a numeric value to the variable `my_apples`, assign a different numeric value to the variable `my_oranges`. Add these two together and assign the result to the variable `my_fruit`. Print the result of `my_fruit` to the report.
+
 ```{r}
 my_apples <- 6
 my_oranges <- 19
@@ -33,30 +51,54 @@ my_fruit <- my_apples + my_oranges
 my_fruit
 ```
 
-3. Consider the following code below. What type of data is `a`? That is, what is it's `class`? 
+4. What is the data type of the variable `my_fruit`? 
+
 ```{r}
-a <- "green"
-class(a)
+class(my_fruit)
 ```
 
-Its class is "character"
+Its class is "numeric"
 
-4. A variable that classified as `logical` can hold only what two values? These are also called Boolean variables. 
+5. A variable that classified as `logical` can hold only what two values? These are also called Boolean variables. (You don't need to write code to answer this question.)
 
 TRUE and FALSE
 
 
-5. Knit this document. 
+6. Knit this document. 
 
-## Vectors
+# Vectors()
 
-Data Camp took you through a tour of Vegas data. Let's recreate and play around with a week at the tables. 
+1. Fill in the blanks below to eplore what happens when you have vecotrs of different data types. Report your answer for each in a sentence below.
 
-1. Create three vectors (`weekday`, `poker`, `roulette`) to describe the following outcome. Be sure to use these vector names exactly as I have written them here. 
+```{r}
+num_only <- c(1,2,3,4)                    #a
+char_only <- c("a","b","c","d")           #b
+num_char <- c(1, 2, 3, "a")               #c
+num_logical <- c(1, 2, 3, TRUE)           #d
+char_logical <- c("a", "b", "c", TRUE)    #e
+tricky <- c(1, 2, 3, "4")                 #f
+class(num_only) 
+class(char_only)
+class(num_char)
+class(num_logical)
+class(char_logical)
+class(tricky)
+```
 
-* `weekday`: The 5 weekdays.
+* a. The `num_only` vector contains only numeric values, and it's class is numeric.
+* b. The `char_only` vector contains only character values, and it's class is character. 
+* c. The `num_char` vector contains numeric and character values, and it's class is character.
+* d. The `num_logical` vector contains numeric and Boolean values, and it's class is numeric. 
+* e. The `char_logical` vector contains character and Boolean values, and it's class is character. 
+* f. The `tricky` vector contains three numeric value and one character value("4"), and it's class is character. 
+
+## Let's go to Vegas!
+
+2. Create three vectors (`weekday`, `poker`, `roulette`) using the `c()` operator to describe the following outcome. 
+
+* `weekday`: The 5 weekdays. Use these three letter codes: mon, tue, wed, thu, fri.
 * `poker`: 
-    - On Monday you won $140
+    - On Monday you won $140 
     - Tuesday you lost $50
     - Wednesday you won $20
     - Thursday you lost $120
@@ -68,103 +110,88 @@ Data Camp took you through a tour of Vegas data. Let's recreate and play around 
     - Thursday you lost $350
     - Friday you won $10
 
+_Hint: If I won $30 on monday and lost $20 on tuesday, my vector would look like `c(30, -20)`_
+
 ```{r}
 weekday <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 poker <- c(140, -50, 20, -120, 240)
 roulette <- c(-24, -50, 100, -350, 10)
 ```
 
-2. How much money did you gain/loose overall? What game did you do better on? 
+3. Use the `sum()` function to calculate how much money did you gain/lose on each game. What game did you do better on?
+
 ```{r}
-sum(poker) + sum(roulette)
+sum(poker)
+sum(roulette)
 sum(poker) > sum(roulette)
 ```
-Lost $84 overall. Did better on poker.
+* We gained `$230` on poker and lost `$314` on roulette. We did better on poker game.   
 
-## Matrix
-
-Click the green play button in the top right corner of this code chunk to run all code in that chunk. This will create a matrix containing the box ofice numbers for all current Star Wars movies. 
+4. Add the results of both vectors together, then calculate your net gain over the weekend. Did you come out ahead?
 
 ```{r}
-domestic <- c(474.544, 310.676, 380.270, 460.998, 290.271, 309.205, 936.662, 321.282)
-worldwide <- c(1027.044, 656.695, 848.998, 786.598, 534.171, 572.705, 2058.662, 635.282)
-star_wars_matrix <- matrix(c(domestic, worldwide), ncol=2, byrow=FALSE)
-rownames(star_wars_matrix) <- c("phantom_menace", "attack_clones", "reveng_sith", "new_hope", "empire_strikes", "return_jedi", "force_awakens", "last_jedi")
-colnames(star_wars_matrix) <- c("US", "non-US")
+sum(poker+roulette)
+```
+We came out behind.
+
+5. On which days did you make money on poker? _Hint: subset the `weekday` vector using a logical statement about `poker`_
+```{r}
+weekday[poker>0]
 ```
 
-1. Print out this matrix and take a look at it. 
+6. On which days did you do better on poker than roulette? _Hint: compare the two vectors using a statement of inequality_
+
 ```{r}
-star_wars_matrix
+weekday[poker > roulette]
+``` 
+
+7. Knit this document to make sure it still works. 
+
+
+# Data Frames
+
+Run the code chunk below to read in the Ames data set from the web. This data set is on all residential home sales in Ames, Iowa between 2006 and 2010. The data set contains many explanatory variables on the quality and quantity of physical attributes of residential homes in Iowa sold between 2006 and 2010. Most of the variables describe information a typical home buyer would like to know about a property (square footage, number of bedrooms and bathrooms, size of lot, etc.). A detailed discussion of variables can be found in the original paper: De Cock D. 2011. Ames, Iowa: Alternative to the Boston Housing Data as an End of Semester Regression Project. Journal of Statistics Education; 19(3).
+
+```{r}
+ames <- openintro::ames
 ```
-
-
-2. Select the rows for the second trilogy released (Episodes I-III). This is also referred to as subsetting.
 ```{r}
-star_wars_matrix[1:3, ]
-```
-
-3. Use `colSums()` on your selection above to find out how much this trilogy made in total. 
-
-```{r}
-colSums(star_wars_matrix[1:3,])
-```
-
-4. Do the same calculation for the first trilogy (Episodes IV-VI), and 2 released so far of the most recent trilogy (Episodes VII & VIII) 
-
-```{r}
-colSums(star_wars_matrix[c(4,5,6,7,8), ])
+View(ames)
 ```
 
 
+1. List out the variable name and data types for five different variables in the Ames data set
 
-## Data Frames
-In the section above, all that data was contained in separate vectors. Let's combine them into a `data.frame` and explore. Data frames are a more common way of storing data in R. 
+Order, integer 
+PID, integer
+MS. Subclass, integer
+MS. Zoning, character
+Lot. Frontage, integer
 
-Use the following code to create a data frame out of the vegas data. The code chunk has already been written for you, you just need to remove the `eval=FALSE` portion so that it will evaluate. 
+2. How many observations does the ames data set have? How many variables? 
+
+2930 observations and 82 variables. 
+
+3. Extract the variable that measures the overall condition of the house (`Overall.Cond`) by position (using bracket index notation `[]`), and by variable names (using `$` notation)
+
 ```{r}
-vegas <- data.frame(day = weekday, poker = poker, roulette = roulette)
+ames[,22]
+ames$Overall.Cond
 ```
 
-1. Print out the `vegas` data set in it's entirety
+4. What is the maximum number of Full bathrooms (`Full.bath`) in this housing data set? 
+
 ```{r}
-vegas
+max(ames$Full.Bath)
 ```
 
-> Knit now. Did the vegas data set show up in your output? 
-> If not, did you remove `eval=FALSE` from your code chunk options? 
-> If that didn't work, did you name your vectors earlier exactly `weekday`, `poker`, and `roulette`?
-
-
-2. Print out the records for just Tuesday and Thursday using bracket notation 
-and indices `[,]`. _Hint: To print out the first two columns you could use [,c(1,2)]_
+5. Do any houses have more than 2 fireplaces (`Fireplaces`)? _Hint: Use the `summary()` function._
 ```{r}
-vegas[c(2,4),]
+summary(ames$Fireplaces)
 ```
+* There are houses that have more than 2 fireplaces.
 
-3. Use dollar sign notation to print just the poker variable: (`vegas$poker`).
+6. What is the average sale price (`price`) for houses sold in 2010? (`Yr.Sold`). Be sure to match the data type of your logical statement with the data type of `Yr.Sold`. The year should be written as 2010, not "2010". 
 ```{r}
-vegas$poker
-```
-
-
-3. Print out the records for Wednesday only, using bracket notation and a logical statement such
-as `vegas$day == "Wed"` to identify the row of interest. 
-```{r}
-vegas[vegas$day== "Wednesday",]
-```
-
-
-4. Create a new variable called `vegas$total` that adds the daily totals for each
-game together. Print the full data set again. Notice that the `total` variable is now 
-part of the `vegas` dat set. 
-```{r}
-vegas$total <- rowSums(vegas[,c(2,3)])
-```
-
-5. Use this new total vector to subset the data frame now to only include days
-where there was a positive total. Store this result as a new object called 
-`vegas$win_days`, and print this new object to the screen. 
-```{r}
-vegas[vegas$total > 0, ]
+mean(ames$price[ames$Yr.Sold==2010])
 ```

@@ -1,99 +1,113 @@
 ---
-title: 'HW 2: Importing, exploring, managing data using functions'
+title: "Homework 2"
 author: "NAME"
 date: "DATE"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
-Answer the questions in this lab and submit the compiled WORD or PDF by the deadline. 
+# Introduction
 
+In this homework assignment, you will be working with data and managing factors. The data sets you will use are, `ncbirths` and `smoking` data set which come part of the `openintro` package.
 
-1. Questions in this assignment use the `NCbirths` data set. Read in the data set in the code chunk below. 
+The code chunk below sets some code chunk options (using `opts_chunk` from the `knitr` package) to make your knitted report output more readable. I encourage you to play around with these options to learn how they work. 
 
-```{r}
-df <- read.csv("https://norcalbiostat.netlify.com/data/NCbirths.csv")
-```
-
-
-2. When reading in the `Police Shootings` Excel data set, what do the arguments `sheet=1` and `col_names=TRUE` mean? 
-
-Read from the first sheet and the first row contains column names.
-
-
-3. Use the `str()` function to determine how many observations and variables are contained in the `NCbirths` data set. Write the code necessary, then answer the question in a complete sentence. 
-
-```{r}
-str(df)
-```
-The NCbirths dataframe contains 1000 observations (rows) and 13 variables (columns).
-
-4. Go to Dr. D's data website (http://norcalbiostat.com/data/cleaned_data/) and find 3 data sets with different file types. For each file state the name of the file, it's file type, and the function you would need to use to read that file into R. 
-
-> Ex: The `email` data set is tab-delimited text (.txt) file. It can be read into R using the `read.delim()` function. 
-
-* The `NCbirts` data set is comma delimited, therefore `read.csv()` will work.
-
-* The `parentalHIV` data set is tab delimited, therefore `read.delim()` will work.
-
-* The `Police Shootings` data set is an excel file, therefore `read_excel()` will work.
-
-
-
-5. Calculate the mean age of the mothers (`mage`) in the sample.
-```{r}
-mean(df$mage)
-```
-
-
-6. Pregnancies last on average 38 weeks. Recode the `weeks` variable to change all records where `weeks` is greater than 38, to equal 38. That is, for all record where `weeks>38`, change the value of `weeks` to `<- 38`. 
-
-```{r}
-df$weeks[df$weeks > 38] <- 38
-```
-
-
-7. Use the `summary` function to calculate summary statistics on the fathers age (`fage`). Round to 3 digits using the `digits=` argument. Don't forget that you can look at the bottom of the help for summary (`?summary`) file for examples on how to use this function.  
-```{r}
-summary(df$fage,digits=3)
-```
-
-   
-8. What is the distribution of smoking habit (`habit`) among? i.e. How many are smokers and how many are non-smokers?  _Hint: Use the `table()`_ function. 
-```{r}
-table(df$habit)
-```
-   
-
-9. Use the `is.na()` function to create a new variable called `missing_gained` on the `NCbirths` data set that identifies if data on the `gained` variable is missing. 
-    
-    
-```{r}
-df$missing_gained <- is.na(df$gained)
-```
-    
-   
-10. What percent of records are missing data on weight gained during pregnancy? There are several ways you can calculate this! Explain what your process, and answer the question in a full sentence. 
-
-```{r}
-table(df$missing_gained)
-mean(df$missing_gained)
-```
-
-We could use the table function and do the calculations by hand, or be clever about it and let the function `mean()` do the math for us.  Either way, `.027*100`% is missing.
-
-
-11. Use the `ifelse()` function to dichotomize the `weeks` variable at it's mean where records with values over the mean are labeled `AboveAve` and records with values below the mean are labeled `UnderAve`. Call this new variable `week_ave`. (_Hint: Calculate the mean value for the variable `weeks`, then use that number in the logical statement part of the `ifelse` function._)
-
-```{r}
-week_ave <- mean(df$weeks, na.rm=TRUE)
-df$week_ave <- ifelse(df$weeks <= week_ave, "UnderAve", "AboveAve")
-```
-
-
-
-12. Create a frequency table for your new variable (`week_ave`) in the previous question. Then use the pipe operator `%>%` to add on the function `prop.table()` at the end. What does the `prop.table()` function do? 
-
-```{r}
+```{r, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.height=4, fig.width=5, fig.align='center') 
 library(dplyr)
-df$week_ave %>% table %>% prop.table
+library(forcats)
+ncbirths <- openintro::ncbirths
+smoking <- openintro::smoking
 ```
+
+# Working with Data
+
+This section we will use `ncbirths` data set. 
+
+1. Calculate the mean age of the mothers (`mage`).
+```{r}
+mean(ncbirths$mage)
+```
+
+2. Pregnancies last on average 38 weeks. Recode the `weeks` variable to change all records where `weeks` is greater than 38, to equal 38. That is, for all record where `weeks>38`, change the value of `weeks` to `<- 38`.
+
+```{r}
+ncbirths$weeks[ncbirths$weeks > 38] <- 38
+```
+
+3. Use the `summary` function to calculate summary statistics on the fathers age (`fage`). Round to 3 digits using the `digits=` argument. Don't forget that you can look at the bottom of the help for summary (`?summary`) file for examples on how to use this function.  
+```{r}
+summary(ncbirths$fage,digits=3)
+```
+
+4. Use the `is.na()` function to create a new variable called `missing_gained` on the `ncbirths` data set that identifies if data on the `gained` variable is missing.
+
+```{r}
+ncbirths$missing_gained <- is.na(ncbirths$gained)
+```
+   
+5. What percent of records are missing data on weight gained during pregnancy? There are several ways you can calculate this! Explain what your process, and answer the question in a full sentence. 
+
+```{r}
+table(ncbirths$missing_gained)
+mean(ncbirths$missing_gained)
+```
+
+We could use the table function and do the calculations by hand, or be clever about it and let the function `mean()` do the math for us. Either way, `.027*100`% is missing.
+
+
+6. Use the `ifelse()` function to dichotomize the `weeks` variable at it's mean where records with values over the mean are labeled `AboveAve` and records with values below the mean are labeled `UnderAve`. Call this new variable `week_ave`. (_Hint: Calculate the mean value for the variable `weeks`, then use that number in the logical statement part of the `ifelse` function._)
+
+```{r}
+week_ave <- mean(ncbirths$weeks, na.rm=TRUE)
+ncbirths$week_ave <- ifelse(ncbirths$weeks <= week_ave, "UnderAve", "AboveAve")
+```
+
+7. Create a frequency table for your new variable (`week_ave`) in the previous question. Then use the pipe operator `%>%` to add on the function `prop.table()` at the end. What does the `prop.table()` function do? 
+
+```{r}
+ncbirths$week_ave %>% table() %>% prop.table()
+```
+* `prop.table()` function gives you,instead of frequency, the percentage  of a value or category in a variable. 
+
+# Wrangling Factors 
+
+In this section, you will use `smoking` data set.
+
+1. Examine the variable `ethnicity` using `fct_count`. Then, collapse levels of that variable into a smaller number of factors using `fct_collapse`. _Hint: Create a new factor variable as part of the `smoking` data set (i.e smoking$ethnicity_new)._
+
+* "NA" = c("Refused","Unknown")
+* Asian = c("Chinese", "Asian")
+
+```{r}
+fct_count(smoking$ethnicity)
+smoking$ethnicity_new <- fct_collapse(smoking$ethnicity
+,"NA"=c("Refused","Unknown")
+,Asian=c("Asian","Chinese"))
+```
+
+2. Create a two-way `table` of `ethnicity` against `ethnicity_new` to confirm that this new factor variable was created correctly.
+
+```{r}
+table(smoking$ethnicity, smoking$ethnicity_new)
+```
+
+3. Using `fct_recode`, create a new factor variable `recode_ethnicity` from `ethnicity_new` with labels "A"(Asian), "B"(Black), "M"(Mixed), "W"(White). Make sure you create this new variable as part of the `smoking` data set. (i.e. `smoking$recode_ethnicity <-`) 
+
+```{r}
+smoking$recode_ethnicity <- smoking$ethnicity_new %>% fct_recode("A"="Asian", "B"="Black"
+,"M"="Mixed", "W"="White")
+table(smoking$recode_ethnicity)
+```
+
+
+4.  Manually reorder the level of `ethnicity_new` variable in an increasing order using `fct_relevel`.
+
+```{r}
+smoking$ethnicity_new %>% fct_relevel("Mixed","NA","Black","Asian","White") %>% table()
+```
+
+
+
 

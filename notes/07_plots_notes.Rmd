@@ -1,5 +1,5 @@
 ---
-title: "Lesson 06 - Creating graphics"
+title: "Lesson 07 - Creating graphics"
 output: html_document
 ---
 
@@ -8,9 +8,9 @@ output: html_document
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(warning=FALSE, message=FALSE,error=TRUE) 
 library(ggplot2)
-data("diamonds")
+diamonds <- ggplot2::diamonds
 set.seed(1410) # Make the sample reproducible
-dsmall <- diamonds[sample(nrow(diamonds), 1000), ]
+dsmall <- diamonds[sample(nrow(diamonds), 1000), ] # pull a quasi-random sample of 1000 records
 ```
 
 # Univariate (One Variable)
@@ -27,7 +27,7 @@ A table of `cut`.
 
 
 ### Barcharts / Barplots
-Fill in the blankn line to create a barchart of `cut`. 
+Fill in the blank line to create a barchart of `cut`. 
 
 ```{r}
 ggplot(dsmall, aes(x=____)) + geom_bar()

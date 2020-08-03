@@ -1,9 +1,11 @@
 ---
-title: "Lesson 08 - Creating graphics"
-author: "Robin Donatello"
-date: "Last Updated `r format(Sys.Date(), '%m-%d-%Y')`"
+title: "Lesson 07 - Creating graphics"
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
   html_document:
+    highlight: tango
+    theme: yeti
+    css: ../css/yeti.css
     toc: yes
     toc_float: yes
   pdf_document:
@@ -277,24 +279,9 @@ ggplot(dsmall, aes(x=color, y=carat, fill=color)) +
         geom_boxplot(alpha=.5, width=.2)
 ```
 
+    
 -----
 
-# Additional Resources
+# <a href="https://norcalbiostat.github.io/MATH130/wk3.html"><button type="button">Go Back to Week 3</button> </a>
 
-For a **full** , and comprehensive reference guide on how to do nearly anything in ggplot -- this is by far my favorite reference http://www.cookbook-r.com/Graphs/ I reference things in there (like how to remove or change the title of a legend) constantly. 
-
-* [[The full set of lecture notes from which these notes were extracted.]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html).
-* R Graphics: https://www.stat.auckland.ac.nz/~paul/RGraphics/rgraphics.html The best book about using base graphics
-* STHDA: Statisical tools for high-throughput data analysis. http://www.sthda.com/english/
-* Quick-R: [Basic Graphs](http://www.statmethods.net/graphs/index.html)
-* Quick-R: [ggplot2](http://www.statmethods.net/advgraphs/ggplot2.html)
-* Books 
-    - ggplot2 http://ggplot2.org/book/ or http://amzn.com/0387981403
-    - qplot http://ggplot2.org/book/qplot.pdf
-* Help lists
-    - ggplot2 mailing list http://groups.google.com/group/ggplot2
-    - stackoverflow http://stackoverflow.com/tags/ggplot2
-    - Chico R users group
-    
-For any other Google Search be sure to limit searches to within the past year or so. R packages get updated very frequently, and many functions change or become obsolete. 
 

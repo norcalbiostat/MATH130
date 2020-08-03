@@ -1,78 +1,104 @@
 ---
-title: "HW 2: Importing, exploring, managing data using functions"
+title: "Homework 2"
 author: "NAME"
 date: "DATE"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
-Answer the questions in this lab and submit the compiled WORD or PDF by the deadline. 
+# Introduction
 
+In this homework assignment, you will be working with data and managing factors. The data sets you will use are, `ncbirths` and `smoking` data set which come part of the `openintro` package.
 
-1. Questions in this assignment use the `NCbirths` data set. Read in the data set in the code chunk below. 
+The code chunk below sets some code chunk options (using `opts_chunk` from the `knitr` package) to make your knitted report output more readable. I encourage you to play around with these options to learn how they work. 
 
-```{r}
-# Read in the NC Births data set here, then delete this comment
+```{r, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.height=4, fig.width=5, fig.align='center') 
+library(dplyr)
+library(forcats)
+ncbirths <- openintro::ncbirths
+smoking <- openintro::smoking
 ```
 
+# Working with Data
 
-2. When reading in the `Police Shootings` Excel data set, what do the arguments `sheet=1` and `col_names=TRUE` mean? 
+This section we will use `ncbirths` data set. 
 
-
-
-3. Use the `str()` function to determine how many observations and variables are contained in the `NCbirths` data set. Write the code necessary, then answer the question in a complete sentence. 
-
-
-
-4. Go to Dr. D's data website (http://norcalbiostat.com/data/cleaned_data/) and find 3 data sets with different file types. For each file state the name of the file, it's file type, and the function you would need to use to read that file into R. 
-
-> Ex: The `email` data set is tab-delimited text (.txt) file. It can be read into R using the `read.delim()` function. 
-
-* 
-
-* 
-
-* 
-
-
-
-5. Calculate the mean age of the mothers (`mage`) in the sample.
+1. Calculate the mean age of the mothers (`mage`).
 ```{r}
 
 ```
 
-
-6. Pregnancies last on average 38 weeks. Recode the `weeks` variable to change all records where `weeks` is greater than 38, to equal 38. That is, for all record where `weeks>38`, change the value of `weeks` to `<- 38`. 
+2. Pregnancies last on average 38 weeks. Recode the `weeks` variable to change all records where `weeks` is greater than 38, to equal 38. That is, for all record where `weeks>38`, change the value of `weeks` to `<- 38`.
 
 ```{r}
 
 ```
 
-
-7. Use the `summary` function to calculate summary statistics on the fathers age (`fage`). Round to 3 digits using the `digits=` argument. Don't forget that you can look at the bottom of the help for summary (`?summary`) file for examples on how to use this function.  
+3. Use the `summary` function to calculate summary statistics on the fathers age (`fage`). Round to 3 digits using the `digits=` argument. Don't forget that you can look at the bottom of the help for summary (`?summary`) file for examples on how to use this function.  
 ```{r}
 
 ```
 
-   
-8. What is the distribution of smoking habit (`habit`) among? i.e. How many are smokers and how many are non-smokers?  _Hint: Use the `table()`_ function. 
+4. Use the `is.na()` function to create a new variable called `missing_gained` on the `ncbirths` data set that identifies if data on the `gained` variable is missing.
+
 ```{r}
 
 ```
    
+5. What percent of records are missing data on weight gained during pregnancy? There are several ways you can calculate this! Explain what your process, and answer the question in a full sentence. 
 
-9. Use the `is.na()` function to create a new variable called `missing_gained` on the `NCbirths` data set that identifies if data on the `gained` variable is missing. 
-    
-    
-    
-   
-10. What percent of records are missing data on weight gained during pregnancy? There are several ways you can calculate this! Explain what your process, and answer the question in a full sentence. 
+```{r}
+
+```
 
 
+6. Use the `ifelse()` function to dichotomize the `weeks` variable at it's mean where records with values over the mean are labeled `AboveAve` and records with values below the mean are labeled `UnderAve`. Call this new variable `week_ave`. (_Hint: Calculate the mean value for the variable `weeks`, then use that number in the logical statement part of the `ifelse` function._)
+
+```{r}
+
+```
+
+7. Create a frequency table for your new variable (`week_ave`) in the previous question. Then use the pipe operator `%>%` to add on the function `prop.table()` at the end. What does the `prop.table()` function do? 
+
+```{r}
+
+```
 
 
-11. Use the `ifelse()` function to dichotomize the `weeks` variable at it's mean where records with values over the mean are labeled `AboveAve` and records with values below the mean are labeled `UnderAve`. Call this new variable `week_ave`. (_Hint: Calculate the mean value for the variable `weeks`, then use that number in the logical statement part of the `ifelse` function._)
+# Wrangling Factors 
+
+In this section, you will use `smoking` data set.
+
+1. Examine the variable `ethnicity` using `fct_count`. Then, collapse levels of that variable into a smaller number of factors using `fct_collapse`. _Hint: Create a new factor variable as part of the `smoking` data set (i.e smoking$ethnicity_new)._
+
+* "NA" = c("Refused","Unknown")
+* Asian = c("Chinese", "Asian")
+
+```{r}
+
+```
+
+2. Create a two-way `table` of `ethnicity` against `ethnicity_new` to confirm that this new factor variable was created correctly.
+
+```{r}
+
+```
+
+3. Using `fct_recode`, create a new factor variable `recode_ethnicity` from `ethnicity_new` with labels "A"(Asian), "B"(Black), "M"(Mixed), "W"(White). Make sure you create this new variable as part of the `smoking` data set. (i.e. `smoking$recode_ethnicity <-`) 
+
+```{r}
+
+```
+
+
+4.  Manually reorder the level of `ethnicity_new` variable in an increasing order using `fct_relevel`.
+
+```{r}
+
+```
 
 
 
-
-12. Create a frequency table for your new variable (`week_ave`) in the previous question. Then use the pipe operator `%>%` to add on the function `prop.table()` at the end. What does the `prop.table()` function do? 
 
