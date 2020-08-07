@@ -221,7 +221,6 @@ The same 4 steps that resulted in the `a4` data set, but without all the interme
 The ability to manipulate, arrange and clean up data is an extremely important skill to have. It is advised that you review at least one other tutorial method for using dplyr. Remember, it is all about practice. The more you use it the easier it will become!
 
 * R Studio's [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
-* [Data Camp](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial) has a dplyr lesson
 * [Dplyr vignette](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
 * [Hands-on dplyr tutorial for faster data manipulation in R](https://www.youtube.com/watch?v=jWjqLW-u3hc) You Tube video by Data School
 * UBC STAT 545 (this class is awesome!) http://stat545.com
