@@ -13,10 +13,16 @@ This week you'll learn how to streamline your data processing steps so you can g
 
 ---
 
+# `r emo::ji("memo")` Prepare:
+
+* Download (_Right click, save as_) the notes for both lessons and save into your `Math130/notes` folder. 
+
+<br>
+
 # `r emo::ji("books")` Notes:
 
-* lec07 - Basic Graphing     [[HTML]](notes/08_plots.html)   [[PDF]](notes/08_plots.pdf)   [[RMD]](notes/08_plots_notes.Rmd)
-* lec08 - More data management and aggregation `dplyr` [[HTML]](notes/09_dplyr.html)  [[PDF]](notes/09_dplyr.pdf)  [[RMD]](notes/09_dplyr_notes.Rmd) 
+* lec07 - Basic Graphing using `ggplot2`               [[HTML]](notes/07_plots.html)   [[PDF]](notes/07_plots.pdf)   [[RMD]](notes/07_plots_notes.Rmd)
+* lec08 - More data management and aggregation `dplyr` [[HTML]](notes/08_dplyr.html)  [[PDF]](notes/08_dplyr.pdf)  [[RMD]](notes/08_dplyr_notes.Rmd) 
 
 <br>
 
@@ -29,19 +35,23 @@ This week you'll learn how to streamline your data processing steps so you can g
 
 # `r emo::ji("thinking_face")` Additional Resources: 
 
-### ggplot
+* `ggplot`
+    * Hands on learning with R Primers: Visualization Basics https://rstudio.cloud/learn/primers/1.1
+    * [ggplot2 cheat sheet](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Visualization**
+    
+    * For a **full** , and comprehensive reference guide on how to do nearly anything in ggplot -- this is by far my favorite reference http://www.cookbook-r.com/Graphs/ I reference things in there (like how to remove or change the title of a legend) constantly. 
+    * [[The full set of lecture notes from which these notes were extracted.]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html).
+    * [R graph gallery](https://www.r-graph-gallery.com/) Hundreds of charts with fully reproducible code to help inspire your visualizations. 
+    * STHDA: Statistical tools for high-throughput data analysis. http://www.sthda.com/english/
 
-* Hands on learning with R Primers: Visualization Basics https://rstudio.cloud/learn/primers/1.1
-* [ggplot2 cheat sheet](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Visualization**
+* `dplyr`: The ability to manipulate, arrange and clean up data is an extremely important skill to have. It is advised that you review at least one other tutorial method for using dplyr. Remember, it is all about practice. The more you use it the easier it will become!
 
-* For a **full** , and comprehensive reference guide on how to do nearly anything in ggplot -- this is by far my favorite reference http://www.cookbook-r.com/Graphs/ I reference things in there (like how to remove or change the title of a legend) constantly. 
-* [[The full set of lecture notes from which these notes were extracted.]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html).
-* [R graph gallery](https://www.r-graph-gallery.com/) Hundreds of charts with fully reproducible code to help inspire your visualizations. 
-* STHDA: Statistical tools for high-throughput data analysis. http://www.sthda.com/english/
+    * Hands on learning with R Primers: Isolating data with dplyr https://rstudio.cloud/learn/primers/2.2
+    * [dplyr cheat sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Transformation**
+    * [Dplyr vignette](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
+    * [Hands-on dplyr tutorial for faster data manipulation in R](https://www.youtube.com/watch?v=jWjqLW-u3hc) You Tube video by Data School
+    * UBC STAT 545 (this class is awesome!) http://stat545.com
 
-### dplyr
-* Hands on learning with R Primers: Isolating data with dplyr https://rstudio.cloud/learn/primers/2.2
-* [dplyr cheat sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Transformation**
 
 ---
 _Last Updated `r Sys.Date()`_

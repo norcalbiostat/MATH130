@@ -1621,7 +1621,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Lesson 06 - Controlling your factors</h1>
-<h4 class="date"><em>Last Updated 08-02-2020</em></h4>
+<h4 class="date"><em>Last Updated 08-14-2020</em></h4>
 
 </div>
 
@@ -1641,7 +1641,7 @@ div.tocify {
 </div>
 <div id="preparation" class="section level2">
 <h2>Preparation</h2>
-<p>✏️ Prior to this lesson learners should</p>
+<p>Prior to this lesson learners should</p>
 <ul>
 <li>Download the <a href="06_factors_notes.Rmd">[06_factors_notes.Rmd]</a> R markdown file and save into your <code>notes/Math130</code> folder.
 <ul>
@@ -1740,7 +1740,9 @@ div.tocify {
 ##  none small   big 
 ##   549  2827   545</code></pre>
 <p>In each of these examples, I pipe (<code>%&gt;%</code>) the <code>table()</code> function at the end so I can see the results of the reordering. This helps me visually confirm that the code used changed the factor levels to be left to right in increasing content size order. This will be important for graphing.</p>
-<p>⚠️ Since I did not use the assignment operator (<code>&lt;-</code>) here, these changes were not made to the variable in the <code>email</code> data set. The examples below demonstrate making an adjustmet to a factor variable and saving that adjustment as a new variable in the data set.</p>
+<blockquote>
+<p>Since I did not use the assignment operator (<code>&lt;-</code>) here, these changes were not made to the variable in the <code>email</code> data set. The examples below demonstrate making an adjustmet to a factor variable and saving that adjustment as a new variable in the data set.</p>
+</blockquote>
 <!---
 ## Order by frequency
 The size of the number in an email is _ordinal_, meaning the levels have an internal order. _Nominal_ categorical
@@ -1865,7 +1867,7 @@ This just *happens* to be the same as in decreasing frequency order.
 ##   Taco Bell      0    0   0   0 115    0
 ##   &lt;NA&gt;           0    0   0   0   0    0</code></pre>
 <div id="lets-chain-this-all-together." class="section level5">
-<h5>⭐ Let’s chain this all together.</h5>
+<h5>Let’s chain this all together.</h5>
 <p>Sporadically throughout this lesson, and at the end of the last lesson i’ve used the pipe <code>%&gt;%</code> operator as somewhat of a shortcut. This amazing piece of code lets us string together commands. Let’s see how to accomplish both changes to the restaurant variable in one single step.</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>ff<span class="op">$</span>restaurant <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fct_collapse</span>(<span class="dt">BurgerJoint =</span> <span class="kw">c</span>(<span class="st">&quot;Burger King&quot;</span>, <span class="st">&quot;Mcdonalds&quot;</span>, <span class="st">&quot;Sonic&quot;</span>), </span>
 <span id="cb34-2"><a href="#cb34-2"></a>                               <span class="dt">Sammich     =</span> <span class="kw">c</span>(<span class="st">&quot;Arbys&quot;</span>, <span class="st">&quot;Subway&quot;</span>)) <span class="op">%&gt;%</span></span>

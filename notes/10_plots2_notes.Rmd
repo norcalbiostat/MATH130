@@ -1,5 +1,5 @@
 ---
-title: "Lesson 10 - Creating Intermediate graphics"
+title: "Lesson 10 - Graphing Enhancements"
 output: html_document
 ---
 
@@ -7,8 +7,9 @@ output: html_document
 
 ```{r, warning=FALSE, message=FALSE}
 library(ggplot2); library(dplyr)
-knitr::opts_chunk$set(warning=FALSE, message=FALSE) 
-
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, error=TRUE) 
+email <- read.table("../data/email.txt", header=TRUE, sep="\t")
+NCbirths <- read.csv("../data/NCbirths.csv", header=TRUE)
 ```
 
 # Appearance enhancements
@@ -23,19 +24,32 @@ ggplot(email, aes(x=line_breaks, y=num_char)) + geom_point() + theme_
 ggplot(email, aes(x=line_breaks, y=num_char)) + geom_point() + theme_
 ```
 
-
-## Change legend titles 
+## Legend modifications
 
 ```{r}
 ggplot(email, aes(y=num_char, x=number, fill=number)) + geom_boxplot() + 
   scale_fill_discrete(name="________")
 ```
 
-Here, I `col`ored the points by a discrete variable, so the layer is `scale_color_discrete()`.
+Color the points by a discrete variable
 ```{r}
 ggplot(email, aes(y=num_char, x=number, col=number)) + geom_boxplot() + 
   scale________discrete(name="Size of number")
 ```
+
+
+```{r}
+ggplot(email, aes(y=num_char, x=number, col=number)) + geom_boxplot() + 
+  scale_color_discrete(name="Size of number") + theme(_______)
+```
+
+# Removing NA categories. 
+
+```{r}
+NCbirths %>% _____(mage, whitemom, marital, habit) %>% ______() %>% 
+  _____(aes(x=mage, fill=whitemom)) + 
+  geom_density(alpha=.2) + facet_grid(marital~habit)
+``
 
 ## Add means to boxplots. 
 
@@ -46,11 +60,31 @@ ggplot(email, aes(y=num_char, x=number, fill=______)) + geom_boxplot() +
 ```
 
 
+# Changing colors
+
+## Manual
+
+Using names or hex codes.
+
+```{r}
+ggplot(email, aes(x=number, fill=number)) + geom_bar() +
+    scale_fill_manual(values=c("_______", "_______", "_______"))
+```
+ 
+ 
+ 
+## Using a color palette (recommended)
+```{r}
+library(RColorBrewer)
+ggplot(email, aes(x=number, fill=number)) + geom_bar() +
+    scale_fill_brewer(palette="_____")
+```
+
+
 # Barchart enhancements
 
 ## Numbers to the top of bars. 
 
-The biggest addition to a barchart is the numbers on top of the bars. 
 ```{r}
 ggplot(email, aes(x=number)) + theme_bw() + 
     geom_bar(aes(y = ..count..)) + ggtitle("Frequency of emails by size of number") + 
@@ -60,29 +94,32 @@ ggplot(email, aes(x=number)) + theme_bw() +
 ## Plotting Proportions
 
 ```{r}
-library(scales)
-cut.props <- table(email$number) %>% prop.table() %>% data.frame()
-cut.props # what does this data look like? 
+library(_______)
 
-ggplot(_____, aes(x=_____, y=_____)) + 
-  geom_col() + 
-  ________ (labels=percent) + 
-  ylab("Proportion") + 
-  xlab("Size of number in email") + 
-  ggtitle("Proportion of emails by number size")
+plot_frq(email$number)
 ```
 
-
-
-## Cleveland Dot Plots
+Grouped proportions: 
 
 ```{r}
-ggplot(cut.props, aes(x=Var1, y=Freq)) +  
-  geom_point(size = 3) + 
-  _________(aes(x=Var1, xend=Var1, y=__, yend=____), color='grey50')
+______(NCbirths$mature, NCbirths$marital)
 ```
 
-# Faceting / paneling 
+Change to row proportions and remove the total bar. 
+```{r}
+_______(NCbirths$mature, NCbirths$marital, margin=_____, __________ = FALSE)
+```
+
+# Multivariate Plotting 
+
+## Boxplots with three variables. 
+
+```{r}
+ggplot(NCbirths, aes(y=______, x=_____, fill=______)) + 
+        geom_boxplot()
+```
+
+## Faceting
 
 ```{r}
 ggplot(NCbirths, aes(x=mage, fill=gender)) + geom_density(alpha=.3) + facet_wrap(~____)
@@ -112,34 +149,5 @@ grid.arrange(_____,_____, ncol=2)
 ggplot(NCbirths, aes(x=mage, fill=whitemom)) + geom_density(alpha=.2) + _______(marital~habit)
 ```
 
-# Removing NA categories. 
-
-```{r}
-NCbirths %>% _____(mage, whitemom, marital, habit) %>% ______() %>% 
-  _____(aes(x=mage, fill=whitemom)) + 
-  geom_density(alpha=.2) + facet_grid(marital~habit)
-```
-
-# Changing colors
-
-## Manual
-
-```{r}
-ggplot(email, aes(x=number, fill=number)) + geom_bar() +
-    ______(values=c("red", "green", "blue"))
-```
-
-There's some spectacularly named colors as well, 
-```{r}
-ggplot(email, aes(x=number, fill=number)) + geom_bar() +
-    scale_fill_manual(values=c("_______", "_______", "_______"))
-```
- 
-## Using a color palette (recommended)
-```{r}
-library(RColorBrewer)
-ggplot(email, aes(x=number, fill=number)) + geom_bar() +
-    scale_fill_brewer(palette="_____")
-```
 
 

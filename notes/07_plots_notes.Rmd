@@ -1,5 +1,5 @@
 ---
-title: "Lesson 07 - Creating graphics"
+title: "Lesson 07 - Creating graphics (Notes)"
 output: html_document
 ---
 
@@ -12,6 +12,10 @@ diamonds <- ggplot2::diamonds
 set.seed(1410) # Make the sample reproducible
 dsmall <- diamonds[sample(nrow(diamonds), 1000), ] # pull a quasi-random sample of 1000 records
 ```
+
+Follow along during lecture to create the plots that are discussed. The sections in here align with the lecture material. 
+For each code chunk provided, fill in the blanks (_____) to complete the code to create the plot by pressing the green "play" button to run that specific code chunk. That is, you don't have to knit after every code chunk.
+
 
 # Univariate (One Variable)
 
@@ -33,12 +37,16 @@ Fill in the blank line to create a barchart of `cut`.
 ggplot(dsmall, aes(x=____)) + geom_bar()
 ```
 
+Reorder levels on the fly
+```{r}
+ggplot(____, aes(x=forcats::fct_infreq(____))) + geom_bar() + xlab("cut")
+```
 
 ## Continuous variable
 
 
 ### Histograms
-A histogram of depth. 
+A histogram of price. 
 
 ```{r}
 ggplot(dsmall, aes(x=_____)) + _________
@@ -47,7 +55,7 @@ ggplot(dsmall, aes(x=_____)) + _________
 ### Density plots
 
 ```{r}
-ggplot(______, aes(x=depth)) + _______()
+ggplot(______, aes(x=price)) + _______()
 ```
 
 ### Histograms + density 
@@ -66,7 +74,19 @@ boxplot(_____$_____)
 ```
 
 ```{r}
-boxplot(dsmall$depth, horizontal = _____, main="__________", xlab="__________")
+boxplot(dsmall$price, horizontal = _____, main="Distribution of diamond prices", xlab="__________")
+```
+
+
+### New variable
+```{r}
+dsmall$price_range <- cut_width(dsmall$_____/1000, width=5)
+```
+
+Create a barchart to visualize the frequencies of each bin. 
+
+```{r}
+ggplot(dsmall, aes(x=_______)) + ______
 ```
 
 ----
@@ -86,14 +106,14 @@ table(dsmall$___, dsmall$_____)
 #### Cell proportions
 
 ```{r}
-_____(dsmall$cut, dsmall$color) %>% ________
+_____(dsmall$cut, dsmall$price_range) %>% ________
 ```
 
 
 #### Row proportions
 
 ```{r}
-table(____$____, dsmall$color) %>% prop.table(________) %>% _____(3)
+table(____$____, dsmall$price_range) %>% prop.table(________) %>% _____(3)
 ```
 
 
@@ -107,7 +127,7 @@ table(____$____, ____$____) %>% ________(margin=2) %>% round(_)
 ### Grouped bar charts
 
 ```{r}
-ggplot(______, ___(_=___, fill=color)) + _________() + geom_bar(_______ = "dodge")
+ggplot(______, ___(_=___, fill=price_range)) + _________() + geom_bar(_______ = "dodge")
 ```
 
 
@@ -149,14 +169,14 @@ ggplot(______, aes(x=____, fill=____)) + geom_density(alpha=__)
 
 
 ```{r}
-ggplot(dsmall, aes(x=depth, _____=cut)) + geom_density()
+ggplot(dsmall, aes(x=depth, _____=cut)) +__________
 ```
 
 
 ### Grouped boxplots
 
 ```{r}
-ggplot(dsmall, aes(x=color, y=carat, fill=______)) + geom_boxplot()
+ggplot(_____, aes(_______, y=carat)) + __________
 ```
 
 #### Adding violins to the boxplot

@@ -1,75 +1,73 @@
 ---
-title: "HW 4: Better data management! Better plots!"
+title: 'Homework 4: Data Import and Enhanced Graphics'
 author: "NAME"
 date: "DATE"
+output: html_document
 ---
 
-This homework uses the `dplyr` and `nycflights13` packages. It is good habit to load all needed packages in the first code chunk. 
-
-```{r, warning=FALSE, message=FALSE}
-
-
-```
-
-Use the `flights` data set for the next few exercises.  Load that data set here by typing `data(flights)`. 
 ```{r}
-
+library(dplyr)
+library(ggplot2)
 ```
 
+# Importing data
+Go to [Dr. D's data website](https://www.norcalbiostat.com/teaching/data/#) to find the following data files. Download them to your computer (ref: [HW 09](../09_import.html)) and import them in the first three questions below. 
+
+1. Read in the `High School and Beyond` data set.
 
 
-1. Use `select()` to extract the following variables: `origin`, `distance`, and `air_time`, `dest`. Save this result as a data set named `f1`. 
+2. Read in the `Crime Data` data set.
+
+
+3. Read in the `countyComplete` data set.
+
+
+4. When reading in the Excel data set on crime, what do the arguments `sheet=1` and `col_names=TRUE` mean? 
+
+
+5. Use the `str()` function to determine how many observations and variables are contained in the `countyComplete` data set. Write the answer in a complete sentence.
+
+
+----
+
+
+# Graphing Enhancements
+This section will ask you to create graphics, often on data that needs pre-processing using the dplyr verbs you learned in the last homework. No one expects you to have all those commands memorized yet, the key is to know how to go find what you need. So reference last week's notes and homework while you do this section. 
+
+## Exploring the murder rate 
+This section demonstrates how you can build a nice graph in stages. Each question will have you adjust one thing on the plot. Instead of retyping the entire code each time, copy the code from the prior question and then make the requested adjustment. 
+
+> This is the suggested way of building an advanced plot. Small bit by bit, changing or adding only one thing at a time. 
+
+1. Using the `crime` data, create a density plot of the distribution of `murder` rate (x) by `region` (fill). To avoid problems with overplotting, use `alpha=.5` inside the density geometry to make the colors transparent. 
+
+
+2. These are pretty diverse regions, let's see how the murder rate varies within region. Fill by `division` instead, and panel on `region`. 
+
+
+3. Add a different theme to this plot. 
+
+
+4. Change the colors to use the `Set1` palette. 
+
+
+5. Capitalize the legend title. _Hint, you're adding something to the `scale_` section_. 
+
+6. This works, but i'm not entirely thrilled with how much space it's taking up. Let's look at these as boxplots instead of density plots. _Don't forget that ggplot wants the continuous variable on the y axis_. 
+
+7. The x-axis is all weird now. Let's be clear that the x is division. 
+
+8. In this case, Division is nested within Region and so we don't need ALL the levels of division to show up in each panel. Let's "Free" our x axis by adding `scales="free_x"` to the `facet_wrap`. 
+
+
+9. But I really want to see them as horizontal plots, so add a `+ coord_flip()` layer. This also helps with readability of long axis names. 
+
+10. The legend is kinda useless now because we have the labels clearly written. Add `guide=FALSE` to the `scale` layer. 
+
+11. Add `ncol=1` to the `facet_wrap` to stack the panels vertically. 
 
 
 
-2. Take the `f1` data set and `filter()` to select only the flights whose destination (`dest`) is Atlanta (ATL). Save this result as `f2`. _Hint: the destination variable is a character variable, so think carefully about how you specify ATL_. 
-
-
-3. Take the `f2` data set and use `mutate()` to create a new variable `speed` that calculates speed of the plane as `distance/air_time*60`. Save this result as `f3`. 
-
-
-4. Use `ggplot` to plot the distribution of the planes speed on it's way to Atlanta using a histogram. 
-
-
-
-5. Use `dplyr` chaining magic (%>%) to combine questions 1-4 in one step. 
-
-
-6. The three airports in the NYC region are all pretty close together. Do they all have the same travel time to Chicago O'Hare (ORD)? Use the same tactic as you did in steps 1-4 (or 5) by subsetting to the desired destination, then create overlapping density plots of `air_time` where each density plot is colored (or filled) by the variable `origin`. _Forget how to create colored lines? Revisit lesson 06_. 
-
-
-
-7. What is the monthly average departure delay time? 
-
-
-
-8. Use `geom_col()` to create a barplot to visualize the above information. 
-
-
-9. Create a scatterplot comparing the departure delay against arrival delay for flights to the Bay Area ("SFO", "SJC", "OAK"). Color the points by `origin`. What do you notice? 
-
-
-
-10. Do all airports have similar delays flying to O'Hare (ORD) throughout the year? Use `facet_wrap` to create side by side boxplots with overlaid violins (using good trasparency options) of departure delay `dep_delay` by `origin`, paneled by `month`.  
-
-
-
-
-11. Remove flights with delays over an hour and recreate the above plot.
-
-
-
-12. Use `coord_flip()` to 1) make the boxes horizontal, 2) change the background theme to something else and 3) change the axes labels to read in english, 4) add a title. 
-
-
-13. Go to the [R Cookbook](http://www.cookbook-r.com/Graphs/) and learn how to remove the legend. 
-
-
-14. What type of delays can we expect when traveling out of LGA? 
-    * Filter to only select flights out of LGA. 
-    * Calculate the mean `air_time` for each `dest`ination
-    * Create a scatterplot with destination on the x, calculated average on the y
-    * Flip the coordinates
-    * Reorder the destination by the value of the mean. 
+12. Add an appropriate title and axis titles. 
 
 

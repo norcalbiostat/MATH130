@@ -7,13 +7,21 @@ output:
     css: ../css/yeti.css
 ---
 
+# Exploratory Data Analysis
 
 Now it's time to put your new 1337 skillz to the test! You will conduct an exploratory data analysis project. 
 
-Previous class projects can be seen [[here]](https://norcalbiostat.github.io/peer_review/math130_eda.html).
+---
 
-`r emo::ji("pencil2")` Exploratory Data Analysis Project - With Peer Review [[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf). 
+<br>
 
+# `r emo::ji("pencil2")` Assignment
+
+Exploratory Data Analysis Project - With Peer Review [[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf). 
+
+<br>
+
+Examples of previous class projects can be seen [[here]](https://norcalbiostat.github.io/peer_review/math130_eda.html).
 
 ---
 _Last Updated `r Sys.Date()`_

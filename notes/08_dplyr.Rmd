@@ -1,16 +1,15 @@
 ---
-title: "Lesson 09 - Data management and aggregation using `dplyr`"
-author: "Robin Donatello"
-date: "Last Updated `r format(Sys.Date(), '%m-%d-%Y')`"
+title: "Lesson 08 - Data management and aggregation using `dplyr`"
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
-  html_document:
-    highlight: tango
-    css: ../css/yeti.css
-    theme: yeti
-    toc: yes
-    toc_float: yes
   pdf_document:
     toc: no
+  html_document:
+    highlight: tango
+    theme: yeti
+    css: ../css/yeti.css
+    toc: yes
+    toc_float: yes
 ---
 
 
@@ -36,10 +35,11 @@ After completing this lesson students will be able to
 
 * Explain the difference between a `data.table` and a `tibble`. 
 * Build and execute a chain of command to accomplish a data management task
+* Extract certain rows using `select`. 
 * Create new variables using `mutate`. 
-* Subset the data using `filter`.
-* Create summary statistics using `summarize`
-* Sort the data using `arrange`
+* Rename variables using `rename`
+* Subset the data based on a criteria using `filter`.
+* Create summary statistics using `group_by` and `summarize`
 * Learn how to use code chunk options to disable warning messages. 
 
 
@@ -47,12 +47,12 @@ After completing this lesson students will be able to
 
 Prior to this lesson students should
 
-* Download the [[09_dplyr_notes.Rmd]](09_dplyr_notes.Rmd) R markdown file and save into your Math130 folder. 
+* Download the [[08_dplyr_notes.Rmd]](08_dplyr_notes.Rmd) R markdown file and save into your `Math130/notes` folder. 
 * Ensure that the `dplyr` and `nyflights13` data sets are installed by running the first code chunk. 
 
 ```{r, warning=FALSE, message=FALSE}
-library(dplyr); library(nycflights13)
-data(flights)
+library(dplyr)
+flights <- nycflights13::flights
 ```
 
 ## Exploring airline flight data with dplyr. 
@@ -70,13 +70,14 @@ flights
 The output has been trimmed to something more reasonable for our viewing pleasure. This may not seem such a big deal because R Studio already provides some level of truncation for our viewing pleasure. 
 
 # Basic verbs
-The `dplyr` package contains new data manipulation functions, also called verbs. We will look at the following four: 
+The `dplyr` package contains new data manipulation functions, also called verbs. We will look at the following verbs: 
 
 * `filter()`: Returns a subset of the rows.
-* `select()`: Returns a subset of the columns.
+* `select()`: Returns only the listed columns.
+* `rename()`: Renames the variables listed. 
 * `mutate()`: Adds columns from existing data.
 * `summarise()`: Reduces each group to a single row by calculating aggregate measures.
-* `group_by()`: Groups a data set on a factor variable, such that all functions peformed are then done on each level of the factor.
+* `group_by()`: Groups a data set on a factor variable, such that all functions performed are then done on each level of the factor.
 
 
 ## Filter
@@ -112,9 +113,21 @@ This also works to exclude all columns EXCEPT the ones between two variables.
 select(flights, -(year:day))
 ```
 
- 
+## Rename
+Sometimes variables come to you in really obscure naming conventions. What the heck is SBA641? New to `dplyr` 1.0.0 is the `rename()` function. Works like magic to convert `old name` to a `new name`. The generic syntax is `rename(new = old)`
+
+So to rename `dep_time` to `departure_time` we would type
+
+```{r}
+rename(flights, departure_time = dep_time)
+```
+
+The variable name on the 3rd column now says `departure_time` instead of `dep_time`. 
+
+> For the purpose of these lecture notes I am not making this change permenant. There is no assignment operator `<-` used here, so this change is not going to persist into later code. 
+
 ## Mutate
-As well as selecting from the set of existing columns, it's often useful to add new columns that are functions of existing columns. This is the job of mutate()!
+As well as selecting from the set of existing columns, it's often useful to add new columns that are functions of existing columns. This is the job of `mutate()`!
 
 Here we create two variables: gain (as arrival delay minus departure delay) and speed (as distance divided by time, converted to hours). 
 ```{r}
@@ -146,12 +159,6 @@ Let's demonstrate how some of these functions work after grouping the flights da
 
 ```{r}
 by_month <- group_by(flights, month)
-```
-
-* If we want to sort the data, `arrange()` orders first by grouping variables, then by the sorting variable. 
-```{r}
-how_long <- arrange(by_month, distance)
-select(how_long, month, distance)
 ```
 
 
@@ -217,11 +224,5 @@ The same 4 steps that resulted in the `a4` data set, but without all the interme
 
 -----
 
-# Additional Resources
-The ability to manipulate, arrange and clean up data is an extremely important skill to have. It is advised that you review at least one other tutorial method for using dplyr. Remember, it is all about practice. The more you use it the easier it will become!
-
-* R Studio's [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
-* [Dplyr vignette](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
-* [Hands-on dplyr tutorial for faster data manipulation in R](https://www.youtube.com/watch?v=jWjqLW-u3hc) You Tube video by Data School
-* UBC STAT 545 (this class is awesome!) http://stat545.com
+# <a href="https://norcalbiostat.github.io/MATH130/wk3.html"><button type="button">Go Back to Week 3</button> </a>
 

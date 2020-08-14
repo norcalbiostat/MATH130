@@ -9,163 +9,146 @@ output:
 
 # Introduction
 
-You will be managing factors and creating some basic plots in this homework assignment. The data sets you will use come from two places, `NCbirths` which you will have to read in below, and the `planes` data set which comes part of the `nycflights13` package. The `planes` data set contains data on plane characteristics such as the number of engines. 
+You will be creating some basic plots using `ggplot2` package and managing data using `dplyr` package in this homework assignment. You will use two data sets, `ncbirths` which is in `openintro` package and `flights` which come part of the `nycflights13` package. 
 
-The code chunk below sets some code chunk options (using `opts_chunk` from the `knitr` package) to make your knitted report output more readable. I encourage you to play around with these options to learn how they work. 
+The code chunk below sets some code chunk options (using `opts_chunk` from the `knitr` package) to make your knitted report output more readable. It is good habit to load all packages and data in the first code chunk. 
 
 ```{r, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(warning=FALSE, message=FALSE, fig.height=4, fig.width=5, fig.align='center') 
 library(ggplot2)
-library(nycflights13)
 library(dplyr)
-df <- read.csv("https://norcalbiostat.netlify.com/data/NCbirths.csv")
+flights <- nycflights13::flights
+ncbirths <- openintro::ncbirths
 ```
-
-You can use a combination of base and `ggplot2` graphics for this lab. Your answers can be for your eyes only (exploratory). They do not have to be pretty.  
-
-
-## How many passengers can a plane hold before needing another engine? 
-This question uses the `planes` data set. Let's load that into our working environment so we can look at it.
-```{r}
-data(planes)
-```
-
-
-1. Examine the variable `engines` using `table()` and `class`. What is it's data type? 
-
-The variable engines has data type integer.
-
-```{r}
-class(planes$engines)
-table(planes$engines)
-```
-
-
-2. There are too few planes with more than 2 engines. Recode all records with 4 engines to a value of 3. _Hint: Revisit lesson 04_. Create a `table` of this variable again to ensure that all 4's are now 3's. 
-
-```{r}
-planes$engines[planes$engines == 4] <- 3
-table(planes$engines)
-```
-
-
-3. Create a new factor variable `num_engines` from `engines` with labels "one", "two", "three+". 
-Make sure you create this new variable as part of the `planes` data set. (i.e. `planes$num_engines <-` )
-
-```{r}
-planes$num_engines <- factor(planes$engines, labels=c("one", "two", "three+"))
-table(planes$num_engines)
-```
-
-
-4. Create a two-way `table` of `engines` against `num_engines` to confirm that this new factor variable was created correctly. 
-
-```{r}
-table(planes$engines, planes$num_engines)
-```
-
 
 # Univariate plots
-This section uses data from both the `NCbirths` and the `planes` data sets. 
 
+This section asks you to create data visualizations or summaries from the `ncbirths` data set. 
 
-1. A table of marital status (`marital`) from NCbirths. 
-
-```{r}
-table(df$marital)
-```
-
-
-
-2. A barchart of marital status (same as above)
+1. Create a table of marital status (`marital`) from NCbirths. 
 
 ```{r}
-ggplot(df, aes(marital)) + geom_bar()
+table(ncbirths$marital)
 ```
 
-
-
-3. A barchart of the type of plane (`planes$engine`) with the levels displayed in increasing frequency order. 
+2. Create a barchart of marital status (same as above)
 
 ```{r}
-library(forcats)
-ggplot(planes, aes(engine)) + geom_bar() 
-ggplot(planes, aes(fct_infreq(engine))) + geom_bar() # re-order by freq
-ggplot(planes, aes(fct_rev(fct_infreq(engine)))) + geom_bar() # re-order by DECREASING freq
+ggplot(ncbirths, aes(marital)) + geom_bar()
 ```
 
-
-
-4. A histogram of mothers age (`mage`) with an overlaid density plot in a different color. Be sure that both density curve and histogram can be seen. 
+3. Create a histogram of mothers age (`mage`) with an overlaid density plot in a different color. Be sure that both density curve and histogram can be seen. 
 
 ```{r}
-ggplot(df, aes(mage)) + geom_histogram(aes(y=..density..)) + geom_density()
+ggplot(ncbirths, aes(mage)) + geom_histogram(aes(y=..density..)) + geom_density()
 ```
 
-
-
-5. A horizontal boxplot of weight of the baby (`weight`)
+4. Create a horizontal boxplot of weight of the baby (`weight`)
 I don't care how they make this plot, so long as it looks like a horizontal boxplot.
 
 ```{r}
-ggplot(df, aes(0, weight)) + geom_boxplot() + coord_flip()
+ggplot(ncbirths, aes(0, weight)) + geom_boxplot() + coord_flip()
 ```
 
+# Bivariate plots (This section still uses the `ncbirth` data set.)
 
-# Bivariate plots
-
-6. Create a two-way frequency table of maturity status (`mature`) against smoking `habit`
+1. Create a two-way frequency table of maturity status (`mature`) against smoking `habit`
 
 ```{r}
-table(df$mature, df$habit)
+table(ncbirths$mature, ncbirths$habit)
 ```
 
-
-7. Create a proportion table of smoking habit _within_ maturity status. Round to 3 digits. 
+2. Create a proportion table of smoking habit _within_ maturity status. Round to 3 digits. 
 
 ```{r}
-table(df$mature, df$habit) %>% prop.table(margin=1) %>% round(3)
+table(ncbirths$mature, ncbirths$habit) %>% prop.table(margin=1) %>% round(3)
 ```
 
-
-
-8. Create a grouped barchart that reflects the frequencies you calculated above. Think carefully which variable goes on the `x` axis, and which one is used for the `fill`
+3. Create a grouped barchart that reflects the frequencies you calculated above. Think carefully which variable goes on the `x` axis, and which one is used for the `fill`
 
 ```{r}
-ggplot(df, aes(mature, fill=habit)) + geom_bar(position="dodge")
+ggplot(ncbirths, aes(mature, fill=habit)) + geom_bar(position="dodge")
 ```
 
-
-9. A scatterplot of length of pregnancy in `weeks` and the babies `weight`. Include a smoother line in brown, and a best fit linear model line in purple
+4. Create a scatterplot of length of pregnancy in `weeks` and the babies `weight`. Include a smoother line in brown, and a best fit linear model line in purple
     
 ```{r}
-ggplot(df, aes(weeks, weight)) + 
+ggplot(ncbirths, aes(weeks, weight)) + 
   geom_point() +
   geom_smooth(se=FALSE, color="brown") + 
   geom_smooth(se=FALSE, method="lm", color="purple")
 
 ```
     
-10. Grouped boxplots of baby `weight` by mothers smoking `habit`. Make sure you `fill` the boxes by `habit` as well. 
+5. Creat a grouped boxplots of baby `weight` by mothers smoking `habit`. Make sure you `fill` the boxes by `habit` as well. 
 
 ```{r}
-ggplot(df, aes(habit, weight, fill=habit)) + geom_boxplot()
+ggplot(ncbirths, aes(habit, weight, fill=habit)) + geom_boxplot()
 ```
 
-
-11. Replicate the same plot as above, but overlay a violin plot and change the transparency of both violin and boxplot layers. 
+6. Replicate the same plot as above, but overlay a violin plot and change the transparency of both violin and boxplot layers. 
 
 ```{r}
-ggplot(df, aes(habit, weight, fill=habit)) + 
+ggplot(ncbirths, aes(habit, weight, fill=habit)) + 
   geom_boxplot(width=.1) +
   geom_violin(alpha=.1)
 ```
 
-
-12. Overlaid density plots of weight `gained` by babies `gender`. Do not apply a `fill`, only use the `color` aesthetic. 
+7. Create an overlaid density plots of weight `gained` by babies `gender`. Do not apply a `fill`, only use the `color` aesthetic. 
 
 ```{r}
-ggplot(df, aes(gained, color=gender)) + geom_density()
+ggplot(ncbirths, aes(gained, color=gender)) + geom_density()
 ```
 
+# Data management and aggregation
 
+This section uses the `dplyr` and `nycflights13` packages. Use the `flights` data set for the next few exercises. 
+
+* At each step use the assignment operator `<-` to store the results into a new data table and use that data in the next step. 
+* At each step, print out the resulting data frame so you can see the results. 
+
+Example _(not run)_ 
+```r
+p1 <- planes %>% select(type)
+p1
+```
+
+1. Use `select()` to extract the following variables: `origin`, `distance`, and `air_time`, `dest`. Save this result as a data set named `f1`. 
+```{r}
+f1 <- flights %>% select(origin, distance, air_time, dest)
+f1
+```
+
+2. Take the `f1` data set and `filter()` to select only the flights whose destination (`dest`) is Atlanta (ATL). Save this result as `f2`. _Hint: the destination variable is a character variable, so think carefully about how you specify ATL_. 
+
+```{r}
+f2 <- f1 %>% filter(dest=="ATL")
+f2
+```
+
+3. Take the `f2` data set and use `mutate()` to create a new variable `speed` that calculates speed of the plane as `distance/air_time*60`. Save this result as `f3`. 
+```{r}
+f3 <- f2 %>% mutate(speed = distance / air_time*60)
+f3
+```
+
+4. Use `ggplot` to plot the distribution of the planes speed on it's way to Atlanta using a histogram. 
+```{r}
+library(ggplot2)
+ggplot(f3, aes(x=speed)) +  geom_histogram()
+```
+
+5. Use `dplyr` chaining magic (%>%) to combine questions 1-4 in one step. 
+
+```{r}
+flights %>% select(origin, distance, air_time, dest) %>% filter(dest=="ATL") %>% 
+            mutate(speed = distance / air_time*60) %>% 
+            ggplot(aes(x=speed)) +  geom_histogram()
+```
+
+6. The three airports in the NYC region are all pretty close together. Do they all have the same travel time to Chicago O'Hare (ORD)? Use the same tactic as you did in steps 1-4 (or 5) by subsetting to the desired destination, then create overlapping density plots of `air_time` where each density plot is colored (or filled) by the variable `origin`. 
+
+```{r}
+flights %>% filter(dest=="ORD") %>% 
+            ggplot(aes(x=air_time, fill=origin)) +  geom_density(alpha=.3)
+```

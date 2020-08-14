@@ -2,14 +2,14 @@
 title: "Lesson 04 - Getting Started with R"
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
+  pdf_document:
+    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 ---
 
 
@@ -40,7 +40,7 @@ In lesson 02 we saw that we could write R code in the console and get immediate 
 Because we want our code and workflow to be reproducible, and often your code may span several lines at a time, it is better to type the commands we want in a script, and save the script. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. It's also easier to fix mistakes this way, without having to retype in the entire command. 
 
 
-#### `r emo::ji("pencil2")` Start a new Rmarkdown file
+##### Start a new Rmarkdown file
 
 * Go to File --> New File --> R Markdown to open a new R markdown window.
 * Give this file a name such as "Lesson 04 notes", and put your name as the author. 
@@ -52,7 +52,7 @@ Now let's go back to that long expression from lesson 2 (corrected), but this ti
 2 + 5*(8^3)- 3*log(10)
 ```
 
-#### `r emo::ji("pencil2")`  Make a change to the above expression and run the command again. 
+##### Make a change to the above expression and run the command again. 
 
 
 For the rest of this lesson, retype each code chunk below into the notes file you just created. Be sure to annotate these notes as you would take notes in any other class. For you to retain what you are reading and learning, writing out what these pieces of code are doing (e.g. the assignment operator `<-`) in **your own words** is an effective learning technique.
@@ -72,7 +72,7 @@ weight_kg <- 55
 `<-` is the assignment operator. It assigns values on the right to objects on
 the left. So, after executing `x <- 3`, the value of `x` is `3`. 
 
-`r emo::ji("warning")` Objects can be given any name such as `x`, `current_temperature`, or `subject_id`. However there are some naming guidelines you need to be aware of. 
+**Objects can be given any name such as `x`, `current_temperature`, or `subject_id`. However there are some naming guidelines you need to be aware of.**
 
 * You want your object names to be explicit and not too long. 
 * They cannot start with a number (`2x` is not valid, but `x2` is). 
@@ -362,7 +362,7 @@ For this part of the lesson we will use a data set called `diamonds` that comes 
 diamonds <- ggplot2::diamonds
 ```
 
-`r emo::ji("pencil2")` To see the raw data values, click on the square spreadsheet icon to the right of the data set name in the top right panel of RStudio (circled in green in the image below).
+##### To see the raw data values, click on the square spreadsheet icon to the right of the data set name in the top right panel of RStudio (circled in green in the image below).
 
 ![_screenshot of dataset in the global environment_](../static/img/data.PNG)
 

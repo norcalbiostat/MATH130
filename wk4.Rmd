@@ -7,14 +7,19 @@ output:
     css: ../css/yeti.css
 ---
 
----
+# Importing data into R and Intermediate Plotting
 
 Interesting data doesn't live inside R. Lets get data from an external file into R, and learn how to make more complex plots. 
 
+----
 
-`r emo::ji("memo")` Prepare:
+<br>
 
-* Right click each link and save the following data sets **into the `data` subfolder in your MATH130 folder**. 
+# `r emo::ji("memo")` Prepare:
+
+* Install the following packages: `gridExtra`, `RColorBrewer` and `sjPlot`.
+* Download the notes files for the two lessons into your `Math130/notes` folder. 
+* Right click each link and save the following data sets into your `Math130/data` folder.
 
 `r emo::ji("sign")` **DO NOT RENAME ANYTHING** If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder. 
 
@@ -23,22 +28,42 @@ Interesting data doesn't live inside R. Lets get data from an external file into
 * [email](https://norcalbiostat.netlify.com/data/email.txt)
 * [Police Shootings](https://norcalbiostat.netlify.com/data/fatal-police-shootings-data.xlsx)
 
-`r emo::ji("books")` Notes:
+<br>
 
+# `r emo::ji("books")` Notes:
 
-`r emo::ji("books")` Notes:
+* lec09 - Getting data into R       [[HTML]](notes/09_import.html) [[PDF]](notes/09_import.pdf) [[RMD]](notes/09_import_notes.Rmd)
+* lec10 - Graphing Enhancements     [[HTML]](notes/10_plots2.html) [[PDF]](notes/10_plots2.pdf) [[RMD]](notes/10_plots2_notes.Rmd)
 
-* lec09 - Getting data into R [[HTML]](notes/05_import.html) [[PDF]](notes/05_import.pdf) [[RMD]](notes/05_import_notes.Rmd)
-* lec10 - Intermediate Graphing                        [[HTML]](notes/10_plots2.html) [[PDF]](notes/10_plots2.pdf) [[RMD]](notes/10_plots2_notes.Rmd)
-* (not quite) [[All the graphing things]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html) (optional)
+<br>
 
-`r emo::ji("pencil2")` Assignment [[HW 4]](hw/hw4.Rmd).  
+# `r emo::ji("pencil2")` Assignment
 
+* [[HW 4]](hw/hw4.Rmd) - you will write your answers directly in here, and submit your assignment as instructed by the due date. 
 
-`r emo::ji("thinking_face")` Additional Resources: 
+<br>
 
-* R Primer: 
-* [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Import**
+# `r emo::ji("thinking_face")` Additional Resources: 
 
+* Data Import
+  * [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Import**
+  * Marin Stats Lectures
+    - Import Data, Copy Data from Excel to R CSV & TXT Files https://www.youtube.com/watch?v=qPk0YEKhqB8
+    - Importing , Checking and Working with Data in R https://www.youtube.com/watch?v=U4-RnTW5dfw
+  * Computing for the Social Sciences: https://cfss.uchicago.edu/notes/importing-data/
+  * Importing Data with R Studio https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio
+
+* Graphing
+  * `sjPlot`: Data Visualization for Statistics in Social Science [vignette](https://strengejacke.github.io/sjPlot/)
+  * R Graphics cookbook: http://www.cookbook-r.com/Graphs/
+  * R Graph Gallery: https://www.r-graph-gallery.com/
+  * STHDA - Visualization: http://www.sthda.com/english/wiki/data-visualization
+  * Guidance on colors 
+    * https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf
+    * http://www.sthda.com/english/wiki/colors-in-r
+    * https://www.stat.ubc.ca/~jenny/STAT545A/block14_colors.html
+
+  
 ---
+
 _Last Updated `r Sys.Date()`_

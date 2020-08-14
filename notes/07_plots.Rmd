@@ -2,14 +2,14 @@
 title: "Lesson 07 - Creating graphics"
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
+  pdf_document:
+    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 ---
 
 
@@ -36,8 +36,7 @@ After completing this lesson students will be able to
 
 ##### Prior to this lesson learners should
 
-* Download the [[08_plots_notes.Rmd]](08_plots_notes.Rmd) R markdown file and save into your `scripts/Math130` folder. 
-* Install the `ggplot2` package. 
+* Download the [[07_plots_notes.Rmd]](07_plots_notes.Rmd) R markdown file and save into your `Math130/notes` folder. 
 
 ## The syntax of `ggplot`
 The reason we use the functions in `ggplot2` is for consistency in the structure of it's arguments. Here is a bare bones generic plotting function: 
@@ -63,7 +62,7 @@ We will use a subset of the `diamonds` dataset that comes with the `ggplot2` pac
 
 ```{r}
 library(ggplot2)
-data("diamonds")
+diamonds <- ggplot2::diamonds
 set.seed(1410) # Make the sample reproducible
 dsmall <- diamonds[sample(nrow(diamonds), 1000), ]
 ```
@@ -91,14 +90,15 @@ The geometry needed to draw a barchart in ggplot is `geom_bar()`.
 ggplot(dsmall, aes(x=cut)) + geom_bar()
 ```
 
-We can reorder these levels on the fly. Here i'm using `forcats` but that's only one option. 
+We can reorder these levels on the fly so they are being shown in decreasing frequency using the `fct_infreq` function from the `forcats` library. 
 ```{r}
 ggplot(dsmall, aes(x=forcats::fct_infreq(cut))) + geom_bar() + xlab("cut")
 ```
 
+> Special note. The `::` notation is a shortcut to use a function from inside a package without actually loading the entire package. This can be useful when you're only using a function once or twice in an analysis. 
 
 ## Continuous variable
-The price, carat, and depth of the diamonds are all continuous variables. 
+The price, carat, and depth of the diamonds are all continuous variables. Let's explore the distribution of `price`. 
 
 ### Histograms
 Rather than showing the value of each observation, we prefer to think of the value as belonging to a _bin_. The height of the bars in a histogram display the frequency of values that fall into those of those bins. 
@@ -106,14 +106,15 @@ Rather than showing the value of each observation, we prefer to think of the val
 Since the x-axis is continuous the bars touch. This is unlike the barchart that has a categorical x-axis, and vertical bars that are separated.
 
 ```{r}
-ggplot(dsmall, aes(x=depth)) + geom_histogram()
+ggplot(dsmall, aes(x=price)) + geom_histogram()
 ```
+
 
 ### Density plots
 To get a better idea of the true shape of the distribution we can "smooth" out the bins and create what's called a `density` plot or curve. Notice that the shape of this distribution curve is much more... "wigglier" than the histogram may have implied. 
 
 ```{r}
-ggplot(dsmall, aes(x=depth)) + geom_density()
+ggplot(dsmall, aes(x=price)) + geom_density()
 ```
 
 ### Histograms + density 
@@ -125,7 +126,7 @@ Often is is more helpful to have the density (or kernal density) plot _on top of
 * I'm also going to get rid of the fill by using `NA` so the colored bars don't plot over the density line. 
 
 ```{r}
-ggplot(dsmall, aes(x=depth)) + geom_density(col="blue") + 
+ggplot(dsmall, aes(x=price)) + geom_density(col="blue") + 
   geom_histogram(aes(y=..density..), colour="black", fill=NA)
 ```
 
@@ -134,17 +135,31 @@ Another very common way to visualize the distribution of a continuous variable i
 
 #### base
 ```{r}
-boxplot(dsmall$depth)
+boxplot(dsmall$price)
 ```
 
 Notice that the only axis labeled is the y=axis. Like a dotplot the x axis, or "width", of the boxplot is meaningless here. We can make the axis more readable by flipping the plot on it's side. 
 ```{r}
-boxplot(dsmall$depth, horizontal = TRUE, main="Distribution of diamond prices", xlab="Dollars")
+boxplot(dsmall$price, horizontal = TRUE, main="Distribution of diamond prices", xlab="Dollars")
 ```
 
 Horizontal is a bit easier to read in my opinion. 
 
 What about ggplot? ggplot doesn't really like to do univariate boxplots. You'll see those later when we create one boxplot per group. 
+
+
+### New variable
+Before we move on, I want to see `price` displayed as ranges of 5,000 instead of a continuous measure from 0 to 20,000. I will us the `cut_width` function to create a new categorical variable here called `price_range`. [See this page for this, and other functions in ggplot that discretize numeric data into categorical ](https://ggplot2.tidyverse.org/reference/cut_interval.html). 
+
+```{r}
+dsmall$price_range <- cut_width(dsmall$price/1000, width=5)
+```
+
+Notice I also divided price by 1000, so 2.5 means 2500. Now that `price_range` is a categorical variable, I can create a barchart to visualize the frequencies of each bin. 
+
+```{r}
+ggplot(dsmall, aes(x=price_range)) + geom_bar()
+```
 
 ----
 
@@ -158,52 +173,55 @@ Cross-tabs, cross-tabulations and two-way tables (all the same thing, different 
 #### Frequency table
 The frequency table is constructed using the `table()` function. 
 ```{r}
-table(dsmall$cut, dsmall$color)
+table(dsmall$cut, dsmall$price_range)
 ```
 
-There are 4 Fair diamonds with color D, and 21 Ideal quality diamonds with color J.
+There are 4 Fair diamonds that cost between 7.5 and 12.5 thousand dollars, and 103 Ideal quality diamonds that cost between 2.5 and 7.5k. 
 
 #### Cell proportions
 Wrapping `prop.table()` around a table gives you the **cell** proportions. 
 ```{r}
-table(dsmall$cut, dsmall$color) %>% prop.table()
+table(dsmall$cut, dsmall$price_range) %>% prop.table()
 ```
-0.4% of all diamonds are D color and Fair cut, 2.1% are J color and Ideal cut. 
+
+* 0.015% of all diamonds are Fair cut and cost under 2.5k.
+* 0.002% of all diamonds are Ideal cut and cost over 17.5k
 
 #### Row proportions
-To get the **row** proportions, you specify `margin=1`. The percentages now add up to 1 across the rows. 
+To get the **row** proportions, specify `margin=1`. The percentages now add up to 1 across the rows. 
 ```{r}
-table(dsmall$cut, dsmall$color) %>% prop.table(margin=1) %>% round(3)
+table(dsmall$cut, dsmall$price_range) %>% prop.table(margin=1) %>% round(3)
 ```
 
-14.8% of all Fair quality diamonds are color D. 5.4% of all Ideal quality diamonds have color J.
+* 44.1% of Fair quality diamonds cost under 2.5k
+* 1.9% of Premium quality diamonds cost over 17.5k.
 
 #### Column proportions
 To get the **column** proportions, you specify `margin=2`. The percentages now add up to 1 down the columns. 
 ```{r}
-table(dsmall$cut, dsmall$color) %>% prop.table(margin=2) %>% round(3)
+table(dsmall$cut, dsmall$price_range) %>% prop.table(margin=2) %>% round(3)
 ```
 
-2.7% of all D color diamonds are of Fair quality. 44.7% of all J color diamonds are of Ideal quality. 
-
+* 8.0% of diamonds that cost under 2.5k are of Good quality
+* 62.5% of diamonds that cost over 17.5k are Premium quality
 
 ### Grouped bar charts
 To compare proprtions of one categorical variable within the same level of another, is to use grouped barcharts. 
 
-Plot the cut on the x axis, but then `fill` using the second categorical variable. This has the effect of visualizing the **row** percents from the table above. The percent of color, within each type of cut. 
+Plot the cut on the x axis, but then `fill` using the second categorical variable. This has the effect of visualizing the **row** percents from the table above. Here it is the percent of `price_range`, within each type of `cut`. 
 
 ```{r}
-ggplot(dsmall, aes(x=cut, fill=color)) + geom_bar()
+ggplot(dsmall, aes(x=cut, fill=price_range)) + geom_bar()
 ```
 
 The default is a stacked barchart. So add the argument `position=dodge` inside the `geom_bar` layer to put the bars side by side. 
 ```{r}
-ggplot(dsmall, aes(x=cut, fill=color)) + geom_bar(position = "dodge")
+ggplot(dsmall, aes(x=cut, fill=price_range)) + geom_bar(position = "dodge")
 ```
 
-And look, an automatic legend. What if I wanted to better compare cut within color group? This is the **column** percentages. Just switch which variable is the x axis and which one is used to fill the colors!
+And look, an automatic legend. What if I wanted to better compare cut within price range? This is the **column** percentages. Just switch which variable is the x axis and which one is used to fill the colors!
 ```{r}
-ggplot(dsmall, aes(x=color, fill=cut)) + geom_bar(position = "dodge")
+ggplot(dsmall, aes(x=price_range, fill=cut)) + geom_bar(position = "dodge")
 ```
 
 And this easy change is why we love `ggplot2`. 
@@ -252,29 +270,30 @@ We can adjust the transparency of the density curve by applying a value to `alph
 ggplot(dsmall, aes(x=depth, fill=cut)) + geom_density(alpha=.3)
 ```
 
-Now we can see that there are some fair cut diamonds with deptsh around 60. This peak was hidden from us before. 
+Now we can see that there are some fair cut diamonds with depths around 60. This peak was hidden from us before. 
 
 You could also just color the lines and leave the fill alone. 
 ```{r}
 ggplot(dsmall, aes(x=depth, color=cut)) + geom_density()
 ```
 
-We won't talk about changing colors in this lab, but the yellow is prety hard to read. 
+We won't talk about changing colors or the background in this lab, but the yellow is pretty hard to read. 
 
 
 ### Grouped boxplots
 
-A simple addition, just define your x and y accordingly. Specifying your `fill` to be the same variable as your `x`, gives you an automatic legend. 
+`ggplot` is happy to do grouped boxplots. Put the continuous variable on the y, categorical on the x. 
 
 ```{r}
-ggplot(dsmall, aes(x=color, y=carat, fill=color)) + geom_boxplot()
+ggplot(dsmall, aes(x=price_range, y=carat)) + geom_boxplot()
 ```
 
+
 #### Adding violins to the boxplot
-A violin plot is like a density plot, turned on it's side, and reflected around the axis for symmetry purposes. Overlaying a boxplot and a violin plot serves a similar purpose to Histograms + Density plots. It shows outliers, the location of most the data, and better shows the shape/skew of the distribution
+A violin plot is like a density plot, turned on it's side, and reflected around the axis for symmetry purposes. Overlaying a boxplot and a violin plot serves a similar purpose to Histograms + Density plots. It shows outliers, the location of most the data, and better shows the shape/skew of the distribution. Let's also `fill` the geometries with the same color as what is on the x-axis. Not 100% needed but nice for display sometimes. 
 
 ```{r}
-ggplot(dsmall, aes(x=color, y=carat, fill=color)) +
+ggplot(dsmall, aes(x=price_range, y=carat, fill=price_range)) +
         geom_violin(alpha=.1) + 
         geom_boxplot(alpha=.5, width=.2)
 ```

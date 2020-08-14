@@ -1,16 +1,15 @@
 ---
-title: "Lesson 05 - Getting data into R"
-author: "Robin Donatello"
-date: "Last Updated `r format(Sys.Date(), '%m-%d-%Y')`"
+title: "Lesson 09 - Getting data into R"
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
+  pdf_document:
+    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 ---
 
 
@@ -24,16 +23,11 @@ After completing this lesson learners will be able to
 * Compare and contrast the three file types discussed in this lesson. 
 * Use functions to examine data objects to ensure data was imported correctly. 
 
-
 ##### Prior to this lesson learners should
 
-* Download the [[05_import_notes.Rmd]](06_dm_notes.Rmd) R markdown file and save into your `scripts/Math130` folder. 
-* Download the three data sets listed below. Right click each link and save the following data sets **into the `data` subfolder in your MATH130 folder**. **DO NOT RENAME ANYTHING** If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder. 
+* Download the [[09_import_notes.Rmd]](09_dm_notes.Rmd) R markdown file and save into your `Math130/notes` folder. 
+* Download the three data sets listed on the [Week 4 overview](../wk4.html) below.
 
-
-* [NCBirths](https://norcalbiostat.netlify.com/data/NCbirths.csv)
-* [email](https://norcalbiostat.netlify.com/data/email.txt)
-* [Police Shootings](https://norcalbiostat.netlify.com/data/fatal-police-shootings-data.xlsx)
 
 # File types
 In this lesson we are only going to explore reading files that exist on your computer into R from three most commonly used data sources: A tab-delimited text file, A CSV file and an Excel file. 
@@ -42,7 +36,7 @@ The three different files we will be using have different file types, or extensi
 
 * `email.txt` is a `.txt` or "text" file.
 * `NCBirths.csv` is a `.csv` or "comma separated values" file.
-* `WashPost Police Shootings 2015.xlsx` is a `.xlsx` or Excel file. 
+* `fatal-police-shootings-data.xlsx` is a `.xlsx` or Excel file. 
 
 Each of these file types differ in the type of _delimiter_ used. The _delimiter_ is a character or symbol that separates columns of data from each other when stored in an external file.  Recall back to the Data Camp exercises on data frames and matrices. Each column in the matrix represented data on a specific variable. Something had to tell R how to distinguish which values went with which variable. 
 
@@ -62,7 +56,7 @@ In all the examples below, the path shown (`data/`) is the path on **MY** comput
 You can  find the path of a file by navigating to the desired file in your finder or browser window, right click and copy the file to the clipboard, then right click and pasting into a R markdown file. This will show a path that looks something like this: 
 
 ```r
-file:///C:/Box Sync/Data/Challenger.txt
+file:///C:/Math 130/Data/Challenger.txt
 ```
 
 You will need to remove the `file:///` part at the beginning before using this path. You will have three chances in this lab to practice this. 
@@ -108,13 +102,12 @@ str(email)
 * The variable names were read in correctly, as evidenced by the words in the far right corner after the `$`. 
 * Most variables are treated as numeric integers, except a few are factors. Including `time`. If we wanted to examine a time trend, we would need to convert the class into a `datetime` 
 
-> What happens if you forget to include the arguments for `header` or `sep`? Try that now. 
+> What happens if you forget to include the arguments for `header` or `sep`? Try that now and discuss with your neighbor what happened. 
 
 **Forgetting both arguments**
 
-```{r, eval=FALSE}
+```{r, error=TRUE}
 email <- read.table("../data/email.txt")
-head(email)
 ```
 
 **Forgetting the header**
@@ -147,7 +140,7 @@ head(NCbirths)
 ## Excel files
 The best method I have found so far to read in Excel files is from the [`readxl` package](http://readxl.tidyverse.org/) by [Hadley Wickham](http://hadley.nz/). This package need to be installed first, and then can be simply loaded using the `library()` function each time you start an `R` session where you will be reading in this type of data. 
 
-The `read_excel()` function is what we are going to use. Note the use of the underscore `_` instead of a period `.` between read and the file type.  
+The `read_excel()` function is what we are going to use. Note the use of the underscore `_` instead of a period `.` between `read` and `excel`. 
 
 ```{r}
 library(readxl)
@@ -155,23 +148,14 @@ police  <- read_excel("../data/fatal-police-shootings-data.xlsx", sheet=1, col_n
 police[1:10,1:5]
 ```
 
-> This is currently not working
 
 * The variable `date` is a `dttm` or _date-time_ variable. This means `R` recognizes it directly as a date, not some string of numbers. 
 * Categorical variables such as `manner_of_death` and `city` are read in as `character` instead of factor. We may or may not want to change that later.
 * Numeric variables such as `age` are of type `dbl` (double). This is similar to `integer` or `numeric`, so we are fine. 
 
-----
 
-# Additional resources
+-----
 
-## Importing Data
+# <a href="https://norcalbiostat.github.io/MATH130/wk4.html"><button type="button">Go Back to Week 4</button> </a>
 
-* Marin Stats Lectures
-    - Import Data, Copy Data from Excel to R CSV & TXT Files https://www.youtube.com/watch?v=qPk0YEKhqB8
-    - Importing , Checking and Working with Data in R https://www.youtube.com/watch?v=U4-RnTW5dfw
-* Quick-R https://www.statmethods.net/input/importingdata.html
-* Computing for the Social Sciences: https://cfss.uchicago.edu/notes/importing-data/
-* Importing Data with R Studio https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio
-* Importing Data into R Studio cloud https://community.rstudio.com/t/importing-data-into-r-studio-cloud/14332
 

@@ -68,7 +68,7 @@ TRUE and FALSE
 
 # Vectors()
 
-1. Fill in the blanks below to eplore what happens when you have vecotrs of different data types. Report your answer for each in a sentence below.
+1.  Use the `class()` function to explore what happens when you have vectors of different data types. The first one has been done for you. Report your answer for each in a sentence below.
 
 ```{r}
 num_only <- c(1,2,3,4)                    #a
@@ -96,7 +96,7 @@ class(tricky)
 
 2. Create three vectors (`weekday`, `poker`, `roulette`) using the `c()` operator to describe the following outcome. 
 
-* `weekday`: The 5 weekdays. Use these three letter codes: mon, tue, wed, thu, fri.
+* `weekday`: The 5 weekdays. Use these three letter codes: "mon", "tue", "wed", "thu", "fri."
 * `poker`: 
     - On Monday you won $140 
     - Tuesday you lost $50
@@ -113,7 +113,7 @@ class(tricky)
 _Hint: If I won $30 on monday and lost $20 on tuesday, my vector would look like `c(30, -20)`_
 
 ```{r}
-weekday <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+weekday <- c("mon", "tue", "wed", "thu", "fri")
 poker <- c(140, -50, 20, -120, 240)
 roulette <- c(-24, -50, 100, -350, 10)
 ```
@@ -154,13 +154,11 @@ Run the code chunk below to read in the Ames data set from the web. This data se
 
 ```{r}
 ames <- openintro::ames
-```
-```{r}
-View(ames)
+head(ames)
 ```
 
 
-1. List out the variable name and data types for five different variables in the Ames data set
+1. List out the variable name and data types for five different variables in the ames data set
 
 Order, integer 
 PID, integer

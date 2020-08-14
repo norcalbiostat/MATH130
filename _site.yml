@@ -25,7 +25,7 @@ navbar:
       href: faq.html
     - text: "Syllabus"
       icon: fa-info-circle
-      href: static/syllabus.html
+      href: syllabus.html
       
 output:
   html_document:

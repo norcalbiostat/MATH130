@@ -96,8 +96,8 @@ table(smoking$ethnicity, smoking$ethnicity_new)
 3. Using `fct_recode`, create a new factor variable `recode_ethnicity` from `ethnicity_new` with labels "A"(Asian), "B"(Black), "M"(Mixed), "W"(White). Make sure you create this new variable as part of the `smoking` data set. (i.e. `smoking$recode_ethnicity <-`) 
 
 ```{r}
-smoking$recode_ethnicity <- smoking$ethnicity_new %>% fct_recode("A"="Asian", "B"="Black"
-,"M"="Mixed", "W"="White")
+smoking$recode_ethnicity <- smoking$ethnicity_new %>% 
+        fct_recode("A"="Asian", "B"="Black","M"="Mixed", "W"="White")
 table(smoking$recode_ethnicity)
 ```
 

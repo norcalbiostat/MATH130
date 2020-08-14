@@ -1,17 +1,20 @@
 ---
-title: "Lesson 09 - Data management and aggregation using `dplyr`"
+title: "Lesson 08 - Data management and aggregation using `dplyr` (Notes)"
 output: html_document
 ---
 
 
 # Introduction 
 
+Follow along during lecture, filling in the blanks (_____) to complete the code provided. Run the code chunk after you complete it to ensure that the output you get matches what is in the lecture notes. 
+
+
 ## Preparation
 
 ```{r, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(warning=FALSE, message=FALSE,error=TRUE) 
-library(dplyr); library(nycflights13)
-data(flights)
+library(dplyr)
+flights <- nycflights13::flights
 ```
 
 ## Exploring airline flight data with dplyr. 
@@ -50,6 +53,9 @@ This also works to exclude all columns EXCEPT the ones between two variables.
 select(flights, -(____:___))
 ```
 
+## Rename
+Rename `dep_time` to `departure_time`. 
+
 
 ## Mutate
 
@@ -83,14 +89,8 @@ Create a new data set that is grouped by month.
 by_month <- group_by(flights, ______)
 ```
 
-Orders first by grouping variables, then by the sorting variable. 
-```{r}
-how_long <- arrange(by_month, _______)
-select(how_long, month, distance)
-```
 
-
-The average distance flown per month. 
+Calculate the average distance flown per month. 
 ```{r}
 summarise(______, avg_airtime = mean(distance, na.rm=TRUE))
 ```

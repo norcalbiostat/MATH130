@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -1300,6 +1299,22 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
 
 
 
@@ -1331,7 +1346,7 @@ h6 {
 }
 </style>
 
-<style type="text/css">h5 {font-size:8;font-weight: bold;color: #008cba;background-color: #e3e6ea;}</style>
+<style type="text/css">h5 {font-size:8;font-weight: bold;color: #008cba;background-color: #e3e6ea;}h1, h2, h3, h4{color: #008cba;}.button {background-color: #4CAF50; border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}</style>
 
 
 
@@ -1408,6 +1423,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -1436,6 +1452,12 @@ summary {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -1535,7 +1557,7 @@ div.tocify {
 <div id="data" class="section level2">
 <h2>Data</h2>
 <p>You have a choice here. If you are currently working on some data that you would like to explore, talk with me to get your data set approved.</p>
-<p>If you do not have your own data, you can choose from one of the following data sets, all of which can be downloaded from the <a href="https://norcalbiostat.netlify.com/data/cleaned_data/">Data</a> page of my teaching course website. Here are some viable choices:</p>
+<p>If you do not have your own data, you can choose from one of the following data sets, all of which can be downloaded from the <a href="https://norcalbiostat.netlify.com/teaching/data">Data</a> page of my teaching course website. Here are some viable choices:</p>
 <ul>
 <li><strong>Depression</strong>: Level of depression (<code>cesd</code>), health care, and demographic characteristics.</li>
 <li><strong>High School and Beyond</strong>: Educational, vocational, and personal development of elementary and high school students.</li>
@@ -1552,35 +1574,37 @@ div.tocify {
 <li>To allow for adequate time for peer grading the submission deadline is a strict cutoff. Really late assignments won’t be accepted.</li>
 <li>Knit your file to HTML, WORD, or PDF, then upload to Google Drive using the link below for your section the due date.
 <ul>
-<li><a href="https://drive.google.com/drive/folders/1DL1TGF0MK7riJl9tAOUCNVK565UmjCt3?usp=sharing">Spring 20 - Section 01</a></li>
-<li>If you knit to HTML, you must open &amp; save the resulting file as PDF so it can be commented on.</li>
+<li><a href="https://drive.google.com/drive/folders/1m9fs7_GYveiQ4tMWTgtQj2YhPTn2WSqg?usp=sharing">Fall 20 - Section 01</a></li>
+<li>🛑 If you knit to HTML, you must open &amp; save the resulting file as PDF so it can be commented on.</li>
 </ul></li>
 <li>Put your student username in the name of the file somewhere, so that your fellow students know which assignment they are to review.</li>
 </ul>
 </div>
 <div id="peer-review" class="section level1">
 <h1>Peer Review</h1>
-<p>After the submission deadline, your analysis projects will be randomly assigned to two other projects to peer review and score. This means you will score and provide feedback on 2 reports. The instructor(s) will also score all projects for their class sections.</p>
+<p>After the submission deadline, your analysis projects will be randomly assigned to two other people to peer review and score. This means you will also score and provide feedback on 2 reports. Your instructor will also score all projects for your class section.</p>
 <ul>
 <li>All submissions will be processed and posted to a <a href="https://norcalbiostat.github.io/peer_review/math130_eda.html">peer review</a> website.</li>
-<li><p>Your assignments will be posted here. If one or both of the people you are assigned to review do not submit a project, pick another person to review. You do not have to notify your instructor if this happens.</p>
+<li>Your assignments will be posted here. If one or both of the people you are assigned to review do not submit a project, pick another person to review. You do not have to notify your instructor if this happens.</li>
+</ul>
+<p>How to do your reviews:</p>
+<ol style="list-style-type: decimal">
+<li>Go to the Google Drive folder for your section and find the projects you are assigned to review.
 <ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1gcxGsuRZKeyR6khSiVcuMyR5ACryZNiJYrgHkfyyI3M/edit?usp=sharing">Spring 20 - Section 01</a></li>
+<li><a href="https://drive.google.com/drive/folders/1m9fs7_GYveiQ4tMWTgtQj2YhPTn2WSqg?usp=sharing">Fall 20 - Section 01</a></li>
 </ul></li>
-<li>Download your assigned projects to review to your computer.
-<ul>
-<li>Using the commenting features of either WORD or a PDF reader, provide 4 comments for each project.
+<li>Open the file in the browser window</li>
+<li>Using the commenting feature provide 4 comments for each project.
 <ul>
 <li>Two positive: What specific features did they include that you liked or found helpful?</li>
 <li>Two negative: What can they do different or better next time? Did you find a bug in their code?</li>
-</ul></li>
 </ul></li>
 <li>Score each project using this <a href="https://goo.gl/forms/7I4zsYpSsiZpgKyH3">Google Form</a>.
 <ul>
 <li>This data entry form follows the scoring rubric printed below in this document.</li>
 <li>You will upload both projects you reviewed to this form as well.</li>
 </ul></li>
-</ul>
+</ol>
 </div>
 <div id="guidelines" class="section level1">
 <h1>Guidelines</h1>
@@ -1687,7 +1711,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

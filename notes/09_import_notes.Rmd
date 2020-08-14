@@ -1,14 +1,7 @@
 ---
-title: 'Lesson 05 - Getting data into R'
+title: 'Lesson 09 - Getting data into R (Notes)'
 output: html_document
 ---
-
-
-# Introduction
-
-
-# Download data
-
 
 # Importing data
 
@@ -46,9 +39,8 @@ Read in the `NCBirths.csv` file here.
 ```
 
 ## Excel files
-Read in the `WashPost Police Shootings 2015.xlsx` file here. Don't forget that you need to load the `readxl` library first. 
+Read in the `fatal-police-shootings-data.xlsx` file here. Don't forget that you need to load the `readxl` library first. 
 ```{r}
-#library(readxl)
 
 ```
 

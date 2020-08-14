@@ -28,7 +28,7 @@ After completing this lesson students will be able to
 
 ## Preparation 
 
-`r emo::ji("pencil2")` Prior to this lesson learners should
+Prior to this lesson learners should
 
 * Download the [[06_factors_notes.Rmd]](06_factors_notes.Rmd) R markdown file and save into your `notes/Math130` folder. 
     - Open this in RStudio and ensure the first code chunk will run without error. 
@@ -143,7 +143,7 @@ email$number %>% fct_relevel("none", "small", "big") %>% table()
 In each of these examples, I pipe (`%>%`) the `table()` function at the end so I can see the results of the reordering. 
 This helps me visually confirm that the code used changed the factor levels to be left to right in increasing content size order. This will be important for graphing. 
 
-`r emo::ji("warning")` Since I did not use the assignment operator (`<-`) here, these changes were not made to the variable in the `email` data set. The examples below demonstrate making an adjustmet to a factor variable and saving that adjustment as a new variable in the data set.
+> Since I did not use the assignment operator (`<-`) here, these changes were not made to the variable in the `email` data set. The examples below demonstrate making an adjustmet to a factor variable and saving that adjustment as a new variable in the data set.
 
 <!---
 ## Order by frequency
@@ -233,7 +233,7 @@ ff$restaurant_shortname <- fct_recode(ff$restaurant_new,
 table(ff$restaurant, ff$restaurant_shortname, useNA="always")
 ```
 
-##### `r emo::ji("star")` Let's chain this all together. 
+##### Let's chain this all together. 
 Sporadically throughout this lesson, and at the end of the last lesson i've used the pipe `%>%` operator as somewhat of a shortcut. This amazing piece of code lets us string together commands. Let's see how to accomplish both changes to the restaurant variable in one single step. 
 
 ```{r}

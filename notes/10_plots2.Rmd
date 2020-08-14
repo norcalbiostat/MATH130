@@ -1,16 +1,15 @@
 ---
-title: "Lesson 10 - Creating Intermediate graphics"
-author: "Robin Donatello"
+title: "Lesson 10 - Graphing Enhancements"
 date: "Last Updated `r format(Sys.Date(), '%m-%d-%Y')`"
 output:
-  pdf_document:
-    toc: no
   html_document:
     highlight: tango
-    css: ../css/yeti.css
     theme: yeti
+    css: ../css/yeti.css
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 # Introduction 
@@ -20,19 +19,23 @@ The first lesson on graphing focused on creating the correct graphics for the da
 ## Student Learning Outcomes
 After completing this lesson students will be able to
 
-* Create several multivariable graphics
 * Change the color of plots
 * Create a grid/panel of plots.
+* Create several multivariable graphics
+* Know of a few new packages that contain functions that enhance plots
+
+
+> There is *NO* need to remember all of these adjustments when there are incredibly handy reference guides available. The resource section of the [Week 4 overview](../wk4.html) has links to some of my favorite sites. 
 
 
 ## Preparation
 
-Prior to this lesson students should
+Prior to this lesson students should 
 
-* Download the [[08_plots2_notes.Rmd]] R markdown file and save into your Math130 folder.
-* Install the `scales` and `gridExtra` packages.
-* Import both the NCbirths, and the email data sets. 
-* Load the `ggplot2` and `dplyr` packages. 
+1. Install the following packages: `gridExtra`, `RColorBrewer` and `sjPlot` packages.
+2. Download the notes file for this lesson
+3. Update the paths to read in the data and ensure the first code chunk of your notes work. 
+
 
 ```{r, warning=FALSE, message=FALSE}
 library(ggplot2); library(dplyr)
@@ -41,11 +44,9 @@ email <- read.table("../data/email.txt", header=TRUE, sep="\t")
 NCbirths <- read.csv("../data/NCbirths.csv", header=TRUE)
 ```
 
-# Appearance enhancements
+# Themes
 
-## Themes
-
-The standard theme has a grey background, white grid lines etc. 
+The standard theme has a gray background, white grid lines etc. 
 Themes can be changed by adding `theme_X()` where `X` has several options
 
 ```{r}
@@ -56,7 +57,9 @@ ggplot(email, aes(x=line_breaks, y=num_char)) + geom_point() + theme_dark()
 
 See more about themes here: http://www.sthda.com/english/wiki/ggplot2-themes-and-background-colors-the-3-elements
 
-## Change legend titles 
+# Legends
+
+## Titles 
 
 Add the `name=` argument to whatever layer you added that created the legend. Here I specified a `fill`, and it was a `discrete` variable. So I use the `scale_fill_discrete()` layer. 
 
@@ -65,23 +68,79 @@ ggplot(email, aes(y=num_char, x=number, fill=number)) + geom_boxplot() +
   scale_fill_discrete(name="Size of number")
 ```
 
-Here, I `col`ored the points by a discrete variable, so the layer is `scale_color_discrete()`.
+Here I `col`or the box outlines so the layer is `scale_color_discrete()`.
 ```{r}
 ggplot(email, aes(y=num_char, x=number, col=number)) + geom_boxplot() + 
   scale_color_discrete(name="Size of number")
 ```
 
-## Add means to boxplots. 
-Boxplots are great. Even better with violin overlays. Know what makes them even better than butter? Adding a point for the mean. `stat_summary` is the layer you want to add. 
-
+## Removing the legend
+In this case the legend show the same information. That's redundant and takes up space, so let's remove it entirely by adding `guide=FALSE` to the `scale_` layer. 
 ```{r}
-ggplot(email, aes(y=num_char, x=number, fill=number)) + geom_boxplot() + 
-  scale_fill_discrete(name="Size of number") + 
-  stat_summary(fun.y="mean", geom="point", size=3, pch=17,color="red")
+ggplot(email, aes(y=num_char, x=number, col=number)) + geom_boxplot() + 
+  scale_color_discrete(guide=FALSE)
 ```
 
-I suggest playing around with `size` and plotting character `pch` to get a feel for how these work. You can also look at `?pch` (and scroll down in the help file) to see the 25 default plotting characters.
+# Titles
+A good plot needs to stand alone and convey as much information as possible. 
 
+* `ggtitle()` adds an overall plot title
+* `ylab()` and `xlab()` adjust the axis labels. 
+
+```{r}
+ggplot(email, aes(y=num_char, x=number, col=number)) + geom_boxplot() + 
+  scale_color_discrete(guide=FALSE) + 
+  ggtitle("Distribution of the number of characters in an email based on the size of the number in the email") +
+  ylab("Number of characters") + xlab("Size of number in email")
+```
+
+
+
+# Removing NA categories. 
+This happens when there is no data is present for one or more levels. One way to get around this is to 
+use `select` to only choose variables that we are going to use in the plot directly, delete all rows with any missing values using `na.omit()`, then pipe `ggplot` directly in after deleting all rows with missing data.
+
+
+```{r}
+NCbirths %>% select(mage, whitemom, marital, habit) %>% na.omit() %>% 
+  ggplot(aes(x=mage, fill=whitemom)) + 
+  geom_density(alpha=.2) + facet_grid(marital~habit)
+```
+
+> Warning: `na.omit()` can be dangerous to use. It will drop EVERY row with ANY value missing. We are using it safely here because we are only selecting the variables that we will use in the plot.  
+
+# Changing colors
+
+## Manual
+
+```{r}
+ggplot(email, aes(x=number, fill=number)) + geom_bar() +
+    scale_fill_manual(values=c("red", "green", "blue"))
+```
+
+There's some spectacularly named colors as well, here is the [full list of names](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf). 
+```{r}
+ggplot(email, aes(x=number, fill=number)) + geom_bar() +
+    scale_fill_manual(values=c("salmon", "slategray4", "violet"))
+```
+ 
+And you can use [hex colors](https://www.w3schools.com/colors/colors_picker.asp)
+```{r}
+ggplot(email, aes(x=number, fill=number)) + geom_bar() +
+    scale_fill_manual(values=c("#47dbff", "#b3b3cc", "#ff531a"))
+```
+
+
+## Using a color palette (recommended)
+```{r}
+library(RColorBrewer)
+ggplot(email, aes(x=number, fill=number)) + geom_bar() +
+    scale_fill_brewer(palette="Spectral")
+```
+
+Review the links in the additional resources section of the [Week 4 overview](../wk4.html) on how to choose colors. With great power comes great responsibility. Colors can just as easily detract from a plot as they can enhance it. 
+
+----
 
 # Barchart enhancements
 
@@ -98,35 +157,62 @@ ggplot(email, aes(x=number)) + theme_bw() +
 * Play with the `size` modifier to find something readable. 
 
 ## Plotting Proportions
-Often you don't want to compare counts but percents. To accomplish this, we have to aggregate the data to calculate the proportions first, then plot the aggregated data using `geom_col` to create the columns.  Here we also use `scale_y_continuous` to make the y axis labels display as percents. You can adjust the scale with just ggplot, but specifically showing percentages requires the `scales` package to be loaded. 
+Often you don't want to compare counts but percents. To accomplish this in ggplot is doable, but involves pre-calculating the percentages first and then plotting the summary numbers. This is a great place to introduce a different package: `sjPlot`. 
 
+`ggplot2` is pretty great for easy out-of-the-box plots that don't look half bad. Well for something a bit better when it comes to labeled barcharts let's turn to the `sjPlot` package. Note this package uses ggplot graphics, but does not follow the syntax. So you'll need to reference the [vignette](https://strengejacke.github.io/sjPlot/) often to to learn more of what this package can do and what syntax it uses. 
+
+To plot the frequency distribution of a single categorical variable we use the "plot freq" function `plot_frq`
 ```{r}
-library(scales)
-cut.props <- table(email$number) %>% prop.table() %>% data.frame()
-cut.props # what does this data look like? 
+library(sjPlot)
 
-ggplot(cut.props, aes(x=Var1, y=Freq)) + 
-  geom_col() + 
-  scale_y_continuous(labels=percent) + 
-  ylab("Proportion") + 
-  xlab("Size of number in email") + 
-  ggtitle("Proportion of emails by number size")
+plot_frq(email$number)
 ```
 
-
-
-## Cleveland Dot Plots
-Another way to visualize categorical data that takes up less ink than bars is a Cleveland dot plot. Here again we are plotting summary data instead of the raw data. This uses a new `geom_segment` that draws the lines from x=0 to the dot, and that it should be placed on the y-axis at the value of `Freq`. 
+To plot the results of a contingency table we can use the `plot_xtab` function. 
 
 ```{r}
-ggplot(cut.props, aes(x=Var1, y=Freq)) +  
-  geom_point(size = 3) + 
-  geom_segment(aes(x=Var1, xend=Var1, y=0, yend=Freq), color='grey50')
+plot_xtab(NCbirths$mature, NCbirths$marital)
 ```
 
-More examples can be found here: https://uc-r.github.io/cleveland-dot-plots
+As before, you *MUST* do a common sense check on the proportions that are shown, which also means knowing what the default settings for a function are. The defaults for `plot_xtab` show the proportion of the fill variable, within the variable that's on the x. 
+In context of the plot above, 17.5% of women who are not married are mature moms. 86.8% of all moms are younger moms. 
 
-# Faceting / paneling 
+You can see the available adjustments using function arguments by reviewing the [vignette for that function](https://strengejacke.github.io/sjPlot/reference/plot_xtab.html). Here I will turn off the total column by adding `show.total=FALSE` and turn it into row percents by adding `margin='row'`.
+
+```{r}
+plot_xtab(NCbirths$mature, NCbirths$marital, margin='row', show.total = FALSE)
+```
+
+Now 81.1% of mature moms are not married, and 41.6% of younger moms are married. 
+Always make sure your %'s being displayed match your interpretation. 
+
+----
+
+
+# Multivariate Plotting 
+So far we've only looked at how to plot 2 variables on the same plot. Let's up our game some. 
+
+## Boxplots with three variables. 
+In the first plotting lesson, we saw that for boxplots the continuous variable goes on the y, categorical on the x. Well you can also fill (or color) the boxes by a third variable if you want an additional comparison within the categories on the x axis. 
+
+```{r}
+ggplot(NCbirths, aes(y=weeks, x=mature, fill=habit)) + 
+        geom_boxplot()
+```
+
+This lets us compare the average gestation period for smokers vs non smokers, and mature vs younger moms. Displaying the boxes this way allows for easy comparison of weeks between smokers & non smokers, within maturity status. If we flip the x axis and fill, 
+
+```{r}
+ggplot(NCbirths, aes(y=weeks, x=habit, fill=mature)) + 
+        geom_boxplot()
+```
+
+Now the emphasis is on comparing weeks between mature & younger moms, within each smoking status. 
+
+This way of grouping levels of one aspect within categories of another aspect is extended and enhanced using faceting or paneling. 
+
+
+## Faceting / paneling 
 
 ggplot introduces yet another term called `faceting`. The definition is _a particular aspect or feature of something_, or _one side of something many-sided, especially of a cut gem_. Basically instead of plotting the grouped graphics on the same plotting area, we let each group have it's own plot, or facet.  
 
@@ -142,22 +228,13 @@ ggplot(NCbirths, aes(x=mage, fill=gender)) + geom_density(alpha=.3) + facet_wrap
 
 It is important to compare distributions across groups on the same scale, and our eyes can compare items vertically better than horizontally. 
 
-# Multiple plots per window
+## Multiple plots per window
 
-## Base
-I use `par(mfrow=c(r,c))` for base graphics, where `r` is the number of rows and `c` the number of columns. 
+This method works only for plots created with `ggplot`. Here we use the `grid.arrange` function in the `gridExtra` package. 
 
-```{r}
-par(mfrow=c(1,3))
-hist(NCbirths$mage)
-boxplot(NCbirths$fage)
-plot(NCbirths$mage ~ NCbirths$fage)
-```
+1. assign the output of a ggplot object to an object (here it's `plot1` and `plot2`). 
+2. Use `grid.arrange()` to arrange them either side by side or top and bottom. 
 
-Other resources including learning about `layouts`. Multipanel plotting with base graphics http://seananderson.ca/courses/11-multipanel/multipanel.pdf 
-
-#### ggplot
-Use the `grid.arrange` function in the `gridExtra` package.  You assign the output of a ggplot object to an object (here it's `plot1` and `plot2`). Then you use `grid.arrange()` to arrange them either side by side or top and bottom. 
 ```{r}
 library(gridExtra)
 plot1 <- ggplot(NCbirths, aes(x=mage, fill=whitemom)) + geom_density(alpha=.2)
@@ -173,44 +250,9 @@ Who says we're stuck with only faceting on one variable? A variant on `facet_wra
 ggplot(NCbirths, aes(x=mage, fill=whitemom)) + geom_density(alpha=.2) + facet_grid(marital~habit)
 ```
 
-# Removing NA categories. 
-This happens when there is no data is present for one or more levels. One way to get around this is to 
-use `select` to only choose variables that we are going to use in the plot directly, delete all rows with any missing values using `na.omit()`, then pipe `ggplot` directly in after deleting all rows with missing data.
+-----
 
-
-```{r}
-NCbirths %>% select(mage, whitemom, marital, habit) %>% na.omit() %>% 
-  ggplot(aes(x=mage, fill=whitemom)) + 
-  geom_density(alpha=.2) + facet_grid(marital~habit)
-```
-
-> Warning: `na.omit()` can be dangerous to use. It will drop EVERY row with ANY value missing. We are using it safely here because we are only selecting the variables that we will use in the plot.  
-
-
-# Changing colors
-
-## Manual
-
-```{r}
-ggplot(email, aes(x=number, fill=number)) + geom_bar() +
-    scale_fill_manual(values=c("red", "green", "blue"))
-```
-
-There's some spectacularly named colors as well, 
-```{r}
-ggplot(email, aes(x=number, fill=number)) + geom_bar() +
-    scale_fill_manual(values=c("salmon", "slategray4", "violet"))
-```
- 
-## Using a color palette (recommended)
-```{r}
-library(RColorBrewer)
-ggplot(email, aes(x=number, fill=number)) + geom_bar() +
-    scale_fill_brewer(palette="Spectral")
-```
-
-More guidance on colors can be found here: 
-https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf
+# <a href="https://norcalbiostat.github.io/MATH130/wk4.html"><button type="button">Go Back to Week 4</button> </a>
 
 
 

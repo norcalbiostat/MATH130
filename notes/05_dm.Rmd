@@ -2,14 +2,14 @@
 title: "Lesson 05 - Working with Data"
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
+  pdf_document:
+    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 ---
 
 
@@ -28,7 +28,7 @@ After completing this lesson learners will be able to
 
 ## Preparation 
 
-`r emo::ji("pencil2")` Prior to this lesson learners should
+Prior to this lesson learners should
 
 * Download the [[05_dm_notes.Rmd]](05_dm_notes.Rmd) R markdown file and save into your `notes/Math130` folder. 
     - Open this in RStudio and ensure the first code chunk will run without error. 
@@ -260,7 +260,7 @@ table(ncbirths$mature)
 
 This is also accomplished by first stating the variable, then piping in the summary function. 
 
-`r emo::ji("warning")` If you get an error message saying something like <span style="color:red;">function not found</span>, that is a message to you that you need to load the library. See the [preparation](#preparation) section of these notes to remind yourself how to do this. 
+> If you get an error message saying something like <span style="color:red;">function not found</span>, that is a message to you that you need to load the library. See the [preparation](#preparation) section of these notes to remind yourself how to do this. 
 
 ```{r, warning=FALSE, message=FALSE}
 ncbirths$mature %>% table()

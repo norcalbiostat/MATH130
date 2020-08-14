@@ -64,7 +64,7 @@ e. `mass_index` =
 
 # Vectors()
 
-1. Fill in the blanks below to eplore what happens when you have vecotrs of different data types. Report your answer for each in a sentence below.
+1. Use the `class()` function to explore what happens when you have vectors of different data types. The first one has been done for you. Report your answer for each in a sentence below.
 
 ```{r}
 num_only <- c(1,2,3,4)                    #a
@@ -73,7 +73,7 @@ num_char <- c(1, 2, 3, "a")               #c
 num_logical <- c(1, 2, 3, TRUE)           #d
 char_logical <- c("a", "b", "c", TRUE)    #e
 tricky <- c(1, 2, 3, "4")                 #f
-class() 
+class(num_only) 
 class()
 class()
 class()
@@ -92,7 +92,7 @@ class()
 
 2. Create three vectors (`weekday`, `poker`, `roulette`) using the `c()` operator to describe the following outcome. 
 
-* `weekday`: The 5 weekdays. Use these three letter codes: mon, tue, wed, thu, fri.
+* `weekday`: The 5 weekdays. Use these three letter codes: "mon", "tue", "wed", "thu", "fri."
 * `poker`: 
     - On Monday you won $140 
     - Tuesday you lost $50
@@ -145,13 +145,11 @@ Run the code chunk below to read in the Ames data set from the web. This data se
 
 ```{r}
 ames <- openintro::ames
-```
-```{r}
-View(ames)
+head(ames)
 ```
 
 
-1. List out the variable name and data types for five different variables in the Ames data set
+1. List out the variable name and data types for five different variables in the ames data set
 
 
 
