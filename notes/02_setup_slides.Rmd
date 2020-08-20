@@ -106,7 +106,7 @@ name: intro_rstudio
 
 # Setting preferences in R Studio
 
-##  Retain sanity while troubleshooting
+##  Retain sanity while troubleshooting `r emo::ji("cinema")`
 
 `r emo::ji("pencil2")` 
 
@@ -116,6 +116,10 @@ name: intro_rstudio
 * Click apply then ok to close that window.
   
 This will ensure that when you restart R you do not "carry forward" objects such as data sets that you were working on in a prior assignment. 
+
+To effectively resetart R, go to the file menu and click _Session_ , then "Restart R", or "Restart R and clear output". 
+
+`r emo::ji("cinema")` [Link to video walk through](https://youtu.be/49u5xAYfrgk) 
 
 ---
 class: inverse, middle, center
@@ -127,7 +131,7 @@ class: inverse, middle, center
 
 Using a consistent folder structure across your projects will help keep things
 organized, and will also make it easy to find/file things in the future. This
-can be especially helpful when you have multiple projects.
+can be especially helpful when you have multiple projects. `r emo::ji("cinema")` [Windows video walk through.](https://youtu.be/ayar0LFRg0U)
 
 
 .pull-left[
