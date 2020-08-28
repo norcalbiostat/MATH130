@@ -222,8 +222,7 @@ class(animals)
 ```
 
 The function `str()` provides an overview of the structure of an object and its
-elements. It is a useful function when working with large and complex
-objects:
+elements. It is a useful function when working with large and complex objects:
 
 ```{r}
 str(weight_g)
@@ -232,8 +231,7 @@ str(animals)
 
 ## Data Types
 
-R objects come in different data types. You just saw vectors comprised of numbers (**numeric**), 
-of words (**character** or **string**). The other common data type that we will be encountering in this class is a `"logical"` (sometimes called Boolean). These are created by writing a logical statement where the answer is either TRUE or FALSE. Silly examples include "Is 3 greater than 4?" and "Is the square root of 4 equal to 2?"
+R objects come in different data types. You just saw vectors comprised of numbers (**numeric**), of words (**character** or **string**). The other common data type that we will be encountering in this class is a `"logical"` (sometimes called Boolean). These are created by writing a logical statement where the answer is either TRUE or FALSE. Silly examples include "Is 3 greater than 4?" and "Is the square root of 4 equal to 2?"
 ```{r}
 3>4
 sqrt(4)==2

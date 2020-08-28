@@ -2,7 +2,9 @@
 title: 'Homework 4: Data Import and Enhanced Graphics'
 author: "NAME"
 date: "DATE"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r}
