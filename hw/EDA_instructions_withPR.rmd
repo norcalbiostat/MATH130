@@ -1,14 +1,14 @@
 ---
 title: "Exploratory Data Analysis Project"
 output:
-  pdf_document:
-    toc: no
   html_document:
     highlight: tango
     css: ../css/yeti.css
     theme: yeti
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 Time to put everything you learned in this class into action. In an exploratory data analysis (EDA) you are just looking at (exploring) the data and learning about the data and possible relationships between variables. This is not a formal statistical analysis, you cannot make any claims about groups being statistically different. This is just descriptive. You are allowed and encouraged to hypothesize why you observe certain relationships or data characteristics, just be sure not to draw any conclusions from the data.
@@ -51,7 +51,7 @@ Any other data sets require instructor approval. Data sets such as the 'plants' 
 * To allow for adequate time for peer grading the submission deadline is a strict cutoff. Really late assignments won't be accepted.
 * Knit your file to HTML, WORD, or PDF, then upload to Google Drive using the link below for your section the due date.
     - [Fall 20 - Section 01](https://drive.google.com/drive/folders/1m9fs7_GYveiQ4tMWTgtQj2YhPTn2WSqg?usp=sharing)
-    - If you knit to HTML, you must open & save the resulting file as PDF so it can be commented on. 
+    - **If you knit to HTML, you must open & save the resulting file as PDF so it can be commented on.**
 * Put your student username in the name of the file somewhere, so that your fellow students know which assignment they are to review.
 
 
@@ -59,20 +59,27 @@ Any other data sets require instructor approval. Data sets such as the 'plants' 
 
 After the submission deadline, your analysis projects will be randomly assigned to two other people to peer review and score. This means you will also score and provide feedback on 2 reports. Your instructor will also score all projects for your class section.
 
-* All submissions will be processed and posted to a [peer review](https://norcalbiostat.github.io/peer_review/math130_eda.html) website.
+<!---
+* All submissions will be processed and posted to a cc
 * Your assignments will be posted here. If one or both of the people you are assigned to review do not submit a project, pick another person to review. You do not have to notify your instructor if this happens.
+---> 
 
 How to do your reviews: 
 
 1. Go to the Google Drive folder for your section and find the projects you are assigned to review. 
     - [Fall 20 - Section 01](https://drive.google.com/drive/folders/1m9fs7_GYveiQ4tMWTgtQj2YhPTn2WSqg?usp=sharing)
-2. Open the file in the browser window
+2. Download the projects that you have been assigned to review. 
 3. Using the commenting feature provide 4 comments for each project.
     - Two positive: What specific features did they include that you liked or found helpful?
-    - Two negative: What can they do different or better next time? Did you find a bug in their code?
+    - Two improvements: What can they do different or better next time? Did you find a bug in their code?
 4. Score each project using this [Google Form](https://goo.gl/forms/7I4zsYpSsiZpgKyH3).
     - This data entry form follows the scoring rubric printed below in this document.
-    - You will upload both projects you reviewed to this form as well.
+    - You will upload your review to this form as well.
+
+
+> How to add comments
+> * [MS Word](https://support.microsoft.com/en-us/office/insert-delete-or-change-a-comment-5cb1af25-4dfe-4484-9713-2c80391ecf12)
+> * [Adobe Reader](https://helpx.adobe.com/acrobat/using/commenting-pdfs.html)
 
 
 # Guidelines
@@ -83,12 +90,14 @@ How to do your reviews:
 * Remove superfluous code and output (i.e. printing a data set to the screen).
 * This is to be independent work. Papers that are too similar will receive no credit.
 * Look at the grading rubric to help you decide the level of detail required.
-
+* [**Examples of prior work**](https://norcalbiostat.github.io/peer_review/math130_eda.html)
 
 # Grading
 * Your final project grade will be a weighted average of 30% peer reviews ($\bar{PR}$) and 70% instructor review ($IR$): $(.3*\bar{PR} + .7*IR)$.
 * Your submission is worth 20 points, the peer review is 10 pts.
 
+
+\newpage
 
 ## Scoring Rubric
 The criteria below is what you will be graded on. Below each criteria is an example of the points awarded for the level of competency. Use this criteria when you score your peers reports.

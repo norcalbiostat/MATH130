@@ -2,14 +2,14 @@
 title: "Lesson 09 - Getting data into R"
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
-  pdf_document:
-    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 
@@ -25,7 +25,7 @@ After completing this lesson learners will be able to
 
 ##### Prior to this lesson learners should
 
-* Download the [[09_import_notes.Rmd]](09_dm_notes.Rmd) R markdown file and save into your `Math130/notes` folder. 
+* Download the [[09_import_notes.Rmd]](09_import_notes.Rmd) R markdown file and save into your `Math130/notes` folder. 
 * Download the three data sets listed on the [Week 4 overview](../wk4.html) below.
 
 
@@ -38,7 +38,7 @@ The three different files we will be using have different file types, or extensi
 * `NCBirths.csv` is a `.csv` or "comma separated values" file.
 * `fatal-police-shootings-data.xlsx` is a `.xlsx` or Excel file. 
 
-Each of these file types differ in the type of _delimiter_ used. The _delimiter_ is a character or symbol that separates columns of data from each other when stored in an external file.  Recall back to the Data Camp exercises on data frames and matrices. Each column in the matrix represented data on a specific variable. Something had to tell R how to distinguish which values went with which variable. 
+Each of these file types differ in the type of _delimiter_ used. The _delimiter_ is a character or symbol that separates columns of data from each other when stored in an external file.  Recall back to the earlier lesson on data frames and matrices. Each column in the matrix represented data on a specific variable. Something had to tell R how to distinguish which values went with which variable. 
 
 There are two main types of delimiters we will consider in this class; comma and tab. That does not mean that data can't be stored in other ways, these are just the two most common. 
 
