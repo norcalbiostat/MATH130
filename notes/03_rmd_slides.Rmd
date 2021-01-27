@@ -76,7 +76,7 @@ or by typing  `CTRL+ALT+I`.
 
 This is what we mean by reproducible. If you make a change in the code document, and re-knit (aka compile), your changes will be reflected in the generated document. 
 
-`r emo::ji("warning")` If you are asked to install additional packges, go ahead and say yes. Then go back to [lesson 02](02_setup_slides.html) and make sure you have all the necesary packages listed. 
+`r emo::ji("warning")` If you are asked to install additional packages, go ahead and say yes. Then go back to [lesson 02](02_setup_slides.html) and make sure you have all the necessary packages listed. 
 
 ---
 # Make a change

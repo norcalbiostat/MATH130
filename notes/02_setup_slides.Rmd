@@ -117,7 +117,7 @@ name: intro_rstudio
   
 This will ensure that when you restart R you do not "carry forward" objects such as data sets that you were working on in a prior assignment. 
 
-To effectively resetart R, go to the file menu and click _Session_ , then "Restart R", or "Restart R and clear output". 
+To effectively restart R, go to the file menu and click _Session_ , then "Restart R", or "Restart R and clear output". 
 
 `r emo::ji("cinema")` [Link to video walk through](https://youtu.be/49u5xAYfrgk) 
 
@@ -305,7 +305,7 @@ install.packages("openintro")
 ```
 ]
 
-Note in this last package that is a lower case letter L at the end. For read EXCELL. It is not the number 1 (one). 
+Note in this last package that is a lower case letter L at the end. For "read EXCEL." It is not the number 1 (one). 
 
 <br> 
 
@@ -333,7 +333,7 @@ The key to receiving help from someone is for them to rapidly grasp your problem
 
 Try to use the correct words to describe your problem. For instance, a package is not the same thing as a library. Most people will understand what you meant, but it can make things confusing for people trying to help you. Be as precise as possible when describing your problem.
 
-`r emo::ji("warning")` Don't let not knowing exactly how to describe your problem prevent you from asking. Screenshots help temendously
+`r emo::ji("warning")` Don't let not knowing exactly how to describe your problem prevent you from asking. Screenshots help tremendously!
 
 **When asking someone for help try to**
 1. Explain what thing you are trying to do
@@ -347,7 +347,7 @@ Try to use the correct words to describe your problem. For instance, a package i
 
 ## Use the built-in RStudio help interface to search for more information on R functions
 
-One of the fastest ways to get help, is to use the RStudio help interface. This panel by default can be found at the lower right hand panel of RStudio. As seen in the screenshot, by typing the word `mean`, RStudio tries to also give a number of suggestions that you might be interested in. The description is then shown in the display window.
+One of the fastest ways to get help is to use the RStudio help interface. This panel by default can be found at the lower right hand panel of RStudio. As seen in the screenshot, by typing the word `mean`, RStudio tries to also give a number of suggestions that you might be interested in. The description is then shown in the display window.
 
 ### I know the name of the function I want to use, but I'm not sure how to use it
 
@@ -401,7 +401,7 @@ If you check Stack Overflow, search using the `[r]` tag. Most questions have alr
 ---
 # "In Person" help
 
-Unfortunately in person `r emo::ji("busts_in_silhouette")` help not available during Fall 20 due to COVID19 `r emo::ji("mask")`
+Unfortunately in person `r emo::ji("busts_in_silhouette")` help not available during Spring 21 due to COVID19 `r emo::ji("mask")`
 
 However, Zoom is the next best thing. 
 
@@ -466,7 +466,7 @@ If you're a book kinda person, there is plenty of help available as well. Many h
 
 ## Saving and closing your work. 
 
-Unless you're returning to work in R Studio in a short while, You should make a habit to save all open tabs and completely shut down R studio when you are done working. This ensures your environment is cleared. _This is a good thing._
+Unless you're returning to work in R Studio in a short while, you should make a habit to save all open tabs and completely shut down R studio when you are done working. This ensures your environment is cleared. _This is a good thing._
 
 ## Restart R
 
