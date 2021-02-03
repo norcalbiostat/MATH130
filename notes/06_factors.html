@@ -329,7 +329,7 @@ ff    &lt;-<span class="st"> </span>openintro::fastfood</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">email$spam_fac &lt;-<span class="st"> </span><span class="kw">factor</span>(email$spam, <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;no&quot;</span>, <span class="st">&quot;yes&quot;</span>))</code></pre></div>
 <p>The ordering of the <code>labels</code> argument <em>must</em> be in the same order (left to right) as the factor levels themselves. Look back at the order of columns in the <code>table</code> - it goes 0 then 1. Thus our labels need to go “no” then “yes”.</p>
 <p><strong>Always confirm your recode</strong></p>
-<p>Here we confirm that the new variable was created corectly by creating a two-way contingency table by calling the <code>table(old variable, new variable)</code> function on both the old and new variables.</p>
+<p>Here we confirm that the new variable was created correctly by creating a two-way contingency table by calling the <code>table(old variable, new variable)</code> function on both the old and new variables.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(email$spam, email$spam_fac, <span class="dt">useNA=</span><span class="st">&quot;always&quot;</span>)</code></pre></div>
 <pre><code>##       
 ##          no  yes &lt;NA&gt;
@@ -490,7 +490,7 @@ This just *happens* to be the same as in decreasing frequency order.
 ##   &lt;NA&gt;           0    0   0   0   0    0</code></pre>
 <div id="lets-chain-this-all-together." class="section level5">
 <h5>Let’s chain this all together.</h5>
-<p>Sporadically throughout this lesson, and at the end of the last lesson i’ve used the pipe <code>%&gt;%</code> operator as somewhat of a shortcut. This amazing piece of code lets us string together commands. Let’s see how to accomplish both changes to the restaurant variable in one single step.</p>
+<p>Sporadically throughout this lesson, and at the end of the last lesson I’ve used the pipe <code>%&gt;%</code> operator as somewhat of a shortcut. This amazing piece of code lets us string together commands. Let’s see how to accomplish both changes to the restaurant variable in one single step.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ff$restaurant %&gt;%<span class="st"> </span><span class="kw">fct_collapse</span>(<span class="dt">BurgerJoint =</span> <span class="kw">c</span>(<span class="st">&quot;Burger King&quot;</span>, <span class="st">&quot;Mcdonalds&quot;</span>, <span class="st">&quot;Sonic&quot;</span>), 
                                <span class="dt">Sammich     =</span> <span class="kw">c</span>(<span class="st">&quot;Arbys&quot;</span>, <span class="st">&quot;Subway&quot;</span>)) %&gt;%
 <span class="st">                  </span><span class="kw">fct_recode</span>(<span class="st">&quot;Ckn&quot;</span>  =<span class="st"> &quot;Chick Fil-A&quot;</span>, 
@@ -502,7 +502,7 @@ This just *happens* to be the same as in decreasing frequency order.
 <pre><code>## .
 ##  Samm Burg    Ckn    DQ    TB 
 ##   151   180    27    42   115</code></pre>
-<p>Few things to note when chaining commands together:</p>
+<p>A few things to note when chaining commands together:</p>
 <ol style="list-style-type: decimal">
 <li>the first argument (the data or variable) is not included.</li>
 <li>the pipe itself must be at the end of a “sentence”</li>
@@ -515,7 +515,7 @@ This just *happens* to be the same as in decreasing frequency order.
 <h1>Removing factor levels.</h1>
 <p>Sometimes, you don’t even want to consider certain levels. This often occurs in survey data where the respondent provides an answer of “Refuse to answer” or the data is coded as the word “missing”. The word “missing’ is fundamentally different than the <code>NA</code> code for a missing value.</p>
 <p>For demonstration purposes, let’s get rid of the data from DQ. Who eats something other than ice cream at that place anyhow?</p>
-<p>The most straight forward way to set a varible missing based on it’s value is to use a logical statement to choose what rows the variable is set to missing.</p>
+<p>The most straight forward way to set a variable missing based on it’s value is to use a logical statement to choose what rows the variable is set to missing.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ff$restaurant_shortname[ff$restaurant_shortname ==<span class="st"> &quot;DQ&quot;</span>] &lt;-<span class="st"> </span><span class="ot">NA</span>
 <span class="kw">table</span>(ff$restaurant_shortname, <span class="dt">useNA=</span><span class="st">&quot;always&quot;</span>)</code></pre></div>
 <pre><code>## 

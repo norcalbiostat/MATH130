@@ -42,7 +42,7 @@ How many records are in each level?
 
 **Example: Is the email flagged as spam?**
 
-Use the function `factor()` to convert the numeric variable `spam` to a factor, applying `lables` to convert 0 to "no" and 1 to "yes". 
+Use the function `factor()` to convert the numeric variable `spam` to a factor, applying `labels` to convert 0 to "no" and 1 to "yes". 
 
 ```{r}
 

@@ -106,7 +106,7 @@ The ordering of the `labels` argument _must_ be in the same order (left to right
 
 **Always confirm your recode** 
 
-Here we confirm that the new variable was created corectly by creating a two-way contingency table by calling the `table(old variable, new variable)` function on both the old and new variables. 
+Here we confirm that the new variable was created correctly by creating a two-way contingency table by calling the `table(old variable, new variable)` function on both the old and new variables. 
 
 ```{r}
 table(email$spam, email$spam_fac, useNA="always")
@@ -234,7 +234,7 @@ table(ff$restaurant, ff$restaurant_shortname, useNA="always")
 ```
 
 ##### Let's chain this all together. 
-Sporadically throughout this lesson, and at the end of the last lesson i've used the pipe `%>%` operator as somewhat of a shortcut. This amazing piece of code lets us string together commands. Let's see how to accomplish both changes to the restaurant variable in one single step. 
+Sporadically throughout this lesson, and at the end of the last lesson I've used the pipe `%>%` operator as somewhat of a shortcut. This amazing piece of code lets us string together commands. Let's see how to accomplish both changes to the restaurant variable in one single step. 
 
 ```{r}
 ff$restaurant %>% fct_collapse(BurgerJoint = c("Burger King", "Mcdonalds", "Sonic"), 
@@ -247,7 +247,7 @@ ff$restaurant %>% fct_collapse(BurgerJoint = c("Burger King", "Mcdonalds", "Soni
                   table()
 ```
 
-Few things to note when chaining commands together: 
+A few things to note when chaining commands together: 
 
 1. the first argument (the data or variable) is not included. 
 2. the pipe itself must be at the end of a "sentence"
@@ -264,7 +264,7 @@ Sometimes, you don't even want to consider certain levels. This often occurs in 
 
 For demonstration purposes, let's get rid of the data from DQ. Who eats something other than ice cream at that place anyhow? 
 
-The most straight forward way to set a varible missing based on it's value is to use a logical statement to choose what rows the variable is set to missing. 
+The most straight forward way to set a variable missing based on it's value is to use a logical statement to choose what rows the variable is set to missing. 
 
 ```{r}
 ff$restaurant_shortname[ff$restaurant_shortname == "DQ"] <- NA
