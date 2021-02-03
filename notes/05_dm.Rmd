@@ -1,15 +1,15 @@
 ---
 title: "Lesson 05 - Working with Data"
-date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
   pdf_document:
     toc: no
   html_document:
+    css: ../css/yeti.css
     highlight: tango
     theme: yeti
-    css: ../css/yeti.css
     toc: yes
     toc_float: yes
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
 
@@ -221,7 +221,7 @@ Let's add a variable to identify if a mother in the North Carolina births data s
 Make a new variable `underage` on the `ncbirths` data set. If `mage` is under 18, then the value of this new variable is `underage`, else it is labeled as `adult`. 
 
 ```{r}
-ncbirths$underage <- ifelse(ncbirths$mage <= 18, "underage", "adult")
+ncbirths$underage <- ifelse(ncbirths$mage < 18, "underage", "adult")
 ```
 
 You should always make sure your code works as intended.
@@ -230,10 +230,10 @@ You should always make sure your code works as intended.
 ```{r}
 table(ncbirths$underage, useNA="always")
 ```
-* Next let's check it against the value of `mage` itself. Let's look at all rows where mothers age is either 18 or 19 `mage %in% c(18,19)`, and only the columns of interest. 
+* Next let's check it against the value of `mage` itself. Let's look at all rows where mothers age is either 17 or 18 `mage %in% c(17,18)`, and only the columns of interest. 
 
 ```{r}
-ncbirths[ncbirths$mage %in% c(18,19),c('mage', 'underage')]
+ncbirths[ncbirths$mage %in% c(17,18),c('mage', 'underage')]
 ```
 
 Notice I snuck a new operator in on you - `%in%`. This is a way you can provide a list of values (a.k.a a vector) and say "if the value of the variable I want is %in% any of these options in this vector..." do the thing. 

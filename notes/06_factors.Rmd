@@ -1,15 +1,15 @@
 ---
 title: "Lesson 06 - Controlling your factors"
-date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
-  html_document:
-    highlight: tango
-    theme: yeti
-    css: ../css/yeti.css
-    toc: yes
-    toc_float: yes
   pdf_document:
     toc: no
+  html_document:
+    css: ../css/yeti.css
+    highlight: tango
+    theme: yeti
+    toc: yes
+    toc_float: yes
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
 
@@ -64,7 +64,7 @@ We can use the `levels()` function to get to know factor variables.
 levels(email$number)
 ```
 
-There are three levels: `big`, `none`, and `small`. 
+There are three levels: `none`, `small`, and `big`. 
 
 How many records are in each level? There are a few ways we can determine this, here are two: 
 
@@ -96,7 +96,7 @@ table(email$spam)
 class(email$spam)
 ```
 
-We use the function `factor()` to convert the numeric variable `spam` to a factor, applying `lables` to convert 0 to "no" and 1 to "yes". 
+We use the function `factor()` to convert the numeric variable `spam` to a factor, applying `labels` to convert 0 to "no" and 1 to "yes". 
 
 ```{r}
 email$spam_fac <- factor(email$spam, labels=c("no", "yes"))
@@ -123,25 +123,25 @@ Let's revisit the variable `number`, that contains the size of the number in the
 table(email$number)
 ```
 
-Specifically the ordering from left to right of the factors. Seem odd? This is ordinal data, in that `none` is inherently "smaller" than `small`, which is smaller than `big`. But the ordering goes `big` - `none` - `small`, which is in Alphabetical order!
+Specifically the ordering from left to right of the factors. This is ordinal data, in that `none` is inherently "smaller" than `small`, which is smaller than `big`. Though R correctly ordered these data, it may default to alphabetical order in other cases, so beware! You may need to correct the ordering for other data sets.
 
-Gee thanks R. Exactly how I want my factors ordered (NOT!) Let's see a few ways of how to control the ordering. 
+Let's see a few ways of how to control the ordering. 
 
 ## Manually specified 
-We need to take control of these factors! We can do that by re-factoring the existing factor variable, but this time specifying the `levels` of the factor (since it already has labels). 
+We need to take control of these factors! We can do that by re-factoring the existing factor variable, but this time specifying the `levels` of the factor (since it already has labels). Say we decide to reverse the order so we go from big to small to none, in decreasing order of size.
 
 **Base R**
 ```{r}
-factor(email$number, levels=c("none", "small", "big")) %>% table()
+factor(email$number, levels=c("big", "small", "none")) %>% table()
 ```
 
 **forcats**
 ```{r}
-email$number %>% fct_relevel("none", "small", "big") %>% table()
+email$number %>% fct_relevel("big", "small", "none") %>% table()
 ```
 
 In each of these examples, I pipe (`%>%`) the `table()` function at the end so I can see the results of the reordering. 
-This helps me visually confirm that the code used changed the factor levels to be left to right in increasing content size order. This will be important for graphing. 
+This helps me visually confirm that the code used changed the factor levels to be left to right in decreasing content size order. This will be important for graphing. 
 
 > Since I did not use the assignment operator (`<-`) here, these changes were not made to the variable in the `email` data set. The examples below demonstrate making an adjustmet to a factor variable and saving that adjustment as a new variable in the data set.
 
@@ -181,7 +181,7 @@ Sometimes factors come to us in names we don't prefer. We want them to say somet
 **Base R**
 The easiest way here is to re-factor the variable and apply new `labels`. 
 ```{r}
-email$my_new_number <- factor(email$number, labels=c("1M+", "None", "<1M"))
+email$my_new_number <- factor(email$number, labels=c( "None", "<1M","1M+"))
 ```
 
 Ok, but did this work? Trust, but verify. 
