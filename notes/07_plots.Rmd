@@ -1,15 +1,15 @@
 ---
 title: "Lesson 07 - Creating graphics"
-date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
-  pdf_document:
-    toc: no
   html_document:
+    css: ../css/yeti.css
     highlight: tango
     theme: yeti
-    css: ../css/yeti.css
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
 
@@ -48,11 +48,11 @@ ggplot(data, aes(x=x, y=y, col=col, fill=fill, group=group)) +  geom_THING()
 ### Required arguments
 
 * `data`: What data set is this plot using? This is ALWAYS the first argument.
-* `aes()`: This is the _aestetics_ of the plot. What's varible is on the x, what is on 
+* `aes()`: This is the _aesthetics_ of the plot. What variable is on the x, and what is on 
    the y? Do you want to color by another variable, perhaps fill some box by the value
    of another variable, or group by a variable. 
 * `geom_THING()`: Every plot has to have a geometry. What is the shape of the thing you 
-   want to plot? Do you want to plot points - use `geom_points()`. Want to connect those
+   want to plot? Do you want to plot point? Use `geom_points()`. Want to connect those
    points with a line? Use `geom_lines()`. We will see many varieties in this lab. 
 
 
@@ -80,7 +80,7 @@ Tables are the most common way to get summary statistics of a categorical variab
 ```{r}
 table(dsmall$cut)
 ```
-There are 27 Fair quality diamonds, 83 good quality and 387 Ideal quality diamonds in this sample. 
+There are 27 Fair quality diamonds, 83 Good quality diamonds, and 387 Ideal quality diamonds in this sample. 
 
 ### Barcharts / Barplots
 A Barchart or barplot takes these frequencies, and draws bars along the X-axis where the height of the bars is determined by the frequencies seen in the table. 
@@ -111,18 +111,18 @@ ggplot(dsmall, aes(x=price)) + geom_histogram()
 
 
 ### Density plots
-To get a better idea of the true shape of the distribution we can "smooth" out the bins and create what's called a `density` plot or curve. Notice that the shape of this distribution curve is much more... "wigglier" than the histogram may have implied. 
+To get a better idea of the true shape of the distribution we can "smooth" out the bins and create what's called a `density` plot or curve. Notice that the shape of this distribution curve is much... "wigglier" than the histogram may have implied. 
 
 ```{r}
 ggplot(dsmall, aes(x=price)) + geom_density()
 ```
 
 ### Histograms + density 
-Often is is more helpful to have the density (or kernal density) plot _on top of_ a histogram plot. 
+Often it is more helpful to have the density (or kernel density) plot _on top of_ a histogram plot. 
 
-* The syntax starts the same, we'll add a new geom, `geom_density` and color the line blue. 
+* The syntax starts the same: we'll add a new geom, `geom_density` and color the line blue. 
 * Then we add the histogram geom using `geom_histogram` but must specify that the y axis should be on the density, not frequency, scale. 
-    - Note that this has to go inside the aestetic statement `aes()`. 
+    - Note that this has to go inside the aesthetic statement `aes()`. 
 * I'm also going to get rid of the fill by using `NA` so the colored bars don't plot over the density line. 
 
 ```{r}
@@ -138,7 +138,7 @@ Another very common way to visualize the distribution of a continuous variable i
 boxplot(dsmall$price)
 ```
 
-Notice that the only axis labeled is the y=axis. Like a dotplot the x axis, or "width", of the boxplot is meaningless here. We can make the axis more readable by flipping the plot on it's side. 
+Notice that the only axis labeled is the y=axis. Like a dotplot the x axis, or "width", of the boxplot is meaningless here. We can make the axis more readable by flipping the plot on its side. 
 ```{r}
 boxplot(dsmall$price, horizontal = TRUE, main="Distribution of diamond prices", xlab="Dollars")
 ```
@@ -176,7 +176,7 @@ The frequency table is constructed using the `table()` function.
 table(dsmall$cut, dsmall$price_range)
 ```
 
-There are 4 Fair diamonds that cost between 7.5 and 12.5 thousand dollars, and 103 Ideal quality diamonds that cost between 2.5 and 7.5k. 
+There are 3 Fair diamonds that cost between 7.5 and 12.5 thousand dollars, and 111 Ideal quality diamonds that cost between 2.5 and 7.5k. 
 
 #### Cell proportions
 Wrapping `prop.table()` around a table gives you the **cell** proportions. 
@@ -184,8 +184,8 @@ Wrapping `prop.table()` around a table gives you the **cell** proportions.
 table(dsmall$cut, dsmall$price_range) %>% prop.table()
 ```
 
-* 0.015% of all diamonds are Fair cut and cost under 2.5k.
-* 0.002% of all diamonds are Ideal cut and cost over 17.5k
+* 0.007% of all diamonds are Fair cut and cost under 2.5k.
+* 0.001% of all diamonds are Premium cut and cost over 17.5k
 
 #### Row proportions
 To get the **row** proportions, specify `margin=1`. The percentages now add up to 1 across the rows. 
@@ -193,8 +193,8 @@ To get the **row** proportions, specify `margin=1`. The percentages now add up t
 table(dsmall$cut, dsmall$price_range) %>% prop.table(margin=1) %>% round(3)
 ```
 
-* 44.1% of Fair quality diamonds cost under 2.5k
-* 1.9% of Premium quality diamonds cost over 17.5k.
+* 25.9% of Fair quality diamonds cost under 2.5k
+* 1.3% of Very Good quality diamonds cost over 17.5k.
 
 #### Column proportions
 To get the **column** proportions, you specify `margin=2`. The percentages now add up to 1 down the columns. 
@@ -202,8 +202,8 @@ To get the **column** proportions, you specify `margin=2`. The percentages now a
 table(dsmall$cut, dsmall$price_range) %>% prop.table(margin=2) %>% round(3)
 ```
 
-* 8.0% of diamonds that cost under 2.5k are of Good quality
-* 62.5% of diamonds that cost over 17.5k are Premium quality
+* 7.8% of diamonds that cost under 2.5k are of Good quality
+* 20% of diamonds that cost over 17.5k are Premium quality
 
 ### Grouped bar charts
 To compare proprtions of one categorical variable within the same level of another, is to use grouped barcharts. 
@@ -290,7 +290,7 @@ ggplot(dsmall, aes(x=price_range, y=carat)) + geom_boxplot()
 
 
 #### Adding violins to the boxplot
-A violin plot is like a density plot, turned on it's side, and reflected around the axis for symmetry purposes. Overlaying a boxplot and a violin plot serves a similar purpose to Histograms + Density plots. It shows outliers, the location of most the data, and better shows the shape/skew of the distribution. Let's also `fill` the geometries with the same color as what is on the x-axis. Not 100% needed but nice for display sometimes. 
+A violin plot is like a density plot, turned on its side, and reflected around the axis for symmetry purposes. Overlaying a boxplot and a violin plot serves a similar purpose to Histograms + Density plots. It shows outliers, the location of most the data, and better shows the shape/skew of the distribution. Let's also `fill` the geometries with the same color as what is on the x-axis. Not 100% needed but nice for display sometimes. 
 
 ```{r}
 ggplot(dsmall, aes(x=price_range, y=carat, fill=price_range)) +
