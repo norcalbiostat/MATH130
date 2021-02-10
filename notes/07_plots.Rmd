@@ -1,14 +1,14 @@
 ---
 title: "Lesson 07 - Creating graphics"
 output:
+  pdf_document:
+    toc: no
   html_document:
     css: ../css/yeti.css
     highlight: tango
     theme: yeti
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
@@ -184,8 +184,8 @@ Wrapping `prop.table()` around a table gives you the **cell** proportions.
 table(dsmall$cut, dsmall$price_range) %>% prop.table()
 ```
 
-* 0.007% of all diamonds are Fair cut and cost under 2.5k.
-* 0.001% of all diamonds are Premium cut and cost over 17.5k
+* 0.7% of all diamonds are Fair cut and cost under 2.5k.
+* 0.1% of all diamonds are Premium cut and cost over 17.5k
 
 #### Row proportions
 To get the **row** proportions, specify `margin=1`. The percentages now add up to 1 across the rows. 
