@@ -23,7 +23,7 @@ ncbirths <- openintro::ncbirths
 
 # Univariate plots
 
-fThis section asks you to create data visualizations or summaries from the `ncbirths` data set. 
+This section asks you to create data visualizations or summaries from the `ncbirths` data set. 
 
 1. Create a table of marital status (`marital`) from NCbirths. 
 
@@ -37,14 +37,14 @@ fThis section asks you to create data visualizations or summaries from the `ncbi
 
 ```
 
-3. Create a histogram of mothers age (`mage`) with an overlaid density plot in a different color. Be sure that both density curve and histogram can be seen. 
+3. Create a histogram of mother's age (`mage`) with an overlaid density plot in a different color. Be sure that both density curve and histogram can be seen. 
 
 ```{r}
 
 ```
 
 4. Create a horizontal boxplot of weight of the baby (`weight`)
-I don't care how they make this plot, so long as it looks like a horizontal boxplot.
+I don't care how you make this plot, so long as it looks like a horizontal boxplot.
 
 ```{r}
 
@@ -64,19 +64,19 @@ I don't care how they make this plot, so long as it looks like a horizontal boxp
 
 ```
 
-3. Create a grouped barchart that reflects the frequencies you calculated above. Think carefully which variable goes on the `x` axis, and which one is used for the `fill`
+3. Create a grouped barchart that reflects the frequencies you calculated above. Think carefully which variable goes on the `x` axis, and which one is used for the `fill`.
 
 ```{r}
 
 ```
 
-4. Create a scatterplot of length of pregnancy in `weeks` and the babies `weight`. Include a smoother line in brown, and a best fit linear model line in purple
+4. Create a scatterplot of length of pregnancy in `weeks` and the babies `weight`. Include a smoother line in brown, and a best fit linear model line in purple.
     
 ```{r}
 
 ```
     
-5. Creat a grouped boxplots of baby `weight` by mothers smoking `habit`. Make sure you `fill` the boxes by `habit` as well. 
+5. Create a grouped boxplot of baby `weight` by mothers smoking `habit`. Make sure you `fill` the boxes by `habit` as well. 
 
 ```{r}
 
