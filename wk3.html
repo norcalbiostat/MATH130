@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -20,9 +20,7 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
 
@@ -54,9 +52,11 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="..\css\yeti.css" type="text/css" />
+<link rel="stylesheet" href="../css/yeti.css" type="text/css" />
 
+</head>
 
+<body>
 
 <style type = "text/css">
 .main-container {
@@ -70,18 +70,13 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
 }
-.html-widget {
-  margin-bottom: 20px;
-}
 button.code-folding-btn:focus {
   outline: none;
-}
-summary {
-  display: list-item;
 }
 </style>
 
@@ -97,6 +92,7 @@ body {
   padding-top: 50px;
   margin-top: -50px;
 }
+
 .section h2 {
   padding-top: 50px;
   margin-top: -50px;
@@ -116,43 +112,6 @@ body {
 .section h6 {
   padding-top: 50px;
   margin-top: -50px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -174,74 +133,19 @@ $(document).ready(function () {
 });
 </script>
 
+
+<div class="container-fluid main-container">
+
 <!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
 
 <!-- code folding -->
 
 
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
 
 
 
@@ -343,18 +247,19 @@ $(document).ready(function () {
 <div id="additional-resources" class="section level1">
 <h1>🤔 Additional Resources:</h1>
 <ul>
-<li><p><code>ggplot</code></p>
+<li><code>ggplot</code>
 <ul>
-<li><p>Hands on learning with R Primers: Visualization Basics <a href="https://rstudio.cloud/learn/primers/1.1" class="uri">https://rstudio.cloud/learn/primers/1.1</a></p></li>
+<li>Hands on learning with R Primers: Visualization Basics <a href="https://rstudio.cloud/learn/primers/1.1" class="uri">https://rstudio.cloud/learn/primers/1.1</a></li>
 <li><p><a href="https://rstudio.cloud/learn/cheat-sheets">ggplot2 cheat sheet</a>: Relevant sheet is <strong>Data Visualization</strong></p></li>
-<li><p>For a <strong>full</strong> , and comprehensive reference guide on how to do nearly anything in ggplot – this is by far my favorite reference <a href="http://www.cookbook-r.com/Graphs/" class="uri">http://www.cookbook-r.com/Graphs/</a> I reference things in there (like how to remove or change the title of a legend) constantly.</p></li>
-<li><p><a href="https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html">[The full set of lecture notes from which these notes were extracted.]</a>.</p></li>
-<li><p><a href="https://www.r-graph-gallery.com/">R graph gallery</a> Hundreds of charts with fully reproducible code to help inspire your visualizations.</p></li>
+<li>For a <strong>full</strong> , and comprehensive reference guide on how to do nearly anything in ggplot – this is by far my favorite reference <a href="http://www.cookbook-r.com/Graphs/" class="uri">http://www.cookbook-r.com/Graphs/</a> I reference things in there (like how to remove or change the title of a legend) constantly.</li>
+<li><a href="https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html">[The full set of lecture notes from which these notes were extracted.]</a>.</li>
+<li><a href="https://www.r-graph-gallery.com/">R graph gallery</a> Hundreds of charts with fully reproducible code to help inspire your visualizations.</li>
 <li><p>STHDA: Statistical tools for high-throughput data analysis. <a href="http://www.sthda.com/english/" class="uri">http://www.sthda.com/english/</a></p></li>
 </ul></li>
 <li><p><code>dplyr</code>: The ability to manipulate, arrange and clean up data is an extremely important skill to have. It is advised that you review at least one other tutorial method for using dplyr. Remember, it is all about practice. The more you use it the easier it will become!</p>
 <ul>
-<li>Hands on learning with R Primers: Isolating data with dplyr <a href="https://rstudio.cloud/learn/primers/2.2" class="uri">https://rstudio.cloud/learn/primers/2.2</a></li>
+<li>A colorful and in-progress look at using dplyr with penguin data (by Allison Horst): <a href="https://allisonhorst.shinyapps.io/dplyr-learnr/" class="uri">https://allisonhorst.shinyapps.io/dplyr-learnr/</a></li>
+<li>Hands on learning with R Primers: Isolating data with dplyr: <a href="https://rstudio.cloud/learn/primers/2.2" class="uri">https://rstudio.cloud/learn/primers/2.2</a></li>
 <li><a href="https://rstudio.cloud/learn/cheat-sheets">dplyr cheat sheets</a>: Relevant sheet is <strong>Data Transformation</strong></li>
 <li><a href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html">Dplyr vignette</a></li>
 <li><a href="https://www.youtube.com/watch?v=jWjqLW-u3hc">Hands-on dplyr tutorial for faster data manipulation in R</a> You Tube video by Data School</li>
@@ -362,7 +267,7 @@ $(document).ready(function () {
 </ul></li>
 </ul>
 <hr />
-<p><em>Last Updated 2020-08-13</em></p>
+<p><em>Last Updated 2021-02-12</em></p>
 </div>
 
 
@@ -382,23 +287,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

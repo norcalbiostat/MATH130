@@ -1,10 +1,11 @@
 ---
 title: "Week 3"
 output:
+  pdf_document: default
   html_document:
+    css: ../css/yeti.css
     highlight: tango
     theme: yeti
-    css: ../css/yeti.css
 ---
 
 # Introduction to wrangling data and graphing.
@@ -46,7 +47,8 @@ This week you'll learn how to streamline your data processing steps so you can g
 
 * `dplyr`: The ability to manipulate, arrange and clean up data is an extremely important skill to have. It is advised that you review at least one other tutorial method for using dplyr. Remember, it is all about practice. The more you use it the easier it will become!
 
-    * Hands on learning with R Primers: Isolating data with dplyr https://rstudio.cloud/learn/primers/2.2
+    * A colorful and in-progress look at using dplyr with penguin data (by Allison Horst): https://allisonhorst.shinyapps.io/dplyr-learnr/
+    * Hands on learning with R Primers: Isolating data with dplyr: https://rstudio.cloud/learn/primers/2.2
     * [dplyr cheat sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Transformation**
     * [Dplyr vignette](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
     * [Hands-on dplyr tutorial for faster data manipulation in R](https://www.youtube.com/watch?v=jWjqLW-u3hc) You Tube video by Data School
