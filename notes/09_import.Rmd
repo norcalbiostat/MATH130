@@ -1,15 +1,15 @@
 ---
 title: "Lesson 09 - Getting data into R"
-date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
-  html_document:
-    highlight: tango
-    theme: yeti
-    css: ../css/yeti.css
-    toc: yes
-    toc_float: yes
   pdf_document:
     toc: no
+  html_document:
+    css: ../css/yeti.css
+    highlight: tango
+    theme: yeti
+    toc: yes
+    toc_float: yes
+date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
 
@@ -47,13 +47,12 @@ Each of these different data types requires a different function or mechanism to
 
 # General Importing data
 
-To import data into R, we have to tell the program explicitly where to find the files you just downloaded. To do that we need to find the file's _path_. 
+To import data into R, we have to tell the program explicitly where to find the files you just downloaded. To do that we need to find the file's _path_. The _path_ is a programmatic way to direct your computer to the location of a file. It's like the file's address, or, where it lives on your computer. 
+<!-- ([link]("../static/img/path.png") to picture to explain absolute vs relative path if there is time) -->
 
-The _path_ is a programmatic way to direct your computer to the location of a file. It's like the file's address, or, where it lives on your computer. ([link]("../static/img/path.png") to picture to explain absolute vs relative path if there is time)
+In all the examples below, the path shown (`data/`) is the path on **MY** computer. You will have to update this path to **YOUR** path on **YOUR** machine that points to your MATH130 folder. 
 
-In all the examples below, the path shown (`data/`) is the path on **MY** computer.You will have to update this path to **YOUR** path on **YOUR** machine that points to your MATH130 folder. 
-
-You can  find the path of a file by navigating to the desired file in your finder or browser window, right click and copy the file to the clipboard, then right click and pasting into a R markdown file. This will show a path that looks something like this: 
+You can find the path of a file by navigating to the desired file in your finder or browser window. Right click and copy the file to the clipboard, then right click and pasting into a R markdown file. This will show a path that looks something like this: 
 
 ```r
 file:///C:/Math 130/Data/Challenger.txt
@@ -65,11 +64,11 @@ You will need to remove the `file:///` part at the beginning before using this p
 ### Special Instructions for Mac
 
 * Navigate to the file or folder you wish to copy the path for Right-click (or Control+Click, or a Two-Finger click on trackpads) on the file or folder in the Mac Finder
-* While in the right-click menu, hold down the OPTION key to reveal the “Copy (item name) as Pathname” option, it replaces the standard Copy option Once selected, the file or folders path is now in the clipboard, ready to be pasted anywhere
+* While in the right-click menu, hold down the OPTION key to reveal the “Copy (item name) as Pathname” option, which replaces the standard Copy option. Once selected, the file or folders path is now in the clipboard, ready to be pasted anywhere
 
 *Source: https://stackoverflow.com/questions/52695546/how-to-copy-path-of-a-file-in-mac-os*
 
-## Checking the import was successfull
+## Checking the import was successful
 
 The first thing you should always do after importing a data file is look at the raw data and ask yourself the following things: 
 
@@ -77,7 +76,7 @@ The first thing you should always do after importing a data file is look at the 
 2. Is there the expected number of rows and columns? 
 3. Are the data types for each variable as expected? 
 
-There are many ways this can be done, here are three
+There are many ways this can be done. Here are three:
 
 1. `str()` to show you the structure of the data frame. 
 2. `head()` to show you the top 6 rows
@@ -102,7 +101,8 @@ str(email)
 * The variable names were read in correctly, as evidenced by the words in the far right corner after the `$`. 
 * Most variables are treated as numeric integers, except a few are factors. Including `time`. If we wanted to examine a time trend, we would need to convert the class into a `datetime` 
 
-> What happens if you forget to include the arguments for `header` or `sep`? Try that now and discuss with your neighbor what happened. 
+> What happens if you forget to include the arguments for `header` or `sep`? Try that now and discuss what happened. 
+<!-- > What happens if you forget to include the arguments for `header` or `sep`? Try that now and discuss with your neighbor what happened.  -->
 
 **Forgetting both arguments**
 
@@ -124,7 +124,7 @@ head(email)
 
 
 ## CSV: Comma Separated Values
-CSV is a fancy way of saying a text file with comma-separated values (i.e. CSV). This file type can also open in Excel, the icons even look similar. We could use `read.table()` to import this data file, but `read.csv()` is optimized to read in CSV files. 
+CSV is a fancy way of saying a text file with comma-separated values (i.e. CSV). This file type can also open in Excel--the icons even look similar. We could use `read.table()` to import this data file, but `read.csv()` is optimized to read in CSV files. 
 
 ```{r}
 NCbirths <- read.csv("../data/NCbirths.csv", header=TRUE)
