@@ -1,10 +1,11 @@
 ---
 title: "Week 4"
 output:
+  pdf_document: default
   html_document:
+    css: ../css/yeti.css
     highlight: tango
     theme: yeti
-    css: ../css/yeti.css
 ---
 
 # Importing data into R and Intermediate Plotting
@@ -58,6 +59,8 @@ Interesting data doesn't live inside R. Lets get data from an external file into
   * R Graphics cookbook: http://www.cookbook-r.com/Graphs/
   * R Graph Gallery: https://www.r-graph-gallery.com/
   * STHDA - Visualization: http://www.sthda.com/english/wiki/data-visualization
+  * Colorblind-friendly palettes for plots:
+  http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette
   * Guidance on colors 
     * https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf
     * http://www.sthda.com/english/wiki/colors-in-r
