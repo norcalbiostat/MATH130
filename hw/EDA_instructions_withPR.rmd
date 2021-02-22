@@ -1,14 +1,14 @@
 ---
 title: "Exploratory Data Analysis Project"
 output:
+  pdf_document:
+    toc: no
   html_document:
-    highlight: tango
     css: ../css/yeti.css
+    highlight: tango
     theme: yeti
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 ---
 
 Time to put everything you learned in this class into action. In an exploratory data analysis (EDA) you are just looking at (exploring) the data and learning about the data and possible relationships between variables. This is not a formal statistical analysis, you cannot make any claims about groups being statistically different. This is just descriptive. You are allowed and encouraged to hypothesize why you observe certain relationships or data characteristics, just be sure not to draw any conclusions from the data.
@@ -44,13 +44,13 @@ If you do not have your own data, you can choose from one of the following data 
 * **Email Spam**: Characteristics of emails used to predict if the email is spam or not.
 * **HIV**: Data on adolescent children living with HIV positive parents.
 
-Any other data sets require instructor approval. Data sets such as the 'plants' or arm strength' data sets are insufficiently complex for this project. Also you can't use the `dsmall`, `diamonds`, `email` or `NCbirths` data sets because we've used them too much already.
+Any other data sets require instructor approval. Data sets such as the 'plants' or arm strength' data sets are insufficiently complex for this project. Also you can't use the `dsmall`, `diamonds`, or `NCbirths` data sets because we've used them too much already.
 
 # How to submit
 
 * To allow for adequate time for peer grading the submission deadline is a strict cutoff. Really late assignments won't be accepted.
 * Knit your file to HTML, WORD, or PDF, then upload to Google Drive using the link below for your section the due date.
-    - [Fall 20 - Section 01](https://drive.google.com/drive/folders/1m9fs7_GYveiQ4tMWTgtQj2YhPTn2WSqg?usp=sharing)
+    - [Spring 21 - Section 01](https://drive.google.com/drive/folders/1L28tIbpjTzS-QhcoMzjdk53sR-WZhWAx?usp=sharing)
     - **If you knit to HTML, you must open & save the resulting file as PDF so it can be commented on.**
 * Put your student username in the name of the file somewhere, so that your fellow students know which assignment they are to review.
 
@@ -67,7 +67,7 @@ After the submission deadline, your analysis projects will be randomly assigned 
 How to do your reviews: 
 
 1. Go to the Google Drive folder for your section and find the projects you are assigned to review. 
-    - [Fall 20 - Section 01](https://drive.google.com/drive/folders/1m9fs7_GYveiQ4tMWTgtQj2YhPTn2WSqg?usp=sharing)
+    - [Spring 21 - Section 01](https://drive.google.com/drive/folders/1L28tIbpjTzS-QhcoMzjdk53sR-WZhWAx?usp=sharing)
 2. Download the projects that you have been assigned to review. 
 3. Using the commenting feature provide 4 comments for each project.
     - Two positive: What specific features did they include that you liked or found helpful?
