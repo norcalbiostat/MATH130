@@ -78,7 +78,9 @@ How to do your reviews:
 
 
 > How to add comments
+
 > * [MS Word](https://support.microsoft.com/en-us/office/insert-delete-or-change-a-comment-5cb1af25-4dfe-4484-9713-2c80391ecf12)
+
 > * [Adobe Reader](https://helpx.adobe.com/acrobat/using/commenting-pdfs.html)
 
 
