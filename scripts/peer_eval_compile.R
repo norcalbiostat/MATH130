@@ -7,10 +7,10 @@ library(dplyr)
 pr_raw <- read_sheet("https://docs.google.com/spreadsheets/d/17VhpLa9AZOkeOUYtxyog5NwXL389HLKP7v8VqVmDdSU/edit#gid=1340211106")
 
 # rename to usable names
-names(pr_raw) <- c("timestamp", "author", "repro", "desc", "univ1", "univ2", "bivar", "summary", "org", "email", "blank", "upload")
+names(pr_raw) <- c("timestamp", "author", "repro", "desc", "univ", "univ2", "bivar", "summary", "org", "email", "blank", "upload")
 
-# drop all but this semester
-pr <- pr_raw %>% filter(as.Date(timestamp) > "2019-03-02" & as.Date(timestamp) < "2019-06-01") 
+# drop all but this semester (update timestamps where needed)
+pr <- pr_raw %>% filter(as.Date(timestamp) > "2021-01-01" & as.Date(timestamp) < "2021-05-01") 
 
 
 # Identify instructor review vs peer review
@@ -18,7 +18,7 @@ pr$IR <- ifelse(grepl("rdonatello|nlytal|eroualdes|klgray", pr$email), "Instruct
 pr$IR[is.na(pr$IR)] <- "Peer Review"
 
 # average score per review
-pr <- pr %>% mutate(score = rowMeans(pr[,c('repro', 'desc', 'univ1', 'univ2', 'bivar', 'summary', 'org')], 
+pr <- pr %>% mutate(score = rowMeans(pr[,c('repro', 'desc', 'univ', 'bivar', 'org')], 
                                      na.rm=TRUE), 
                     author = tolower(author))
 
