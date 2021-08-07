@@ -1,5 +1,5 @@
 ---
-title: "Math 130: Introduction to R - Fall 20"
+title: "Math 130: Introduction to R - Fall 21"
 fontsize: 11pt
 output:
   pdf_document:
@@ -25,20 +25,17 @@ This course is designed as a primer to get the complete novice up and running wi
 
 |                        |        Section 01       |       Section 02        |
 |:-----------------------|:-----------------------:|:-----------------------:|
-| **Meeting Days**       | 8/24/20 - 9/25/20       |  Not Offered    |
-| **Meeting Times**      | MWF 9:00-9:50           |            |
-| **Meeting Location**   | Online                |                 |
-| **Instructor**         | Nicholas Lytal         |           |
-| **Office Location**    | N/A                  |                 |
-| **Office Phone**       | N/A                  |                 |
-| **E-mail**             | nlytal@csuchico.edu  |      |
+| **Meeting Days**       | 08/23/21 - 09/24/21     |  08/23/21 - 09/24/21    |
+| **Meeting Times**      | MWF 2:00-2:50 pm        |  MWF 10:00 - 10:50 am   |
+| **Meeting Location**   | Online                  |  Online                 |
+| **Instructor**         | Nicholas Lytal          |  Robin Donatello        |
+| **Office Location**    | N/A                     |  Holt 202               |
+| **E-mail**             | nlytal@csuchico.edu     |  rdonatello@csuchico.edu|
 
 
-## Additional Support
-
+## Additional Support: Community Coding. 
+Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. Schedule and info found at https://www.csuchico.edu/datascience/community-coding.shtml 
 * The Data Science Initiative offers year-round training workshops and seminars on data-science related topics including R. See http://datascience.csuchico.edu for more information and a schedule of events.
-* Community Coding: Times TBD. [[flyer]](bit.ly/cc_hours)
-    - Students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment.
     
 # Learning Outcomes
 By the end of the course, students will be able to
@@ -46,7 +43,7 @@ By the end of the course, students will be able to
 * Import data into R from external files such as text files and spreadsheets.
 * Calculate summary statistics.
 * Create new variables using different data types.
-* Perform data management techniques such as subsetting, grouping, summarizing.
+* Perform data management techniques such as filtering, grouping, summarizing.
 * Create informative data visualizations and tables.
 * Create a reproducible research document.
 * Conduct an exploratory data analysis in a reproducible manner.
@@ -60,7 +57,7 @@ By the end of the course, students will be able to
 If you have your own PC/Mac/*nix computer, you are advised to install  R and R Studio on your personal computer. That way you can take what you've learned in this class and apply it to other classes. Both are free. Walk through installation instructions can be found here: https://norcalbiostat.netlify.com/post/software-overview/
 
 * R version 4.0.0 or later. Download from https://cran.r-project.org/
-* R Studio version 1.39 or later. Download the desktop version from https://www.rstudio.com/products/rstudio/download/#download
+* R Studio version 1.40 or later. Download the desktop version from https://www.rstudio.com/products/rstudio/download/#download
 
 Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the virtual computers campus ITSS have created. <span style="color:red">**Fall 20 instructions pending**</span>
 
@@ -111,18 +108,19 @@ The general outline of topics is listed below. A detailed most up to date schedu
 
 ## Everyone is welcome here
 
-It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit. It is my intent to present materials and activities that are respectful of diversity: gender identity, sexuality, disability, age, socioeconomic status, ethnicity, race, nationality, religion, and culture. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.
+It is our intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit. It is our intent to present materials and activities that are respectful of diversity: gender identity, sexuality, disability, age, socioeconomic status, ethnicity, race, nationality, religion, and culture. Your suggestions are encouraged and appreciated. Please let us know ways to improve the effectiveness of the course for you personally, or for other students or student groups.
 
-I would like to create a learning environment that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:
+We would like to create a learning environment that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:
 
-* If you have a name and/or set of pronouns that differ from those that appear in your official Chico records, please let me know!
-* If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. Remember that you can also submit anonymous feedback (which will lead to me making a general announcement to the class, if necessary to address your concerns). 
+* If you have a name and/or set of pronouns that differ from those that appear in your official Chico records, please let us know!
+* If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with us. We want to be a resource for you. Remember that you can also submit anonymous feedback (which may lead to a general announcement to the class, if necessary to address the concerns). 
 * If you prefer to speak with someone outside of the course, the Office of Diversity and Inclusion is here to assist. Their number is 530-898-4764, and email diversityoffice@csuchico.edu
-* I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. (Again, anonymous feedback is always an option).
+* We (like many people) are still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. (Again, anonymous feedback is always an option).
 
-_Adapted from [Monica Linden at Brown University](https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements)_. 
 
-Furthermore, I would like to acknowledge that we are meeting on the traditional lands of the Mechoopda people. Without them, we would not have access to this campus or our education.
+_Adapted from [Monica Linden at Brown University](https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements)_.
+
+Furthermore, we would like to acknowledge that we are meeting on the traditional lands of the Mechoopda people. Without them, we would not have access to this campus or our education.
 
 
 ----
@@ -130,18 +128,17 @@ Furthermore, I would like to acknowledge that we are meeting on the traditional 
 # University Policies and Campus Resources
 
 ### Adding and Dropping the course
-This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/4/20. No adds or drops are allowed after 9/18/20 without a serious and compelling reason approved by the instructor, department chair, and college dean.
+This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/3/21. No adds or drops are allowed after 9/20/20 without a serious and compelling reason approved by the instructor, department chair, and college dean.
 
 ### Academic Integrity
 Students are expected to be familiar with the University’s Academic Integrity Policy. Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. Faculty members are required to report all infractions to the Office of Student Judicial Affairs. The policy on academic integrity and other resources related to student conduct can be found on the Student Judicial Affairs web site at http://www.csuchico.edu/sjd/integrity.shtml.
 
 
 ### IT Support Services
-During the COVID-19 pandemic, the physical office for ITSS is closed until further notice. However, most services are still available via phone, online, or in a [Zoom Lobby](https://csuchico.zoom.us/j/5308984357?pwd=WUwwaXJQUTNPSnJqc1hTemxPY0ZiQT09) during business hours. See the [ITSS webpage](https://www.csuchico.edu/itss/) for futher details. 
 
-<!---
 Computer labs for student use are located on the first and fourth floor of the Meriam Library, Room 116 and 450, Tehama Hall Room 131, and the Bell Memorial Union (BMU) basement. You can get help using your computer from IT Support Services; contact them through the ITSS web site at http://www.csuchico.edu/itss. Additional labs may be available to students in your department or college.
---->
+
+**Due to the ongoing COVID-19 pandemic, students should check online for any hour restrictions in place for access to the Library or ITSS.**
 
 
 
@@ -159,9 +156,8 @@ http://www.csuchico.edu/arc
 ### Chico State Basic Needs Project
 The **Hungry Wildcat Food Pantry** provides supplemental food, fresh produce, CalFresh application assistance and basic needs referral services for students experiencing food and housing insecurity.
 
-All students are welcomed to visit the Pantry located in the Student Service Center 196, open Monday-Friday, 11am-4pm or call 530-898-4098.
+All students are welcomed to visit the Pantry located in the Student Service Center 196. Check the website for a location map and for the most up to date information on open hours: https://www.csuchico.edu/basic-needs/pantry.shtml .
 
-Please visit the Chico State Basic Needs website http://www.csuchico.edu/basic-needs for more information.
 
 ## Confidentiality and Mandatory Reoprting
 As an instructor, one of my responsibilities is to help create a safe learning environment on our campus. I also have a mandatory reporting responsibility related to my role as a your instructor. I am required to share information regarding sexual misconduct with the University. Students may speak to someone confidentially by contacting the Counseling and Wellness Center (898-6345) or Safe Place (898-3030). Information on campus reporting obligations and other Title IX related resources are available here: www.csuchico.edu/title-ix.

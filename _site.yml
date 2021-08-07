@@ -20,7 +20,7 @@ navbar:
     - text: "Data"
       icon: fa-database
       href: https://www.norcalbiostat.com/teaching/data/
-    - text: "Help!"
+    - text: "Help"
       icon: fa-question
       href: faq.html
     - text: "Syllabus"
