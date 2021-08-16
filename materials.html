@@ -13,48 +13,43 @@
 
 <title>Course materials</title>
 
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-
-
-
 <style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
-<link rel="stylesheet" href="..\css\yeti.css" type="text/css" />
+
+
+
+
+
+<link rel="stylesheet" href="C:/GitHub/css/yeti.css" type="text/css" />
 
 
 
@@ -63,10 +58,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -83,40 +74,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 45px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h2 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h3 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h4 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h5 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h6 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -144,7 +108,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -156,7 +120,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -167,10 +131,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -182,7 +159,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -289,7 +265,7 @@ $(document).ready(function () {
   <a href="faq.html">
     <span class="fa fa-question"></span>
      
-    Help!
+    Help
   </a>
 </li>
 <li>
@@ -304,7 +280,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -313,54 +289,192 @@ $(document).ready(function () {
 </div>
 
 
-<div id="assignments" class="section level3">
-<h3>Assignments</h3>
-<ul>
-<li><a href="hw/hw1.Rmd">hw1</a></li>
-<li><a href="hw/hw2.Rmd">hw2</a></li>
-<li><a href="hw/hw3.Rmd">hw3</a></li>
-<li><a href="hw/hw4.Rmd">hw4</a></li>
-</ul>
-<!-- end of list -->
+<hr />
+<div id="assignments" class="section level2">
+<h2>Assignments</h2>
+<table class=" lightable-classic" style="font-size: 25px; font-family: Courier New; width: auto !important; ">
+<tbody>
+<tr>
+<td style="text-align:center;border-left:1px solid;border-right:1px solid;">
+<a href="hw/hw1.Rmd">hw1</a>
+</td>
+<td style="text-align:center;border-left:1px solid;border-right:1px solid;">
+<a href="hw/hw2.Rmd">hw2</a>
+</td>
+<td style="text-align:center;border-left:1px solid;border-right:1px solid;">
+<a href="hw/hw3.Rmd">hw3</a>
+</td>
+<td style="text-align:center;border-left:1px solid;border-right:1px solid;">
+<a href="hw/hw4.Rmd">hw4</a>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 </div>
-<div id="notes-as-html-files" class="section level3">
-<h3>Notes as HTML files</h3>
-<ul>
-<li><a href="notes/01_intro_slides.html">01_intro_slides</a></li>
-<li><a href="notes/02_setup_slides.html">02_setup_slides</a></li>
-<li><a href="notes/03_rmd_slides.html">03_rmd_slides</a></li>
-<li><a href="notes/04_r.html">04_r</a></li>
-<li><a href="notes/05_dm.html">05_dm</a></li>
-<li><a href="notes/06_factors.html">06_factors</a></li>
-<li><a href="notes/07_plots.html">07_plots</a></li>
-</ul>
-<!-- end of list -->
+<div id="lecture-notes" class="section level2">
+<h2>Lecture notes</h2>
+<p>Notes and slides are available in both HTML and PDF formats. For some lessons R Markdown “fill in the blank” helper notes are also available. To download RMD files, right click and “save as”. Do not open in a browser then save.</p>
+<table class="table table-striped table-hover" style="font-size: 15px; font-family: Courier New; width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Lesson Name
+</th>
+<th style="text-align:center;">
+HTML
+</th>
+<th style="text-align:center;">
+PDF
+</th>
+<th style="text-align:center;">
+Helper File
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+01_intro_slides
+</td>
+<td style="text-align:center;">
+<a href="notes/01_intro_slides.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/01_intro_slides.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+02_setup_slides
+</td>
+<td style="text-align:center;">
+<a href="notes/02_setup_slides.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/02_setup_slides.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+03_rmd_slides
+</td>
+<td style="text-align:center;">
+<a href="notes/03_rmd_slides.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/03_rmd_slides.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+04_r
+</td>
+<td style="text-align:center;">
+<a href="notes/04_r.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/04_r.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+05_dm
+</td>
+<td style="text-align:center;">
+<a href="notes/05_dm.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/05_dm.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+<a href="05_dm_notes.Rmd">RMD</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+06_factors
+</td>
+<td style="text-align:center;">
+<a href="notes/06_factors.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/06_factors.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+<a href="06_factors_notes.Rmd">RMD</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+07_plots
+</td>
+<td style="text-align:center;">
+<a href="notes/07_plots.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/07_plots.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+<a href="07_plots_notes.Rmd">RMD</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+08_dplyr
+</td>
+<td style="text-align:center;">
+<a href="notes/08_dplyr.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/08_dplyr.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+<a href="08_dplyr_notes.Rmd">RMD</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+09_import
+</td>
+<td style="text-align:center;">
+<a href="notes/09_import.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/09_import.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+<a href="09_import_notes.Rmd">RMD</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10_plots2
+</td>
+<td style="text-align:center;">
+<a href="notes/10_plots2.html">HTML</a>
+</td>
+<td style="text-align:center;">
+<a href="notes/10_plots2.pdf">PDF</a>
+</td>
+<td style="text-align:center;">
+<a href="10_plots2_notes.Rmd">RMD</a>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="notes-in-pdf-format" class="section level3">
-<h3>Notes in PDF format</h3>
-<ul>
-<li><a href="notes/01_intro_slides.pdf">01_intro_slides</a></li>
-<li><a href="notes/02_setup_slides.pdf">02_setup_slides</a></li>
-<li><a href="notes/03_rmd_slides.pdf">03_rmd_slides</a></li>
-<li><a href="notes/04_r.pdf">04_r</a></li>
-<li><a href="notes/05_dm.pdf">05_dm</a></li>
-<li><a href="notes/06_factors.pdf">06_factors</a></li>
-<li><a href="notes/07_plots.pdf">07_plots</a></li>
-</ul>
-<!-- end of list -->
-</div>
-<div id="r-markdown-fill-in-the-blank-notes" class="section level3">
-<h3>R Markdown “fill in the blank” notes</h3>
-<p>To download RMD files, right click and “save as”. Do not open in a browser then save.</p>
-<ul>
-<li><a href="05_dm_notes.Rmd">05_dm_notes</a></li>
-<li><a href="06_factors_notes.Rmd">06_factors_notes</a></li>
-<li><a href="07_plots_notes.Rmd">07_plots_notes</a></li>
-<li><a href="08_dplyr_notes.Rmd">08_dplyr_notes</a></li>
-<li><a href="09_import_notes.Rmd">09_import_notes</a></li>
-<li><a href="10_plots2_notes.Rmd">10_plots2_notes</a></li>
-</ul>
-<!-- end of list -->
+<div id="video-recordings" class="section level2">
+<h2>Video Recordings</h2>
+<p>Coming soon</p>
 </div>
 
 
@@ -372,7 +486,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -390,7 +504,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

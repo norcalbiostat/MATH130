@@ -5,8 +5,8 @@
 \documentclass[
   11pt,
 ]{article}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -37,12 +37,13 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Math 130: Introduction to R - Spring 21},
+  pdftitle={Math 130: Introduction to R - Fall 21},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -51,7 +52,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -71,8 +72,11 @@
 \RequirePackage{accsupp}
 \RequirePackage{pdfcomment}
 \newcommand{\AccTool}[2]{\BeginAccSupp{method=pdfstringdef,unicode,Alt={{#1}}}\pdftooltip{{#2}}{{#1}}\EndAccSupp{}}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 
-\title{Math 130: Introduction to R - Spring 21}
+\title{Math 130: Introduction to R - Fall 21}
 \author{}
 \date{\vspace{-2.5em}}
 
@@ -109,42 +113,33 @@ pre-specified data set or your data set of choice.
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
-& Section 01 & Section 02\tabularnewline
+& Section 01 & Section 02 \\
 \midrule
 \endhead
-\textbf{Meeting Days} & 1/25/20 - 2/26/20 & Not Offered\tabularnewline
-\textbf{Meeting Times} & MWF 11:00-11:50 &\tabularnewline
-\textbf{Meeting Location} & Online &\tabularnewline
-\textbf{Instructor} & Nicholas Lytal &\tabularnewline
-\textbf{Office Location} & N/A &\tabularnewline
-\textbf{Office Phone} & N/A &\tabularnewline
+\textbf{Meeting Days} & 08/23/21 - 09/24/21 & 08/23/21 - 09/24/21 \\
+\textbf{Meeting Times} & MWF 2:00-2:50 pm & MWF 10:00 - 10:50 am \\
+\textbf{Meeting Location} & Online & Online \\
+\textbf{Instructor} & Nicholas Lytal & Robin Donatello \\
+\textbf{Office Location} & N/A & Holt 202 \\
 \textbf{E-mail} &
-\href{mailto:nlytal@csuchico.edu}{\nolinkurl{nlytal@csuchico.edu}}
-&\tabularnewline
+\href{mailto:nlytal@csuchico.edu}{\nolinkurl{nlytal@csuchico.edu}} &
+\href{mailto:rdonatello@csuchico.edu}{\nolinkurl{rdonatello@csuchico.edu}} \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{additional-support}{%
-\subsection{Additional Support}\label{additional-support}}
+\hypertarget{additional-support-community-coding.}{%
+\subsection{Additional Support: Community
+Coding.}\label{additional-support-community-coding.}}
 
-\begin{itemize}
-\tightlist
-\item
-  The Data Science Initiative offers year-round training workshops and
-  seminars on data-science related topics including R. See
-  \url{http://datascience.csuchico.edu} for more information and a
-  schedule of events.
-\item
-  Community Coding: Times TBD. \href{https://www.csuchico.edu/datascience/community-coding.shtml}{{[}main page{]}}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Students, staff, faculty, and the public are invited to join our
-    Community Coding sessions. Bring your computer, coding projects, and
-    your questions to this open working environment.
-  \end{itemize}
-\end{itemize}
+Similar to drop in Mathematics tutoring hours, students, staff, faculty,
+and the public are invited to join our Community Coding sessions. Bring
+your computer, coding projects, and your questions to this open working
+environment. Schedule and info found at
+\url{https://www.csuchico.edu/datascience/community-coding.shtml} * The
+Data Science Initiative offers year-round training workshops and
+seminars on data-science related topics including R. See
+\url{http://datascience.csuchico.edu} for more information and a
+schedule of events.
 
 \hypertarget{learning-outcomes}{%
 \section{Learning Outcomes}\label{learning-outcomes}}
@@ -161,7 +156,7 @@ By the end of the course, students will be able to
 \item
   Create new variables using different data types.
 \item
-  Perform data management techniques such as subsetting, grouping,
+  Perform data management techniques such as filtering, grouping,
   summarizing.
 \item
   Create informative data visualizations and tables.
@@ -198,13 +193,13 @@ free. Walk through installation instructions can be found here:
   R version 4.0.0 or later. Download from
   \url{https://cran.r-project.org/}
 \item
-  R Studio version 1.39 or later. Download the desktop version from
+  R Studio version 1.40 or later. Download the desktop version from
   \url{https://www.rstudio.com/products/rstudio/download/\#download}
 \end{itemize}
 
 Students who do not have a computer that they install programs on
 (i.e.~a iPad or Chromebook) can use the virtual computers campus ITSS
-have created.
+have created. {\textbf{Fall 20 instructions pending}}
 
 \hypertarget{time-commitment}{%
 \section{Time Commitment}\label{time-commitment}}
@@ -328,18 +323,18 @@ statements}\label{class-policies-and-statements}}
 \hypertarget{everyone-is-welcome-here}{%
 \subsection{Everyone is welcome here}\label{everyone-is-welcome-here}}
 
-It is my intent that students from all diverse backgrounds and
+It is our intent that students from all diverse backgrounds and
 perspectives be well-served by this course, that students' learning
 needs be addressed both in and out of class, and that the diversity that
 the students bring to this class be viewed as a resource, strength and
-benefit. It is my intent to present materials and activities that are
+benefit. It is our intent to present materials and activities that are
 respectful of diversity: gender identity, sexuality, disability, age,
 socioeconomic status, ethnicity, race, nationality, religion, and
-culture. Your suggestions are encouraged and appreciated. Please let me
+culture. Your suggestions are encouraged and appreciated. Please let us
 know ways to improve the effectiveness of the course for you personally,
 or for other students or student groups.
 
-I would like to create a learning environment that supports a diversity
+We would like to create a learning environment that supports a diversity
 of thoughts, perspectives and experiences, and honors your identities
 (including race, gender, class, sexuality, religion, ability, etc.) To
 help accomplish this:
@@ -348,30 +343,30 @@ help accomplish this:
 \tightlist
 \item
   If you have a name and/or set of pronouns that differ from those that
-  appear in your official Chico records, please let me know!
+  appear in your official Chico records, please let us know!
 \item
   If you feel like your performance in the class is being impacted by
   your experiences outside of class, please don't hesitate to come and
-  talk with me. I want to be a resource for you. Remember that you can
-  also submit anonymous feedback (which will lead to me making a general
-  announcement to the class, if necessary to address your concerns).
+  talk with us. We want to be a resource for you. Remember that you can
+  also submit anonymous feedback (which may lead to a general
+  announcement to the class, if necessary to address the concerns).
 \item
   If you prefer to speak with someone outside of the course, the Office
   of Diversity and Inclusion is here to assist. Their number is
   530-898-4764, and email
   \href{mailto:diversityoffice@csuchico.edu}{\nolinkurl{diversityoffice@csuchico.edu}}
 \item
-  I (like many people) am still in the process of learning about diverse
-  perspectives and identities. If something was said in class (by
-  anyone) that made you feel uncomfortable, please talk to me about it.
-  (Again, anonymous feedback is always an option).
+  We (like many people) are still in the process of learning about
+  diverse perspectives and identities. If something was said in class
+  (by anyone) that made you feel uncomfortable, please talk to me about
+  it. (Again, anonymous feedback is always an option).
 \end{itemize}
 
 \emph{Adapted from
 \href{https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements}{Monica
 Linden at Brown University}}.
 
-Furthermore, I would like to acknowledge that we are meeting on the
+Furthermore, we would like to acknowledge that we are meeting on the
 traditional lands of the Mechoopda people. Without them, we would not
 have access to this campus or our education.
 
@@ -388,8 +383,8 @@ course}\label{adding-and-dropping-the-course}}
 This course only runs for a few weeks and all materials are available on
 the course website. It will be difficult to get caught up if you add the
 class after the first week. The last day to add or drop classes without
-special permission by the instructor is \textbf{2/5/21}. No adds or drops are
-allowed after \textbf{2/19/21} without a serious and compelling reason approved
+special permission by the instructor is 9/3/21. No adds or drops are
+allowed after 9/20/20 without a serious and compelling reason approved
 by the instructor, department chair, and college dean.
 
 \hypertarget{academic-integrity}{%
@@ -408,12 +403,16 @@ Student Judicial Affairs web site at
 \hypertarget{it-support-services}{%
 \subsubsection{IT Support Services}\label{it-support-services}}
 
-During the COVID-19 pandemic, the physical office for ITSS is closed
-until further notice. However, most services are still available via
-phone, online, or in a
-\href{https://csuchico.zoom.us/j/5308984357?pwd=WUwwaXJQUTNPSnJqc1hTemxPY0ZiQT09}{Zoom
-Lobby} during business hours. See the
-\href{https://www.csuchico.edu/itss/}{ITSS webpage} for futher details.
+Computer labs for student use are located on the first and fourth floor
+of the Meriam Library, Room 116 and 450, Tehama Hall Room 131, and the
+Bell Memorial Union (BMU) basement. You can get help using your computer
+from IT Support Services; contact them through the ITSS web site at
+\url{http://www.csuchico.edu/itss}. Additional labs may be available to
+students in your department or college.
+
+\textbf{Due to the ongoing COVID-19 pandemic, students should check
+online for any hour restrictions in place for access to the Library or
+ITSS.}
 
 \hypertarget{americans-with-disabilities-act}{%
 \subsubsection{Americans with Disabilities
@@ -443,14 +442,13 @@ fresh produce, CalFresh application assistance and basic needs referral
 services for students experiencing food and housing insecurity.
 
 All students are welcomed to visit the Pantry located in the Student
-Service Center 196, open Monday-Friday, 11am-4pm or call 530-898-4098.
+Service Center 196. Check the website for a location map and for the
+most up to date information on open hours:
+\url{https://www.csuchico.edu/basic-needs/pantry.shtml} .
 
-Please visit the Chico State Basic Needs website
-\url{http://www.csuchico.edu/basic-needs} for more information.
-
-\hypertarget{confidentiality-and-mandatory-reporting}{%
+\hypertarget{confidentiality-and-mandatory-reoprting}{%
 \subsection{Confidentiality and Mandatory
-Reporting}\label{confidentiality-and-mandatory-reporting}}
+Reoprting}\label{confidentiality-and-mandatory-reoprting}}
 
 As an instructor, one of my responsibilities is to help create a safe
 learning environment on our campus. I also have a mandatory reporting

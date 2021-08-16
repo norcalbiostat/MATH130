@@ -12,10 +12,13 @@ library(dplyr)
 library(stringr)
 library(pander)
 library(knitr); library(kableExtra)
-opts_chunk$set(echo = FALSE)
+opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
+options(knitr.kable.NA = '')
 ```
 
-### Assignments
+----
+
+## Assignments
 
 ```{r}
 f  <- list.files("hw", pattern='*.Rmd')
@@ -28,43 +31,47 @@ out.hw <- hw %>% mutate(name = gsub("hw/|.Rmd",  "", filenames),
 ```
 
 ```{r}
-pander(as.list(out.hw$link))
+kable(t(out.hw$link), align='c') %>% 
+  column_spec (1:4,border_left = T, border_right = T) %>%
+  kable_classic(full_width = F, html_font = "Courier New", font_size = 25, position = "left")
 ```
+
 
 ```{r}
 note.files <- list.files("notes", pattern='*.html')
 note.path  <- paste0("notes/", note.files)
 note.names <- gsub(".html",  "", note.files)
-
-nf.html <- sprintf("[%s](%s)",note.names, note.path)
-nf.pdf  <- sprintf("[%s](%s)",note.names, gsub(".html", ".pdf", note.path))
-
 note.rmd.files <- list.files("notes", pattern='notes')
-nf.rmd  <- sprintf("[%s](%s)", gsub(".Rmd",  "", note.rmd.files), 
-                               gsub(".html", ".Rmd", note.rmd.files))
+
+notes <- data.frame(`Lesson Name` = note.names, 
+                    HTML = sprintf("[HTML](%s)", note.path), 
+                    PDF  = sprintf("[PDF](%s)", gsub(".html", ".pdf", note.path)), 
+                    idx  = str_extract(note.names, "\\d{2}"))
+
+helper.files <- data.frame(note.rmd.files = list.files("notes", pattern='notes'), 
+                           idx = str_extract(note.rmd.files, "\\d{2}"), 
+                           `Helper Files` = sprintf("[RMD](%s)", note.rmd.files)
+                           )
+display <- full_join(notes, helper.files) %>% 
+              select(-idx, -note.rmd.files) %>%
+              rename(`Lesson Name` = Lesson.Name, `Helper File` = Helper.Files)
 ```
 
-### Notes as HTML files
+<br>
 
-```{r}
-pander(as.list(nf.html))
-```
-
-
-### Notes in PDF format
-```{r}
-pander(as.list(nf.pdf))
-```
-
-### R Markdown "fill in the blank" notes
+## Lecture notes
+Notes and slides are available in both HTML and PDF formats. For some lessons R Markdown "fill in the blank" helper notes are also available. 
 To download RMD files, right click and "save as". Do not open in a browser then save. 
 
+
 ```{r}
-pander(as.list(nf.rmd))
+kable(display, align='lccc') %>% 
+  kable_styling(full_width = F, bootstrap_options = c("striped", "hover"), 
+                html_font = "Courier New", font_size = 15, position = "left")
 ```
 
 
-
-
+## Video Recordings
+Coming soon
 
 

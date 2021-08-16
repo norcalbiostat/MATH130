@@ -1,10 +1,15 @@
 ---
 title: "Frequently Asked Questions"
-date: "Last Updated `r Sys.time()`"
-output: html_document
+date: "_Last Updated `r Sys.time()`_"
+output:   
+  html_document:
+    highlight: tango
+    css: ../css/yeti.css
+    theme: yeti
 ---
 
- 
+----
+
 # Common Error Messages
 Taken from: http://blog.revolutionanalytics.com/2015/03/the-most-common-r-error-messages.html
 
@@ -16,7 +21,8 @@ Taken from: http://blog.revolutionanalytics.com/2015/03/the-most-common-r-error-
 * `subscript out of bounds` errors, caused by trying to access an element or dimension that doesn't exist
 * package errors caused by being unable to install, compile or load a package.
     
-    
+----
+
 # Where can I get help using R outside of class time? 
 
 ### Online
@@ -31,24 +37,19 @@ Taken from: http://blog.revolutionanalytics.com/2015/03/the-most-common-r-error-
 
 ### In Person (via Zoom during COVID-19): 
 
-* **Community Coding Sessions** - F20 TBD
-
-> _Come code with us! Bring your Data Science and coding questions, data, and projects. We aim to provide a helpful and friendly working environment where you can work, ask questions or discuss ideas related to R, Python, Data Science, or more generally data visualization and analysis._
-
+* **Community Coding Sessions** 
+Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. Schedule and info found at https://www.csuchico.edu/datascience/community-coding.shtml 
 * **Robin Donatello** - Stat professor. Holt 202. rdonatello@csuchico.edu 
-    - No official OH for F20
+    - OH TBD
     - Some community coding sessions. 
 * **Edward Roualdes** - Stat professor. Holt 204. eroualdes@csuchico.edu
-    - OH TBD
-    - Most community coding sessions. 
+    - No official OH for AY 2021-22 
 * **Kathy Gray** - Stat professor. Holt 108. klgray@csuchico.edu
-* **Jane Guo** - Stat professor. Holt xxx. jguo2@csuchico.edu
+* **Jane Guo** - Stat professor. Holt 150. jguo2@csuchico.edu
 * **Nicholas Lytal** - Stat professor. Holt xxx. nlytal@csuchico.edu
-    
-
 * **Peer Mentors** (possibly paid tutoring, some you can catch in the Math tutoring lab)
     
-
+----
 
 # What other computers on campus have R? 
 
