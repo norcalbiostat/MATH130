@@ -11,7 +11,7 @@ Course website: https://norcalbiostat.github.io/MATH130/
 * `openintro` _for built in data sets_
 * `readxl` _read in excel files_
 * `xaringan` _slides_
-* `pagedown` _print slides to pdf_
+* `pagedown` _print slides to pdf_ --> Not working as of 8/17/21
 
 
 
