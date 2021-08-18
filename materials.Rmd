@@ -38,29 +38,38 @@ kable(t(out.hw$link), align='c') %>%
 
 
 ```{r}
-note.files <- list.files("notes", pattern='*.html')
-note.path  <- paste0("notes/", note.files)
-note.names <- gsub(".html",  "", note.files)
+
+# HTML files
+file.names <- list.files("notes", pattern='.html')
+html.path  <- paste0("notes/", file.names)
+html.files <- data.frame(
+  name =  gsub(".html", "", file.names),
+  idx = str_extract(html.path, "\\d{2}"), 
+  HTML = sprintf("[HTML](%s)", html.path)
+  )
+
+# PDF files
+pdf.path  <- paste0("notes/", list.files("notes", pattern='.pdf'))
+pdf.files <- data.frame(idx = str_extract(pdf.path, "\\d{2}"), 
+                        PDF = sprintf("[PDF](%s)", pdf.path)
+                         ) %>% filter(!is.na(idx))
+
+# helper RMD files
 note.rmd.files <- list.files("notes", pattern='notes')
-
-notes <- data.frame(`Lesson Name` = note.names, 
-                    HTML = sprintf("[HTML](%s)", note.path), 
-                    PDF  = sprintf("[PDF](%s)", gsub(".html", ".pdf", note.path)), 
-                    idx  = str_extract(note.names, "\\d{2}"))
-
-helper.files <- data.frame(note.rmd.files = list.files("notes", pattern='notes'), 
-                           idx = str_extract(note.rmd.files, "\\d{2}"), 
+helper.files <- data.frame(idx = str_extract(note.rmd.files, "\\d{2}"), 
                            `Helper Files` = sprintf("[RMD](%s)", note.rmd.files)
                            )
-display <- full_join(notes, helper.files) %>% 
-              select(-idx, -note.rmd.files) %>%
-              rename(`Lesson Name` = Lesson.Name, `Helper File` = Helper.Files)
+
+display <- full_join(html.files, pdf.files) %>% 
+  full_join(helper.files) %>% 
+  select(-idx) %>%
+  rename(`Lesson Name` = name, `Helper File` = Helper.Files)
 ```
 
 <br>
 
 ## Lecture notes
-Notes and slides are available in both HTML and PDF formats. For some lessons R Markdown "fill in the blank" helper notes are also available. 
+Most notes and slides are available in both HTML and PDF formats. For some lessons R Markdown "fill in the blank" helper notes are also available. 
 To download RMD files, right click and "save as". Do not open in a browser then save. 
 
 

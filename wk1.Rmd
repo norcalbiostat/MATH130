@@ -21,10 +21,10 @@ This week we will introduce you to this short course, and how to use your new to
 
 # `r emo::ji("books")` Notes
 
-* lec01-Introduction to the class   [[Slides]](notes/01_intro_slides.html) [[PDF]](notes/01_intro_slides.pdf)  
-* lec02-Introduction to your new tools  [[Slides]](notes/02_setup_slides.html) [[PDF]](notes/02_setup_slides.pdf) 
-* lec03-Introduction to R Markdown  [[Slides]](notes/03_rmd_slides.html)   [[PDF]](notes/03_rmd_slides.pdf) 
-* lec04-Introduction to R           [[HTML]](notes/04_r.html)     [[PDF]](notes/04_r_slides.pdf)  
+* lec01-Introduction to the class   [[Slides]](notes/01_intro_slides.html)
+* lec02-Introduction to your new tools  [[Slides]](notes/02_setup_slides.html)
+* lec03-Introduction to R Markdown  [[Slides]](notes/03_rmd_slides.html)
+* lec04-Introduction to R           [[HTML]](notes/04_r.html)
 
 <br> 
 
@@ -36,8 +36,7 @@ This week we will introduce you to this short course, and how to use your new to
 
 # `r emo::ji("pencil2")` Assignments
 
-* Download the [[Assignment 1]](hw/hw1.Rmd) file. Save this in your Math 130 folder. You will write your answers directly in this file. 
-    - Submit the `.RMD file` for this assignment as instructed by the due date.  
+* Download the [[Assignment 1]](hw/hw1.Rmd) file. Save this in your Math 130 folder. You will write your answers directly in this file and submit your assignment as instructed by the due date.
 
 <br> 
 

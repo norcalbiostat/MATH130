@@ -281,9 +281,14 @@ Warning in install.packages :
 
 The correct package name is `ggplot2`, not `ggplot`.
 
+<br> 
+
+**Alternative Method of installing Packages:**  
+Use the Package tab in the lower right pane in R Studio. 
+
 ---
 background-image: url('../static/img/allthethings.jpg')
-background-position: 100% 80% 
+background-position: 100% 15% 
 background-size: 180px 150px
 
 # Install all the things!
@@ -291,38 +296,50 @@ background-size: 180px 150px
 Now that you're a package installing pro, go ahead and install the following packages that we will be using in the next few weeks. 
 
 .pull-left[<br>
-`r emo::ji("pencil2")` Type these commands into the console one at a time and wait for it to finish before entering the next command.
+`r emo::ji("pencil2")` Install the list of packages to the left one at a time and wait for it to finish before entering the next command.
 ]
 
 .pull-right[
-```r
-install.packages("rmarkdown")
-install.packages("dplyr")
-install.packages("knitr")
-install.packages("forcats")
-install.packages("readxl")
-install.packages("openintro")
-```
+* `tidyverse`
+* `openintro`
+* `tinytex`
 ]
 
-Note in this last package that is a lower case letter L at the end. For "read EXCEL." It is not the number 1 (one). 
+<br>
 
-<br> 
+Note: We're cheating a little bit. The [Tidyverse](https://www.tidyverse.org/) is "an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammer, and data structures". In other words, they are designed to play really well together.
 
-**Alternative Method of installing Packages:**  
-Use the Package tab in the lower right pane in R Studio. 
+So, instead of separately installing `ggplot2`, `rmarkdown`, `dplyr`, `readxl` among others, we are choosing to install the complete tidyverse at one time. 
+
+
+---
+
+# One more thing..
+
+
+To write fancy math in your homework, or to turn your work into a nice looking PDF, you need a typesetting program called $\LaTeX$ (pronounced "lay-tek" or "lah-tex"). It's a super neat program, but also nearly 4Gb. Too big for our needs. That's where the `tinytex` package came from. we're going to use it to install a lightweight version of $\LaTeX$. This will let us write math equations in R Markdown, and create PDF's of your homework.
+
+In your console type the following and hit **Enter**
+
+```r
+tinytex::install_tinytex()
+```
+
+This may take a few minutes, but then you're good to go!
 
 ---
 class: inverse, top, center
 background-image: url('https://bcgov.github.io/ds-cop-intro-to-r/fig/help-me-help-you.png')
 background-position: 50% 75%
-background-size: 50%
+background-size: 45%
 
 # Seeking Help
 
-<center><img src="../static/img/debugging.jpg" width="350px"></center>
 _Sometimes a second pair of eyeballs is all you need_
 
+<center><img src="../static/img/debugging.jpg" width="300px"></center>
+
+_Much of this information is also on the [FAQ](../faq.html) page_
 
 .footnote[[Image credit: Intro to DS using R Workshop](https://bcgov.github.io/ds-cop-intro-to-r/seeking-help-from-others-with-reprex.html)]
 
@@ -342,7 +359,9 @@ Try to use the correct words to describe your problem. For instance, a package i
 
 `r emo::ji("warning")` Don't spend more than 20 minutes banging your head on the wall before you ask the instructor for help!
 
+> Note: the 
 ---
+
 # Help from inside R Studio
 
 ## Use the built-in RStudio help interface to search for more information on R functions
@@ -401,18 +420,16 @@ If you check Stack Overflow, search using the `[r]` tag. Most questions have alr
 ---
 # "In Person" help
 
-Unfortunately in person `r emo::ji("busts_in_silhouette")` help not available during Spring 21 due to COVID19 `r emo::ji("mask")`
-
-However, Zoom is the next best thing. 
+For Fall 21 help is available both in person, and online. 
 
 <!--* The person sitting next to you. Don't hesitate to talk to your neighbor, 
   compare your answers, and ask for help.-->
 * Your friendly classmates: if you know someone with more experience than you,
   they might be able and willing to help you.
-* Attend Community Coding.
-  - Hours can be found here: [bit.ly/cc_hours](bit.ly/cc_hours)
+* Attend [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml). 
   - Drop in work session & dedicated space to work on coding projects.
   - Collaborate with your peers and learn from experts.
+  - Some hours are held over Zoom
 * The [R Users Meetup group](https://www.meetup.com/Chico-R-Users-Group/) useful if you want to stay connected to the community and learn about upcoming events.
     - https://www.meetup.com/Chico-R-Users-Group/
 
@@ -450,15 +467,6 @@ If you're a book kinda person, there is plenty of help available as well. Many h
     - SAS and SPSS Users http://r4stats.com/books/r4sas-spss/
     - STATA Users http://r4stats.com/books/r4stata/
 
----
-# Moar resources!
-
-* The [Posting Guide](http://www.r-project.org/posting-guide.html) for the R
-  mailing lists.
-* [How to ask for R help](http://blog.revolutionanalytics.com/2014/01/how-to-ask-for-r-help.html)
-  useful guidelines
-* [This blog post by Jon Skeet](http://codeblog.jonskeet.uk/2010/08/29/writing-the-perfect-question/)
-  has quite comprehensive advice on how to ask programming questions.
 
 
 ---

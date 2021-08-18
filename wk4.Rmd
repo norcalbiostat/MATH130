@@ -1,7 +1,6 @@
 ---
 title: "Week 4"
 output:
-  pdf_document: default
   html_document:
     css: ../css/yeti.css
     highlight: tango

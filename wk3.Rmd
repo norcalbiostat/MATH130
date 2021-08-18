@@ -1,7 +1,6 @@
 ---
 title: "Week 3"
 output:
-  pdf_document: default
   html_document:
     css: ../css/yeti.css
     highlight: tango
@@ -16,7 +15,7 @@ This week you'll learn how to streamline your data processing steps so you can g
 
 # `r emo::ji("memo")` Prepare:
 
-* Download (_Right click, save as_) the notes for both lessons and save into your `Math130/notes` folder. 
+* Download (_Right click, save as_) the RMD notes for both lessons and save into your `Math130/notes` folder. 
 
 <br>
 
