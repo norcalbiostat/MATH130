@@ -19,7 +19,7 @@ navbar:
   right:
     - text: "Data"
       icon: fa-database
-      href: https://www.norcalbiostat.com/teaching/data/
+      href: https://www.norcalbiostat.com/data/
     - text: "Help"
       icon: fa-question
       href: faq.html

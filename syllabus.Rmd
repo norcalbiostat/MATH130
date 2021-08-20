@@ -29,12 +29,14 @@ This course is designed as a primer to get the complete novice up and running wi
 | **Meeting Times**      | MWF 2:00-2:50 pm        |  MWF 10:00 - 10:50 am   |
 | **Meeting Location**   | Online                  |  Online                 |
 | **Instructor**         | Nicholas Lytal          |  Robin Donatello        |
-| **Office Location**    | N/A                     |  Holt 202               |
+| **Office Location**    | Holt 106                |  Holt 202               |
 | **E-mail**             | nlytal@csuchico.edu     |  rdonatello@csuchico.edu|
 
 
 ## Additional Support: Community Coding. 
-Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. Schedule and info found at https://www.csuchico.edu/datascience/community-coding.shtml 
+Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. 
+
+* Schedule and info found at https://www.csuchico.edu/datascience/community-coding.shtml 
 * The Data Science Initiative offers year-round training workshops and seminars on data-science related topics including R. See http://datascience.csuchico.edu for more information and a schedule of events.
     
 # Learning Outcomes
@@ -59,7 +61,7 @@ If you have your own PC/Mac/*nix computer, you are advised to install  R and R S
 * R version 4.0.0 or later. Download from https://cran.r-project.org/
 * R Studio version 1.40 or later. Download the desktop version from https://www.rstudio.com/products/rstudio/download/#download
 
-Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the virtual computers campus ITSS have created. <span style="color:red">**Fall 20 instructions pending**</span>
+Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the [Wildcat virtual lab](https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333), or use R Studio Cloud (https://rstudio.cloud/) - the free or $5/month plan should be sufficent.  
 
 
 

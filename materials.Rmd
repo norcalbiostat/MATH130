@@ -79,8 +79,8 @@ kable(display, align='lccc') %>%
                 html_font = "Courier New", font_size = 15, position = "left")
 ```
 
-
+<!---
 ## Video Recordings
 Coming soon
-
+--->
 

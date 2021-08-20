@@ -5,7 +5,10 @@ output:
   html_document: 
     toc: yes
     toc_depth: 2
-    toc_float: true
+    toc_float: yes
+    highlight: tango
+    theme: yeti
+    css: ../css/yeti.css
 ---
 
 # What other computers on campus have R? 
@@ -13,6 +16,8 @@ output:
 * All campus computers should have R & R Studio installed on them. 
 * Butte 207 & 211 are open computer labs.
 * [Wildcat Lab](https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333)
+
+----
 
 # Common Error Messages
 Taken from: http://blog.revolutionanalytics.com/2015/03/the-most-common-r-error-messages.html
@@ -34,10 +39,10 @@ If you check Stack Overflow, search using the `[r]` tag. Most questions have alr
 `r emo::ji("warning")` Development of R moves pretty fast. When at all possible, use results from the past 1-2 years. Anything over 5 years old for packages such as `ggplot`, `dplyr`, and `forcats` are likely obsolete. 
 
 
+----
+
 
 # Where can I get help using R outside of class time? 
-
-## From inside R Studio
 
 ### Use the built-in RStudio help interface to search for more information on R functions
 
@@ -112,6 +117,7 @@ For Fall 21 help is available both in person, and online.
   code repository (e.g., GitHub).
 * Twitter: #rstats @Rstudio
 
+----
 
 ## Written references
 
@@ -126,6 +132,8 @@ If you're a book kinda person, there is plenty of help available as well. Many h
     - Excel Users https://www.rforexcelusers.com/
     - SAS and SPSS Users http://r4stats.com/books/r4sas-spss/
     - STATA Users http://r4stats.com/books/r4stata/
+
+----
 
 
 ## Random blogs
