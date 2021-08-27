@@ -19,6 +19,17 @@ output:
 
 ----
 
+# Getting started / Installing Programs
+
+* Installing R & R Studio [[Windows]](https://www.youtube.com/watch?v=gx7A7C_wdyE) [[Mac]](https://www.youtube.com/watch?v=Y20P3u3c_1c)
+* How to navigate R Studio: https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij
+* Setting sanity preferences in R Studio: https://youtu.be/49u5xAYfrgk 
+* Setting up your class folder (Windows): https://youtu.be/ayar0LFRg0U
+* Downloading Homework: https://youtu.be/p9BujthQETs 
+* Getting started with Homework 1: https://media.csuchico.edu/media/MATH130%20-%20Extra%20Video%20(Jan%2029)/1_9nsoxdy9
+
+----
+
 # Common Error Messages
 Taken from: http://blog.revolutionanalytics.com/2015/03/the-most-common-r-error-messages.html
 

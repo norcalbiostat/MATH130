@@ -13,7 +13,7 @@
 
 <title>Frequently Asked Questions</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -58,6 +58,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -143,7 +144,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<link rel="stylesheet" href="../css/yeti.css" type="text/css" />
+<link rel="stylesheet" href="C:/GitHub/css/yeti.css" type="text/css" />
 
 
 
@@ -423,21 +424,21 @@ div.tocify {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://www.norcalbiostat.com/data/">
-    <span class="fas fa-database"></span>
+    <span class="fa fa-database"></span>
      
     Data
   </a>
 </li>
 <li>
   <a href="faq.html">
-    <span class="fas fa-question"></span>
+    <span class="fa fa-question"></span>
      
     Help
   </a>
 </li>
 <li>
   <a href="syllabus.html">
-    <span class="fas fa-info-circle"></span>
+    <span class="fa fa-info-circle"></span>
      
     Syllabus
   </a>
@@ -452,7 +453,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Frequently Asked Questions</h1>
-<h4 class="date">Last Updated 2021-08-20 14:04:17</h4>
+<h4 class="date">Last Updated 2021-08-26 19:46:39</h4>
 
 </div>
 
@@ -463,6 +464,18 @@ div.tocify {
 <li>All campus computers should have R &amp; R Studio installed on them.</li>
 <li>Butte 207 &amp; 211 are open computer labs.</li>
 <li><a href="https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333">Wildcat Lab</a></li>
+</ul>
+<hr />
+</div>
+<div id="getting-started-installing-programs" class="section level1">
+<h1>Getting started / Installing Programs</h1>
+<ul>
+<li>Installing R &amp; R Studio <a href="https://www.youtube.com/watch?v=gx7A7C_wdyE">[Windows]</a> <a href="https://www.youtube.com/watch?v=Y20P3u3c_1c">[Mac]</a></li>
+<li>How to navigate R Studio: <a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij" class="uri">https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij</a></li>
+<li>Setting sanity preferences in R Studio: <a href="https://youtu.be/49u5xAYfrgk" class="uri">https://youtu.be/49u5xAYfrgk</a></li>
+<li>Setting up your class folder (Windows): <a href="https://youtu.be/ayar0LFRg0U" class="uri">https://youtu.be/ayar0LFRg0U</a></li>
+<li>Downloading Homework: <a href="https://youtu.be/p9BujthQETs" class="uri">https://youtu.be/p9BujthQETs</a></li>
+<li>Getting started with Homework 1: <a href="https://media.csuchico.edu/media/MATH130%20-%20Extra%20Video%20(Jan%2029)/1_9nsoxdy9" class="uri">https://media.csuchico.edu/media/MATH130%20-%20Extra%20Video%20(Jan%2029)/1_9nsoxdy9</a></li>
 </ul>
 <hr />
 </div>
@@ -604,6 +617,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
