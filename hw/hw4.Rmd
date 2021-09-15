@@ -11,7 +11,7 @@ library(ggplot2)
 ```
 
 # Importing data
-Go to [Dr. D's data website](https://www.norcalbiostat.com/teaching/data/#) to find the following data files. Download them to your computer (ref: [HW 09](../09_import.html)) and import them in the first three questions below. 
+Go to [Dr. D's data website](https://www.norcalbiostat.com/data/) to find the following data files. Download them to your computer (ref: [HW 09](../09_import.html)) and import them in the first three questions below. 
 
 1. Read in the `High School and Beyond` data set.
 
@@ -25,7 +25,7 @@ Go to [Dr. D's data website](https://www.norcalbiostat.com/teaching/data/#) to f
 4. When reading in the Excel data set on crime, what do the arguments `sheet=1` and `col_names=TRUE` mean? 
 
 
-5. Use the `str()` function to determine how many observations and variables are contained in the `countyComplete` data set. Write the answer in a complete sentence.
+5. How many observations and variables are contained in the `countyComplete` data set? Explain how you found this information. 
 
 
 ----

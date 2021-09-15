@@ -36,7 +36,7 @@ Use the grading rubric at the end of this document for guidance as to what you s
 
 You have a choice here. If you are currently working on some data that you would like to explore, talk with me to get your data set approved.
 
-If you do not have your own data, you can choose from one of the following data sets, all of which can be downloaded from the [Data](https://norcalbiostat.netlify.com/teaching/data) page of my teaching course website. Here are some viable choices:
+If you do not have your own data, you can choose from one of the following data sets, all of which can be downloaded from the [Data](https://norcalbiostat.netlify.com/data) page of Dr. D's teaching course website. Here are some viable choices:
 
 * **Depression**: Level of depression (`cesd`), health care, and demographic characteristics.
 * **High School and Beyond**: Educational, vocational, and personal development of elementary and high school students.
@@ -49,30 +49,25 @@ Any other data sets require instructor approval. Data sets such as the 'plants' 
 # How to submit
 
 * To allow for adequate time for peer grading the submission deadline is a strict cutoff. Really late assignments won't be accepted.
-* Knit your file to HTML, WORD, or PDF, then upload to Google Drive using the link below for your section the due date.
-    - [Spring 21 - Section 01](https://drive.google.com/drive/folders/1L28tIbpjTzS-QhcoMzjdk53sR-WZhWAx?usp=sharing)
+* Knit your file to HTML, WORD, or PDF, then upload to Box [[using this link]](https://csuchico.app.box.com/f/44dd8d9cef9b4b219efb09b1eb3e5b33) by the due date. 
     - **If you knit to HTML, you must open & save the resulting file as PDF so it can be commented on.**
-* Put your student username in the name of the file somewhere, so that your fellow students know which assignment they are to review.
+* You must put your student username in the name of the file.
 
 
 # Peer Review
 
 After the submission deadline, your analysis projects will be randomly assigned to two other people to peer review and score. This means you will also score and provide feedback on 2 reports. Your instructor will also score all projects for your class section.
 
-<!---
-* All submissions will be processed and posted to a cc
-* Your assignments will be posted here. If one or both of the people you are assigned to review do not submit a project, pick another person to review. You do not have to notify your instructor if this happens.
----> 
 
 How to do your reviews: 
 
-1. Go to the Google Drive folder for your section and find the projects you are assigned to review. 
-    - [Spring 21 - Section 01](https://drive.google.com/drive/folders/1L28tIbpjTzS-QhcoMzjdk53sR-WZhWAx?usp=sharing)
+1. Go to the [[project page]](https://norcalbiostat.github.io/peer_review/math130_eda.html) and find the projects you are assigned to review. 
 2. Download the projects that you have been assigned to review. 
-3. Using the commenting feature provide 4 comments for each project.
+3. If one or both of the people you are assigned to review do not submit a project, pick another person to review. You do not have to notify your instructor if this happens.
+4. Using the commenting feature provide 4 comments for each project.
     - Two positive: What specific features did they include that you liked or found helpful?
     - Two improvements: What can they do different or better next time? Did you find a bug in their code?
-4. Score each project using this [Google Form](https://goo.gl/forms/7I4zsYpSsiZpgKyH3).
+5. Score each project using this [Google Form](https://goo.gl/forms/7I4zsYpSsiZpgKyH3).
     - This data entry form follows the scoring rubric printed below in this document.
     - You will upload your review to this form as well.
 
@@ -92,7 +87,6 @@ How to do your reviews:
 * Remove superfluous code and output (i.e. printing a data set to the screen).
 * This is to be independent work. Papers that are too similar will receive no credit.
 * Look at the grading rubric to help you decide the level of detail required.
-* [**Examples of prior work**](https://norcalbiostat.github.io/peer_review/math130_eda.html)
 
 # Grading
 * Your final project grade will be a weighted average of 30% peer reviews ($\bar{PR}$) and 70% instructor review ($IR$): $(.3*\bar{PR} + .7*IR)$.
