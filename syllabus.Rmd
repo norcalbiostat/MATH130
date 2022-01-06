@@ -2,9 +2,9 @@
 title: "Math 130: Introduction to R - Spring 22"
 fontsize: 11pt
 output:
+  html_document: default
   pdf_document:
     keep_tex: yes
-  html_document: default
 header-includes:
   - \RequirePackage{accsupp}
   - \RequirePackage{pdfcomment}
@@ -111,7 +111,7 @@ Credit / No Credit. There are 100 points available in this course. You must earn
 * Assignments: 4 @ 10 pts each.
 * Fill out course notes: 7 @ 5 pts each
 * Project:
-    - Exploratory Data Analysis (25 pts)
+    - Exploratory Data Analysis (20 pts)
     - Peer Review (5 pts)
 
 ----
