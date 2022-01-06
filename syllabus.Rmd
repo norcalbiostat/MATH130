@@ -1,5 +1,5 @@
 ---
-title: "Math 130: Introduction to R - Fall 21"
+title: "Math 130: Introduction to R - Spring 22"
 fontsize: 11pt
 output:
   pdf_document:
@@ -21,23 +21,37 @@ This course is designed as a primer to get the complete novice up and running wi
 
 * **Course Website:** https://norcalbiostat.github.io/MATH130/
 * **Prerequisites:** Basic computer literacy
-* **Workshop style:** This workshop style class runs for 5 weeks only. See expectations for time commitment during these 5 weeks below.
+* **Workshop style:** This workshop style class runs for 5 weeks only. See expectations for time commitment during these 5 weeks below.  
+* **Discord Server:** https://discord.gg/ck497bJty5 
 
 |                        |        Section 01       |       Section 02        |
 |:-----------------------|:-----------------------:|:-----------------------:|
-| **Meeting Days**       | 08/23/21 - 09/24/21     |  08/23/21 - 09/24/21    |
-| **Meeting Times**      | MWF 2:00-2:50 pm        |  MWF 10:00 - 10:50 am   |
-| **Meeting Location**   | Online                  |  Online                 |
+| **Meeting Days**       | 01/24/22 - 02/25/22     |  01/24/22 - 02/25/22    |
+| **Meeting Times**      | MWF 10 - 10:50 am       |  No set meeting pattern |
+| **Meeting Location**   | Holt 257                |  Online                 |
 | **Instructor**         | Nicholas Lytal          |  Robin Donatello        |
 | **Office Location**    | Holt 106                |  Holt 202               |
 | **E-mail**             | nlytal@csuchico.edu     |  rdonatello@csuchico.edu|
 
+## Asynchronous sections
+At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See Blackboard learn for more details on the course format. 
 
-## Additional Support: Community Coding. 
-Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. 
+## Blackboard Learn Useage
+See the welcome page for your section in Blackboard Learn for specific information on how BBL will be used for your section. 
+
+## Student Support
+
+### Discord 
+To facilitate peer to peer and effective instructor to peer assistance Discord will be used for discussion and questions outside of class. This server hosts students across multiple Statistics and Data Science classes, with a specific channel for all sections of Math 130. 
+
+1. Click this link to join the server: https://discord.gg/ck497bJty5
+2. Verify your email and agree to the rules and code of conduct. This helps create a safe learning environment.
+3. Go to the `#get-roles` text channel in the left sidebar, choose your pronouns (optional but helpful), and click the RStudio icon emoji under the second post to self-assign you to the Math-130 role. this will let you see and access the class channels! More on how to use Discord in week 1. 
+
+### Community Coding. 
+Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. For asynchronous sections, this is the best way to get direct instructor assistance.  
 
 * Schedule and info found at https://www.csuchico.edu/datascience/community-coding.shtml 
-* The Data Science Initiative offers year-round training workshops and seminars on data-science related topics including R. See http://datascience.csuchico.edu for more information and a schedule of events.
     
 # Learning Outcomes
 By the end of the course, students will be able to
@@ -50,48 +64,12 @@ By the end of the course, students will be able to
 * Create a reproducible research document.
 * Conduct an exploratory data analysis in a reproducible manner.
 
-# Required Materials
-
-* A reliable laptop, chromebook, tablet that can use a browser to access the internet.
-* Reliable internet connection while on and off campus.
-
-#### Software
-If you have your own PC/Mac/*nix computer, you are advised to install  R and R Studio on your personal computer. That way you can take what you've learned in this class and apply it to other classes. Both are free. Walk through installation instructions can be found here: https://norcalbiostat.netlify.com/post/software-overview/
-
-* R version 4.0.0 or later. Download from https://cran.r-project.org/
-* R Studio version 1.40 or later. Download the desktop version from https://www.rstudio.com/products/rstudio/download/#download
-
-Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the [Wildcat virtual lab](https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333), or use R Studio Cloud (https://rstudio.cloud/) - the free or $5/month plan should be sufficent.  
-
-
-
-# Time Commitment
-
-> For all CSU degree programs and courses bearing academic credit, the "credit hour" is defined as ... not less than one hour of classroom or direct faculty instruction and a minimum of two hours of out-of-class student work each week for approximately fifteen weeks for one semester or trimester hour of credit.
-
-This adds up to 15 hours in class, and 30 hours outside of class during these 5 weeks. That's 3 hours in class, and 10 hours of homework per week. If you are new to programming and unfamiliar with computers, you may end up taking the entire time. Be sure to schedule sufficient time during week 5 to work on the project.
-
-You will get out of this class what you put into it. Recall this is just a co-curriculuar or supplemental basic introductory class. You will not learn everything there is to know about R, nor likely not feel proficient by the time you are done. But you will be solidly on the path where you can continue to learn and improve.
-
-# Grading
-Credit / No Credit. There are 100 points available in this course. You must earn 70 points to receive credit for the course.
-
-* Daily attendance: (10 pts)
-* Assignments:
-    - HW 1 (15 pts)
-    - HW 2 (15 pts)
-    - HW 3 (15 pts)
-    - HW 4 (15 pts)
-* Project:
-    - Exploratory Data Analysis (25 pts)
-    - Peer Review (5 pts)
-
 
 # Schedule of Topics
 The general outline of topics is listed below. A detailed most up to date schedule can be found on the course website.
 
 * Week 1
-    - Intro to the R language and the R Studio Integrated Development Environment
+    - Introduction to the R language and the R Studio Environment
     - Conducting reproducible research with R Markdown
 * Week 2
     - How to use functions to get things done
@@ -103,6 +81,38 @@ The general outline of topics is listed below. A detailed most up to date schedu
     - Bivariate and Multivariate Data Visualization using `ggplot2`
     - Importing data into R from external files
 * Week 5: Exploratory Data Analysis (individual project)
+
+
+# Required Materials
+
+* A reliable laptop, chromebook, tablet that can use a browser to access the internet.
+* Reliable internet connection while on and off campus.
+
+#### Software
+If you have your own PC/Mac/*nix computer, you are advised to install  R and R Studio on your personal computer. That way you can take what you've learned in this class and apply it to other classes. Both are free. Walk through installation instructions can be found here: https://norcalbiostat.netlify.com/post/software-overview/
+
+* R version 4.1.0 or later. Download from https://cran.r-project.org/
+* R Studio version 1.40 or later. Download the desktop version from https://www.rstudio.com/products/rstudio/download/#download
+
+Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the [Wildcat virtual lab](https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333), or sign up for R Studio Cloud (https://rstudio.cloud/). The free or $5/month plan should be sufficient.  
+
+
+# Time Commitment
+
+> For all CSU degree programs and courses bearing academic credit, the "credit hour" is defined as ... not less than one hour of classroom or direct faculty instruction and a minimum of two hours of out-of-class student work each week for approximately fifteen weeks for one semester or trimester hour of credit.
+
+This adds up to 15 hours in class, and 30 hours outside of class during these 5 weeks. That's 3 hours in class, and 10 hours of homework per week. If you are new to programming and unfamiliar with computers, you may end up taking the entire time. Be sure to schedule sufficient time during week 5 to work on the project.
+
+You will get out of this class what you put into it. Recall this is just a co-curriculuar or supplemental basic introductory class. You will not learn everything there is to know about R, nor likely not feel proficient by the time you are done. But you will be solidly on the path where you can continue to learn and improve.
+
+# Grading
+Credit / No Credit. There are 100 points available in this course. You must earn 70 points to receive credit for the course. See Blackboard Learn for instructions on how to submit your work and due dates. 
+
+* Assignments: 4 @ 10 pts each.
+* Fill out course notes: 7 @ 5 pts each
+* Project:
+    - Exploratory Data Analysis (25 pts)
+    - Peer Review (5 pts)
 
 ----
 
@@ -130,7 +140,7 @@ Furthermore, we would like to acknowledge that we are meeting on the traditional
 # University Policies and Campus Resources
 
 ### Adding and Dropping the course
-This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/3/21. No adds or drops are allowed after 9/20/20 without a serious and compelling reason approved by the instructor, department chair, and college dean.
+This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 2/4/22. No adds or drops are allowed after 2/18/22 without a serious and compelling reason approved by the instructor, department chair, and college dean.
 
 ### Academic Integrity
 Students are expected to be familiar with the University’s Academic Integrity Policy. Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. Faculty members are required to report all infractions to the Office of Student Judicial Affairs. The policy on academic integrity and other resources related to student conduct can be found on the Student Judicial Affairs web site at http://www.csuchico.edu/sjd/integrity.shtml.

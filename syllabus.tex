@@ -5,14 +5,13 @@
 \documentclass[
   11pt,
 ]{article}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
-  \usepackage{amssymb}
 \else % if luatex or xetex
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -38,12 +37,12 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Math 130: Introduction to R - Fall 21},
+  pdftitle={Math 130: Introduction to R - Spring 22},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -77,7 +76,7 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{Math 130: Introduction to R - Fall 21}
+\title{Math 130: Introduction to R - Spring 22}
 \author{}
 \date{\vspace{-2.5em}}
 
@@ -109,46 +108,85 @@ pre-specified data set or your data set of choice.
   \textbf{Prerequisites:} Basic computer literacy
 \item
   \textbf{Workshop style:} This workshop style class runs for 5 weeks
-  only. See expectations for time commitment during these 5 weeks below.
+  only. See expectations for time commitment during these 5 weeks
+  below.\\
+\item
+  \textbf{Discord Server:} \url{https://discord.gg/ck497bJty5}
 \end{itemize}
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
-& Section 01 & Section 02\tabularnewline
+& Section 01 & Section 02 \\
 \midrule
 \endhead
-\textbf{Meeting Days} & 08/23/21 - 09/24/21 & 08/23/21 -
-09/24/21\tabularnewline
-\textbf{Meeting Times} & MWF 2:00-2:50 pm & MWF 10:00 - 10:50
-am\tabularnewline
-\textbf{Meeting Location} & Online & Online\tabularnewline
-\textbf{Instructor} & Nicholas Lytal & Robin Donatello\tabularnewline
-\textbf{Office Location} & Holt 106 & Holt 202\tabularnewline
+\textbf{Meeting Days} & 01/24/22 - 02/25/22 & 01/24/22 - 02/25/22 \\
+\textbf{Meeting Times} & MWF 10 - 10:50 am & No set meeting pattern \\
+\textbf{Meeting Location} & Holt 257 & Online \\
+\textbf{Instructor} & Nicholas Lytal & Robin Donatello \\
+\textbf{Office Location} & Holt 106 & Holt 202 \\
 \textbf{E-mail} &
 \href{mailto:nlytal@csuchico.edu}{\nolinkurl{nlytal@csuchico.edu}} &
-\href{mailto:rdonatello@csuchico.edu}{\nolinkurl{rdonatello@csuchico.edu}}\tabularnewline
+\href{mailto:rdonatello@csuchico.edu}{\nolinkurl{rdonatello@csuchico.edu}} \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{additional-support-community-coding.}{%
-\subsection{Additional Support: Community
-Coding.}\label{additional-support-community-coding.}}
+\hypertarget{asynchronous-sections}{%
+\subsection{Asynchronous sections}\label{asynchronous-sections}}
+
+At least one section of this class is fully online, asynchronous. This
+means there are no set meeting times, but assignments still have due
+dates. Lectures are all pre-recorded and linked from the class website.
+Students work through the material and complete assignments at their own
+pace. See Blackboard learn for more details on the course format.
+
+\hypertarget{blackboard-learn-useage}{%
+\subsection{Blackboard Learn Useage}\label{blackboard-learn-useage}}
+
+See the welcome page for your section in Blackboard Learn for specific
+information on how BBL will be used for your section.
+
+\hypertarget{student-support}{%
+\subsection{Student Support}\label{student-support}}
+
+\hypertarget{discord}{%
+\subsubsection{Discord}\label{discord}}
+
+To facilitate peer to peer and effective instructor to peer assistance
+Discord will be used for discussion and questions outside of class. This
+server hosts students across multiple Statistics and Data Science
+classes, with a specific channel for all sections of Math 130.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Click this link to join the server:
+  \url{https://discord.gg/ck497bJty5}
+\item
+  Verify your email and agree to the rules and code of conduct. This
+  helps create a safe learning environment.
+\item
+  Go to the \texttt{\#get-roles} text channel in the left sidebar,
+  choose your pronouns (optional but helpful), and click the RStudio
+  icon emoji under the second post to self-assign you to the Math-130
+  role. this will let you see and access the class channels! More on how
+  to use Discord in week 1.
+\end{enumerate}
+
+\hypertarget{community-coding.}{%
+\subsubsection{Community Coding.}\label{community-coding.}}
 
 Similar to drop in Mathematics tutoring hours, students, staff, faculty,
 and the public are invited to join our Community Coding sessions. Bring
 your computer, coding projects, and your questions to this open working
-environment.
+environment. For asynchronous sections, this is the best way to get
+direct instructor assistance.
 
 \begin{itemize}
 \tightlist
 \item
   Schedule and info found at
   \url{https://www.csuchico.edu/datascience/community-coding.shtml}
-\item
-  The Data Science Initiative offers year-round training workshops and
-  seminars on data-science related topics including R. See
-  \url{http://datascience.csuchico.edu} for more information and a
-  schedule of events.
 \end{itemize}
 
 \hypertarget{learning-outcomes}{%
@@ -176,102 +214,6 @@ By the end of the course, students will be able to
   Conduct an exploratory data analysis in a reproducible manner.
 \end{itemize}
 
-\hypertarget{required-materials}{%
-\section{Required Materials}\label{required-materials}}
-
-\begin{itemize}
-\tightlist
-\item
-  A reliable laptop, chromebook, tablet that can use a browser to access
-  the internet.
-\item
-  Reliable internet connection while on and off campus.
-\end{itemize}
-
-\hypertarget{software}{%
-\paragraph{Software}\label{software}}
-
-If you have your own PC/Mac/*nix computer, you are advised to install R
-and R Studio on your personal computer. That way you can take what
-you've learned in this class and apply it to other classes. Both are
-free. Walk through installation instructions can be found here:
-\url{https://norcalbiostat.netlify.com/post/software-overview/}
-
-\begin{itemize}
-\tightlist
-\item
-  R version 4.0.0 or later. Download from
-  \url{https://cran.r-project.org/}
-\item
-  R Studio version 1.40 or later. Download the desktop version from
-  \url{https://www.rstudio.com/products/rstudio/download/\#download}
-\end{itemize}
-
-Students who do not have a computer that they install programs on
-(i.e.~a iPad or Chromebook) can use the
-\href{https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333}{Wildcat
-virtual lab}, or use R Studio Cloud (\url{https://rstudio.cloud/}) - the
-free or \$5/month plan should be sufficent.
-
-\hypertarget{time-commitment}{%
-\section{Time Commitment}\label{time-commitment}}
-
-\begin{quote}
-For all CSU degree programs and courses bearing academic credit, the
-``credit hour'' is defined as \ldots{} not less than one hour of
-classroom or direct faculty instruction and a minimum of two hours of
-out-of-class student work each week for approximately fifteen weeks for
-one semester or trimester hour of credit.
-\end{quote}
-
-This adds up to 15 hours in class, and 30 hours outside of class during
-these 5 weeks. That's 3 hours in class, and 10 hours of homework per
-week. If you are new to programming and unfamiliar with computers, you
-may end up taking the entire time. Be sure to schedule sufficient time
-during week 5 to work on the project.
-
-You will get out of this class what you put into it. Recall this is just
-a co-curriculuar or supplemental basic introductory class. You will not
-learn everything there is to know about R, nor likely not feel
-proficient by the time you are done. But you will be solidly on the path
-where you can continue to learn and improve.
-
-\hypertarget{grading}{%
-\section{Grading}\label{grading}}
-
-Credit / No Credit. There are 100 points available in this course. You
-must earn 70 points to receive credit for the course.
-
-\begin{itemize}
-\tightlist
-\item
-  Daily attendance: (10 pts)
-\item
-  Assignments:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    HW 1 (15 pts)
-  \item
-    HW 2 (15 pts)
-  \item
-    HW 3 (15 pts)
-  \item
-    HW 4 (15 pts)
-  \end{itemize}
-\item
-  Project:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Exploratory Data Analysis (25 pts)
-  \item
-    Peer Review (5 pts)
-  \end{itemize}
-\end{itemize}
-
 \hypertarget{schedule-of-topics}{%
 \section{Schedule of Topics}\label{schedule-of-topics}}
 
@@ -286,8 +228,7 @@ date schedule can be found on the course website.
   \begin{itemize}
   \tightlist
   \item
-    Intro to the R language and the R Studio Integrated Development
-    Environment
+    Introduction to the R language and the R Studio Environment
   \item
     Conducting reproducible research with R Markdown
   \end{itemize}
@@ -324,6 +265,92 @@ date schedule can be found on the course website.
   \end{itemize}
 \item
   Week 5: Exploratory Data Analysis (individual project)
+\end{itemize}
+
+\hypertarget{required-materials}{%
+\section{Required Materials}\label{required-materials}}
+
+\begin{itemize}
+\tightlist
+\item
+  A reliable laptop, chromebook, tablet that can use a browser to access
+  the internet.
+\item
+  Reliable internet connection while on and off campus.
+\end{itemize}
+
+\hypertarget{software}{%
+\paragraph{Software}\label{software}}
+
+If you have your own PC/Mac/*nix computer, you are advised to install R
+and R Studio on your personal computer. That way you can take what
+you've learned in this class and apply it to other classes. Both are
+free. Walk through installation instructions can be found here:
+\url{https://norcalbiostat.netlify.com/post/software-overview/}
+
+\begin{itemize}
+\tightlist
+\item
+  R version 4.1.0 or later. Download from
+  \url{https://cran.r-project.org/}
+\item
+  R Studio version 1.40 or later. Download the desktop version from
+  \url{https://www.rstudio.com/products/rstudio/download/\#download}
+\end{itemize}
+
+Students who do not have a computer that they install programs on
+(i.e.~a iPad or Chromebook) can use the
+\href{https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333}{Wildcat
+virtual lab}, or sign up for R Studio Cloud
+(\url{https://rstudio.cloud/}). The free or \$5/month plan should be
+sufficient.
+
+\hypertarget{time-commitment}{%
+\section{Time Commitment}\label{time-commitment}}
+
+\begin{quote}
+For all CSU degree programs and courses bearing academic credit, the
+``credit hour'' is defined as \ldots{} not less than one hour of
+classroom or direct faculty instruction and a minimum of two hours of
+out-of-class student work each week for approximately fifteen weeks for
+one semester or trimester hour of credit.
+\end{quote}
+
+This adds up to 15 hours in class, and 30 hours outside of class during
+these 5 weeks. That's 3 hours in class, and 10 hours of homework per
+week. If you are new to programming and unfamiliar with computers, you
+may end up taking the entire time. Be sure to schedule sufficient time
+during week 5 to work on the project.
+
+You will get out of this class what you put into it. Recall this is just
+a co-curriculuar or supplemental basic introductory class. You will not
+learn everything there is to know about R, nor likely not feel
+proficient by the time you are done. But you will be solidly on the path
+where you can continue to learn and improve.
+
+\hypertarget{grading}{%
+\section{Grading}\label{grading}}
+
+Credit / No Credit. There are 100 points available in this course. You
+must earn 70 points to receive credit for the course. See Blackboard
+Learn for instructions on how to submit your work and due dates.
+
+\begin{itemize}
+\tightlist
+\item
+  Assignments: 4 @ 10 pts each.
+\item
+  Fill out course notes: 7 @ 5 pts each
+\item
+  Project:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Exploratory Data Analysis (25 pts)
+  \item
+    Peer Review (5 pts)
+  \end{itemize}
 \end{itemize}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -395,8 +422,8 @@ course}\label{adding-and-dropping-the-course}}
 This course only runs for a few weeks and all materials are available on
 the course website. It will be difficult to get caught up if you add the
 class after the first week. The last day to add or drop classes without
-special permission by the instructor is 9/3/21. No adds or drops are
-allowed after 9/20/20 without a serious and compelling reason approved
+special permission by the instructor is 2/4/22. No adds or drops are
+allowed after 2/18/22 without a serious and compelling reason approved
 by the instructor, department chair, and college dean.
 
 \hypertarget{academic-integrity}{%
