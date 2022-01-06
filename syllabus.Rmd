@@ -21,7 +21,8 @@ This course is designed as a primer to get the complete novice up and running wi
 
 * **Course Website:** https://norcalbiostat.github.io/MATH130/
 * **Prerequisites:** Basic computer literacy
-* **Workshop style:** This workshop style class runs for 5 weeks only. See expectations for time commitment during these 5 weeks below.
+* **Workshop style:** This workshop style class runs for 5 weeks only. See expectations for time commitment during these 5 weeks below.  
+* **Discord Server:** https://discord.gg/ck497bJty5 
 
 |                        |        Section 01       |       Section 02        |
 |:-----------------------|:-----------------------:|:-----------------------:|
@@ -33,21 +34,21 @@ This course is designed as a primer to get the complete novice up and running wi
 | **E-mail**             | nlytal@csuchico.edu     |  rdonatello@csuchico.edu|
 
 ## Asynchronous sections
-At least one section of this class is fully online, asyncronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. Instructor availability will be described in Blackboard Learn.
+At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See Blackboard learn for more details on the course format. 
 
 ## Blackboard Learn Useage
 See the welcome page for your section in Blackboard Learn for specific information on how BBL will be used for your section. 
 
-## Discord 
-To facilitate peer to peer and effective instructor to peer assistance Discord will be used for discussion and questions outside of class. This server hosts students across multiple Statistics and Data Science classes, with a specific channel for all sections of Math 130. You must assign yourself the `math130` role to access the channels for this class.  
+## Student Support
+
+### Discord 
+To facilitate peer to peer and effective instructor to peer assistance Discord will be used for discussion and questions outside of class. This server hosts students across multiple Statistics and Data Science classes, with a specific channel for all sections of Math 130. 
 
 1. Click this link to join the server: https://discord.gg/ck497bJty5
-2. Agree to the rules and code of conduct
-3. Assign a role to yourself by 
+2. Verify your email and agree to the rules and code of conduct. This helps create a safe learning environment.
+3. Go to the `#get-roles` text channel in the left sidebar, choose your pronouns (optional but helpful), and click the RStudio icon emoji under the second post to self-assign you to the Math-130 role. this will let you see and access the class channels! More on how to use Discord in week 1. 
 
-Walkthrough video: 
-
-## Additional Support: Community Coding. 
+### Community Coding. 
 Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. For asynchronous sections, this is the best way to get direct instructor assistance.  
 
 * Schedule and info found at https://www.csuchico.edu/datascience/community-coding.shtml 
