@@ -34,7 +34,7 @@ This course is designed as a primer to get the complete novice up and running wi
 | **E-mail**             | nlytal@csuchico.edu     |  rdonatello@csuchico.edu|
 
 ## Asynchronous sections
-At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See Blackboard learn for more details on the course format. 
+At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01b_async_protocol.html) for more details on the course format. 
 
 ## Blackboard Learn Useage
 See the welcome page for your section in Blackboard Learn for specific information on how BBL will be used for your section. 
