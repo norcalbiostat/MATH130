@@ -1,0 +1,155 @@
+---
+title: "Lesson 01b"
+subtitle: "Asynchronous class protocol"
+author: "Math 130 - Dr. Robin Donatello"
+date: "_Last updated: `r format(Sys.Date(), '%b %d, %Y')`_"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, metropolis, metropolis-fonts]
+    contentSlideClass: ["left", "center"]
+    nature:
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+# So you signed up for an asynchronous class
+
+* What does asynchronous mean? 
+
+* How will it work for this class? 
+
+* How do I ...
+    - turn in homework
+    - talk to the instructor
+    - get help
+    - see my grade
+
+---
+
+# What does asynchronous mean?
+
+* No scheduled class times where we meet all together at the same time and place. 
+
+* Self-paced work, but still with due dates.
+
+* More self-regulation on your part to watch the videos and **reach out for help when needed**
+
+```{r, echo = FALSE, fig.show = "hold", fig.alt = "a woman confused by math", out.width="50%", fig.align="center"}
+knitr::include_graphics("https://media.giphy.com/media/1C8bHHJturSx2/giphy.gif")
+```
+
+---
+
+# Do I have to watch the videos? 
+
+Can't I just google it? 
+
+* You could, but it's easy to get lost as a new language learner. 
+* This course was specifically designed to teach new learners specific pieces of how to work with data in R that will lead to success (and less headache) in later classes. 
+
+```{r confusion, echo = FALSE, fig.show = "hold", fig.alt = "a woman confused by math", out.width="50%", fig.align="center"}
+knitr::include_graphics("https://media.giphy.com/media/WRQBXSCnEFJIuxktnw/giphy.gif")
+```
+
+* Watching the videos walks you through filling out the course notes, which directly translates to the homework. So you'll end up doing WAY more work if you go the google route. 
+
+---
+
+# Asynchronous $\neq$ no community
+
+It's an overused statement now due to Covid, but we really are all in this together. You are not alone in your learning journey and challenging yourself by learning new things is most effective in a community. 
+
+This is one reason I'm asking you to join Discord for this class. 
+
+* Coding is a social activity!
+* Faster response time to get a question answered
+* Helping others reinforces your learning - a learning technique not to be undervalued!
+
+```{r, echo = FALSE, fig.show = "hold", fig.alt = "Bringing pizza to a firefight now that's Community", out.width="50%", fig.align="center"}
+knitr::include_graphics("https://media.giphy.com/media/zPOErRpLtHWbm/giphy.gif")
+```
+
+
+---
+
+# Asynchronous $\neq$ no instructor!
+
+I'm still here for you! I'm just letting you lead your learning. 
+
+I will have several hours each week specifically dedicated to student help and learning. Some of those times will be during Community Coding, some will be just me hanging out in the `#Student-Hours` in Discord. 
+
+My weekly non-community coding contact hours will be determined by the end of Week 1 and posted in Blackboard (and in the `#announcements` Discord channel)
+
+## Ways to contact me: 
+
+* Discord (preferred)
+* Come to Community Coding - [[see hours here]](https://www.csuchico.edu/datascience/community-coding.shtml)
+    - Great resource to get help from people other than me!
+* Email - last resort. Wait times for a response are long :(
+
+
+---
+
+# Join Discord
+This is the defacto method of communication for this class. 
+I will not be using BBL announcements, I already mentioned my email response time sucks. 
+
+Click this link to join the server: https://discord.gg/ck497bJty5
+
+1. Verify your email and agree to the rules and code of conduct. This helps create a safe learning environment.
+
+2. Go to the `#get-roles` text channel in the left sidebar, choose your pronouns (optional but helpful), and click the RStudio icon emoji under the second post to self-assign you to the Math-130 role. this will let you see and access the class channels! 
+
+3. Post an introduction in the `#class-chat` channel. Tell us a little bit about you (major, hobbies etc) and introduce a favorite pet or book. 
+
+
+---
+
+# Tips for success
+
+* Set aside specific time during the week as you would any class to work on this material. 
+
+* You get out of this class what you put into it. If you don't try to learn the _why_, you won't be able to do the harder but more important work. 
+
+* Robin's rule - do not spend more than 20 minutes stuck before you ask for help. 
+
+* Find a study buddy. Someone to sit down and work on this material with you. Adult beverages optional. 
+
+* Come hang out in Discord or at Community Coding. Ask all the questions, get all the helps. Seriously, make that your "class" time. Join a voice channel in Discord, a CC zoom room or a room in person and just sit and do your work. That way someone is right there when you have a question. 
+
+* Don't be afraid if you don't know, that's part of the learning process. None of us is born knowing things. Knowledge comes from experience. Period.  
+
+* You CAN'T break R. I promise. The worst that'll happen is that you have to reinstall it. nbd.
+
+---
+
+# Submitting work for scoring
+
+* Due dates and grades are posted in Blackboard
+
+* All homework assignments are submitted to Google Drive
+    - You will be added via your campus email
+    
+* Course note code files will be uploaded to a Box folder - submission link in the BBL gradebook link for each assignment.
+  - Each set of lecture notes have their own folder
+  - To ensure your file is graded you must: 
+      1. make sure it compiles to PDF
+      2. file name is renamed properly with your username
+
+---
+class: inverse
+
+# Asynchronous not for you? 
+
+.center[
+![](https://media.giphy.com/media/a93jwI0wkWTQs/giphy.gif)
+]
+
+Enroll in the in-person section with Dr. Lytal
+
+
+
+
+

@@ -3,7 +3,7 @@ title: "Lesson 01"
 subtitle: "Introduction to the class"
 author: "Math 130"
 institute: "California State University, Chico"
-date: "_Last updated: `r Sys.Date()`_"
+date: "_Last updated: `r format(Sys.Date(), '%b %d, %Y')`_"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -109,8 +109,22 @@ Setup instructions are in [lesson 02](02_setup_slides.html).
 - Cross-platform interface. Also works on Windows/iOS/Linux.
 - Tab completion for functions. Forget the syntax or a variable name? Popup helpers are available.
 - Free training videos available from the developers directly.
-- Built in version control
 - One button publishing of reproducible documents such as reports, interactive visualizations, presentations (like this one!), websites.
+
+.pull-left[
+```{r rstudio-analogy, echo = FALSE, fig.show = "hold", out.width = "50%", fig.alt = "RStudio extends what R can do, and makes it easier to write R code and interact with R.", fig.align="left"}
+knitr::include_graphics("../static/img/r-manual.jpeg")
+```
+]
+.pull-right[
+```{r rstudio-analogy-2, echo = FALSE, fig.show = "hold", fig.alt = "automatic car gear shift representing the ease of RStudio", out.width="50%", fig.align="right"}
+knitr::include_graphics("../static/img/r-automatic.jpeg")
+```
+]
+
+RStudio extends what R can do, and makes it easier to write R code and interact with R. <a href="https://unsplash.com/photos/D19rXKDUPYM">Left photo credit</a>; <a href="https://unsplash.com/photos/Wec3M4dY_LE">Right photo credit</a>. Entire figure credit: Data Carpentry R for Social Scientists.
+
+
 
 <br>
 

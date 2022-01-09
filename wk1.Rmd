@@ -13,24 +13,12 @@ This week we will introduce you to this short course, and how to use your new to
 
 ---
 
-# `r emo::ji("memo")` Prepare
-
-* Follow the [[lec02]](notes/02_setup_slides.html) notes to install the necessary programs.
-
-<br> 
-
 # `r emo::ji("books")` Notes
 
 * lec01-Introduction to the class   [[Slides]](notes/01_intro_slides.html)
 * lec02-Introduction to your new tools  [[Slides]](notes/02_setup_slides.html)
 * lec03-Introduction to R Markdown  [[Slides]](notes/03_rmd_slides.html)
-* lec04-Introduction to R           [[HTML]](notes/04_r.html)
-
-<br> 
-
-# `r emo::ji("cinema")` Videos
-
-* Setup your folder for success! (lec02)
+* lec04-Introduction to R           [[HTML]](notes/04_r.html)[[RMD-missing]]()
 
 <br> 
 

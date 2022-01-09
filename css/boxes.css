@@ -1,0 +1,31 @@
+
+/* ======= BOXES ======= */
+.blue {
+  padding: .5em;
+  border-radius: 10px;
+  background: #5bc0de;
+}
+
+.blue-nos-center {
+  text-align: center;
+  background: #5bc0de;
+}
+
+.green {
+  padding: .5em;
+  border-radius: 10px;
+  background: #5cb85c;
+}
+
+.red {
+  padding: .5em;
+  border-radius: 10px;
+  background: #d9534f;
+}
+
+.yellow {
+  padding: .5em;
+  border-radius: 10px;
+  background: #f0ad4e;
+}
+
