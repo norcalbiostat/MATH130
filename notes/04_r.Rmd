@@ -2,14 +2,14 @@
 title: "Lesson 04 - Getting Started with R"
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
-  pdf_document:
-    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 
@@ -191,13 +191,24 @@ functions that require many arguments.
 
 ----
 
-# Vectors and data types
+# Data Types
 
-A vector is the most common and basic data type in R, and is pretty much
-the workhorse of R. A vector is composed by a series of values, which can be
-either numbers or characters. We can assign a series of values to a vector using
-the `c()` function. For example we can create a vector of animal weights and assign
-it to a new object `weight_g`:
+R objects come in different data types. The most common data types are numbers (**numeric**), words (**character** or **string**), and **logical** (sometimes called Boolean). These are created by writing a logical statement where the answer is either TRUE or FALSE. Silly examples include "Is 3 greater than 4?" and "Is the square root of 4 equal to 2?"
+```{r}
+3>4
+sqrt(4)==2
+```
+
+We will see how to use these logical statements to do things such as subsetting data and creating new variables. 
+
+# Data Structures
+Data structures is how we refer to a collection of pieces of data, like a series of numbers, or a list of words. 
+
+## Vectors 
+
+A vector is the most common and basic data structure in R, and is pretty much the workhorse of R.
+
+We can assign a series of values to a vector using the `c()` function. For example we can create a vector of animal weights and assign it to a new object `weight_g`:
 
 ```{r}
 (weight_g <- c(50, 60, 65, 82))
@@ -209,37 +220,24 @@ A vector can also contain characters:
 (animals <- c("mouse", "rat", "dog"))
 ```
 
-The quotes around "mouse", "rat", etc. are essential here. Without the quotes R
-will assume objects have been created called `mouse`, `rat` and `dog`. As these objects
-don't exist in R's memory, there will be an error message.
+The quotes around "mouse", "rat", etc. are essential here. Without the quotes R will assume objects have been created called `mouse`, `rat` and `dog`. As these objects don't exist in R's memory, there will be an error message.
 
-An important feature of a vector, is that all of the elements are the same type of data.
-The function `class()` indicates the class (the type of element) of an object:
+An important feature of a vector, is that all of the elements are the same type of data. That is, each element in the vector has to be the same type. You can use the function `class()` to see what data type a vector is. 
 
 ```{r}
 class(weight_g)
 class(animals)
 ```
 
-The function `str()` provides an overview of the structure of an object and its
-elements. It is a useful function when working with large and complex objects:
-
+If you try to mix and match data types within a vector, some "coercion" will occur. If you combine letters and numbers, everything will be treated as a number. 
 ```{r}
-str(weight_g)
-str(animals)
+(mix_match <- c(weight_g, animals))
+class(mix_match)
 ```
 
-## Data Types
+This is VERY important to keep in mind when you import data into R from another program like Excel. If you have any letters (like the word "missing", or "NA") in a column, all data from that column will be treated as character strings. And you can't do math (such as take a mean) on words. 
 
-R objects come in different data types. You just saw vectors comprised of numbers (**numeric**), of words (**character** or **string**). The other common data type that we will be encountering in this class is a `"logical"` (sometimes called Boolean). These are created by writing a logical statement where the answer is either TRUE or FALSE. Silly examples include "Is 3 greater than 4?" and "Is the square root of 4 equal to 2?"
-```{r}
-3>4
-sqrt(4)==2
-```
-
-We will see how to use these logical statements to do things such as subsetting data and creating new variables. 
-
-Vectors are one of the many **data structures** that R uses. Other important ones are lists (`list`), matrices (`matrix`), data frames (`data.frame`), factors (`factor`) and arrays (`array`). We will only talk about `data.frame`s and `factors` in this class. 
+Vectors are one of the many **data structures** that R uses. Other important ones are lists (`list`), matrices (`matrix`), data frames (`data.frame`), factors (`factor`) and arrays (`array`). We will only talk about `vectors`,`data.frame`s and `factors` in this class (not all in this lesson). 
 
 
 ## Doing math on vectors

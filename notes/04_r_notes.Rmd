@@ -1,0 +1,224 @@
+---
+title: "Lesson 04 - Getting Started with R (notes)"
+author: "PUT YOUR NAME HERE"
+output: html_document
+---
+
+# Creating objects in R
+
+```{r}
+weight_kg <- 55
+```
+
+When assigning a value to an object, R does not print anything. You can force R to print the value by using parentheses or by typing the object name:
+
+```{r}
+weight_kg <- 55    
+(weight_kg <- 55)  
+weight_kg          
+```
+
+For instance, we may want to convert this weight into pounds (weight in pounds is 2.2 times the weight in kg):
+
+```{r}
+
+```
+
+We can also change an object's value by assigning it a new one:
+
+```{r}
+
+```
+
+For example, let's store the animal's weight in pounds in a new object, `weight_lb`:
+
+```{r}
+
+```
+
+and then change `weight_kg` to 100.
+
+```{r}
+
+```
+
+R executes code in top-down order. So what happens on line 10 occurs before line 11. What do you think is the current content of the object `weight_lb`? 126.5 or 220?
+
+> write your answer here
+
+
+----
+
+# Functions and their arguments
+
+```{r}
+
+```
+
+Let's look into the `round` function. 
+
+```{r}
+
+```
+
+We see that if we want a different number of digits, we cantype `digits = 2` or however many we want.
+
+```{r}
+
+```
+
+If you provide the arguments in the exact same order as they are defined you
+don't have to name them:
+
+```{r}
+
+```
+
+And if you do name the arguments, you can switch their order:
+
+```{r}
+
+```
+
+----
+
+# Data Types
+
+"Is 3 greater than 4?" and "Is the square root of 4 equal to 2?"
+```{r}
+
+```
+
+
+# Data Structures
+
+## Vectors 
+
+For example we can create a vector of animal weights and assign it to a new object `weight_g`:
+
+```{r}
+
+```
+
+A vector can also contain characters:
+
+```{r}
+
+```
+
+You can use the function `class()` to see what data type a vector is. 
+
+```{r}
+
+```
+
+If you combine letters and numbers, everything will be treated as a number. 
+```{r}
+
+```
+
+
+
+## Doing math on vectors
+
+You can perform math operations on the elements of a vector such as
+```{r}
+
+```
+
+When adding two vectors together, the elements in the same position are added to each other. So element 1 in the vector `a` is added to element 1 in vector `b`. 
+```{r}
+
+```
+
+More complex calculations can be performed on multiple vectors. 
+```{r}
+
+```
+      
+All these operations on vectors behave the same way when dealing with variables in a data set (data.frame).   
+   
+If you want to add the values _within_ a vector, you use functions such as `sum()`, `max()` and `mean()`
+```{r}
+
+```
+
+## Subsetting vectors
+
+If we want to extract one or several values from a vector, we must provide one
+or several indices in square brackets. For instance:
+
+```{r}
+
+```
+
+The number in the indices indicates which element to extract. For example we can extract the 3rd element in `weight_g` by typing
+
+```{r}
+
+```
+
+### Conditional subsetting
+
+Typically, these logical vectors are not typed by hand, but are the output of other functions or logical tests such as: 
+
+```{r}
+
+```
+
+For instance, if you wanted to select only the values where weight in grams is above 50 we would type:
+
+```{r}
+
+```
+
+You can combine multiple tests using `&` (both conditions are true, AND) or `|` (at least one of the conditions is true, OR):
+
+_Weight is less than 30g or greater than 60g_
+```{r}
+
+```
+_Weight is between 60 and 80lbs_
+```{r}
+
+```
+
+The function `%in%` allows you to test if any of the elements of a search vector are found:
+
+```{r}
+
+```
+
+## Order matters. 
+When considering string or character vectors or data elements, R treats everything in alphabetical order. 
+
+```{r}
+
+```
+
+# Data Frames
+We can load the `diamonds` data set into our global environment by typing 
+
+```{r}
+
+```
+
+We can get an idea of the structure of the data frame including variable names and types by using the `str` function,
+```{r}
+
+```
+
+## Inspecting data.frame objects
+
+## Identifying variables
+
+Below is an example of finding the average price for all diamonds in the data set. 
+
+```{r}
+
+```
+
+Here is an example of finding the average price for `Good` quality diamonds. 
+```{r}
+
+```

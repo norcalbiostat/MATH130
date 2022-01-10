@@ -11,7 +11,7 @@
 
 
 
-<title>Week 1</title>
+<title>Week 4</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -282,42 +282,78 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Week 1</h1>
+<h1 class="title toc-ignore">Week 4</h1>
 
 </div>
 
 
-<div id="getting-started-with-r-and-r-studio" class="section level1">
-<h1>Getting started with R and R Studio</h1>
-<p>This week we will introduce you to this short course, and how to use your new tools R and R Markdown.</p>
+<div id="importing-data-into-r-and-intermediate-plotting" class="section level1">
+<h1>Importing data into R and Intermediate Plotting</h1>
+<p>Interesting data doesn’t live inside R. Lets get data from an external file into R, and learn how to make more complex plots.</p>
 <hr />
+<p><br></p>
 </div>
-<div id="notes" class="section level1">
-<h1>📚 Notes</h1>
+<div id="prepare" class="section level1">
+<h1>📝 Prepare:</h1>
 <ul>
-<li>lec01-Introduction to the class <a href="notes/01_intro_slides.html">[Slides]</a></li>
-<li>lec02-Introduction to your new tools <a href="notes/02_setup_slides.html">[Slides]</a></li>
-<li>lec03-Introduction to R Markdown <a href="notes/03_rmd_slides.html">[Slides]</a></li>
-<li>lec04-Introduction to R <a href="notes/04_r.html">[HTML]</a><a href="notes/04_r_notes.Rmd">[RMD notes]</a></li>
+<li>Install the following packages: <code>gridExtra</code>, <code>RColorBrewer</code> and <code>sjPlot</code>.</li>
+<li>Download the notes files for the two lessons into your <code>Math130/notes</code> folder.</li>
+<li>Right click each link and save the following data sets into your <code>Math130/data</code> folder.</li>
+</ul>
+<p>🛑 <strong>DO NOT RENAME ANYTHING</strong> If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder.</p>
+<ul>
+<li><a href="https://norcalbiostat.netlify.com/data/NCbirths.csv">NCBirths</a></li>
+<li><a href="https://norcalbiostat.netlify.com/data/email.txt">email</a></li>
+<li><a href="https://norcalbiostat.netlify.com/data/fatal-police-shootings-data.xlsx">Police Shootings</a></li>
 </ul>
 <p><br></p>
 </div>
-<div id="assignments" class="section level1">
-<h1>✏️ Assignments</h1>
+<div id="notes" class="section level1">
+<h1>📚 Notes:</h1>
+<ul>
+<li>lec09 - Getting data into R <a href="notes/09_import.html">[HTML]</a> <a href="notes/09_import.pdf">[PDF]</a> <a href="notes/09_import_notes.Rmd">[RMD]</a></li>
+<li>lec10 - Graphing Enhancements <a href="notes/10_plots2.html">[HTML]</a> <a href="notes/10_plots2.pdf">[PDF]</a> <a href="notes/10_plots2_notes.Rmd">[RMD]</a></li>
+</ul>
+<p><br></p>
+</div>
+<div id="assignment" class="section level1">
+<h1>✏️ Assignment</h1>
 <p>Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.</p>
 <ul>
-<li><a href="hw/hw1.Rmd">Homework 1</a></li>
-<li><a href="notes/04_r_notes.Rmd">Lecture 04 notes</a></li>
+<li><a href="hw/hw4.Rmd">HW 4</a></li>
+<li><a href="notes/09_import_notes.Rmd">Lec09 notes</a></li>
+<li><a href="notes/10_plots2_notes.Rmd">Lec10 notes</a></li>
 </ul>
 <p><br></p>
 </div>
 <div id="additional-resources" class="section level1">
-<h1>🤔 Additional Resources</h1>
+<h1>🤔 Additional Resources:</h1>
 <ul>
-<li><p>R Markdown from R Studio <a href="http://rmarkdown.rstudio.com/lesson-1.html" class="uri">http://rmarkdown.rstudio.com/lesson-1.html</a></p></li>
-<li><p>R Primer: Programming Basics <a href="https://rstudio.cloud/learn/primers/1.2" class="uri">https://rstudio.cloud/learn/primers/1.2</a></p></li>
-<li><p>Cheat Sheets for <a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf">RStudio</a>, <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf">R Markdown</a>, and <a href="http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf">Base R</a>. <em>Need a translated version? See the bottom of the <a href="https://rstudio.com/resources/cheatsheets/">RStudio resources page</a></em></p></li>
-<li><p>A paper on <a href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a> concepts. Important read for graduate students or any student doing their own research.</p></li>
+<li>Data Import
+<ul>
+<li><a href="https://rstudio.cloud/learn/cheat-sheets">Cheat Sheets</a>: Relevant sheet is <strong>Data Import</strong></li>
+<li>Marin Stats Lectures
+<ul>
+<li>Import Data, Copy Data from Excel to R CSV &amp; TXT Files <a href="https://www.youtube.com/watch?v=qPk0YEKhqB8" class="uri">https://www.youtube.com/watch?v=qPk0YEKhqB8</a></li>
+<li>Importing , Checking and Working with Data in R <a href="https://www.youtube.com/watch?v=U4-RnTW5dfw" class="uri">https://www.youtube.com/watch?v=U4-RnTW5dfw</a></li>
+</ul></li>
+<li>Computing for the Social Sciences: <a href="https://cfss.uchicago.edu/notes/importing-data/" class="uri">https://cfss.uchicago.edu/notes/importing-data/</a></li>
+<li>Importing Data with R Studio <a href="https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio" class="uri">https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio</a></li>
+</ul></li>
+<li>Graphing
+<ul>
+<li><code>sjPlot</code>: Data Visualization for Statistics in Social Science <a href="https://strengejacke.github.io/sjPlot/">vignette</a></li>
+<li>R Graphics cookbook: <a href="http://www.cookbook-r.com/Graphs/" class="uri">http://www.cookbook-r.com/Graphs/</a></li>
+<li>R Graph Gallery: <a href="https://www.r-graph-gallery.com/" class="uri">https://www.r-graph-gallery.com/</a></li>
+<li>STHDA - Visualization: <a href="http://www.sthda.com/english/wiki/data-visualization" class="uri">http://www.sthda.com/english/wiki/data-visualization</a></li>
+<li>Colorblind-friendly palettes for plots: <a href="http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette" class="uri">http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette</a></li>
+<li>Guidance on colors
+<ul>
+<li><a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf" class="uri">https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf</a></li>
+<li><a href="http://www.sthda.com/english/wiki/colors-in-r" class="uri">http://www.sthda.com/english/wiki/colors-in-r</a></li>
+<li><a href="https://www.stat.ubc.ca/~jenny/STAT545A/block14_colors.html" class="uri">https://www.stat.ubc.ca/~jenny/STAT545A/block14_colors.html</a></li>
+</ul></li>
+</ul></li>
 </ul>
 <hr />
 <p><em>Last Updated 2022-01-09</em></p>

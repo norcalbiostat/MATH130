@@ -28,8 +28,11 @@ This week you'll learn how to streamline your data processing steps so you can g
 
 # `r emo::ji("pencil2")` Assignment:
 
-* [[HW 3]](hw/hw3.Rmd) - you will write your answers directly in here, and submit your assignment as instructed by the due date. 
+Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.
 
+* [HW 3](hw/hw3.Rmd) 
+* [Lec07 notes](notes/07_plots_notes.Rmd)
+* [Lec08 notes](notes/08_dplyr_notes.Rmd) 
 
 <br> 
 
