@@ -23,7 +23,7 @@ After completing this lesson learners will be able to create a new R markdown do
 
 ## Pre-requisites
 * Have R and R Studio installed
-* Have the following packages installed: `rmarkdown`, `knitr`
+* Have the following packages installed: `rmarkdown`
 
 ---
 
