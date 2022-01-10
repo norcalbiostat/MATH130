@@ -28,7 +28,11 @@ This week we'll learn how to work with spreadsheet-like data in R. We'll also sp
 
 # `r emo::ji("pencil2")` Assignments
 
-* [[HW 2]](hw/hw2.Rmd) - you will write your answers directly in here, and submit your assignment as instructed by the due date. 
+Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.
+
+* [HW 2](hw/hw2.Rmd) 
+* [Lec05 notes](notes/05_dm_notes.Rmd)
+* [Lec06 notes](notes/06_factors_notes.Rmd)
 
 <br>
 

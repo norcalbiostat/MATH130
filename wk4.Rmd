@@ -39,7 +39,12 @@ Interesting data doesn't live inside R. Lets get data from an external file into
 
 # `r emo::ji("pencil2")` Assignment
 
-* [[HW 4]](hw/hw4.Rmd) - you will write your answers directly in here, and submit your assignment as instructed by the due date. 
+Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.
+
+* [HW 4](hw/hw4.Rmd) 
+* [Lec09 notes](notes/09_import_notes.Rmd)
+* [Lec10 notes](notes/10_plots2_notes.Rmd)
+
 
 <br>
 

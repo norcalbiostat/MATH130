@@ -1,5 +1,6 @@
 ---
 title: "Lesson 07 - Creating graphics (Notes)"
+author: "PUT YOUR NAME HERE"
 output: html_document
 ---
 

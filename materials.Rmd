@@ -63,14 +63,13 @@ helper.files <- data.frame(idx = str_extract(note.rmd.files, "\\d{2}"),
 display <- full_join(html.files, pdf.files) %>% 
   full_join(helper.files) %>% 
   select(-idx) %>%
-  rename(`Lesson Name` = name, `Helper File` = Helper.Files)
+  rename(`Lesson Name` = name, `Notes` = Helper.Files)
 ```
 
 <br>
 
 ## Lecture notes
-Most notes and slides are available in both HTML and PDF formats. For some lessons R Markdown "fill in the blank" helper notes are also available. 
-To download RMD files, right click and "save as". Do not open in a browser then save. 
+Most notes and slides are available in both HTML and PDF formats. For some lessons R Markdown "fill in the blank" helper notes are also available. To download RMD files, right click and "save as". Do not open in a browser then save. 
 
 
 ```{r}
@@ -78,9 +77,4 @@ kable(display, align='lccc') %>%
   kable_styling(full_width = F, bootstrap_options = c("striped", "hover"), 
                 html_font = "Courier New", font_size = 15, position = "left")
 ```
-
-<!---
-## Video Recordings
-Coming soon
---->
 

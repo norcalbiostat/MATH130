@@ -2,9 +2,9 @@
 title: "Math 130: Introduction to R - Spring 22"
 fontsize: 11pt
 output:
-  html_document: default
   pdf_document:
     keep_tex: yes
+  html_document: default
 header-includes:
   - \RequirePackage{accsupp}
   - \RequirePackage{pdfcomment}
@@ -106,7 +106,7 @@ This adds up to 15 hours in class, and 30 hours outside of class during these 5 
 You will get out of this class what you put into it. Recall this is just a co-curriculuar or supplemental basic introductory class. You will not learn everything there is to know about R, nor likely not feel proficient by the time you are done. But you will be solidly on the path where you can continue to learn and improve.
 
 # Grading
-Credit / No Credit. There are 100 points available in this course. You must earn 70 points to receive credit for the course. See Blackboard Learn for instructions on how to submit your work and due dates. 
+Credit / No Credit. There are 100 points available in this course. You must earn 75 points to receive credit for the course. See Blackboard Learn for instructions on how to submit your work and due dates. 
 
 * Assignments: 4 @ 10 pts each.
 * Fill out course notes: 7 @ 5 pts each

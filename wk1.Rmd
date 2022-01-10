@@ -18,13 +18,16 @@ This week we will introduce you to this short course, and how to use your new to
 * lec01-Introduction to the class   [[Slides]](notes/01_intro_slides.html)
 * lec02-Introduction to your new tools  [[Slides]](notes/02_setup_slides.html)
 * lec03-Introduction to R Markdown  [[Slides]](notes/03_rmd_slides.html)
-* lec04-Introduction to R           [[HTML]](notes/04_r.html)[[RMD-missing]]()
+* lec04-Introduction to R           [[HTML]](notes/04_r.html)[[RMD notes]](notes/04_r_notes.Rmd)
 
 <br> 
 
 # `r emo::ji("pencil2")` Assignments
 
-* Download the [[Assignment 1]](hw/hw1.Rmd) file. Save this in your Math 130 folder. You will write your answers directly in this file and submit your assignment as instructed by the due date.
+Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.
+
+* [Homework 1](hw/hw1.Rmd) 
+* [Lecture 04 notes](notes/04_r_notes.Rmd)
 
 <br> 
 
