@@ -193,7 +193,32 @@ functions that require many arguments.
 
 # Data Types
 
-R objects come in different data types. The most common data types are numbers (**numeric**), words (**character** or **string**), and **logical** (sometimes called Boolean). These are created by writing a logical statement where the answer is either TRUE or FALSE. Silly examples include "Is 3 greater than 4?" and "Is the square root of 4 equal to 2?"
+R objects come in different data types. 
+
+## Numbers
+
+When a number is stored in an object it is now called a **numerical** variable. We can do math on numeric variables. 
+
+```{r}
+im_a_number <- 50
+im_a_number*2
+```
+
+
+## Letters
+
+Letters, words, and entire sentences can also be stored in objects. These are then called **character** or **string** variables. We can't do math on character variables, and if we try to R gives us an error message. 
+
+```{r, error=TRUE}
+(im_a_character <- "dog")
+im_a_character*2
+```
+
+In statistics classes, character variables are often treated as **categorical** variables, which can also be called **factor** variables. Factor variables in R are special types of categorical variables. We will learn how to work with factor variables in week 2. 
+
+## Boolean
+When the value of an object can only be `TRUE` or `FALSE` it is called a **Boolean** variable. These are created by writing a **logical statement** where the answer is either TRUE or FALSE. Silly examples include "Is 3 greater than 4?" and "Is the square root of 4 equal to 2?"
+
 ```{r}
 3>4
 sqrt(4)==2

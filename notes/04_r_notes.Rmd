@@ -84,11 +84,27 @@ And if you do name the arguments, you can switch their order:
 
 # Data Types
 
-"Is 3 greater than 4?" and "Is the square root of 4 equal to 2?"
+# Data Types
+
+R objects come in different data types. 
+
+## Numbers
+
 ```{r}
 
 ```
 
+## Letters
+
+```{r, error=TRUE}
+
+```
+
+## Boolean
+
+```{r}
+
+```
 
 # Data Structures
 

@@ -435,12 +435,32 @@ div.tocify {
 </div>
 <div id="data-types" class="section level1">
 <h1>Data Types</h1>
-<p>R objects come in different data types. The most common data types are numbers (<strong>numeric</strong>), words (<strong>character</strong> or <strong>string</strong>), and <strong>logical</strong> (sometimes called Boolean). These are created by writing a logical statement where the answer is either TRUE or FALSE. Silly examples include “Is 3 greater than 4?” and “Is the square root of 4 equal to 2?”</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="sc">&gt;</span><span class="dv">4</span></span></code></pre></div>
+<p>R objects come in different data types.</p>
+<div id="numbers" class="section level2">
+<h2>Numbers</h2>
+<p>When a number is stored in an object it is now called a <strong>numerical</strong> variable. We can do math on numeric variables.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>im_a_number <span class="ot">&lt;-</span> <span class="dv">50</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>im_a_number<span class="sc">*</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 100</code></pre>
+</div>
+<div id="letters" class="section level2">
+<h2>Letters</h2>
+<p>Letters, words, and entire sentences can also be stored in objects. These are then called <strong>character</strong> or <strong>string</strong> variables. We can’t do math on character variables, and if we try to R gives us an error message.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>(im_a_character <span class="ot">&lt;-</span> <span class="st">&quot;dog&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;dog&quot;</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>im_a_character<span class="sc">*</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## Error in im_a_character * 2: non-numeric argument to binary operator</code></pre>
+<p>In statistics classes, character variables are often treated as <strong>categorical</strong> variables, which can also be called <strong>factor</strong> variables. Factor variables in R are special types of categorical variables. We will learn how to work with factor variables in week 2.</p>
+</div>
+<div id="boolean" class="section level2">
+<h2>Boolean</h2>
+<p>When the value of an object can only be <code>TRUE</code> or <code>FALSE</code> it is called a <strong>Boolean</strong> variable. These are created by writing a <strong>logical statement</strong> where the answer is either TRUE or FALSE. Silly examples include “Is 3 greater than 4?” and “Is the square root of 4 equal to 2?”</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="sc">&gt;</span><span class="dv">4</span></span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">4</span>)<span class="sc">==</span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">4</span>)<span class="sc">==</span><span class="dv">2</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <p>We will see how to use these logical statements to do things such as subsetting data and creating new variables.</p>
+</div>
 </div>
 <div id="data-structures" class="section level1">
 <h1>Data Structures</h1>
@@ -449,21 +469,21 @@ div.tocify {
 <h2>Vectors</h2>
 <p>A vector is the most common and basic data structure in R, and is pretty much the workhorse of R.</p>
 <p>We can assign a series of values to a vector using the <code>c()</code> function. For example we can create a vector of animal weights and assign it to a new object <code>weight_g</code>:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>(weight_g <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">65</span>, <span class="dv">82</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>(weight_g <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">65</span>, <span class="dv">82</span>))</span></code></pre></div>
 <pre><code>## [1] 50 60 65 82</code></pre>
 <p>A vector can also contain characters:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>(animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mouse&quot;</span>, <span class="st">&quot;rat&quot;</span>, <span class="st">&quot;dog&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>(animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mouse&quot;</span>, <span class="st">&quot;rat&quot;</span>, <span class="st">&quot;dog&quot;</span>))</span></code></pre></div>
 <pre><code>## [1] &quot;mouse&quot; &quot;rat&quot;   &quot;dog&quot;</code></pre>
 <p>The quotes around “mouse”, “rat”, etc. are essential here. Without the quotes R will assume objects have been created called <code>mouse</code>, <code>rat</code> and <code>dog</code>. As these objects don’t exist in R’s memory, there will be an error message.</p>
 <p>An important feature of a vector, is that all of the elements are the same type of data. That is, each element in the vector has to be the same type. You can use the function <code>class()</code> to see what data type a vector is.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(weight_g)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(weight_g)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(animals)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(animals)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <p>If you try to mix and match data types within a vector, some “coercion” will occur. If you combine letters and numbers, everything will be treated as a number.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>(mix_match <span class="ot">&lt;-</span> <span class="fu">c</span>(weight_g, animals))</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>(mix_match <span class="ot">&lt;-</span> <span class="fu">c</span>(weight_g, animals))</span></code></pre></div>
 <pre><code>## [1] &quot;50&quot;    &quot;60&quot;    &quot;65&quot;    &quot;82&quot;    &quot;mouse&quot; &quot;rat&quot;   &quot;dog&quot;</code></pre>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mix_match)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mix_match)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <p>This is VERY important to keep in mind when you import data into R from another program like Excel. If you have any letters (like the word “missing”, or “NA”) in a column, all data from that column will be treated as character strings. And you can’t do math (such as take a mean) on words.</p>
 <p>Vectors are one of the many <strong>data structures</strong> that R uses. Other important ones are lists (<code>list</code>), matrices (<code>matrix</code>), data frames (<code>data.frame</code>), factors (<code>factor</code>) and arrays (<code>array</code>). We will only talk about <code>vectors</code>,<code>data.frame</code>s and <code>factors</code> in this class (not all in this lesson).</p>
@@ -471,70 +491,70 @@ div.tocify {
 <div id="doing-math-on-vectors" class="section level2">
 <h2>Doing math on vectors</h2>
 <p>You can perform math operations on the elements of a vector such as</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>weight_KG <span class="ot">&lt;-</span> weight_g<span class="sc">/</span><span class="dv">1000</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>weight_KG</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>weight_KG <span class="ot">&lt;-</span> weight_g<span class="sc">/</span><span class="dv">1000</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>weight_KG</span></code></pre></div>
 <pre><code>## [1] 0.050 0.060 0.065 0.082</code></pre>
 <p>When adding two vectors together, the elements in the same position are added to each other. So element 1 in the vector <code>a</code> is added to element 1 in vector <code>b</code>.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>)</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>a<span class="sc">+</span>b</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>a<span class="sc">+</span>b</span></code></pre></div>
 <pre><code>## [1]  7  9 11</code></pre>
 <p>More complex calculations can be performed on multiple vectors.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>wt_lb <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">155</span>, <span class="dv">135</span>, <span class="dv">90</span>)</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>ht_in <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">72</span>, <span class="dv">64</span>, <span class="dv">50</span>)</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>bmi <span class="ot">&lt;-</span> <span class="dv">703</span><span class="sc">*</span>wt_lb <span class="sc">/</span> ht_in<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>bmi</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>wt_lb <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">155</span>, <span class="dv">135</span>, <span class="dv">90</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>ht_in <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">72</span>, <span class="dv">64</span>, <span class="dv">50</span>)</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>bmi <span class="ot">&lt;-</span> <span class="dv">703</span><span class="sc">*</span>wt_lb <span class="sc">/</span> ht_in<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>bmi</span></code></pre></div>
 <pre><code>## [1] 21.01948 23.17017 25.30800</code></pre>
 <p>All these operations on vectors behave the same way when dealing with variables in a data set (data.frame).</p>
 <p>If you want to add the values <em>within</em> a vector, you use functions such as <code>sum()</code>, <code>max()</code> and <code>mean()</code></p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(a)</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(b)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(b)</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(a<span class="sc">+</span>b)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(a<span class="sc">+</span>b)</span></code></pre></div>
 <pre><code>## [1] 9</code></pre>
 </div>
 <div id="subsetting-vectors" class="section level2">
 <h2>Subsetting vectors</h2>
 <p>If we want to extract one or several values from a vector, we must provide one or several indices in square brackets. For instance:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mouse&quot;</span>, <span class="st">&quot;rat&quot;</span>, <span class="st">&quot;dog&quot;</span>, <span class="st">&quot;cat&quot;</span>)</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>animals[<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mouse&quot;</span>, <span class="st">&quot;rat&quot;</span>, <span class="st">&quot;dog&quot;</span>, <span class="st">&quot;cat&quot;</span>)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>animals[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;rat&quot;</code></pre>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>animals[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>animals[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>)]</span></code></pre></div>
 <pre><code>## [1] &quot;rat&quot; &quot;dog&quot;</code></pre>
 <p>The number in the indices indicates which element to extract. For example we can extract the 3rd element in <code>weight_g</code> by typing</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>weight_g[<span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>weight_g[<span class="dv">3</span>]</span></code></pre></div>
 <pre><code>## [1] 65</code></pre>
 <div id="conditional-subsetting" class="section level3">
 <h3>Conditional subsetting</h3>
 <p>Another common way of subsetting is by using a logical vector. <code>TRUE</code> will select the element with the same index, while <code>FALSE</code> will not. Typically, these logical vectors are not typed by hand, but are the output of other functions or logical tests such as:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>weight_g <span class="sc">&gt;</span> <span class="dv">50</span>  <span class="co"># returns TRUE or FALSE depending on which elements that meet the condition</span></span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>weight_g <span class="sc">&gt;</span> <span class="dv">50</span>  <span class="co"># returns TRUE or FALSE depending on which elements that meet the condition</span></span></code></pre></div>
 <pre><code>## [1] FALSE  TRUE  TRUE  TRUE</code></pre>
 <p>We can use this output to select elements in a <em>different</em> vector where the value of that logical statement is TRUE. For instance, if you wanted to select only the values where weight in grams is above 50 we would type:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>weight_g[weight_g <span class="sc">&gt;</span> <span class="dv">50</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>weight_g[weight_g <span class="sc">&gt;</span> <span class="dv">50</span>]</span></code></pre></div>
 <pre><code>## [1] 60 65 82</code></pre>
 <p>You can combine multiple tests using <code>&amp;</code> (both conditions are true, AND) or <code>|</code> (at least one of the conditions is true, OR):</p>
 <p><em>Weight is less than 30g or greater than 60g</em></p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>weight_g[weight_g <span class="sc">&lt;</span> <span class="dv">30</span> <span class="sc">|</span> weight_g <span class="sc">&gt;</span> <span class="dv">60</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>weight_g[weight_g <span class="sc">&lt;</span> <span class="dv">30</span> <span class="sc">|</span> weight_g <span class="sc">&gt;</span> <span class="dv">60</span>]</span></code></pre></div>
 <pre><code>## [1] 65 82</code></pre>
 <p><em>Weight is between 60 and 80lbs</em></p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>weight_g[weight_g <span class="sc">&gt;=</span> <span class="dv">60</span> <span class="sc">&amp;</span> weight_g <span class="sc">&lt;=</span> <span class="dv">80</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>weight_g[weight_g <span class="sc">&gt;=</span> <span class="dv">60</span> <span class="sc">&amp;</span> weight_g <span class="sc">&lt;=</span> <span class="dv">80</span>]</span></code></pre></div>
 <pre><code>## [1] 60 65</code></pre>
 <p>Here, <code>&lt;</code> stands for “less than”, <code>&gt;</code> for “greater than”, <code>&gt;=</code> for “greater than or equal to”, and <code>==</code> for “equal to”. The double equal sign <code>==</code> is a test for numerical equality between the left and right hand sides, and should not be confused with the single <code>=</code> sign, which performs variable assignment (similar to <code>&lt;-</code>).</p>
 <p>A common task is to search for certain strings in a vector. One could use the “or” operator <code>|</code> to test for equality to multiple values, but this can quickly become tedious. The function <code>%in%</code> allows you to test if any of the elements of a search vector are found:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mouse&quot;</span>, <span class="st">&quot;rat&quot;</span>, <span class="st">&quot;dog&quot;</span>, <span class="st">&quot;cat&quot;</span>)</span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>animals[animals <span class="sc">==</span> <span class="st">&quot;cat&quot;</span> <span class="sc">|</span> animals <span class="sc">==</span> <span class="st">&quot;rat&quot;</span>] <span class="co"># returns both rat and cat</span></span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>animals <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mouse&quot;</span>, <span class="st">&quot;rat&quot;</span>, <span class="st">&quot;dog&quot;</span>, <span class="st">&quot;cat&quot;</span>)</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>animals[animals <span class="sc">==</span> <span class="st">&quot;cat&quot;</span> <span class="sc">|</span> animals <span class="sc">==</span> <span class="st">&quot;rat&quot;</span>] <span class="co"># returns both rat and cat</span></span></code></pre></div>
 <pre><code>## [1] &quot;rat&quot; &quot;cat&quot;</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>animals <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;rat&quot;</span>, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;dog&quot;</span>, <span class="st">&quot;duck&quot;</span>, <span class="st">&quot;goat&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>animals <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;rat&quot;</span>, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;dog&quot;</span>, <span class="st">&quot;duck&quot;</span>, <span class="st">&quot;goat&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] FALSE  TRUE  TRUE  TRUE</code></pre>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>animals[animals <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;rat&quot;</span>, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;dog&quot;</span>, <span class="st">&quot;duck&quot;</span>, <span class="st">&quot;goat&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>animals[animals <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;rat&quot;</span>, <span class="st">&quot;cat&quot;</span>, <span class="st">&quot;dog&quot;</span>, <span class="st">&quot;duck&quot;</span>, <span class="st">&quot;goat&quot;</span>)]</span></code></pre></div>
 <pre><code>## [1] &quot;rat&quot; &quot;dog&quot; &quot;cat&quot;</code></pre>
 </div>
 </div>
 <div id="order-matters." class="section level2">
 <h2>Order matters.</h2>
 <p>When considering string or character vectors or data elements, R treats everything in alphabetical order. Thus</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;four&quot;</span> <span class="sc">&gt;</span> <span class="st">&quot;five&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;four&quot;</span> <span class="sc">&gt;</span> <span class="st">&quot;five&quot;</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <p>This will come back to bug you when dealing with categorical data types called <code>factor</code>s in a later lesson. Don’t worry, we’ll show you how to be the boss of your factors and not let R tell you that “one” is greater than “four”.</p>
 </div>
@@ -548,7 +568,7 @@ div.tocify {
 <p class="caption"><em>figure depicting a data frame</em></p>
 </div>
 <p>For this part of the lesson we will use a data set called <code>diamonds</code> that comes with the <code>ggplot2</code> package that you installed as part of lesson 02. In a later lesson we will learn how to import data from an external file into R. We can load the <code>diamonds</code> data set into our global environment by typing</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span>diamonds</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span>diamonds</span></code></pre></div>
 <div id="to-see-the-raw-data-values-click-on-the-square-spreadsheet-icon-to-the-right-of-the-data-set-name-in-the-top-right-panel-of-rstudio-circled-in-green-in-the-image-below." class="section level5">
 <h5>To see the raw data values, click on the square spreadsheet icon to the right of the data set name in the top right panel of RStudio (circled in green in the image below).</h5>
 <div class="figure">
@@ -557,7 +577,7 @@ div.tocify {
 </div>
 <p>This area also tells us a little bit about the data set, specifically that it has 53,940 rows and 10 variables.</p>
 <p>When data sets are very large such as this one, it may be difficult to see all columns or all rows. We can get an idea of the structure of the data frame including variable names and types by using the <code>str</code> function,</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(diamonds)</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(diamonds)</span></code></pre></div>
 <pre><code>## tibble [53,940 x 10] (S3: tbl_df/tbl/data.frame)
 ##  $ carat  : num [1:53940] 0.23 0.21 0.23 0.29 0.31 0.24 0.24 0.26 0.22 0.23 ...
 ##  $ cut    : Ord.factor w/ 5 levels &quot;Fair&quot;&lt;&quot;Good&quot;&lt;..: 5 4 2 4 2 3 3 3 1 3 ...
@@ -602,15 +622,15 @@ div.tocify {
 <div id="identifying-variables" class="section level2">
 <h2>Identifying variables</h2>
 <p>Data frames can be subset by specifying indices (as shown previously), but also by calling their column names directly:</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>diamonds[, <span class="st">&quot;depth&quot;</span>]</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>diamonds[, <span class="dv">5</span>] </span>
-<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>diamonds<span class="sc">$</span>depth</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>diamonds[, <span class="st">&quot;depth&quot;</span>]</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>diamonds[, <span class="dv">5</span>] </span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>diamonds<span class="sc">$</span>depth</span></code></pre></div>
 <p>The <code>$</code> notation has the format <code>data$variable</code> and so can be thought of as specifying which data set the variable is in. It is easy to imagine a situation where two different data sets have the same name.</p>
 <p>This allows us to perform calculations on an individual variable. Below is an example of finding the average price for all diamonds in the data set.</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(diamonds<span class="sc">$</span>price)</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(diamonds<span class="sc">$</span>price)</span></code></pre></div>
 <pre><code>## [1] 3932.8</code></pre>
 <p>You can also subset a variable based on the value of a secondary variable. Here is an example of finding the average price for <code>Good</code> quality diamonds.</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(diamonds<span class="sc">$</span>price[diamonds<span class="sc">$</span>cut<span class="sc">==</span><span class="st">&quot;Good&quot;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(diamonds<span class="sc">$</span>price[diamonds<span class="sc">$</span>cut<span class="sc">==</span><span class="st">&quot;Good&quot;</span>])</span></code></pre></div>
 <pre><code>## [1] 3928.864</code></pre>
 <p>Note that the $ is used in both locations where we want to identify a variable.</p>
 <p>That’s all we’re covering for this week. You are ready to start the homework!</p>
