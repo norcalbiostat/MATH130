@@ -21,7 +21,7 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 > This lesson is a brief excerpt from the [[Applied Statistics Notebook]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html). 
 
 
-# Introduction
+# [Introduction (video)]
 Visualizing your data is hands down the most important thing you can learn to do. Seeing is critical to understanding. There are two audiences in mind when creating data visualizations: 
 
 1. For your eyes only (FYEO). These are quick and dirty plots, without annotation. Meant to be looked at once or twice.
@@ -69,7 +69,7 @@ dsmall <- diamonds[sample(nrow(diamonds), 1000), ]
 
 ----
 
-# Univariate (One Variable)
+# [Univariate (One Variable) (video)]
 
 
 ## Categorical variables
@@ -163,7 +163,7 @@ ggplot(dsmall, aes(x=price_range)) + geom_bar()
 
 ----
 
-# Bivariate (Two Variables)
+# [Bivariate (Two Variables) (video)]
 
 ## Categorical v. Categorical
 

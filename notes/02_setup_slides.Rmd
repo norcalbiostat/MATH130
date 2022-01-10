@@ -295,6 +295,7 @@ Now that you're a package installing pro, go ahead and install the following pac
 `r emo::ji("pencil2")` Install the list of packages to the left one at a time and wait for it to finish before entering the next command.
 
 * `tidyverse`
+* `rmarkdown`
 * `openintro`
 * `tinytex`
 

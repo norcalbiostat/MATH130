@@ -26,10 +26,18 @@ This week we will introduce you to this short course, and how to use your new to
 
 Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.
 
-* [Homework 1](hw/hw1.Rmd) 
+* [Homework 1](hw/hw1.Rmd)
+    - Need help getting started? [Dr. Lytals help video]](https://media.csuchico.edu/media/MATH130%20-%20Extra%20Video%20(Jan%2029)/1_9nsoxdy9)
 * [Lecture 04 notes](notes/04_r_notes.Rmd)
 
 <br> 
+
+# `r emo::ji("trophy")` Bonus Material
+If you are simultaneously taking MATH 130 and another stats course (e.g. Math 315, or Math 615), it will save you a bit of headache to keep your R work for these two classes separate. You can use R Projects to act as containers where you can work on one project/class at a time.
+
+* [Article from RStudio](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
+* [Dr. D's walk through from Fall 21 `r emo::ji("cinema")`]( https://media.csuchico.edu/media/218-MATH130-02-1766/1_98rasme3)
+
 
 # `r emo::ji("thinking_face")` Additional Resources
 
