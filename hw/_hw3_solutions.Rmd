@@ -152,3 +152,11 @@ flights %>% select(origin, distance, air_time, dest) %>% filter(dest=="ATL") %>%
 flights %>% filter(dest=="ORD") %>% 
             ggplot(aes(x=air_time, fill=origin)) +  geom_density(alpha=.3)
 ```
+
+7. Repeat the process in problem 6, but when creating overlapping density plots, instead of `air_time`, define and use `speed` as in problem 3.
+
+```{r}
+flights %>% select(origin, distance, air_time, dest) %>% filter(dest=="ORD") %>% 
+            mutate(speed = distance / air_time*60) %>% 
+            ggplot(aes(x=speed, fill=origin)) +  geom_density(alpha=.3)
+```

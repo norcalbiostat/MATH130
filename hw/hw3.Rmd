@@ -139,3 +139,9 @@ p1
 ```{r}
 
 ```
+
+7. Repeat the process in problem 6, but when creating overlapping density plots, instead of `air_time`, define and use `speed` as in problem 3.
+
+```{r}
+
+```
