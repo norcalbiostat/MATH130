@@ -142,7 +142,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<link rel="stylesheet" href="data:text/css,h5%20%7Bfont%2Dsize%3A8%3Bfont%2Dweight%3A%20bold%3Bcolor%3A%20%23008cba%3Bbackground%2Dcolor%3A%20%23e3e6ea%3B%7Dh1%2C%20h2%2C%20h3%2C%20h4%7Bcolor%3A%20%23008cba%3B%7D%2Ebutton%20%7Bbackground%2Dcolor%3A%20%234CAF50%3B%20border%3A%20none%3Bcolor%3A%20white%3Bpadding%3A%2015px%2032px%3Btext%2Dalign%3A%20center%3Btext%2Ddecoration%3A%20none%3Bdisplay%3A%20inline%2Dblock%3Bfont%2Dsize%3A%2016px%3Bbox%2Dshadow%3A%200%208px%2016px%200%20rgba%280%2C0%2C0%2C0%2E2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0%2E19%29%3B%7D" type="text/css" />
+<link rel="stylesheet" href="data:text/css,%0A%0Ah5%20%7B%0Afont%2Dsize%3A8%3B%0Afont%2Dweight%3A%20bold%3B%0Acolor%3A%20%23008cba%3B%0Abackground%2Dcolor%3A%20%23e3e6ea%3B%0A%7D%0Ah1%2C%20h2%2C%20h3%2C%20h4%7B%0Acolor%3A%20%23008cba%3B%0A%7D%0A%2Ebutton%20%7B%0Abackground%2Dcolor%3A%20%234CAF50%3B%20%0Aborder%3A%20none%3B%0Acolor%3A%20white%3B%0Apadding%3A%2015px%2032px%3B%0Atext%2Dalign%3A%20center%3B%0Atext%2Ddecoration%3A%20none%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dsize%3A%2016px%3B%0Abox%2Dshadow%3A%200%208px%2016px%200%20rgba%280%2C0%2C0%2C0%2E2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0%2E19%29%3B%0A%7D%0A" type="text/css" />
 
 
 
@@ -323,7 +323,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Lesson 04 - Getting Started with R</h1>
-<h4 class="date"><em>Last Updated 01-09-2022</em></h4>
+<h4 class="date"><em>Last Updated 01-12-2022</em></h4>
 
 </div>
 
@@ -433,8 +433,8 @@ div.tocify {
 <p>This is a simple function with only one argument. Functions are the backbone of how R does it’s thing. You will get lots of practice with functions, and quickly encounter functions that require many arguments.</p>
 <hr />
 </div>
-<div id="data-types-needs-video" class="section level1">
-<h1>Data Types <em>Needs video</em></h1>
+<div id="data-types-video" class="section level1">
+<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Functions+and+their+Arguments/1_7q6v5abj">Data Types (video)</a></h1>
 <p>R objects come in different data types.</p>
 <div id="numbers" class="section level2">
 <h2>Numbers</h2>
@@ -462,8 +462,8 @@ div.tocify {
 <p>We will see how to use these logical statements to do things such as subsetting data and creating new variables.</p>
 </div>
 </div>
-<div id="data-structures-needs-video" class="section level1">
-<h1>Data Structures <em>Needs video</em></h1>
+<div id="data-structures-video" class="section level1">
+<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Functions+and+their+Arguments/1_7q6v5abj">Data Structures (video)</a></h1>
 <p>Data structures is how we refer to a collection of pieces of data, like a series of numbers, or a list of words.</p>
 <div id="vectors" class="section level2">
 <h2>Vectors</h2>
@@ -480,7 +480,7 @@ div.tocify {
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(animals)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<p>If you try to mix and match data types within a vector, some “coercion” will occur. If you combine letters and numbers, everything will be treated as a number.</p>
+<p>If you try to mix and match data types within a vector, some “coercion” will occur. If you combine letters and numbers, everything will be treated as letters.</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>(mix_match <span class="ot">&lt;-</span> <span class="fu">c</span>(weight_g, animals))</span></code></pre></div>
 <pre><code>## [1] &quot;50&quot;    &quot;60&quot;    &quot;65&quot;    &quot;82&quot;    &quot;mouse&quot; &quot;rat&quot;   &quot;dog&quot;</code></pre>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mix_match)</span></code></pre></div>
@@ -578,7 +578,7 @@ div.tocify {
 <p>This area also tells us a little bit about the data set, specifically that it has 53,940 rows and 10 variables.</p>
 <p>When data sets are very large such as this one, it may be difficult to see all columns or all rows. We can get an idea of the structure of the data frame including variable names and types by using the <code>str</code> function,</p>
 <div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(diamonds)</span></code></pre></div>
-<pre><code>## tibble [53,940 x 10] (S3: tbl_df/tbl/data.frame)
+<pre><code>## tibble [53,940 × 10] (S3: tbl_df/tbl/data.frame)
 ##  $ carat  : num [1:53940] 0.23 0.21 0.23 0.29 0.31 0.24 0.24 0.26 0.22 0.23 ...
 ##  $ cut    : Ord.factor w/ 5 levels &quot;Fair&quot;&lt;&quot;Good&quot;&lt;..: 5 4 2 4 2 3 3 3 1 3 ...
 ##  $ color  : Ord.factor w/ 7 levels &quot;D&quot;&lt;&quot;E&quot;&lt;&quot;F&quot;&lt;&quot;G&quot;&lt;..: 2 2 2 6 7 7 6 5 2 5 ...

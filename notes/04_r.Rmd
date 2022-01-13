@@ -2,14 +2,14 @@
 title: "Lesson 04 - Getting Started with R"
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
-  pdf_document:
-    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 
@@ -191,7 +191,7 @@ functions that require many arguments.
 
 ----
 
-# Data Types _Needs video_
+# [Data Types (video)](https://media.csuchico.edu/media/MATH+130+Lecture+04A+Data+Types/1_e2j7qadw)
 
 R objects come in different data types. 
 
@@ -226,7 +226,7 @@ sqrt(4)==2
 
 We will see how to use these logical statements to do things such as subsetting data and creating new variables. 
 
-# Data Structures _Needs video_
+# [Data Structures (video)](https://media.csuchico.edu/media/MATH+130+Lecture+04A+Data+Structures/1_yxg14z9f)
 
 Data structures is how we refer to a collection of pieces of data, like a series of numbers, or a list of words. 
 
@@ -255,7 +255,7 @@ class(weight_g)
 class(animals)
 ```
 
-If you try to mix and match data types within a vector, some "coercion" will occur. If you combine letters and numbers, everything will be treated as a number. 
+If you try to mix and match data types within a vector, some "coercion" will occur. If you combine letters and numbers, everything will be treated as letters. 
 ```{r}
 (mix_match <- c(weight_g, animals))
 class(mix_match)
