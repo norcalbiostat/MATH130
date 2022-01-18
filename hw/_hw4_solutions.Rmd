@@ -8,24 +8,27 @@ output:
 ---
 
 ```{r}
+knitr::opts_chunk$set(fig.width=6, fig.height=4) # This sets all figure sizes in the document unless otherwise specified.
 library(dplyr)
 library(ggplot2)
 ```
 
 # Importing data
-Go to [Dr. D's data website](https://www.norcalbiostat.com/teaching/data/#) to find the following data files. Download them to your computer (ref: [HW 09](../09_import.html)) and import them in the first three questions below. 
+Go to [Dr. D's data website](https://www.norcalbiostat.com/data/) to find the following data files. Download them to your computer (ref: [HW 09](../09_import.html)) and import them in the first three questions below. _NOTE: Be sure you download the CSV file as .csv and not as a .numbers file. If you create a file in Numbers, you can choose File > Export To > CSV to convert it._
 
-1. Read in the `High School and Beyond` data set.
+1. Read in the `High School and Beyond` data set. Use R functions to create a table that shows how many students are in each program (using the `prog` variable).
 
 ```{r}
-hbs2 <- read.delim("../data/hsb2.txt", header = TRUE, sep = "\t")
+hsb2 <- read.delim("../data/hsb2.txt", header = TRUE, sep = "\t")
+table(hsb2$prog)
 ```
 
-2. Read in the `Crime Data` data set. 
+2. Read in the `Crime Data` data set. Use R functions to create a table that shows how many states are in each division (using the `division` variable).
 
 ```{r}
 library(readxl)
 crime <- read_excel("../data/Crime_Data.xlsx", sheet = 1, col_names = TRUE)
+table(crime$division)
 ```
 
 3. Read in the `countyComplete` data set.
@@ -52,26 +55,26 @@ The `countyComplete` data frame contains 3116 observations (rows) and 56 variabl
 # Graphing Enhancements
 This section will ask you to create graphics, often on data that needs pre-processing using the dplyr verbs you learned in the last homework. No one expects you to have all those commands memorized yet, the key is to know how to go find what you need. So reference last week's notes and homework while you do this section. 
 
-## Exploring the murder rate 
+## Exploring the poverty rate 
 This section demonstrates how you can build a nice graph in stages. Each question will have you adjust one thing on the plot. Instead of retyping the entire code each time, copy the code from the prior question and then make the requested adjustment. 
 
 > This is the suggested way of building an advanced plot. Small bit by bit, changing or adding only one thing at a time. 
 
-1. Using the `crime` data, create a density plot of the distribution of `murder` rate (x) by `region` (fill). To avoid problems with overplotting, use `alpha=.5` inside the density geometry to make the colors transparent. 
+1. Using the `crime` data, create a density plot of the distribution of `poverty` rate (x) by `region` (fill). To avoid problems with overplotting, use `alpha=.5` inside the density geometry to make the colors transparent. 
 
 ```{r}
-ggplot(crime, aes(x=murder, fill=region)) + geom_density(alpha=.5)
+ggplot(crime, aes(x=poverty, fill=region)) + geom_density(alpha=.5)
 ```
 
-2. These are pretty diverse regions, let's see how the murder rate varies within region. Fill by `division` instead, and panel on `region`. 
+2. These are pretty diverse regions, let's see how the poverty rate varies within region. Fill by `division` instead, and panel on `region`. 
 ```{r}
-ggplot(crime, aes(x=murder, fill=division)) + geom_density(alpha=.5) + facet_wrap(~region)
+ggplot(crime, aes(x=poverty, fill=division)) + geom_density(alpha=.5) + facet_wrap(~region)
 ```
 
-3. Add a different theme to this plot. 
+3. Add a different theme to this plot. _Hint: Do not use theme_void() for this step_
 
 ```{r}
-ggplot(crime, aes(x=murder, fill=division)) +
+ggplot(crime, aes(x=poverty, fill=division)) +
       geom_density(alpha=.5) + facet_wrap(~region) + 
       theme_bw()
 ```
@@ -79,28 +82,28 @@ ggplot(crime, aes(x=murder, fill=division)) +
 4. Change the colors to use the `Set1` palette. 
 
 ```{r}
-ggplot(crime, aes(x=murder, fill=division)) +
+ggplot(crime, aes(x=poverty, fill=division)) +
       geom_density(alpha=.5) + facet_wrap(~region) + 
       theme_bw() + scale_fill_brewer(palette="Set1")
 ```
 
-5. Capitalize the legend title. _Hint, you're adding something to the `scale_` section_. 
+5. Capitalize the legend title. _Hint, you're adding something to the `scale_` _section. Be sure that you continue to build off your code from the previous steps so that your theme is still present_.   
 ```{r}
-ggplot(crime, aes(x=murder, fill=division)) +
+ggplot(crime, aes(x=poverty, fill=division)) +
       geom_density(alpha=.5) + facet_wrap(~region) + 
       theme_bw() + scale_fill_brewer(name="Division", palette="Set1")
 ```
 
-6. This works, but i'm not entirely thrilled with how much space it's taking up. Let's look at these as boxplots instead of density plots. _Don't forget that ggplot wants the continuous variable on the y axis_. 
+6. This works, but I'm not entirely thrilled with how much space it's taking up. Let's look at these as boxplots instead of density plots. Start by setting up vertical boxplots, putting your continuous variable on the y axis. 
 ```{r}
-ggplot(crime, aes(y=murder, fill=division)) +
+ggplot(crime, aes(y=poverty, fill=division)) +
       geom_boxplot(alpha=.5) + facet_wrap(~region) + 
       theme_bw() + scale_fill_brewer(name="Division", palette="Set1")
 ```
 
-7. The x-axis is all weird now. Let's be clear that the x is division. 
+7. The x-axis is using numbers instead of names now. Let's fix that by clearly defining that x is division. _Note, The division levels will appear to blend together, but we'll be fixing that in later steps._
 ```{r}
-ggplot(crime, aes(y=murder, x=division, fill=division)) +
+ggplot(crime, aes(y=poverty, x=division, fill=division)) +
       geom_boxplot(alpha=.5) + facet_wrap(~region) + 
       theme_bw() + scale_fill_brewer(name="Division", palette="Set1")
 ```
@@ -108,46 +111,53 @@ ggplot(crime, aes(y=murder, x=division, fill=division)) +
 8. In this case, Division is nested within Region and so we don't need ALL the levels of division to show up in each panel. Let's "Free" our x axis by adding `scales="free_x"` to the `facet_wrap`. 
 
 ```{r}
-ggplot(crime, aes(y=murder, x=division, fill=division)) +
+ggplot(crime, aes(y=poverty, x=division, fill=division)) +
       geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free_x") + 
       theme_bw() + scale_fill_brewer(name="Division", palette="Set1")
 ```
 
 
-9. But I really want to see them as horizontal plots, so add a `+ coord_flip()` layer. This also helps with readability of long axis names. 
+9. But I really want to see them as horizontal plots, so let's add a `+ coord_flip()` layer. This also helps with readability of long axis names. _Note, you will also need to change your scales to free the y-axis instead now._
 ```{r}
-ggplot(crime, aes(y=murder, x=division, fill=division)) +
-      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free") + 
+ggplot(crime, aes(y=poverty, x=division, fill=division)) +
+      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free_y") +  
       theme_bw() + scale_fill_brewer(name="Division", palette="Set1") + 
       coord_flip()
 ```
 
-10. The legend is kinda useless now because we have the labels clearly written. Add `guide=FALSE` to the `scale` layer. 
+10. The legend is kinda useless now because we have the labels clearly written. Add `guide='none'` to the `scale` layer. 
 ```{r}
-ggplot(crime, aes(y=murder, x=division, fill=division)) +
-      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free") + 
-      theme_bw() + scale_fill_brewer(name="Division", palette="Set1", guide=FALSE) + 
+ggplot(crime, aes(y=poverty, x=division, fill=division)) +
+      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free_y") + 
+      theme_bw() + scale_fill_brewer(name="Division", palette="Set1", guide='none') + 
       coord_flip()
 ```
 
 11. Add `ncol=1` to the `facet_wrap` to stack the panels vertically. 
 
 ```{r}
-ggplot(crime, aes(y=murder, x=division, fill=division)) +
-      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free", ncol=1) + 
-      theme_bw() + scale_fill_brewer(name="Division", palette="Set1", guide=FALSE) + 
+ggplot(crime, aes(y=poverty, x=division, fill=division)) +
+      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free_y", ncol=1) + 
+      theme_bw() + scale_fill_brewer(name="Division", palette="Set1", guide='none') + 
       coord_flip()
 ```
 
 
-12. Add an appropriate title and axis titles. 
+12. Add an appropriate title and axis titles. _NOTE: Be sure your axes are correct, due to the effects of coord_flip()._
 ```{r}
-ggplot(crime, aes(y=murder, x=division, fill=division)) +
-      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free", ncol=1) + 
-      theme_bw() + scale_fill_brewer(name="Division", palette="Set1", guide=FALSE) + 
-      coord_flip() + ggtitle("Murder rate by region and division") + ylab("Division") +
-      xlab("Murder Rate")
+ggplot(crime, aes(y=poverty, x=division, fill=division)) +
+      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free_y", ncol=1) + 
+      theme_bw() + scale_fill_brewer(name="Division", palette="Set1", guide="none") + 
+      coord_flip() + ggtitle("Poverty rate by region and division") + ylab("Division") +
+      xlab("Poverty Rate")
 ```
 
-
+13. One last touch: adjust the figure size by selecting a new size for your code chunk using "fig.height=" and "fig.width=" in your code chunk options.
+```{r, fig.height=3, fig.width=2}
+ggplot(crime, aes(y=poverty, x=division, fill=division)) +
+      geom_boxplot(alpha=.5) + facet_wrap(~region, scales="free_y", ncol=1) + 
+      theme_bw() + scale_fill_brewer(name="Division", palette="Set1", guide="none") + 
+      coord_flip() + ggtitle("Poverty rate by region and division") + ylab("Division") +
+      xlab("Poverty Rate")
+```
 
