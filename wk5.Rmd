@@ -17,7 +17,13 @@ Now it's time to put your new 1337 skillz to the test! You will conduct an explo
 
 # `r emo::ji("pencil2")` Assignment
 
-Exploratory Data Analysis Project - With Peer Review [[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf). 
+Exploratory Data Analysis Project - With Peer Review
+
+> Instructions under revision. 
+
+<!---
+[[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf). 
+--->
 
 <br>
 

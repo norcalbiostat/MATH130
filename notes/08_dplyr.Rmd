@@ -2,14 +2,14 @@
 title: "Lesson 08 - Data management and aggregation using `dplyr`"
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 output:
-  pdf_document:
-    toc: no
   html_document:
     highlight: tango
     theme: yeti
     css: ../css/yeti.css
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 

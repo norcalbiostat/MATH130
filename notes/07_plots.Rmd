@@ -206,7 +206,7 @@ table(dsmall$cut, dsmall$price_range) %>% prop.table(margin=2) %>% round(3)
 * 20% of diamonds that cost over 17.5k are Premium quality
 
 ### Grouped bar charts
-To compare proprtions of one categorical variable within the same level of another, is to use grouped barcharts. 
+To compare proportions of one categorical variable within the same level of another, is to use grouped barcharts. 
 
 Plot the cut on the x axis, but then `fill` using the second categorical variable. This has the effect of visualizing the **row** percents from the table above. Here it is the percent of `price_range`, within each type of `cut`. 
 
