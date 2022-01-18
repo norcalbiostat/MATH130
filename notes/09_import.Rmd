@@ -1,14 +1,14 @@
 ---
 title: "Lesson 09 - Getting data into R"
 output:
-  pdf_document:
-    toc: no
   html_document:
     css: ../css/yeti.css
     highlight: tango
     theme: yeti
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
@@ -138,7 +138,7 @@ head(NCbirths)
 
 
 ## Excel files
-The best method I have found so far to read in Excel files is from the [`readxl` package](http://readxl.tidyverse.org/) by [Hadley Wickham](http://hadley.nz/). This package need to be installed first, and then can be simply loaded using the `library()` function each time you start an `R` session where you will be reading in this type of data. 
+The best method to read in Excel files is from the [`readxl` package](http://readxl.tidyverse.org/) by [Hadley Wickham](http://hadley.nz/). This package need to be installed first, and then can be simply loaded using the `library()` function each time you start an `R` session where you will be reading in this type of data. 
 
 The `read_excel()` function is what we are going to use. Note the use of the underscore `_` instead of a period `.` between `read` and `excel`. 
 
