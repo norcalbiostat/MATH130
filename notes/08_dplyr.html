@@ -142,7 +142,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<link rel="stylesheet" href="data:text/css,h5%20%7Bfont%2Dsize%3A8%3Bfont%2Dweight%3A%20bold%3Bcolor%3A%20%23008cba%3Bbackground%2Dcolor%3A%20%23e3e6ea%3B%7Dh1%2C%20h2%2C%20h3%2C%20h4%7Bcolor%3A%20%23008cba%3B%7D%2Ebutton%20%7Bbackground%2Dcolor%3A%20%234CAF50%3B%20border%3A%20none%3Bcolor%3A%20white%3Bpadding%3A%2015px%2032px%3Btext%2Dalign%3A%20center%3Btext%2Ddecoration%3A%20none%3Bdisplay%3A%20inline%2Dblock%3Bfont%2Dsize%3A%2016px%3Bbox%2Dshadow%3A%200%208px%2016px%200%20rgba%280%2C0%2C0%2C0%2E2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0%2E19%29%3B%7D" type="text/css" />
+<link rel="stylesheet" href="data:text/css,%0A%0Ah5%20%7B%0Afont%2Dsize%3A8%3B%0Afont%2Dweight%3A%20bold%3B%0Acolor%3A%20%23008cba%3B%0Abackground%2Dcolor%3A%20%23e3e6ea%3B%0A%7D%0Ah1%2C%20h2%2C%20h3%2C%20h4%7B%0Acolor%3A%20%23008cba%3B%0A%7D%0A%2Ebutton%20%7B%0Abackground%2Dcolor%3A%20%234CAF50%3B%20%0Aborder%3A%20none%3B%0Acolor%3A%20white%3B%0Apadding%3A%2015px%2032px%3B%0Atext%2Dalign%3A%20center%3B%0Atext%2Ddecoration%3A%20none%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dsize%3A%2016px%3B%0Abox%2Dshadow%3A%200%208px%2016px%200%20rgba%280%2C0%2C0%2C0%2E2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0%2E19%29%3B%0A%7D%0A" type="text/css" />
 
 
 
@@ -323,7 +323,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Lesson 08 - Data management and aggregation using <code>dplyr</code></h1>
-<h4 class="date"><em>Last Updated 01-18-2022</em></h4>
+<h4 class="date"><em>Last Updated 01-19-2022</em></h4>
 
 </div>
 
@@ -361,7 +361,7 @@ div.tocify {
 <p>Prior to this lesson students should</p>
 <ul>
 <li>Download the <a href="08_dplyr_notes.Rmd">[08_dplyr_notes.Rmd]</a> R markdown file and save into your <code>Math130/notes</code> folder.</li>
-<li>Ensure that the <code>dplyr</code> and <code>nyflights13</code> data sets are installed by running the first code chunk.</li>
+<li>Ensure that the <code>dplyr</code> and <code>nycflights13</code> packages are installed by running the first code chunk.</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>flights <span class="ot">&lt;-</span> nycflights13<span class="sc">::</span>flights</span></code></pre></div>
@@ -375,7 +375,7 @@ div.tocify {
 <h1>Tibbles</h1>
 <p>The <code>flights</code> data set, and any data set created with <code>dplyr</code>, has a specific data type called a <code>tibble</code>. These are not as furry and prolific as their cousins the <code>tribbles</code>. <code>tibbles</code> behaves for all intents and purposes as a <code>data.frame</code>, just gets displayed differently. For example, the <code>flights</code> data set contains data on 19 characteristics (variables) from 336,776 flights. There’s no way I would want to print out a data set that large. But I’m gonna….</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>flights</span></code></pre></div>
-<pre><code>## # A tibble: 336,776 x 19
+<pre><code>## # A tibble: 336,776 × 19
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     1     1      517            515         2      830            819
@@ -388,7 +388,7 @@ div.tocify {
 ##  8  2013     1     1      557            600        -3      709            723
 ##  9  2013     1     1      557            600        -3      838            846
 ## 10  2013     1     1      558            600        -2      753            745
-## # ... with 336,766 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
+## # … with 336,766 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
 ## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
 ## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
 <p>The output has been trimmed to something more reasonable for our viewing pleasure. This may not seem such a big deal because R Studio already provides some level of truncation for our viewing pleasure.</p>
@@ -408,7 +408,7 @@ div.tocify {
 <h2>Filter</h2>
 <p><code>filter()</code> allows you to select a subset of the rows of a data frame. The first argument is the name of the data frame, and the second and subsequent are filtering expressions evaluated in the context of that data frame. For example, we can select all flights on January 1st with</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(flights, month <span class="sc">==</span> <span class="dv">1</span>, day <span class="sc">==</span> <span class="dv">1</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 842 x 19
+<pre><code>## # A tibble: 842 × 19
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     1     1      517            515         2      830            819
@@ -421,12 +421,12 @@ div.tocify {
 ##  8  2013     1     1      557            600        -3      709            723
 ##  9  2013     1     1      557            600        -3      838            846
 ## 10  2013     1     1      558            600        -2      753            745
-## # ... with 832 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
-## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
-## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+## # … with 832 more rows, and 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;,
+## #   flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
+## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
 <p><code>filter()</code> works similarly to <code>subset()</code> except that you can give it any number of filtering conditions which are joined together with &amp;. You can use other Boolean operators explicitly. Here we select flights in January or February.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(flights, month <span class="sc">==</span> <span class="dv">1</span> <span class="sc">|</span> month <span class="sc">==</span> <span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 51,955 x 19
+<pre><code>## # A tibble: 51,955 × 19
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     1     1      517            515         2      830            819
@@ -439,7 +439,7 @@ div.tocify {
 ##  8  2013     1     1      557            600        -3      709            723
 ##  9  2013     1     1      557            600        -3      838            846
 ## 10  2013     1     1      558            600        -2      753            745
-## # ... with 51,945 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
+## # … with 51,945 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
 ## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
 ## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
 </div>
@@ -447,7 +447,7 @@ div.tocify {
 <h2>Select</h2>
 <p>Often you work with large data sets with many columns where only a few are actually of interest to you. <code>select()</code> allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(flights, month, day, year)</span></code></pre></div>
-<pre><code>## # A tibble: 336,776 x 3
+<pre><code>## # A tibble: 336,776 × 3
 ##    month   day  year
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;
 ##  1     1     1  2013
@@ -460,10 +460,10 @@ div.tocify {
 ##  8     1     1  2013
 ##  9     1     1  2013
 ## 10     1     1  2013
-## # ... with 336,766 more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <p>You can use a colon (:) to select all columns physically located between two variables.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(flights, year<span class="sc">:</span>day)</span></code></pre></div>
-<pre><code>## # A tibble: 336,776 x 3
+<pre><code>## # A tibble: 336,776 × 3
 ##     year month   day
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;
 ##  1  2013     1     1
@@ -476,10 +476,10 @@ div.tocify {
 ##  8  2013     1     1
 ##  9  2013     1     1
 ## 10  2013     1     1
-## # ... with 336,766 more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <p>To exclude specific columns you use the minus sign (-)</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(flights, <span class="sc">-</span>carrier)</span></code></pre></div>
-<pre><code>## # A tibble: 336,776 x 18
+<pre><code>## # A tibble: 336,776 × 18
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     1     1      517            515         2      830            819
@@ -492,12 +492,12 @@ div.tocify {
 ##  8  2013     1     1      557            600        -3      709            723
 ##  9  2013     1     1      557            600        -3      838            846
 ## 10  2013     1     1      558            600        -2      753            745
-## # ... with 336,766 more rows, and 10 more variables: arr_delay &lt;dbl&gt;,
+## # … with 336,766 more rows, and 10 more variables: arr_delay &lt;dbl&gt;,
 ## #   flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
 ## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
 <p>This also works to exclude all columns EXCEPT the ones between two variables.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(flights, <span class="sc">-</span>(year<span class="sc">:</span>day))</span></code></pre></div>
-<pre><code>## # A tibble: 336,776 x 16
+<pre><code>## # A tibble: 336,776 × 16
 ##    dep_time sched_dep_time dep_delay arr_time sched_arr_time arr_delay carrier
 ##       &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;  
 ##  1      517            515         2      830            819        11 UA     
@@ -510,16 +510,16 @@ div.tocify {
 ##  8      557            600        -3      709            723       -14 EV     
 ##  9      557            600        -3      838            846        -8 B6     
 ## 10      558            600        -2      753            745         8 AA     
-## # ... with 336,766 more rows, and 9 more variables: flight &lt;int&gt;,
-## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+## # … with 336,766 more rows, and 9 more variables: flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
 </div>
 <div id="rename" class="section level2">
 <h2>Rename</h2>
 <p>Sometimes variables come to you in really obscure naming conventions. What the heck is SBA641? New to <code>dplyr</code> 1.0.0 is the <code>rename()</code> function. Works like magic to convert <code>old name</code> to a <code>new name</code>. The generic syntax is <code>rename(new = old)</code></p>
 <p>So to rename <code>dep_time</code> to <code>departure_time</code> we would type</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(flights, <span class="at">departure_time =</span> dep_time)</span></code></pre></div>
-<pre><code>## # A tibble: 336,776 x 19
+<pre><code>## # A tibble: 336,776 × 19
 ##     year month   day departure_time sched_dep_time dep_delay arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;          &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
 ##  1  2013     1     1            517            515         2      830
@@ -532,7 +532,7 @@ div.tocify {
 ##  8  2013     1     1            557            600        -3      709
 ##  9  2013     1     1            557            600        -3      838
 ## 10  2013     1     1            558            600        -2      753
-## # ... with 336,766 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## # … with 336,766 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
 ## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;,
 ## #   dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;,
 ## #   time_hour &lt;dttm&gt;</code></pre>
@@ -548,7 +548,7 @@ div.tocify {
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">mutate</span>(flights, <span class="at">gain =</span> arr_delay <span class="sc">-</span> dep_delay, </span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">speed =</span> distance <span class="sc">/</span> air_time <span class="sc">*</span> <span class="dv">60</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(a, gain, distance, air_time, speed)</span></code></pre></div>
-<pre><code>## # A tibble: 336,776 x 4
+<pre><code>## # A tibble: 336,776 × 4
 ##     gain distance air_time speed
 ##    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;
 ##  1     9     1400      227  370.
@@ -561,11 +561,11 @@ div.tocify {
 ##  8   -11      229       53  259.
 ##  9    -5      944      140  405.
 ## 10    10      733      138  319.
-## # ... with 336,766 more rows</code></pre>
+## # … with 336,766 more rows</code></pre>
 <p>One key advantage of mutate is that you can refer to the columns you just created. Mutate flights to create two variables, <code>gain = arr_delay - dep_delay</code> and <code>gain_per_hour = gain / (air_time / 60)</code>.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(flights, <span class="at">gain =</span> arr_delay <span class="sc">-</span> dep_delay, </span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">gain_per_hour =</span> gain <span class="sc">/</span> (air_time <span class="sc">/</span> <span class="dv">60</span> ))</span></code></pre></div>
-<pre><code>## # A tibble: 336,776 x 21
+<pre><code>## # A tibble: 336,776 × 21
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013     1     1      517            515         2      830            819
@@ -578,7 +578,7 @@ div.tocify {
 ##  8  2013     1     1      557            600        -3      709            723
 ##  9  2013     1     1      557            600        -3      838            846
 ## 10  2013     1     1      558            600        -2      753            745
-## # ... with 336,766 more rows, and 13 more variables: arr_delay &lt;dbl&gt;,
+## # … with 336,766 more rows, and 13 more variables: arr_delay &lt;dbl&gt;,
 ## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
 ## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;,
 ## #   gain &lt;dbl&gt;, gain_per_hour &lt;dbl&gt;</code></pre>
@@ -587,7 +587,7 @@ div.tocify {
 <h2>Summarize</h2>
 <p>The last verb is <code>summarise()</code>, which collapses a data frame to a single row. It’s not very useful yet. We can create a new variable called delay that is the average departure delay on the entire flights data set.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(flights, <span class="at">delay =</span> <span class="fu">mean</span>(dep_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
-<pre><code>## # A tibble: 1 x 1
+<pre><code>## # A tibble: 1 × 1
 ##   delay
 ##   &lt;dbl&gt;
 ## 1  12.6</code></pre>
@@ -602,7 +602,7 @@ div.tocify {
 <li>The <code>summarise()</code> verb allows you to calculate summary statistics for each group. This is probably the most common function that is used in conjunction with <code>group_by</code>. For example, the average distance flown per month.</li>
 </ul>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(by_month, <span class="at">avg_airtime =</span> <span class="fu">mean</span>(distance, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span></code></pre></div>
-<pre><code>## # A tibble: 12 x 2
+<pre><code>## # A tibble: 12 × 2
 ##    month avg_airtime
 ##    &lt;int&gt;       &lt;dbl&gt;
 ##  1     1       1007.
@@ -619,7 +619,7 @@ div.tocify {
 ## 12    12       1065.</code></pre>
 <p>Or simply the total number of flights per month.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(by_month, <span class="at">count=</span><span class="fu">n</span>())</span></code></pre></div>
-<pre><code>## # A tibble: 12 x 2
+<pre><code>## # A tibble: 12 × 2
 ##    month count
 ##    &lt;int&gt; &lt;int&gt;
 ##  1     1 27004
@@ -647,7 +647,7 @@ div.tocify {
 <pre><code>## `summarise()` has grouped output by &#39;year&#39;, &#39;month&#39;. You can override using the `.groups` argument.</code></pre>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>a4 <span class="ot">&lt;-</span> <span class="fu">filter</span>(a3, arr <span class="sc">&gt;</span> <span class="dv">30</span> <span class="sc">|</span> dep <span class="sc">&gt;</span> <span class="dv">30</span>)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(a4)</span></code></pre></div>
-<pre><code>## # A tibble: 6 x 5
+<pre><code>## # A tibble: 6 × 5
 ## # Groups:   year, month [3]
 ##    year month   day   arr   dep
 ##   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -680,7 +680,7 @@ div.tocify {
 <span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(arr <span class="sc">&gt;</span> <span class="dv">30</span> <span class="sc">|</span> dep <span class="sc">&gt;</span> <span class="dv">30</span>)</span></code></pre></div>
 <pre><code>## Adding missing grouping variables: `year`, `month`, `day`</code></pre>
 <pre><code>## `summarise()` has grouped output by &#39;year&#39;, &#39;month&#39;. You can override using the `.groups` argument.</code></pre>
-<pre><code>## # A tibble: 49 x 5
+<pre><code>## # A tibble: 49 × 5
 ## # Groups:   year, month [11]
 ##     year month   day   arr   dep
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -694,7 +694,7 @@ div.tocify {
 ##  8  2013     4    12  36.0  34.8
 ##  9  2013     4    18  36.0  34.9
 ## 10  2013     4    19  47.9  46.1
-## # ... with 39 more rows</code></pre>
+## # … with 39 more rows</code></pre>
 <p>Another way you can read this is by thinking “and then” when you see the <code>%&gt;%</code> operator. So the above code takes the data set flights<br />
 .. and then groups by day<br />
 .. and then selects the delay variables<br />
