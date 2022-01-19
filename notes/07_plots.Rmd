@@ -1,14 +1,14 @@
 ---
 title: "Lesson 07 - Creating graphics"
 output:
-  pdf_document:
-    toc: no
   html_document:
     css: ../css/yeti.css
     highlight: tango
     theme: yeti
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 > This lesson is a brief excerpt from the [[Applied Statistics Notebook]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html). 
 
 
-# [Introduction (video)]
+# [Introduction (video)](https://media.csuchico.edu/media/MATH+130+Lecture+07A+Introduction/1_jlh6zm14)
 Visualizing your data is hands down the most important thing you can learn to do. Seeing is critical to understanding. There are two audiences in mind when creating data visualizations: 
 
 1. For your eyes only (FYEO). These are quick and dirty plots, without annotation. Meant to be looked at once or twice.
@@ -69,7 +69,7 @@ dsmall <- diamonds[sample(nrow(diamonds), 1000), ]
 
 ----
 
-# [Univariate (One Variable) (video)]
+# [Univariate (One Variable) (video)](https://media.csuchico.edu/media/MATH+130+Lecture+07A+Univariate+Plots/1_yxer79dh)
 
 
 ## Categorical variables
@@ -80,7 +80,7 @@ Tables are the most common way to get summary statistics of a categorical variab
 ```{r}
 table(dsmall$cut)
 ```
-There are 27 Fair quality diamonds, 83 Good quality diamonds, and 387 Ideal quality diamonds in this sample. 
+There are 34 Fair quality diamonds, 99 Good quality diamonds, and 390 Ideal quality diamonds in this sample. 
 
 ### Barcharts / Barplots
 A Barchart or barplot takes these frequencies, and draws bars along the X-axis where the height of the bars is determined by the frequencies seen in the table. 
@@ -163,7 +163,7 @@ ggplot(dsmall, aes(x=price_range)) + geom_bar()
 
 ----
 
-# [Bivariate (Two Variables) (video)]
+# [Bivariate (Two Variables) (video)](https://media.csuchico.edu/media/MATH+130+Lecture+07A+Bivariate+Plots/1_n9dyviwp)
 
 ## Categorical v. Categorical
 
@@ -176,7 +176,7 @@ The frequency table is constructed using the `table()` function.
 table(dsmall$cut, dsmall$price_range)
 ```
 
-There are 3 Fair diamonds that cost between 7.5 and 12.5 thousand dollars, and 111 Ideal quality diamonds that cost between 2.5 and 7.5k. 
+There are 4 Fair diamonds that cost between 7.5 and 12.5 thousand dollars, and 103 Ideal quality diamonds that cost between 2.5 and 7.5k. 
 
 #### Cell proportions
 Wrapping `prop.table()` around a table gives you the **cell** proportions. 
@@ -184,8 +184,8 @@ Wrapping `prop.table()` around a table gives you the **cell** proportions.
 table(dsmall$cut, dsmall$price_range) %>% prop.table()
 ```
 
-* 0.7% of all diamonds are Fair cut and cost under 2.5k.
-* 0.1% of all diamonds are Premium cut and cost over 17.5k
+* 1.5% of all diamonds are Fair cut and cost under 2.5k.
+* 0.5% of all diamonds are Premium cut and cost over 17.5k
 
 #### Row proportions
 To get the **row** proportions, specify `margin=1`. The percentages now add up to 1 across the rows. 
@@ -193,8 +193,8 @@ To get the **row** proportions, specify `margin=1`. The percentages now add up t
 table(dsmall$cut, dsmall$price_range) %>% prop.table(margin=1) %>% round(3)
 ```
 
-* 25.9% of Fair quality diamonds cost under 2.5k
-* 1.3% of Very Good quality diamonds cost over 17.5k.
+* 44.1% of Fair quality diamonds cost under 2.5k
+* 1.9% of Premium quality diamonds cost over 17.5k.
 
 #### Column proportions
 To get the **column** proportions, you specify `margin=2`. The percentages now add up to 1 down the columns. 
@@ -202,8 +202,8 @@ To get the **column** proportions, you specify `margin=2`. The percentages now a
 table(dsmall$cut, dsmall$price_range) %>% prop.table(margin=2) %>% round(3)
 ```
 
-* 7.8% of diamonds that cost under 2.5k are of Good quality
-* 20% of diamonds that cost over 17.5k are Premium quality
+* 8% of diamonds that cost under 2.5k are of Good quality
+* 25% of diamonds that cost over 17.5k are Ideal quality
 
 ### Grouped bar charts
 To compare proportions of one categorical variable within the same level of another, is to use grouped barcharts. 
@@ -270,7 +270,7 @@ We can adjust the transparency of the density curve by applying a value to `alph
 ggplot(dsmall, aes(x=depth, fill=cut)) + geom_density(alpha=.3)
 ```
 
-Now we can see that there are some fair cut diamonds with depths around 60. This peak was hidden from us before. 
+Now we can see that there are some premium cut diamonds with depths around 62. This peak was hidden from us before. 
 
 You could also just color the lines and leave the fill alone. 
 ```{r}
