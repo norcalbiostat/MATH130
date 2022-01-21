@@ -193,3 +193,11 @@ summary(ames$Fireplaces)
 ```{r}
 mean(ames$price[ames$Yr.Sold==2010])
 ```
+
+
+# Challenge Questions
+
+1. What is the median _price per square foot_ of houses sold in _2008 or later_?
+```{r}
+median(ames$price[ames$Yr.Sold>=2008] / ames$area[ames$Yr.Sold>=2008])
+```

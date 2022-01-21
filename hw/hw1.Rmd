@@ -178,3 +178,7 @@ head(ames)
 ```{r}
 
 ```
+
+# Challenge Questions
+
+1. What is the median _price per square foot_ of houses sold in _2008 or later_?
