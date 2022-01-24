@@ -34,7 +34,7 @@ After completing this lesson learners will be able to:
 
 # `r emo::ji("warning")` A note about R and RStudio:
 
-If you are using a tablet, Chromebook or otherwise do not have a computer that you can install programs on, you can use R Studio Cloud for this class. Make an account at http://rstudio.cloud.com, start a new project, then go to [slide #6](#intro_rstudio) to learn how to navigate RStudio. 
+If you are using a tablet, Chromebook or otherwise do not have a computer that you can install programs on, you can use R Studio Cloud for this class. Make an account at http://rstudio.cloud, start a new project, then go to [slide #6](#intro_rstudio) to learn how to navigate RStudio. 
 
 The **Cloud Free** account allows for 25 project hours/month, which may not be enough for this class. If you run into time limits or you are using this for another class you will have to upgrade to the **Cloud Plus** plan which is $5/month. 
 
