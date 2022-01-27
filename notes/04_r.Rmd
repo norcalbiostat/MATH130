@@ -33,7 +33,7 @@ This lesson is designed to explain the basics of how R works as a programming la
 
 ---
 
-# [Writing Scripts (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Intro+and+Writing+Scripts/1_7cyqxm6j)
+# Writing Scripts <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Intro+and+Writing+Scripts/1_7cyqxm6j" target="_blank">(Video)</a>
 
 In lesson 02 we saw that we could write R code in the console and get immediate results. There are two main ways of interacting with R: by using the console or by using script files (plain text files that contain your code). We will be working in R markdown files exclusively in this class, but it is important to be aware that there are also script files that have an extension of `.R`. These can contain code and comments only, not normal text sentences like this. 
 
@@ -59,7 +59,7 @@ For the rest of this lesson, retype each code chunk below into the notes file yo
 
 ----
 
-# [Creating objects in R (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Creating+Objects+in+R/1_dxcx1qiy)
+# Creating objects in R <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Creating+Objects+in+R/1_dxcx1qiy" target="_blank">(Video)</a>
 
 To do useful and interesting things, we need to assign _values_ to
 _objects_. To create an object, we need to give it a name followed by the
@@ -128,7 +128,7 @@ _The comment character in R is `#`, anything to the right of a `#` in a script w
 
 ----
 
-# [Functions and their arguments (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Functions+and+their+Arguments/1_7q6v5abj)
+# Functions and their arguments <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Functions+and+their+Arguments/1_7q6v5abj" target="_blank">(Video)</a>
 
 Functions are "canned scripts" that automate more complicated sets of commands
 including operations assignments, etc. Many functions are predefined, or can be
@@ -191,7 +191,8 @@ functions that require many arguments.
 
 ----
 
-# [Data Types (video)](https://media.csuchico.edu/media/MATH+130+Lecture+04A+Data+Types/1_e2j7qadw)
+# Data Types <a href="https://media.csuchico.edu/media/MATH+130+Lecture+04A+Data+Types/1_e2j7qadw" target="_blank">(Video)</a>
+
 
 R objects come in different data types. 
 
@@ -226,7 +227,7 @@ sqrt(4)==2
 
 We will see how to use these logical statements to do things such as subsetting data and creating new variables. 
 
-# [Data Structures (video)](https://media.csuchico.edu/media/MATH+130+Lecture+04A+Data+Structures/1_yxg14z9f)
+# Data Structures <a href="https://media.csuchico.edu/media/MATH+130+Lecture+04A+Data+Structures/1_yxg14z9f" target="_blank">(Video)</a>
 
 Data structures is how we refer to a collection of pieces of data, like a series of numbers, or a list of words. 
 
@@ -369,7 +370,7 @@ Thus
 
 This will come back to bug you when dealing with categorical data types called `factor`s in a later lesson. Don't worry, we'll show you how to be the boss of your factors and not let R tell you that "one" is greater than "four". 
 
-# [Data Frames (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Data+Frames/1_8v7zwwro)
+# Data Frames <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+04A+Data+Frames/1_8v7zwwro" target="_blank">(Video)</a>
 
 Data frames are like spreadsheet data, rectangular with rows and columns. Ideally each row represents data on a single observation and each column contains data on a single variable, or characteristic, of the observation. This is called `tidy data`. This is an important concept that you are encouraged to read more about if you will be doing your own data collection and research.
 [This article is a good place to start](https://www.jstatsoft.org/article/view/v059i10).
