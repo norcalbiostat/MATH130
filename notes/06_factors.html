@@ -142,7 +142,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<link rel="stylesheet" href="data:text/css,h5%20%7Bfont%2Dsize%3A8%3Bfont%2Dweight%3A%20bold%3Bcolor%3A%20%23008cba%3Bbackground%2Dcolor%3A%20%23e3e6ea%3B%7Dh1%2C%20h2%2C%20h3%2C%20h4%7Bcolor%3A%20%23008cba%3B%7D%2Ebutton%20%7Bbackground%2Dcolor%3A%20%234CAF50%3B%20border%3A%20none%3Bcolor%3A%20white%3Bpadding%3A%2015px%2032px%3Btext%2Dalign%3A%20center%3Btext%2Ddecoration%3A%20none%3Bdisplay%3A%20inline%2Dblock%3Bfont%2Dsize%3A%2016px%3Bbox%2Dshadow%3A%200%208px%2016px%200%20rgba%280%2C0%2C0%2C0%2E2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0%2E19%29%3B%7D" type="text/css" />
+<link rel="stylesheet" href="data:text/css,%0A%0Ah5%20%7B%0Afont%2Dsize%3A8%3B%0Afont%2Dweight%3A%20bold%3B%0Acolor%3A%20%23008cba%3B%0Abackground%2Dcolor%3A%20%23e3e6ea%3B%0A%7D%0Ah1%2C%20h2%2C%20h3%2C%20h4%7B%0Acolor%3A%20%23008cba%3B%0A%7D%0A%2Ebutton%20%7B%0Abackground%2Dcolor%3A%20%234CAF50%3B%20%0Aborder%3A%20none%3B%0Acolor%3A%20white%3B%0Apadding%3A%2015px%2032px%3B%0Atext%2Dalign%3A%20center%3B%0Atext%2Ddecoration%3A%20none%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dsize%3A%2016px%3B%0Abox%2Dshadow%3A%200%208px%2016px%200%20rgba%280%2C0%2C0%2C0%2E2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0%2E19%29%3B%0A%7D%0A" type="text/css" />
 
 
 
@@ -323,13 +323,13 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Lesson 06 - Controlling your factors</h1>
-<h4 class="date"><em>Last Updated 01-09-2022</em></h4>
+<h4 class="date"><em>Last Updated 01-27-2022</em></h4>
 
 </div>
 
 
 <div id="introduction-video" class="section level1">
-<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Intro/1_h8a1glfl">Introduction (video)</a></h1>
+<h1>Introduction <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Intro/1_h8a1glfl" target="_blank">(Video)</a></h1>
 <p>In this lesson we will discuss ways to organize and deal with categorical data, also known as factor data types.</p>
 <div id="student-learning-objectives" class="section level3">
 <h3>Student Learning Objectives</h3>
@@ -364,7 +364,7 @@ div.tocify {
 </div>
 </div>
 <div id="what-is-a-factor-video" class="section level1">
-<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+What+is+a+FactorF/1_abke2v0c">What is a factor? (video)</a></h1>
+<h1>What is a factor? <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+What+is+a+FactorF/1_abke2v0c" target="_blank">(Video)</a></h1>
 <p>The term factor refers to a data type used to store categorical variables. The difference between a categorical variable and a continuous variable is that a categorical variable corresponds to a limited number of categories, while a continuous variable can correspond to an infinite number of values.</p>
 <p>An example of a categorical variable is the <code>number</code> variable in the <code>email</code> data set. This variable contains data on whether there was no number, a small number (under 1 million), or a big number in the content of the email.</p>
 <p>First we should confirm that R sees <code>number</code> as a factor.</p>
@@ -382,7 +382,7 @@ div.tocify {
 ##   549  2827   545</code></pre>
 <p><strong>forcats</strong></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fct_count</span>(email<span class="sc">$</span>number)</span></code></pre></div>
-<pre><code>## # A tibble: 3 x 2
+<pre><code>## # A tibble: 3 × 2
 ##   f         n
 ##   &lt;fct&gt; &lt;int&gt;
 ## 1 none    549
@@ -392,7 +392,7 @@ div.tocify {
 <hr />
 </div>
 <div id="convert-a-number-to-factor-video" class="section level1">
-<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Convert+a+Number+to+Factor/1_rfnetvxy">Convert a number to Factor (video)</a></h1>
+<h1>Convert a number to Factor <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Convert+a+Number+to+Factor/1_rfnetvxy" target="_blank">(Video)</a></h1>
 <p>Sometimes data are entered into the computer using numeric codes such as 0 and 1. These codes stand for categories, such as “no” and “yes”. Sometimes we want to analyze these binary variables in two ways:</p>
 <ul>
 <li>For statistical analyses, the data must be numeric 0/1.</li>
@@ -420,7 +420,7 @@ div.tocify {
 <hr />
 </div>
 <div id="factor-ordering-video" class="section level1">
-<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Factor+Ordering/1_jl8i52iu">Factor ordering (video)</a></h1>
+<h1>Factor ordering <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Factor+Ordering/1_jl8i52iu" target="_blank">(Video)</a></h1>
 <p>Let’s revisit the variable <code>number</code>, that contains the size of the number in the email.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(email<span class="sc">$</span>number)</span></code></pre></div>
 <pre><code>## 
@@ -497,7 +497,7 @@ This just *happens* to be the same as in decreasing frequency order.
 </div>
 </div>
 <div id="factor-renaming-video" class="section level1">
-<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Factor+%28Re%29naming/1_f34h4fuw">Factor (re)naming (video)</a></h1>
+<h1>Factor (re)naming <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Factor+%28Re%29naming/1_f34h4fuw" target="_blank">(Video)</a></h1>
 <p>Sometimes factors come to us in names we don’t prefer. We want them to say something else.</p>
 <p><strong>Base R</strong> The easiest way here is to re-factor the variable and apply new <code>labels</code>.</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>email<span class="sc">$</span>my_new_number <span class="ot">&lt;-</span> <span class="fu">factor</span>(email<span class="sc">$</span>number, <span class="at">labels=</span><span class="fu">c</span>( <span class="st">&quot;None&quot;</span>, <span class="st">&quot;&lt;1M&quot;</span>,<span class="st">&quot;1M+&quot;</span>))</span></code></pre></div>
@@ -521,8 +521,8 @@ This just *happens* to be the same as in decreasing frequency order.
 ##   &lt;NA&gt;     0     0    0    0</code></pre>
 <hr />
 </div>
-<div id="collapsing-factor-levels.-video" class="section level1">
-<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Collapsing+Factor+Levels/1_23zku0qv">Collapsing factor levels. (video)</a></h1>
+<div id="collapsing-factor-levels-video" class="section level1">
+<h1>Collapsing factor levels <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Collapsing+Factor+Levels/1_23zku0qv" target="_blank">(Video)</a></h1>
 <p>For analysis purposes, sometimes you want to work with a smaller number of factor variables. Let’s look at the restaurants that are included in the <code>fastfood</code> data set.</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(ff<span class="sc">$</span>restaurant)</span></code></pre></div>
 <pre><code>## 
@@ -591,9 +591,9 @@ This just *happens* to be the same as in decreasing frequency order.
 <hr />
 </div>
 </div>
-<div id="removing-factor-levels.-video" class="section level1">
-<h1><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Removing+Factor+Levels/1_dv1a8kgh">Removing factor levels. (video)</a></h1>
-<p>Sometimes, you don’t even want to consider certain levels. This often occurs in survey data where the respondent provides an answer of “Refuse to answer” or the data is coded as the word “missing”. The word &quot;missing’ is fundamentally different than the <code>NA</code> code for a missing value.</p>
+<div id="removing-factor-levels-video" class="section level1">
+<h1>Removing factor levels <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Removing+Factor+Levels/1_dv1a8kgh" target="_blank">(Video)</a></h1>
+<p>Sometimes, you don’t even want to consider certain levels. This often occurs in survey data where the respondent provides an answer of “Refuse to answer” or the data is coded as the word “missing”. The word “missing’ is fundamentally different than the <code>NA</code> code for a missing value.</p>
 <p>For demonstration purposes, let’s get rid of the data from DQ. Who eats something other than ice cream at that place anyhow?</p>
 <p>The most straight forward way to set a variable missing based on it’s value is to use a logical statement to choose what rows the variable is set to missing.</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>ff<span class="sc">$</span>restaurant_shortname[ff<span class="sc">$</span>restaurant_shortname <span class="sc">==</span> <span class="st">&quot;DQ&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>

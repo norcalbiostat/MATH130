@@ -13,7 +13,7 @@ date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
 
-# [Introduction (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Intro/1_h8a1glfl)
+# Introduction <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Intro/1_h8a1glfl" target="_blank">(Video)</a>
 In this lesson we will discuss ways to organize and deal with categorical data, also known as factor data types. 
 
 
@@ -48,7 +48,8 @@ ff    <- openintro::fastfood
 
 ----
 
-# [What is a factor? (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+What+is+a+FactorF/1_abke2v0c)
+# What is a factor?  <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+What+is+a+FactorF/1_abke2v0c" target="_blank">(Video)</a>
+
 The term factor refers to a data type used to store categorical variables. The difference between a categorical variable and a continuous variable is that a categorical variable corresponds to a limited number of categories, while a continuous variable can correspond to an infinite number of values.
 
 An example of a categorical variable is the `number` variable in the `email` data set. This variable contains data on whether there was no number, a small number (under 1 million), or a big number in the content of the email. 
@@ -82,7 +83,7 @@ Note that `fct_count` also gives you the number of records with that factor leve
 
 ----
 
-# [Convert a number to Factor (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Convert+a+Number+to+Factor/1_rfnetvxy)
+# Convert a number to Factor  <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Convert+a+Number+to+Factor/1_rfnetvxy" target="_blank">(Video)</a>
 
 Sometimes data are entered into the computer using numeric codes such as 0 and 1. These codes stand for categories, such as "no" and "yes". Sometimes we want to analyze these binary variables in two ways: 
 
@@ -116,7 +117,7 @@ Here we see that all the 0's were recoded to 'no's, and all the 1's recoded to "
 
 ----
 
-# [Factor ordering (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Factor+Ordering/1_jl8i52iu)
+# Factor ordering  <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Factor+Ordering/1_jl8i52iu" target="_blank">(Video)</a>
 Let's revisit the variable `number`, that contains the size of the number in the email. 
 
 ```{r}
@@ -175,7 +176,8 @@ This just *happens* to be the same as in decreasing frequency order.
 
 -----
 
-# [Factor (re)naming (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Factor+%28Re%29naming/1_f34h4fuw)
+# Factor (re)naming  <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Factor+%28Re%29naming/1_f34h4fuw" target="_blank">(Video)</a>
+
 Sometimes factors come to us in names we don't prefer. We want them to say something else. 
 
 **Base R**
@@ -200,7 +202,7 @@ table(email$number, email$my_forcats_number, useNA="always")
 
 -----
 
-# [Collapsing factor levels.  (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Collapsing+Factor+Levels/1_23zku0qv)
+# Collapsing factor levels <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Collapsing+Factor+Levels/1_23zku0qv" target="_blank">(Video)</a>
 
 For analysis purposes, sometimes you want to work with a smaller number of factor variables. Let's look at the restaurants that are included in the `fastfood` data set. 
 
@@ -258,7 +260,8 @@ There is no harm in accomplishing a task in more than one step.
 
 -----
 
-# [Removing factor levels.  (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Removing+Factor+Levels/1_dv1a8kgh)
+
+# Removing factor levels <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+06A+Removing+Factor+Levels/1_dv1a8kgh" target="_blank">(Video)</a>
 
 Sometimes, you don't even want to consider certain levels. This often occurs in survey data where the respondent provides an answer of "Refuse to answer" or the data is coded as the word "missing". The word "missing' is fundamentally different than the `NA` code for a missing value. 
 
