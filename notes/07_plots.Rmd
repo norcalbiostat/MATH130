@@ -21,7 +21,8 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 > This lesson is a brief excerpt from the [[Applied Statistics Notebook]](https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html). 
 
 
-# [Introduction (video)](https://media.csuchico.edu/media/MATH+130+Lecture+07A+Introduction/1_jlh6zm14)
+# Introduction <a href="https://media.csuchico.edu/media/MATH+130+Lecture+07A+Introduction/1_jlh6zm14" target="_blank">(Video)</a>
+
 Visualizing your data is hands down the most important thing you can learn to do. Seeing is critical to understanding. There are two audiences in mind when creating data visualizations: 
 
 1. For your eyes only (FYEO). These are quick and dirty plots, without annotation. Meant to be looked at once or twice.
@@ -69,8 +70,7 @@ dsmall <- diamonds[sample(nrow(diamonds), 1000), ]
 
 ----
 
-# [Univariate (One Variable) (video)](https://media.csuchico.edu/media/MATH+130+Lecture+07A+Univariate+Plots/1_yxer79dh)
-
+# Univariate (One Variable) <a href="https://media.csuchico.edu/media/MATH+130+Lecture+07A+Univariate+Plots/1_yxer79dh" target="_blank">(Video)</a>
 
 ## Categorical variables
 Both Nominal and Ordinal data types can be visualized using the same methods: tables, barcharts and pie charts. 
@@ -163,7 +163,7 @@ ggplot(dsmall, aes(x=price_range)) + geom_bar()
 
 ----
 
-# [Bivariate (Two Variables) (video)](https://media.csuchico.edu/media/MATH+130+Lecture+07A+Bivariate+Plots/1_n9dyviwp)
+# Bivariate (Two Variables) <a href="https://media.csuchico.edu/media/MATH+130+Lecture+07A+Bivariate+Plots/1_n9dyviwp" target="_blank">(Video)</a>
 
 ## Categorical v. Categorical
 
