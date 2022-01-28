@@ -12,8 +12,8 @@ output:
     toc: no
 ---
 
+# Introduction <a href="https://media.csuchico.edu/media/MATH+130+Lecture+08A+Introduction/1_r7jhnwgd" target="_blank">(Video)</a>
 
-# [Introduction  (video)](https://media.csuchico.edu/media/MATH+130+Lecture+08A+Introduction/1_r7jhnwgd)
 When working with data you must:
 
 1. Figure out what you want to do.
@@ -69,7 +69,7 @@ flights
 
 The output has been trimmed to something more reasonable for our viewing pleasure. This may not seem such a big deal because R Studio already provides some level of truncation for our viewing pleasure. 
 
-# [Basic verbs (video)](https://media.csuchico.edu/media/MATH+130+Lecture+08A+Basic+Verbs/1_ndesnisk)
+# Basic verbs <a href="https://media.csuchico.edu/media/MATH+130+Lecture+08A+Basic+Verbs/1_ndesnisk" target="_blank">(Video)</a>
 The `dplyr` package contains new data manipulation functions, also called verbs. We will look at the following verbs: 
 
 * `filter()`: Returns a subset of the rows.
@@ -152,7 +152,7 @@ summarise(flights, delay = mean(dep_delay, na.rm = TRUE))
 
 
 
-# [Grouped Operations (video)](https://media.csuchico.edu/media/MATH+130+Lecture+08A+Grouped+Operations/1_w9x1kd5m)
+# Grouped Operations  <a href="https://media.csuchico.edu/media/MATH+130+Lecture+08A+Grouped+Operations/1_w9x1kd5m" target="_blank">(Video)</a>
 The above verbs are useful, but they become really powerful when you combine them with the idea of "group by", repeating the operation individually on groups of observations within the dataset. In dplyr, you use the `group_by()` function to describe how to break a dataset down into groups of rows. You can then use the resulting object in exactly the same functions as above; they'll automatically work "by group" when the input is a grouped.
 
 Let's demonstrate how some of these functions work after grouping the flights data set by month. First we'll create a new data set that is grouped by month. 
@@ -172,7 +172,8 @@ Or simply the total number of flights per month.
 summarize(by_month, count=n())
 ``` 
 
-# [Chaining Operations (video)](https://media.csuchico.edu/media/MATH+130+Lecture+08A+Chaining+Operations/1_6xzk59i7)
+
+# Chaining Operations  <a href="https://media.csuchico.edu/media/MATH+130+Lecture+08A+Chaining+Operations/1_6xzk59i7" target="_blank">(Video)</a>
 Consider the following group of operations that take the data set `flights`, and produce a final data set (`a4`) that contains only the flights where the daily average delay is greater than a half hour. 
 ```{r}
 a1 <- group_by(flights, year, month, day)

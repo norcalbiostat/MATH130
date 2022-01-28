@@ -323,13 +323,13 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Lesson 08 - Data management and aggregation using <code>dplyr</code></h1>
-<h4 class="date"><em>Last Updated 01-19-2022</em></h4>
+<h4 class="date"><em>Last Updated 01-27-2022</em></h4>
 
 </div>
 
 
 <div id="introduction-video" class="section level1">
-<h1>[Introduction (video)]</h1>
+<h1>Introduction <a href="https://media.csuchico.edu/media/MATH+130+Lecture+08A+Introduction/1_r7jhnwgd" target="_blank">(Video)</a></h1>
 <p>When working with data you must:</p>
 <ol style="list-style-type: decimal">
 <li>Figure out what you want to do.</li>
@@ -394,7 +394,7 @@ div.tocify {
 <p>The output has been trimmed to something more reasonable for our viewing pleasure. This may not seem such a big deal because R Studio already provides some level of truncation for our viewing pleasure.</p>
 </div>
 <div id="basic-verbs-video" class="section level1">
-<h1>[Basic verbs (video)]</h1>
+<h1>Basic verbs <a href="https://media.csuchico.edu/media/MATH+130+Lecture+08A+Basic+Verbs/1_ndesnisk" target="_blank">(Video)</a></h1>
 <p>The <code>dplyr</code> package contains new data manipulation functions, also called verbs. We will look at the following verbs:</p>
 <ul>
 <li><code>filter()</code>: Returns a subset of the rows.</li>
@@ -594,7 +594,7 @@ div.tocify {
 </div>
 </div>
 <div id="grouped-operations-video" class="section level1">
-<h1>[Grouped Operations (video)]</h1>
+<h1>Grouped Operations <a href="https://media.csuchico.edu/media/MATH+130+Lecture+08A+Grouped+Operations/1_w9x1kd5m" target="_blank">(Video)</a></h1>
 <p>The above verbs are useful, but they become really powerful when you combine them with the idea of “group by”, repeating the operation individually on groups of observations within the dataset. In dplyr, you use the <code>group_by()</code> function to describe how to break a dataset down into groups of rows. You can then use the resulting object in exactly the same functions as above; they’ll automatically work “by group” when the input is a grouped.</p>
 <p>Let’s demonstrate how some of these functions work after grouping the flights data set by month. First we’ll create a new data set that is grouped by month.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>by_month <span class="ot">&lt;-</span> <span class="fu">group_by</span>(flights, month)</span></code></pre></div>
@@ -636,7 +636,7 @@ div.tocify {
 ## 12    12 28135</code></pre>
 </div>
 <div id="chaining-operations-video" class="section level1">
-<h1>[Chaining Operations (video)]</h1>
+<h1>Chaining Operations <a href="https://media.csuchico.edu/media/MATH+130+Lecture+08A+Chaining+Operations/1_6xzk59i7" target="_blank">(Video)</a></h1>
 <p>Consider the following group of operations that take the data set <code>flights</code>, and produce a final data set (<code>a4</code>) that contains only the flights where the daily average delay is greater than a half hour.</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>a1 <span class="ot">&lt;-</span> <span class="fu">group_by</span>(flights, year, month, day)</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>a2 <span class="ot">&lt;-</span> <span class="fu">select</span>(a1, arr_delay, dep_delay)</span></code></pre></div>
