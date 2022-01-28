@@ -12,8 +12,7 @@ output:
 date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
-
-# [Introduction (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Intro/1_oifkz4hn)
+# Introduction <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Intro/1_oifkz4hn" target="_blank">(Video)</a>
 In this lesson we will learn how to summarize data in a data frame, and to do basic data management tasks such as making new variables, recoding data and dealing with missing data. 
 
 
