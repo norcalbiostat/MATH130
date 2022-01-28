@@ -42,7 +42,7 @@ ncbirths <- openintro::ncbirths
 
 -----
 
-# [Missing Data (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Missing+Data/1_3ignf1uh)
+# Missing Data <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Missing+Data/1_3ignf1uh" target="_blank">(Video)</a>
 
 Missing data occurs when the value for a variable is missing. Think of it as a blank cell in an spreadsheet. Missing values can cause some problems during analysis, so let's see how to detect missing values and how to work around them. 
 
@@ -102,8 +102,7 @@ There are 171 records in this data set where the age for the father is not prese
 
 ----- 
 
-
-# [Summarizing data (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Summarizing+Data/1_5hztp76z)
+# Summarizing data <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Summarizing+Data/1_5hztp76z" target="_blank">(Video)</a>
 
 Two common methods used to summarize data are `table()` for categorical factor variables, and `summary()` for numeric variables. 
 
@@ -129,7 +128,8 @@ Mothers included in this data set visited the doctor on average 12.1 times durin
 
 -----
 
-# [Data editing / Recoding (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Data+Editing+%28Recoding%29/1_kh8v7jk6)
+# Data editing / Recoding <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Data+Editing+%28Recoding%29/1_kh8v7jk6" target="_blank">(Video)</a>
+
 
 Sometimes we have a need to edit, or change data. We can change values of existing data by using logical statements.
 
@@ -178,7 +178,7 @@ boxplot(ncbirths$weight)
 
 -----
 
-# [Creating new variables  (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Creating+New+Variables/1_ivmj78et)
+# Creating new variables <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Creating+New+Variables/1_ivmj78et" target="_blank">(Video)</a>
 
 **New variables should be added to the data frame.** This can be done using `$` sign notation. 
 
@@ -240,7 +240,7 @@ Notice I snuck a new operator in on you - `%in%`. This is a way you can provide 
 
 -----
 
-# [Chaining using the pipe %>% (video)](https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Chaining+Using+the+Pipe+E/1_chcscua0)
+# Chaining using the pipe <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+05A+Chaining+Using+the+Pipe+E/1_chcscua0" target="_blank">(Video)</a>
 
 ![](../static/img/pipe.png)
 
