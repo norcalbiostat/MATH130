@@ -21,25 +21,26 @@ weight_kg
 For instance, we may want to convert this weight into pounds (weight in pounds is 2.2 times the weight in kg):
 
 ```{r}
-
+2.2 * weight_kg
 ```
 
 We can also change an object's value by assigning it a new one:
 
 ```{r}
-
+weight_kg <- 57.5
+2.2 * weight_kg
 ```
 
 For example, let's store the animal's weight in pounds in a new object, `weight_lb`:
 
 ```{r}
-
+weight_lb <- 2.2 * weight_kg
 ```
 
 and then change `weight_kg` to 100.
 
 ```{r}
-
+weight_kg <- 100
 ```
 
 R executes code in top-down order. So what happens on line 10 occurs before line 11. What do you think is the current content of the object `weight_lb`? 126.5 or 220?
@@ -52,32 +53,32 @@ R executes code in top-down order. So what happens on line 10 occurs before line
 # Functions and their arguments
 
 ```{r}
-
+sqrt(4)
 ```
 
 Let's look into the `round` function. 
 
 ```{r}
-
+round(3.14159)
 ```
 
 We see that if we want a different number of digits, we cantype `digits = 2` or however many we want.
 
 ```{r}
-
+round(3.14159, digits = 2)
 ```
 
 If you provide the arguments in the exact same order as they are defined you
 don't have to name them:
 
 ```{r}
-
+round(3.14159, 2)
 ```
 
 And if you do name the arguments, you can switch their order:
 
 ```{r}
-
+round(digits = 2, x = 3.14159)
 ```
 
 ----
@@ -89,19 +90,22 @@ R objects come in different data types.
 ## Numbers
 
 ```{r}
-
+im_a_number <- 50
+im_a_number*2
 ```
 
 ## Letters
 
 ```{r, error=TRUE}
-
+(im_a_character <- "dog")
+im_a_character*2
 ```
 
 ## Boolean
 
 ```{r}
-
+3>4
+sqrt(4)==2
 ```
 
 # Data Structures
@@ -111,24 +115,26 @@ R objects come in different data types.
 For example we can create a vector of animal weights and assign it to a new object `weight_g`:
 
 ```{r}
-
+(weight_g <- c(50, 60, 65, 82))
 ```
 
 A vector can also contain characters:
 
 ```{r}
-
+(animals <- c("mouse", "rat", "dog"))
 ```
 
 You can use the function `class()` to see what data type a vector is. 
 
 ```{r}
-
+class(weight_g)
+class(animals)
 ```
 
 If you combine letters and numbers, everything will be treated as a number. 
 ```{r}
-
+(mix_match <- c(weight_g, animals))
+class(mix_match)
 ```
 
 
@@ -137,24 +143,32 @@ If you combine letters and numbers, everything will be treated as a number.
 
 You can perform math operations on the elements of a vector such as
 ```{r}
-
+weight_KG <- weight_g/1000
+weight_KG
 ```
 
 When adding two vectors together, the elements in the same position are added to each other. So element 1 in the vector `a` is added to element 1 in vector `b`. 
 ```{r}
-
+a <- c(1,2,3)
+b <- c(6,7,8)
+a+b
 ```
 
 More complex calculations can be performed on multiple vectors. 
 ```{r}
-
+wt_lb <- c(155, 135, 90)
+ht_in <- c(72, 64, 50)
+bmi <- 703*wt_lb / ht_in^2
+bmi
 ```
       
 All these operations on vectors behave the same way when dealing with variables in a data set (data.frame).   
    
 If you want to add the values _within_ a vector, you use functions such as `sum()`, `max()` and `mean()`
 ```{r}
-
+sum(a)
+max(b)
+mean(a+b)
 ```
 
 ## Subsetting vectors
@@ -163,13 +177,15 @@ If we want to extract one or several values from a vector, we must provide one
 or several indices in square brackets. For instance:
 
 ```{r}
-
+animals <- c("mouse", "rat", "dog", "cat")
+animals[2]
+animals[c(2, 3)]
 ```
 
 The number in the indices indicates which element to extract. For example we can extract the 3rd element in `weight_g` by typing
 
 ```{r}
-
+weight_g[3]
 ```
 
 ### Conditional subsetting
@@ -177,49 +193,52 @@ The number in the indices indicates which element to extract. For example we can
 Typically, these logical vectors are not typed by hand, but are the output of other functions or logical tests such as: 
 
 ```{r}
-
+weight_g > 50
 ```
 
 For instance, if you wanted to select only the values where weight in grams is above 50 we would type:
 
 ```{r}
-
+weight_g[weight_g > 50]
 ```
 
 You can combine multiple tests using `&` (both conditions are true, AND) or `|` (at least one of the conditions is true, OR):
 
 _Weight is less than 30g or greater than 60g_
 ```{r}
-
+weight_g[weight_g < 30 | weight_g > 60]
 ```
 _Weight is between 60 and 80lbs_
 ```{r}
-
+weight_g[weight_g >= 60 & weight_g <= 80]
 ```
 
 The function `%in%` allows you to test if any of the elements of a search vector are found:
 
 ```{r}
-
+animals <- c("mouse", "rat", "dog", "cat")
+animals[animals == "cat" | animals == "rat"] # returns both rat and cat
+animals %in% c("rat", "cat", "dog", "duck", "goat")
+animals[animals %in% c("rat", "cat", "dog", "duck", "goat")]
 ```
 
 ## Order matters. 
 When considering string or character vectors or data elements, R treats everything in alphabetical order. 
 
 ```{r}
-
+"four" > "five"
 ```
 
 # Data Frames
 We can load the `diamonds` data set into our global environment by typing 
 
 ```{r}
-
+diamonds <- ggplot2::diamonds
 ```
 
 We can get an idea of the structure of the data frame including variable names and types by using the `str` function,
 ```{r}
-
+str(diamonds)
 ```
 
 ## Inspecting data.frame objects
@@ -229,10 +248,10 @@ We can get an idea of the structure of the data frame including variable names a
 Below is an example of finding the average price for all diamonds in the data set. 
 
 ```{r}
-
+mean(diamonds$price)
 ```
 
 Here is an example of finding the average price for `Good` quality diamonds. 
 ```{r}
-
+mean(diamonds$price[diamonds$cut=="Good"])
 ```
