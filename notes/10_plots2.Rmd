@@ -12,7 +12,7 @@ output:
     toc: no
 ---
 
-# [Introduction (video)]()
+# Introduction <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+10A+Introduction/1_qmt3ls9l" target="_blank">(Video)</a>
 
 The first lesson on graphing focused on creating the correct graphics for the data types. This lesson expands on those tools and demonstrates how to customize some features and add enhancements to clarify or to add information to a plot. 
 
@@ -44,7 +44,7 @@ email <- read.table("../data/email.txt", header=TRUE, sep="\t")
 NCbirths <- read.csv("../data/NCbirths.csv", header=TRUE)
 ```
 
-# [Themes (video)]()
+# Themes <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+10A+Themes/1_kwh2ucf7" target="_blank">(Video)</a>
 
 The standard theme has a gray background, white grid lines etc. 
 Themes can be changed by adding `theme_X()` where `X` has several options
@@ -57,7 +57,7 @@ ggplot(email, aes(x=line_breaks, y=num_char)) + geom_point() + theme_dark()
 
 See more about themes here: http://www.sthda.com/english/wiki/ggplot2-themes-and-background-colors-the-3-elements
 
-# [Legends (video)]()
+# Legends <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+10A+Legends/1_schkl6as" target="_blank">(Video)</a>
 
 ## Titles 
 
@@ -81,7 +81,7 @@ ggplot(email, aes(y=num_char, x=number, col=number)) + geom_boxplot() +
   scale_color_discrete(guide="none")
 ```
 
-# [Titles (video)]()
+# Titles <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+10A+Titles/1_xvnu92g7" target="_blank">(Video)</a>
 A good plot needs to stand alone and convey as much information as possible. 
 
 * `ggtitle()` adds an overall plot title
@@ -95,8 +95,8 @@ ggplot(email, aes(y=num_char, x=number, col=number)) + geom_boxplot() +
 ```
 
 
+# Removing NA categories <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+10A+Removing+NA+Categories/1_75ripf3f" target="_blank">(Video)</a>
 
-# [Removing NA categories (video)]()
 This happens when there is no data is present for one or more levels. One way to get around this is to 
 use `select` to only choose variables that we are going to use in the plot directly, delete all rows with any missing values using `na.omit()`, then pipe `ggplot` directly in after deleting all rows with missing data.
 
@@ -109,7 +109,7 @@ NCbirths %>% select(mage, whitemom, marital, habit) %>% na.omit() %>%
 
 > Warning: `na.omit()` can be dangerous to use. It will drop EVERY row with ANY value missing. We are using it safely here because we are only selecting the variables that we will use in the plot.  
 
-# [Changing colors (video)]()
+# Changing colors <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+10A+Changing+Colors/1_kb31ew49" target="_blank">(Video)</a>
 
 ## Manual
 
@@ -142,7 +142,8 @@ Review the links in the additional resources section of the [Week 4 overview](..
 
 ----
 
-# [Barchart enhancements (video)]()
+# Barchart enhancements <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+10A+Barchart+Enhancements/1_j8ze36jn" target="_blank">(Video)</a>
+
 
 ## Numbers to the top of bars. 
 
@@ -188,8 +189,8 @@ Always make sure your %'s being displayed match your interpretation.
 
 ----
 
+# Multivariate plotting <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+10A+Multivariate+Plotting/1_xp1whb0f" target="_blank">(Video)</a>
 
-# [Multivariate Plotting (video)]()
 So far we've only looked at how to plot 2 variables on the same plot. Let's up our game some. 
 
 ## Boxplots with three variables. 
