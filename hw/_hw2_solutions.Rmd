@@ -3,8 +3,8 @@ title: "Homework 2"
 author: "NAME"
 date: "DATE"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 # Introduction
@@ -120,5 +120,7 @@ smoking$nationality_new <- fct_collapse(smoking$nationality, "NA"=c("Refused","U
 
 table(smoking$nationality_new)
 
-smoking$nationality_new %>% fct_relevel("NA", "Irish", "Welsh", "Other","Scottish","British","English") %>% table(smoking$smoke)
+smoking$nationality_new %>%
+fct_relevel("NA", "Irish", "Welsh", "Other","Scottish","British","English") %>%
+table(smoking$smoke)
 ```
