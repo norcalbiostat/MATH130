@@ -100,5 +100,13 @@ In this section, you will use `smoking` data set.
 ```
 
 
+# Challenge Questions (1 point extra credit)
+
+1. Within the `smoking` data set, define a new variable called `nationality_new` that collapses the levels "Unknown" and "Refused" from the `nationality` variable into a single level named "NA". Manually reorder the `nationality_new` variable in increasing order, then print a table with two variables: `nationality_new` and `smoke`.
+_Hint: You can put two arguments in a table function. See ?table for details._
+
+```{r}
+
+```
 
 
