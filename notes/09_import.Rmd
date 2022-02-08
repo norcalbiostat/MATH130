@@ -13,7 +13,7 @@ date: "_Last Updated `r format(Sys.Date(), '%m-%d-%Y')`_"
 ---
 
 
-# [Introduction (video)]
+# Introduction <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+09A+Introduction/1_qwkzetht" target="_blank">(Video)</a>
 In this lesson we will introduce ways to get data from external files into R, how R works with data, and how to use functions to explore your data frame. 
 
 ### Student Learning Objectives
@@ -28,8 +28,8 @@ After completing this lesson learners will be able to
 * Download the [[09_import_notes.Rmd]](09_import_notes.Rmd) R markdown file and save into your `Math130/notes` folder. 
 * Download the three data sets listed on the [Week 4 overview](../wk4.html) below.
 
+# File types <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+09A+File+Types/1_9p0tuqjq" target="_blank">(Video)</a>
 
-# [File types (video)]()
 In this lesson we are only going to explore reading files that exist on your computer into R from three most commonly used data sources: A tab-delimited text file, A CSV file and an Excel file. 
 
 The three different files we will be using have different file types, or extensions.  
@@ -44,8 +44,7 @@ There are two main types of delimiters we will consider in this class; comma and
 
 Each of these different data types requires a different function or mechanism to import the data into R. If you use the wrong mechanism, the data may not be read in correctly if at all. 
 
-
-# [General Importing data (video)]
+# General Importing data  <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+09A+General+Importing+Data/1_o1ggmj66" target="_blank">(Video)</a>
 
 To import data into R, we have to tell the program explicitly where to find the files you just downloaded. To do that we need to find the file's _path_. The _path_ is a programmatic way to direct your computer to the location of a file. It's like the file's address, or, where it lives on your computer. 
 <!-- ([link]("../static/img/path.png") to picture to explain absolute vs relative path if there is time) -->

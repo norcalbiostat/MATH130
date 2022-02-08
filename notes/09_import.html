@@ -142,7 +142,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<link rel="stylesheet" href="data:text/css,h5%20%7Bfont%2Dsize%3A8%3Bfont%2Dweight%3A%20bold%3Bcolor%3A%20%23008cba%3Bbackground%2Dcolor%3A%20%23e3e6ea%3B%7Dh1%2C%20h2%2C%20h3%2C%20h4%7Bcolor%3A%20%23008cba%3B%7D%2Ebutton%20%7Bbackground%2Dcolor%3A%20%234CAF50%3B%20border%3A%20none%3Bcolor%3A%20white%3Bpadding%3A%2015px%2032px%3Btext%2Dalign%3A%20center%3Btext%2Ddecoration%3A%20none%3Bdisplay%3A%20inline%2Dblock%3Bfont%2Dsize%3A%2016px%3Bbox%2Dshadow%3A%200%208px%2016px%200%20rgba%280%2C0%2C0%2C0%2E2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0%2E19%29%3B%7D" type="text/css" />
+<link rel="stylesheet" href="data:text/css,%0A%0Ah5%20%7B%0Afont%2Dsize%3A8%3B%0Afont%2Dweight%3A%20bold%3B%0Acolor%3A%20%23008cba%3B%0Abackground%2Dcolor%3A%20%23e3e6ea%3B%0A%7D%0Ah1%2C%20h2%2C%20h3%2C%20h4%7B%0Acolor%3A%20%23008cba%3B%0A%7D%0A%2Ebutton%20%7B%0Abackground%2Dcolor%3A%20%234CAF50%3B%20%0Aborder%3A%20none%3B%0Acolor%3A%20white%3B%0Apadding%3A%2015px%2032px%3B%0Atext%2Dalign%3A%20center%3B%0Atext%2Ddecoration%3A%20none%3B%0Adisplay%3A%20inline%2Dblock%3B%0Afont%2Dsize%3A%2016px%3B%0Abox%2Dshadow%3A%200%208px%2016px%200%20rgba%280%2C0%2C0%2C0%2E2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0%2E19%29%3B%0A%7D%0A" type="text/css" />
 
 
 
@@ -323,13 +323,13 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Lesson 09 - Getting data into R</h1>
-<h4 class="date"><em>Last Updated 01-18-2022</em></h4>
+<h4 class="date"><em>Last Updated 02-07-2022</em></h4>
 
 </div>
 
 
 <div id="introduction-video" class="section level1">
-<h1>[Introduction (video)]</h1>
+<h1>Introduction <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+09A+Introduction/1_qwkzetht" target="_blank">(Video)</a></h1>
 <p>In this lesson we will introduce ways to get data from external files into R, how R works with data, and how to use functions to explore your data frame.</p>
 <div id="student-learning-objectives" class="section level3">
 <h3>Student Learning Objectives</h3>
@@ -349,7 +349,7 @@ div.tocify {
 </div>
 </div>
 <div id="file-types-video" class="section level1">
-<h1><a href>File types (video)</a></h1>
+<h1>File types <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+09A+File+Types/1_9p0tuqjq" target="_blank">(Video)</a></h1>
 <p>In this lesson we are only going to explore reading files that exist on your computer into R from three most commonly used data sources: A tab-delimited text file, A CSV file and an Excel file.</p>
 <p>The three different files we will be using have different file types, or extensions.</p>
 <ul>
@@ -362,7 +362,7 @@ div.tocify {
 <p>Each of these different data types requires a different function or mechanism to import the data into R. If you use the wrong mechanism, the data may not be read in correctly if at all.</p>
 </div>
 <div id="general-importing-data-video" class="section level1">
-<h1>[General Importing data (video)]</h1>
+<h1>General Importing data <a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+09A+General+Importing+Data/1_o1ggmj66" target="_blank">(Video)</a></h1>
 <p>To import data into R, we have to tell the program explicitly where to find the files you just downloaded. To do that we need to find the file’s <em>path</em>. The <em>path</em> is a programmatic way to direct your computer to the location of a file. It’s like the file’s address, or, where it lives on your computer. <!-- ([link]("../static/img/path.png") to picture to explain absolute vs relative path if there is time) --></p>
 <p>In all the examples below, the path shown (<code>data/</code>) is the path on <strong>MY</strong> computer. You will have to update this path to <strong>YOUR</strong> path on <strong>YOUR</strong> machine that points to your MATH130 folder.</p>
 <p>You can find the path of a file by navigating to the desired file in your finder or browser window. Right click and copy the file to the clipboard, then right click and pasting into a R markdown file. This will show a path that looks something like this:</p>
@@ -472,7 +472,7 @@ div.tocify {
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>police  <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;../data/fatal-police-shootings-data.xlsx&quot;</span>, <span class="at">sheet=</span><span class="dv">1</span>, <span class="at">col_names=</span><span class="cn">TRUE</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>police[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div>
-<pre><code>## # A tibble: 10 x 5
+<pre><code>## # A tibble: 10 × 5
 ##       id name                date                manner_of_death  armed     
 ##    &lt;dbl&gt; &lt;chr&gt;               &lt;dttm&gt;              &lt;chr&gt;            &lt;chr&gt;     
 ##  1     3 Tim Elliot          2015-01-02 00:00:00 shot             gun       
