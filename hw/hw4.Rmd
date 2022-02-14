@@ -77,3 +77,11 @@ NOTE: I would highly suggest word-wrapping your code for these questions. Go to 
 
 
 13. One last touch: adjust the figure size by selecting a new size for your code chunk using "fig.height=" and "fig.width=" in your code chunk options.
+
+# Challenge Questions (1 pt extra credit - 0.5 per question)
+
+1. Using the `High School and Beyond` data set you loaded earlier, construct a boxplot for the Writing Scores `write` by Program `prog` that fills by School Type `schtyp`. To receive full credit, be sure you include a title for your plot, label your axes, and give your legend the title "School Type".
+
+
+
+2. Using the `countyComplete` data set you loaded earlier, construct a scatterplot for `per_capita_income` against Percentage of Bachelors Degrees `bachelors`, for ONLY the data from California, Oregon, and Washington. Color and panel on `state`, and remove the legend. As above, include a title for your plot and label your axes.
