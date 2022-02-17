@@ -14,16 +14,18 @@ output:
 Time to put everything you learned in this class into action. In an exploratory data analysis (EDA) you are just looking at (exploring) the data and learning about the data and possible relationships between variables. This is not a formal statistical analysis, you cannot make any claims about groups being statistically different. This is just descriptive. You are allowed and encouraged to hypothesize why you observe certain relationships or data characteristics, just be sure not to draw any conclusions from the data.
 
 # Instructions
-Using your data set of choice, describe the relationship between 2-3 variables.
+Using your data set of choice, pose a brief research question that explores the relationship between 2-3 variables.
 Use markdown headers to make the following sections
 
-1. A short introduction/description of the data.
+1. **Introduction**: A short introduction/description of the data.
     - Specifically mention the 2-3 variables you are going to explore.
-2. A _Univariate_ description of each of the variables under consideration.
+    - What is your research question? What are you interested in finding out more about? 
+2. **Univariate Exploration**: Describe each of the variables under consideration.
     - This means calculate some summary statistics (N(%) or mean(sd)) and make a graphic
-3. A _Bivariate_ comparison between two variables of interest.
-    - Calculate grouped summary statistics as appropriate.
-
+3. **Bivariate Exploration**: Comparison between two variables of interest.
+    - Calculate grouped summary statistics as appropriate. **This is often the most often forgotten part**
+    - You can go further and explore more than two variables at a time using paneling, but be sure to explain what you learn from each graph. 
+4. **Conclusion**: What did you find? If you had a prior hypothesis, does the data seem to support it? Remember this is NOT a statistical analysis. 
 
 All descriptions (univariate and bivariate) must be done using graphics, summary statistics, and words.
 
@@ -34,24 +36,25 @@ Use the grading rubric at the end of this document for guidance as to what you s
 
 ## Data
 
-You have a choice here. If you are currently working on some data that you would like to explore, talk with me to get your data set approved.
+You have a choice here. If you are currently working on some data that you would like to explore, talk with your instructor to get your data set approved. As long as it has more than a few variables in it, and at least 30 observations it should be fine. 
 
 If you do not have your own data, you can choose from one of the following data sets, all of which can be downloaded from the [Data](https://norcalbiostat.netlify.com/data) page of Dr. D's teaching course website. Here are some viable choices:
 
+* **Email Spam**: Characteristics of emails used to predict if the email is spam or not.
+* **HIV**: Data on adolescent children living with HIV positive parents.
 * **Depression**: Level of depression (`cesd`), health care, and demographic characteristics.
 * **High School and Beyond**: Educational, vocational, and personal development of elementary and high school students.
 * **Police Shootings**: Characteristics of individuals killed by police in 2015.
-* **Email Spam**: Characteristics of emails used to predict if the email is spam or not.
-* **HIV**: Data on adolescent children living with HIV positive parents.
 
-Any other data sets require instructor approval. Data sets such as the 'plants' or arm strength' data sets are insufficiently complex for this project. Also you can't use the `dsmall`, `diamonds`, or `NCbirths` data sets because we've used them too much already.
+
+Any other data sets require instructor approval. Data sets such as the `plants` or `arm strength` data sets are insufficiently complex for this project. Also you can't use the `dsmall`, `diamonds`, or `NCbirths` data sets because we've used them too much already.
 
 # How to submit
 
 * To allow for adequate time for peer grading the submission deadline is a strict cutoff. Really late assignments won't be accepted.
 * You must name your file **EDA_username** and knit to PDF. 
     - **If you knit to HTML, you must open & save the resulting file as PDF so it can be commented on.**
-* Upload your project to [[this box folder]](https://csuchico.app.box.com/f/44dd8d9cef9b4b219efb09b1eb3e5b33) by the due date. 
+* Upload your final project to this [[Google Drive folder]](https://drive.google.com/drive/folders/1zehpGNglcSrLbFhms1pteYTzxE9a9Xi0?usp=sharing) by the due date. 
 
 
 
@@ -69,7 +72,7 @@ How to do your reviews:
 4. Using the commenting feature provide 4 comments for each project.
     - Two positive: What specific features did they include that you liked or found helpful?
     - Two improvements: What can they do different or better next time? Did you find a bug in their code?
-5. Score each project using this [Google Form](https://goo.gl/forms/7I4zsYpSsiZpgKyH3).
+5. Score each project using this [[Google Form]](https://forms.gle/UJKJReDdjQh5Chvp8).
     - This data entry form follows the scoring rubric printed below in this document.
     - You will upload your review to this form as well.
 
@@ -92,7 +95,7 @@ How to do your reviews:
 
 # Grading
 * Your final project grade will be a weighted average of 30% peer reviews ($\bar{PR}$) and 70% instructor review ($IR$): $(.3*\bar{PR} + .7*IR)$.
-* Your submission is worth 20 points, the peer review is 10 pts.
+* Your submission is worth 20 points, the peer review is 5 pts.
 
 
 \newpage
@@ -101,31 +104,19 @@ How to do your reviews:
 The criteria below is what you will be graded on. Below each criteria is an example of the points awarded for the level of competency. Use this criteria when you score your peers reports.
 
 
-1. **Reproducibility**: Was the report created in R, using Markdown, in a
-   reproducible manner?
-    - (Novice) The report appears to have been written in another program and R
-          output and/or figures look to have been copied/pasted into the document.
-    - (Competent)  The analysis report was written in R, but vital pieces of
-          information such as the code to create the plots or to read in the data are missing.
-    - (Proficient) This analysis is fully reproducible. It is clear where the data came
-           from, and how it is used at each step. This code could be downloaded
-           and run on another machine with only a change to the data location.
-
-2. **Data Description**: Provide a description of the data set and the variables of interest.
+1. **Data Description**: Provide a description of the data set and the variables of interest.
     - (Novice) There is no description or the description is a copy of the help file.
     - (Competent) There is a minor description of the data but not enough to understand
              what is being measured or compared.
     - (Proficient) The data description is clear and concise, it is clear to me what data
              is being analyzed and where it was obtained.
 
-3. **Univariate Description**: Fully describe the distribution of _each variable_ by itself
+2. **Univariate Description**: Fully describe the distribution of _each variable_ by itself
     - (Novice) There are no numerical or graphical summaries provided.
-    - (Competent) Only numeric or only graphical summaries were created, but no textual
-             description.
-    - (Proficient) The variable was fully described using both numeric and graphical summary
-             methods. This information was summarized below the output in a paragraph
-             form.
-4. **Bivariate Comparison**: Describe the relationship between the two chosen variables.
+    - (Competent) Only numeric or only graphical summaries were created, but no textual description.
+    - (Proficient) The variable was fully described using both numeric and graphical summary methods. This information was summarized below the output in a paragraph form.
+    
+3. **Bivariate Comparison**: Describe the relationship between the two chosen variables.
     - (Novice) No comparison was made, or the variables were compared, but
              inappropriate graphics or summary statistics were created.
     - (Competent) The variables were compared using appropriate graphical methods and
@@ -133,7 +124,7 @@ The criteria below is what you will be graded on. Below each criteria is an exam
     - (Proficient) The variables were compared using appropriate graphical methods and
              a short textual explanation of what the summaries showed.
 
-5. **Organization / Grammar**: How well does the report read? How well organized is it? Was it checked for grammar and spelling mistakes?
+4. **Organization / Grammar**: How well does the report read? How well organized is it? Was it checked for grammar and spelling mistakes?
     - (Novice) Only R code, output is present. There is no discussion of results.
              Tons of extra R code that is not relevant to the discussion is present.
              Markdown headers were not used.
