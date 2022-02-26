@@ -66,16 +66,14 @@ After the submission deadline, your analysis projects will be randomly assigned 
 
 How to do your reviews: 
 
-1. Go to the [[project page]](https://norcalbiostat.github.io/peer_review/math130_eda.html) and find the projects you are assigned to review. 
-2. Download the projects that you have been assigned to review. 
-3. If one or both of the people you are assigned to review do not submit a project, pick another person to review. You do not have to notify your instructor if this happens.
-4. Using the commenting feature provide 4 comments for each project.
+1. The morning after the due date you will be emailed a link to the peer review spreadsheet in Google Drive. This is where you can find the names of the people you are assigned to review. 
+2. Go to the [[project page]](https://norcalbiostat.github.io/peer_review/math130_eda.html) and download the projects you are assigned to review. 
+3. Using the commenting feature provide 4 comments for each project.
     - Two positive: What specific features did they include that you liked or found helpful?
     - Two improvements: What can they do different or better next time? Did you find a bug in their code?
-5. Score each project using this [[Google Form]](https://forms.gle/UJKJReDdjQh5Chvp8).
+4. Score each project using this [[Google Form]](https://forms.gle/UJKJReDdjQh5Chvp8).
     - This data entry form follows the scoring rubric printed below in this document.
     - You will upload your review to this form as well.
-
 
 > How to add comments
 
