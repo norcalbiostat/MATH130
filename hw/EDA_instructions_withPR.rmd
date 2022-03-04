@@ -1,14 +1,14 @@
 ---
 title: "Exploratory Data Analysis Project"
 output:
+  pdf_document:
+    toc: no
   html_document:
     css: ../css/yeti.css
     highlight: tango
     theme: yeti
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 ---
 
 Time to put everything you learned in this class into action. In an exploratory data analysis (EDA) you are just looking at (exploring) the data and learning about the data and possible relationships between variables. This is not a formal statistical analysis, you cannot make any claims about groups being statistically different. This is just descriptive. You are allowed and encouraged to hypothesize why you observe certain relationships or data characteristics, just be sure not to draw any conclusions from the data.
