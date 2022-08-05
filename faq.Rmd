@@ -95,7 +95,7 @@ else has already asked your question.
 
 ## From a real live person
 
-For Fall 21 help is available both in person, and online. 
+For Fall 22 help is available both in person, and online. 
 
 * The person sitting next to you. Don't hesitate to talk to your neighbor, 
   compare your answers, and ask for help. (as applicable)
@@ -110,7 +110,7 @@ For Fall 21 help is available both in person, and online.
 
 
 
-## Online
+## Online from people
 
 * In RStudio go to `Help` --> `Cheatsheets`   
 * R Studio Cloud interactive lessons: https://rstudio.cloud/learn/primers
@@ -126,7 +126,7 @@ For Fall 21 help is available both in person, and online.
   be accessed using `packageDescription("name-of-package")`. You may also want
   to try to email the author of the package directly, or open an issue on the
   code repository (e.g., GitHub).
-* Twitter: #rstats @Rstudio
+* Twitter: #rstats 
 
 ----
 
@@ -137,12 +137,21 @@ If you're a book kinda person, there is plenty of help available as well. Many h
 * R Markdown, the Definitive Guide: https://bookdown.org/yihui/rmarkdown/
 * R for Data Science https://r4ds.had.co.nz/
 * Cookbook for R http://www.cookbook-r.com/
-* R Graphics Cookbook (I use this all the time) -- Chapter 8 in the above link
 * The Art of R Programming https://nostarch.com/artofr.htm
 * R for... http://r4stats.com/
     - Excel Users https://www.rforexcelusers.com/
     - SAS and SPSS Users http://r4stats.com/books/r4sas-spss/
     - STATA Users http://r4stats.com/books/r4stata/
+* [R graphics cookbook](https://r-graphics.org/)
+* [R charts](https://r-charts.com/) and [R graph gallery](https://r-graph-gallery.com/)-- for inspiration on what plots to create
+* [STDHA](http://sthda.com/english/) for a analysis and graphing options
+
+### Want to get fancy?
+
+* [Hello Quarto](https://quarto.org/)
+* [ggpubr](https://rpkgs.datanovia.com/ggpubr/) for near publication ready plots
+* [sjPlot](https://strengejacke.github.io/sjPlot/index.html) to visualize model results
+* [tidymodels](https://www.tidymodels.org/) a new(ish) way of modeling data
 
 ----
 
