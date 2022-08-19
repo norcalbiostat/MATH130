@@ -1,10 +1,10 @@
 ---
-title: "Math 130: Introduction to R - Spring 22"
+title: "Math 130: Introduction to R - Fall 22"
 fontsize: 11pt
 output:
+  html_document: default
   pdf_document:
     keep_tex: yes
-  html_document: default
 header-includes:
   - \RequirePackage{accsupp}
   - \RequirePackage{pdfcomment}
@@ -26,15 +26,15 @@ This course is designed as a primer to get the complete novice up and running wi
 
 |                        |        Section 01       |       Section 02        |
 |:-----------------------|:-----------------------:|:-----------------------:|
-| **Meeting Days**       | 01/24/22 - 02/25/22     |  01/24/22 - 02/25/22    |
-| **Meeting Times**      | MWF 10 - 10:50 am       |  No set meeting pattern |
-| **Meeting Location**   | Holt 257                |  Online                 |
-| **Instructor**         | Nicholas Lytal          |  Robin Donatello        |
-| **Office Location**    | Holt 106                |  Holt 202               |
-| **E-mail**             | nlytal@csuchico.edu     |  rdonatello@csuchico.edu|
+| **Meeting Days**       | 08/22/22 - 09/23/22     |  08/22/22 - 09/23/22    |
+| **Meeting Times**      | MWF 9 - 9:50 am         |  MWF 10 - 10:50 am |
+| **Meeting Location**   | Holt 291                |  Holt 291                 |
+| **Instructor**         | Nicholas Lytal          |  Nicholas Lytal        |
+| **Office Location**    | Holt 106                |  Holt 106               |
+| **E-mail**             | nlytal@csuchico.edu     |  nlytal@csuchico.edu |
 
-## Asynchronous sections
-At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01b_async_protocol.html) for more details on the course format. 
+<!-- ## Asynchronous sections -->
+<!-- At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01b_async_protocol.html) for more details on the course format.  -->
 
 ## Blackboard Learn Useage
 See the welcome page for your section in Blackboard Learn for specific information on how BBL will be used for your section. 
@@ -140,7 +140,7 @@ Furthermore, we would like to acknowledge that we are meeting on the traditional
 # University Policies and Campus Resources
 
 ### Adding and Dropping the course
-This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 2/4/22. No adds or drops are allowed after 2/18/22 without a serious and compelling reason approved by the instructor, department chair, and college dean.
+This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/2/22. No adds or drops are allowed after 9/16/22 without a serious and compelling reason approved by the instructor, department chair, and college dean.
 
 ### Academic Integrity
 Students are expected to be familiar with the University’s Academic Integrity Policy. Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. Faculty members are required to report all infractions to the Office of Student Judicial Affairs. The policy on academic integrity and other resources related to student conduct can be found on the Student Judicial Affairs web site at http://www.csuchico.edu/sjd/integrity.shtml.
