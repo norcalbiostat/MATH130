@@ -36,7 +36,7 @@ This course is designed as a primer to get the complete novice up and running wi
 <!-- ## Asynchronous sections -->
 <!-- At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01b_async_protocol.html) for more details on the course format.  -->
 
-## Blackboard Learn Useage
+## Blackboard Learn Usage
 See the welcome page for your section in Blackboard Learn for specific information on how BBL will be used for your section. 
 
 ## Student Support
@@ -171,5 +171,5 @@ The **Hungry Wildcat Food Pantry** provides supplemental food, fresh produce, Ca
 All students are welcomed to visit the Pantry located in the Student Service Center 196. Check the website for a location map and for the most up to date information on open hours: https://www.csuchico.edu/basic-needs/pantry.shtml .
 
 
-## Confidentiality and Mandatory Reoprting
+## Confidentiality and Mandatory Reporting
 As an instructor, one of my responsibilities is to help create a safe learning environment on our campus. I also have a mandatory reporting responsibility related to my role as a your instructor. I am required to share information regarding sexual misconduct with the University. Students may speak to someone confidentially by contacting the Counseling and Wellness Center (898-6345) or Safe Place (898-3030). Information on campus reporting obligations and other Title IX related resources are available here: www.csuchico.edu/title-ix.
