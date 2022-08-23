@@ -48,7 +48,7 @@ The target audience is anyone who wants to do their own data analysis. The cours
 ### Grading
 
 * Credit / No Credit. There are 100 points available in this course through attendance, assignments, and a final project.
-* You must earn 70 points to receive credit for the course.
+* You must earn 75 points to receive credit for the course.
 * The [syllabus](../syllabus.html) provides specific details on points per assignment.
 
 ### Time Commitment
