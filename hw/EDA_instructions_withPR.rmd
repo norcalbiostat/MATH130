@@ -54,7 +54,7 @@ Any other data sets require instructor approval. Data sets such as the `plants` 
 * To allow for adequate time for peer grading the submission deadline is a strict cutoff. Really late assignments won't be accepted.
 * You must name your file **EDA_username** and knit to PDF. 
     - **If you knit to HTML, you must open & save the resulting file as PDF so it can be commented on.**
-* Upload your final project to this [[Google Drive folder]](https://drive.google.com/drive/folders/1zehpGNglcSrLbFhms1pteYTzxE9a9Xi0?usp=sharing) by the due date. 
+* Upload your final project to this [[Google Drive folder]](https://drive.google.com/drive/folders/19PzBLLrZ7Etm4qBjOjmRsOoy9k7Q7FXI?usp=sharing) by the due date. 
 
 
 
