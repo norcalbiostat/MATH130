@@ -7,7 +7,9 @@ library(dplyr)
 pr_raw <- read_sheet("https://docs.google.com/spreadsheets/d/17VhpLa9AZOkeOUYtxyog5NwXL389HLKP7v8VqVmDdSU/edit#gid=1340211106")
 
 # rename to usable names
-names(pr_raw) <- c("timestamp", "author", "repro", "desc", "univ", "univ2", "bivar", "summary", "org", "email", "blank", "upload")
+#names(pr_raw) <- c("timestamp", "author", "repro", "desc", "univ", "univ2", "bivar", "summary", "org", "email", "blank", "upload")
+
+names(pr_raw) <- c("timestamp", "email", "repro", "desc", "univ", "bivar","org",  "upload")
 
 # drop all but this semester (update timestamps where needed)
 pr <- pr_raw %>% filter(as.Date(timestamp) > "2022-08-01" & as.Date(timestamp) < "2022-12-01") 
