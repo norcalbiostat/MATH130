@@ -1,5 +1,5 @@
 ---
-title: "Math 130: Introduction to R - Fall 22"
+title: "Math 130: Introduction to R - Spring 23"
 fontsize: 11pt
 output:
   html_document: default
