@@ -26,18 +26,19 @@ This course is designed as a primer to get the complete novice up and running wi
 
 |                        |        Section 01       |       Section 02        |
 |:-----------------------|:-----------------------:|:-----------------------:|
-| **Meeting Days**       | 08/22/22 - 09/23/22     |  08/22/22 - 09/23/22    |
-| **Meeting Times**      | MWF 9 - 9:50 am         |  MWF 10 - 10:50 am |
-| **Meeting Location**   | Holt 291                |  Holt 291                 |
-| **Instructor**         | Nicholas Lytal          |  Nicholas Lytal        |
-| **Office Location**    | Holt 106                |  Holt 106               |
-| **E-mail**             | nlytal@csuchico.edu     |  nlytal@csuchico.edu |
+| **Meeting Days**       | 01/23/23 - 02/24/23     |  01/23/23 - 02/24/23    |
+| **Meeting Times**      | No set meeting pattern  |  No set meeting pattern |
+| **Meeting Location**   | Online                |  Online                 |
+| **Instructor**         | Jane Guo                |  Jane Guo       |
+| **Office Location**    | Holt 150                |  Holt 150               |
+| **E-mail**             | jguo2@csuchico.edu     |  jguo2@csuchico.edu |
 
-<!-- ## Asynchronous sections -->
-<!-- At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01b_async_protocol.html) for more details on the course format.  -->
+## Asynchronous sections
+<!-- At least one section of this class is fully online, asynchronous. --> 
+There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01b_async_protocol.html) for more details on the course format.  
 
-## Blackboard Learn Usage
-See the welcome page for your section in Blackboard Learn for specific information on how BBL will be used for your section. 
+## Canvas Usage
+See the welcome page for your section in Canvas for specific information on how Canvas will be used for your section. 
 
 ## Student Support
 
@@ -106,7 +107,7 @@ This adds up to 15 hours in class, and 30 hours outside of class during these 5 
 You will get out of this class what you put into it. Recall this is just a co-curriculuar or supplemental basic introductory class. You will not learn everything there is to know about R, nor likely not feel proficient by the time you are done. But you will be solidly on the path where you can continue to learn and improve.
 
 # Grading
-Credit / No Credit. There are 100 points available in this course. You must earn 75 points to receive credit for the course. See Blackboard Learn for instructions on how to submit your work and due dates. 
+Credit / No Credit. There are 100 points available in this course. You must earn **75** points to receive credit for the course. See Canvas for instructions on how to submit your work and due dates. 
 
 * Assignments: 4 @ 10 pts each.
 * Fill out course notes: 7 @ 5 pts each

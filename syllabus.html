@@ -11,10 +11,10 @@
 
 
 
-<title>Math 130: Introduction to R - Fall 22</title>
+<title>Math 130: Introduction to R - Spring 23</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -62,7 +62,6 @@ if (window.hljs) {
 
 
 
-
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -83,9 +82,6 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
 }
 pre code {
   padding: 0;
@@ -238,7 +234,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -297,7 +293,8 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Math 130: Introduction to R - Fall 22</h1>
+<h1 class="title toc-ignore">Math 130: Introduction to R - Spring
+23</h1>
 
 </div>
 
@@ -305,18 +302,35 @@ $(document).ready(function () {
 <p><a href="syllabus.pdf">[Download this syllabus as a PDF]</a></p>
 <div id="course-description" class="section level1">
 <h1>Course Description</h1>
-<p>This course is designed as a primer to get the complete novice up and running with the basic knowledge of how to use the statistical programming language R in an environment that emphasizes reproducible research and literate programming for data analysis. The target audience is anyone who wants to do their own data analysis. The course will cumulate with an peer-evaluated exploratory data analysis on either a pre-specified data set or your data set of choice.</p>
+<p>This course is designed as a primer to get the complete novice up and
+running with the basic knowledge of how to use the statistical
+programming language R in an environment that emphasizes reproducible
+research and literate programming for data analysis. The target audience
+is anyone who wants to do their own data analysis. The course will
+cumulate with an peer-evaluated exploratory data analysis on either a
+pre-specified data set or your data set of choice.</p>
 </div>
 <div id="logistics" class="section level1">
 <h1>Logistics</h1>
 <ul>
-<li><strong>Course Website:</strong> <a href="https://norcalbiostat.github.io/MATH130/" class="uri">https://norcalbiostat.github.io/MATH130/</a></li>
+<li><strong>Course Website:</strong> <a
+href="https://norcalbiostat.github.io/MATH130/"
+class="uri">https://norcalbiostat.github.io/MATH130/</a></li>
 <li><strong>Prerequisites:</strong> Basic computer literacy</li>
-<li><strong>Workshop style:</strong> This workshop style class runs for 5 weeks only. See expectations for time commitment during these 5 weeks below.<br />
+<li><strong>Workshop style:</strong> This workshop style class runs for
+5 weeks only. See expectations for time commitment during these 5 weeks
+below.<br />
 </li>
-<li><strong>Discord Server:</strong> <a href="https://discord.gg/ck497bJty5" class="uri">https://discord.gg/ck497bJty5</a></li>
+<li><strong>Discord Server:</strong> <a
+href="https://discord.gg/ck497bJty5"
+class="uri">https://discord.gg/ck497bJty5</a></li>
 </ul>
 <table>
+<colgroup>
+<col width="32%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -327,58 +341,85 @@ $(document).ready(function () {
 <tbody>
 <tr class="odd">
 <td align="left"><strong>Meeting Days</strong></td>
-<td align="center">08/22/22 - 09/23/22</td>
-<td align="center">08/22/22 - 09/23/22</td>
+<td align="center">01/23/23 - 02/24/23</td>
+<td align="center">01/23/23 - 02/24/23</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Meeting Times</strong></td>
-<td align="center">MWF 9 - 9:50 am</td>
-<td align="center">MWF 10 - 10:50 am</td>
+<td align="center">No set meeting pattern</td>
+<td align="center">No set meeting pattern</td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>Meeting Location</strong></td>
-<td align="center">Holt 291</td>
-<td align="center">Holt 291</td>
+<td align="center">Online</td>
+<td align="center">Online</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Instructor</strong></td>
-<td align="center">Nicholas Lytal</td>
-<td align="center">Nicholas Lytal</td>
+<td align="center">Jane Guo</td>
+<td align="center">Jane Guo</td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>Office Location</strong></td>
-<td align="center">Holt 106</td>
-<td align="center">Holt 106</td>
+<td align="center">Holt 150</td>
+<td align="center">Holt 150</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>E-mail</strong></td>
-<td align="center"><a href="mailto:nlytal@csuchico.edu" class="email">nlytal@csuchico.edu</a></td>
-<td align="center"><a href="mailto:nlytal@csuchico.edu" class="email">nlytal@csuchico.edu</a></td>
+<td align="center"><a href="mailto:jguo2@csuchico.edu"
+class="email">jguo2@csuchico.edu</a></td>
+<td align="center"><a href="mailto:jguo2@csuchico.edu"
+class="email">jguo2@csuchico.edu</a></td>
 </tr>
 </tbody>
 </table>
-<!-- ## Asynchronous sections -->
-<!-- At least one section of this class is fully online, asynchronous. This means there are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01b_async_protocol.html) for more details on the course format.  -->
-<div id="blackboard-learn-usage" class="section level2">
-<h2>Blackboard Learn Usage</h2>
-<p>See the welcome page for your section in Blackboard Learn for specific information on how BBL will be used for your section.</p>
+<div id="asynchronous-sections" class="section level2">
+<h2>Asynchronous sections</h2>
+<!-- At least one section of this class is fully online, asynchronous. -->
+<p>There are no set meeting times, but assignments still have due dates.
+Lectures are all pre-recorded and linked from the class website.
+Students work through the material and complete assignments at their own
+pace. See <a href="notes/01b_async_protocol.html">[this page]</a> for
+more details on the course format.</p>
+</div>
+<div id="canvas-usage" class="section level2">
+<h2>Canvas Usage</h2>
+<p>See the welcome page for your section in Canvas for specific
+information on how Canvas will be used for your section.</p>
 </div>
 <div id="student-support" class="section level2">
 <h2>Student Support</h2>
 <div id="discord" class="section level3">
 <h3>Discord</h3>
-<p>To facilitate peer to peer and effective instructor to peer assistance Discord will be used for discussion and questions outside of class. This server hosts students across multiple Statistics and Data Science classes, with a specific channel for all sections of Math 130.</p>
+<p>To facilitate peer to peer and effective instructor to peer
+assistance Discord will be used for discussion and questions outside of
+class. This server hosts students across multiple Statistics and Data
+Science classes, with a specific channel for all sections of Math
+130.</p>
 <ol style="list-style-type: decimal">
-<li>Click this link to join the server: <a href="https://discord.gg/ck497bJty5" class="uri">https://discord.gg/ck497bJty5</a></li>
-<li>Verify your email and agree to the rules and code of conduct. This helps create a safe learning environment.</li>
-<li>Go to the <code>#get-roles</code> text channel in the left sidebar, choose your pronouns (optional but helpful), and click the RStudio icon emoji under the second post to self-assign you to the Math-130 role. this will let you see and access the class channels! More on how to use Discord in week 1.</li>
+<li>Click this link to join the server: <a
+href="https://discord.gg/ck497bJty5"
+class="uri">https://discord.gg/ck497bJty5</a></li>
+<li>Verify your email and agree to the rules and code of conduct. This
+helps create a safe learning environment.</li>
+<li>Go to the <code>#get-roles</code> text channel in the left sidebar,
+choose your pronouns (optional but helpful), and click the RStudio icon
+emoji under the second post to self-assign you to the Math-130 role.
+this will let you see and access the class channels! More on how to use
+Discord in week 1.</li>
 </ol>
 </div>
 <div id="community-coding." class="section level3">
 <h3>Community Coding.</h3>
-<p>Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. For asynchronous sections, this is the best way to get direct instructor assistance.</p>
+<p>Similar to drop in Mathematics tutoring hours, students, staff,
+faculty, and the public are invited to join our Community Coding
+sessions. Bring your computer, coding projects, and your questions to
+this open working environment. For asynchronous sections, this is the
+best way to get direct instructor assistance.</p>
 <ul>
-<li>Schedule and info found at <a href="https://www.csuchico.edu/datascience/community-coding.shtml" class="uri">https://www.csuchico.edu/datascience/community-coding.shtml</a></li>
+<li>Schedule and info found at <a
+href="https://www.csuchico.edu/datascience/community-coding.shtml"
+class="uri">https://www.csuchico.edu/datascience/community-coding.shtml</a></li>
 </ul>
 </div>
 </div>
@@ -387,10 +428,12 @@ $(document).ready(function () {
 <h1>Learning Outcomes</h1>
 <p>By the end of the course, students will be able to</p>
 <ul>
-<li>Import data into R from external files such as text files and spreadsheets.</li>
+<li>Import data into R from external files such as text files and
+spreadsheets.</li>
 <li>Calculate summary statistics.</li>
 <li>Create new variables using different data types.</li>
-<li>Perform data management techniques such as filtering, grouping, summarizing.</li>
+<li>Perform data management techniques such as filtering, grouping,
+summarizing.</li>
 <li>Create informative data visualizations and tables.</li>
 <li>Create a reproducible research document.</li>
 <li>Conduct an exploratory data analysis in a reproducible manner.</li>
@@ -398,7 +441,8 @@ $(document).ready(function () {
 </div>
 <div id="schedule-of-topics" class="section level1">
 <h1>Schedule of Topics</h1>
-<p>The general outline of topics is listed below. A detailed most up to date schedule can be found on the course website.</p>
+<p>The general outline of topics is listed below. A detailed most up to
+date schedule can be found on the course website.</p>
 <ul>
 <li>Week 1
 <ul>
@@ -412,12 +456,15 @@ $(document).ready(function () {
 </ul></li>
 <li>Week 3
 <ul>
-<li>Univariate Data Visualization using base, and <code>ggplot2</code> graphics</li>
-<li>Streamlined Data processing and Aggregation with <code>dplyr</code></li>
+<li>Univariate Data Visualization using base, and <code>ggplot2</code>
+graphics</li>
+<li>Streamlined Data processing and Aggregation with
+<code>dplyr</code></li>
 </ul></li>
 <li>Week 4
 <ul>
-<li>Bivariate and Multivariate Data Visualization using <code>ggplot2</code></li>
+<li>Bivariate and Multivariate Data Visualization using
+<code>ggplot2</code></li>
 <li>Importing data into R from external files</li>
 </ul></li>
 <li>Week 5: Exploratory Data Analysis (individual project)</li>
@@ -426,30 +473,60 @@ $(document).ready(function () {
 <div id="required-materials" class="section level1">
 <h1>Required Materials</h1>
 <ul>
-<li>A reliable laptop, chromebook, tablet that can use a browser to access the internet.</li>
+<li>A reliable laptop, chromebook, tablet that can use a browser to
+access the internet.</li>
 <li>Reliable internet connection while on and off campus.</li>
 </ul>
 <div id="software" class="section level4">
 <h4>Software</h4>
-<p>If you have your own PC/Mac/*nix computer, you are advised to install R and R Studio on your personal computer. That way you can take what you’ve learned in this class and apply it to other classes. Both are free. Walk through installation instructions can be found here: <a href="https://norcalbiostat.netlify.com/post/software-overview/" class="uri">https://norcalbiostat.netlify.com/post/software-overview/</a></p>
+<p>If you have your own PC/Mac/*nix computer, you are advised to install
+R and R Studio on your personal computer. That way you can take what
+you’ve learned in this class and apply it to other classes. Both are
+free. Walk through installation instructions can be found here: <a
+href="https://norcalbiostat.netlify.com/post/software-overview/"
+class="uri">https://norcalbiostat.netlify.com/post/software-overview/</a></p>
 <ul>
-<li>R version 4.1.0 or later. Download from <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
-<li>R Studio version 1.40 or later. Download the desktop version from <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></li>
+<li>R version 4.1.0 or later. Download from <a
+href="https://cran.r-project.org/"
+class="uri">https://cran.r-project.org/</a></li>
+<li>R Studio version 1.40 or later. Download the desktop version from <a
+href="https://www.rstudio.com/products/rstudio/download/#download"
+class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></li>
 </ul>
-<p>Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the <a href="https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333">Wildcat virtual lab</a>, or sign up for R Studio Cloud (<a href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a>). The free or $5/month plan should be sufficient.</p>
+<p>Students who do not have a computer that they install programs on
+(i.e. a iPad or Chromebook) can use the <a
+href="https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333">Wildcat
+virtual lab</a>, or sign up for R Studio Cloud (<a
+href="https://rstudio.cloud/" class="uri">https://rstudio.cloud/</a>).
+The free or $5/month plan should be sufficient.</p>
 </div>
 </div>
 <div id="time-commitment" class="section level1">
 <h1>Time Commitment</h1>
 <blockquote>
-<p>For all CSU degree programs and courses bearing academic credit, the “credit hour” is defined as … not less than one hour of classroom or direct faculty instruction and a minimum of two hours of out-of-class student work each week for approximately fifteen weeks for one semester or trimester hour of credit.</p>
+<p>For all CSU degree programs and courses bearing academic credit, the
+“credit hour” is defined as … not less than one hour of classroom or
+direct faculty instruction and a minimum of two hours of out-of-class
+student work each week for approximately fifteen weeks for one semester
+or trimester hour of credit.</p>
 </blockquote>
-<p>This adds up to 15 hours in class, and 30 hours outside of class during these 5 weeks. That’s 3 hours in class, and 10 hours of homework per week. If you are new to programming and unfamiliar with computers, you may end up taking the entire time. Be sure to schedule sufficient time during week 5 to work on the project.</p>
-<p>You will get out of this class what you put into it. Recall this is just a co-curriculuar or supplemental basic introductory class. You will not learn everything there is to know about R, nor likely not feel proficient by the time you are done. But you will be solidly on the path where you can continue to learn and improve.</p>
+<p>This adds up to 15 hours in class, and 30 hours outside of class
+during these 5 weeks. That’s 3 hours in class, and 10 hours of homework
+per week. If you are new to programming and unfamiliar with computers,
+you may end up taking the entire time. Be sure to schedule sufficient
+time during week 5 to work on the project.</p>
+<p>You will get out of this class what you put into it. Recall this is
+just a co-curriculuar or supplemental basic introductory class. You will
+not learn everything there is to know about R, nor likely not feel
+proficient by the time you are done. But you will be solidly on the path
+where you can continue to learn and improve.</p>
 </div>
 <div id="grading" class="section level1">
 <h1>Grading</h1>
-<p>Credit / No Credit. There are 100 points available in this course. You must earn 75 points to receive credit for the course. See Blackboard Learn for instructions on how to submit your work and due dates.</p>
+<p>Credit / No Credit. There are 100 points available in this course.
+You must earn <strong>75</strong> points to receive credit for the
+course. See Canvas for instructions on how to submit your work and due
+dates.</p>
 <ul>
 <li>Assignments: 4 @ 10 pts each.</li>
 <li>Fill out course notes: 7 @ 5 pts each</li>
@@ -465,47 +542,125 @@ $(document).ready(function () {
 <h1>Class Policies and statements</h1>
 <div id="everyone-is-welcome-here" class="section level2">
 <h2>Everyone is welcome here</h2>
-<p>It is our intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit. It is our intent to present materials and activities that are respectful of diversity: gender identity, sexuality, disability, age, socioeconomic status, ethnicity, race, nationality, religion, and culture. Your suggestions are encouraged and appreciated. Please let us know ways to improve the effectiveness of the course for you personally, or for other students or student groups.</p>
-<p>We would like to create a learning environment that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:</p>
+<p>It is our intent that students from all diverse backgrounds and
+perspectives be well-served by this course, that students’ learning
+needs be addressed both in and out of class, and that the diversity that
+the students bring to this class be viewed as a resource, strength and
+benefit. It is our intent to present materials and activities that are
+respectful of diversity: gender identity, sexuality, disability, age,
+socioeconomic status, ethnicity, race, nationality, religion, and
+culture. Your suggestions are encouraged and appreciated. Please let us
+know ways to improve the effectiveness of the course for you personally,
+or for other students or student groups.</p>
+<p>We would like to create a learning environment that supports a
+diversity of thoughts, perspectives and experiences, and honors your
+identities (including race, gender, class, sexuality, religion, ability,
+etc.) To help accomplish this:</p>
 <ul>
-<li>If you have a name and/or set of pronouns that differ from those that appear in your official Chico records, please let us know!</li>
-<li>If you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with us. We want to be a resource for you. Remember that you can also submit anonymous feedback (which may lead to a general announcement to the class, if necessary to address the concerns).</li>
-<li>If you prefer to speak with someone outside of the course, the Office of Diversity and Inclusion is here to assist. Their number is 530-898-4764, and email <a href="mailto:diversityoffice@csuchico.edu" class="email">diversityoffice@csuchico.edu</a></li>
-<li>We (like many people) are still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. (Again, anonymous feedback is always an option).</li>
+<li>If you have a name and/or set of pronouns that differ from those
+that appear in your official Chico records, please let us know!</li>
+<li>If you feel like your performance in the class is being impacted by
+your experiences outside of class, please don’t hesitate to come and
+talk with us. We want to be a resource for you. Remember that you can
+also submit anonymous feedback (which may lead to a general announcement
+to the class, if necessary to address the concerns).</li>
+<li>If you prefer to speak with someone outside of the course, the
+Office of Diversity and Inclusion is here to assist. Their number is
+530-898-4764, and email <a href="mailto:diversityoffice@csuchico.edu"
+class="email">diversityoffice@csuchico.edu</a></li>
+<li>We (like many people) are still in the process of learning about
+diverse perspectives and identities. If something was said in class (by
+anyone) that made you feel uncomfortable, please talk to me about it.
+(Again, anonymous feedback is always an option).</li>
 </ul>
-<p><em>Adapted from <a href="https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements">Monica Linden at Brown University</a></em>.</p>
-<p>Furthermore, we would like to acknowledge that we are meeting on the traditional lands of the Mechoopda people. Without them, we would not have access to this campus or our education.</p>
+<p><em>Adapted from <a
+href="https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements">Monica
+Linden at Brown University</a></em>.</p>
+<p>Furthermore, we would like to acknowledge that we are meeting on the
+traditional lands of the Mechoopda people. Without them, we would not
+have access to this campus or our education.</p>
 <hr />
 </div>
 </div>
-<div id="university-policies-and-campus-resources" class="section level1">
+<div id="university-policies-and-campus-resources"
+class="section level1">
 <h1>University Policies and Campus Resources</h1>
 <div id="adding-and-dropping-the-course" class="section level3">
 <h3>Adding and Dropping the course</h3>
-<p>This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/2/22. No adds or drops are allowed after 9/16/22 without a serious and compelling reason approved by the instructor, department chair, and college dean.</p>
+<p>This course only runs for a few weeks and all materials are available
+on the course website. It will be difficult to get caught up if you add
+the class after the first week. The last day to add or drop classes
+without special permission by the instructor is 9/2/22. No adds or drops
+are allowed after 9/16/22 without a serious and compelling reason
+approved by the instructor, department chair, and college dean.</p>
 </div>
 <div id="academic-integrity" class="section level3">
 <h3>Academic Integrity</h3>
-<p>Students are expected to be familiar with the University’s Academic Integrity Policy. Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. Faculty members are required to report all infractions to the Office of Student Judicial Affairs. The policy on academic integrity and other resources related to student conduct can be found on the Student Judicial Affairs web site at <a href="http://www.csuchico.edu/sjd/integrity.shtml" class="uri">http://www.csuchico.edu/sjd/integrity.shtml</a>.</p>
+<p>Students are expected to be familiar with the University’s Academic
+Integrity Policy. Your own commitment to learning, as evidenced by your
+enrollment at California State University, Chico, and the University’s
+Academic Integrity Policy requires you to be honest in all your academic
+course work. Faculty members are required to report all infractions to
+the Office of Student Judicial Affairs. The policy on academic integrity
+and other resources related to student conduct can be found on the
+Student Judicial Affairs web site at <a
+href="http://www.csuchico.edu/sjd/integrity.shtml"
+class="uri">http://www.csuchico.edu/sjd/integrity.shtml</a>.</p>
 </div>
 <div id="it-support-services" class="section level3">
 <h3>IT Support Services</h3>
-<p>Computer labs for student use are located on the first and fourth floor of the Meriam Library, Room 116 and 450, Tehama Hall Room 131, and the Bell Memorial Union (BMU) basement. You can get help using your computer from IT Support Services; contact them through the ITSS web site at <a href="http://www.csuchico.edu/itss" class="uri">http://www.csuchico.edu/itss</a>. Additional labs may be available to students in your department or college.</p>
-<p><strong>Due to the ongoing COVID-19 pandemic, students should check online for any hour restrictions in place for access to the Library or ITSS.</strong></p>
+<p>Computer labs for student use are located on the first and fourth
+floor of the Meriam Library, Room 116 and 450, Tehama Hall Room 131, and
+the Bell Memorial Union (BMU) basement. You can get help using your
+computer from IT Support Services; contact them through the ITSS web
+site at <a href="http://www.csuchico.edu/itss"
+class="uri">http://www.csuchico.edu/itss</a>. Additional labs may be
+available to students in your department or college.</p>
+<p><strong>Due to the ongoing COVID-19 pandemic, students should check
+online for any hour restrictions in place for access to the Library or
+ITSS.</strong></p>
 </div>
 <div id="americans-with-disabilities-act" class="section level3">
 <h3>Americans with Disabilities Act</h3>
-<p>If you need course adaptations or accommodations because of a disability or chronic illness, or if you need to make special arrangements in case the building must be evacuated, please make an appointment with me as soon as possible, or see me during office hours. Please also contact Accessibility Resource Center (ARC) as they are the designated department responsible for approving and coordinating reasonable accommodations and services for students with disabilities. ARC will help you understand your rights and responsibilities under the Americans with Disabilities Act and provide you further assistance with requesting and arranging accommodations.</p>
-<p>Accessibility Resource Center 530-898-5959 Student Services Center 170 <a href="mailto:arcdept@csuchico.edu" class="email">arcdept@csuchico.edu</a> <a href="http://www.csuchico.edu/arc" class="uri">http://www.csuchico.edu/arc</a></p>
+<p>If you need course adaptations or accommodations because of a
+disability or chronic illness, or if you need to make special
+arrangements in case the building must be evacuated, please make an
+appointment with me as soon as possible, or see me during office hours.
+Please also contact Accessibility Resource Center (ARC) as they are the
+designated department responsible for approving and coordinating
+reasonable accommodations and services for students with disabilities.
+ARC will help you understand your rights and responsibilities under the
+Americans with Disabilities Act and provide you further assistance with
+requesting and arranging accommodations.</p>
+<p>Accessibility Resource Center 530-898-5959 Student Services Center
+170 <a href="mailto:arcdept@csuchico.edu"
+class="email">arcdept@csuchico.edu</a> <a
+href="http://www.csuchico.edu/arc"
+class="uri">http://www.csuchico.edu/arc</a></p>
 </div>
 <div id="chico-state-basic-needs-project" class="section level3">
 <h3>Chico State Basic Needs Project</h3>
-<p>The <strong>Hungry Wildcat Food Pantry</strong> provides supplemental food, fresh produce, CalFresh application assistance and basic needs referral services for students experiencing food and housing insecurity.</p>
-<p>All students are welcomed to visit the Pantry located in the Student Service Center 196. Check the website for a location map and for the most up to date information on open hours: <a href="https://www.csuchico.edu/basic-needs/pantry.shtml" class="uri">https://www.csuchico.edu/basic-needs/pantry.shtml</a> .</p>
+<p>The <strong>Hungry Wildcat Food Pantry</strong> provides supplemental
+food, fresh produce, CalFresh application assistance and basic needs
+referral services for students experiencing food and housing
+insecurity.</p>
+<p>All students are welcomed to visit the Pantry located in the Student
+Service Center 196. Check the website for a location map and for the
+most up to date information on open hours: <a
+href="https://www.csuchico.edu/basic-needs/pantry.shtml"
+class="uri">https://www.csuchico.edu/basic-needs/pantry.shtml</a> .</p>
 </div>
-<div id="confidentiality-and-mandatory-reporting" class="section level2">
+<div id="confidentiality-and-mandatory-reporting"
+class="section level2">
 <h2>Confidentiality and Mandatory Reporting</h2>
-<p>As an instructor, one of my responsibilities is to help create a safe learning environment on our campus. I also have a mandatory reporting responsibility related to my role as a your instructor. I am required to share information regarding sexual misconduct with the University. Students may speak to someone confidentially by contacting the Counseling and Wellness Center (898-6345) or Safe Place (898-3030). Information on campus reporting obligations and other Title IX related resources are available here: www.csuchico.edu/title-ix.</p>
+<p>As an instructor, one of my responsibilities is to help create a safe
+learning environment on our campus. I also have a mandatory reporting
+responsibility related to my role as a your instructor. I am required to
+share information regarding sexual misconduct with the University.
+Students may speak to someone confidentially by contacting the
+Counseling and Wellness Center (898-6345) or Safe Place (898-3030).
+Information on campus reporting obligations and other Title IX related
+resources are available here: www.csuchico.edu/title-ix.</p>
 </div>
 </div>
 
