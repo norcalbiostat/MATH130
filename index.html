@@ -13,7 +13,7 @@
 
 <title>Math 130: Introduction to R</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -47,6 +47,7 @@
 
 
 
+
 <link rel="stylesheet" href="css/yeti.css" type="text/css" />
 
 
@@ -71,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -128,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -161,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -170,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -223,7 +224,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -287,39 +288,75 @@ $(document).ready(function () {
 </div>
 
 
-<p>This is the landing page for <span style="color:blue"><strong>Introduction to R (MATH 130)</strong></span> class offered at California State University, Chico.</p>
+<p>This is the landing page for <span
+style="color:blue"><strong>Introduction to R (MATH 130)</strong></span>
+class offered at California State University, Chico.</p>
 <hr />
 <div id="target-audience" class="section level1">
 <h1>Target Audience</h1>
-<p>Anyone who wants to do their own data analysis! This is a primer to get the complete novice up and running with the basic knowledge of how to use the statistical programming language R for data analysis. Topics include: R programming basics, importing data, properties of tidy data, visualizing data, reproducible research with Markdown and basic data wrangling. Designed to get you up and running with basic knowledge of <code>R</code> and Markdown ASAP. This course is designed as a pre-requisite for most upper division Statistics, and all Data Science courses which use R heavily.</p>
-<p>See the <a href="syllabus.html">syllabus</a> for details about the current class offerings.</p>
-<p><em>Last Updated: 01/05/2022 </em></p>
+<p>Anyone who wants to do their own data analysis! This is a primer to
+get the complete novice up and running with the basic knowledge of how
+to use the statistical programming language R for data analysis. Topics
+include: R programming basics, importing data, properties of tidy data,
+visualizing data, reproducible research with Markdown and basic data
+wrangling. Designed to get you up and running with basic knowledge of
+<code>R</code> and Markdown ASAP. This course is designed as a
+pre-requisite for most upper division Statistics, and all Data Science
+courses which use R heavily.</p>
+<p>See the <a href="syllabus.html">syllabus</a> for details about the
+current class offerings.</p>
+<p><em>Last Updated: 12/22/2022 </em></p>
 <hr />
 </div>
 <div id="schedule" class="section level1">
 <h1>Schedule</h1>
-<p>Click each weekly header below to go to the materials for that week.</p>
-<div id="week-1-getting-started-with-r-and-r-studio" class="section level3">
-<h3><a href="wk1.html" target="_blank">Week 1: Getting started with R and R Studio</a></h3>
-<p><em>Lectures 01-04: Introduction to the class, new tools, R Markdown and R.</em></p>
+<p>Click each weekly header below to go to the materials for that
+week.</p>
+<div id="week-1-getting-started-with-r-and-r-studio"
+class="section level3">
+<h3><a href="wk1.html" target="_blank">Week 1: Getting started with R
+and R Studio</a></h3>
+<p><em>Lectures 01-04: Introduction to the class, new tools, R Markdown
+and R.</em></p>
 </div>
-<div id="week-2-introduction-to-working-with-data-in-r-and-wrangling-factors" class="section level3">
-<h3><a href="wk2.html" target="_blank">Week 2: Introduction to working with data in R and wrangling factors</a></h3>
-<p><em>Lectures 05-06: Learn to manipulate and work with data in R. How to manage factor variables.</em></p>
+<div
+id="week-2-introduction-to-working-with-data-in-r-and-wrangling-factors"
+class="section level3">
+<h3><a href="wk2.html" target="_blank">Week 2: Introduction to working
+with data in R and wrangling factors</a></h3>
+<p><em>Lectures 05-06: Learn to manipulate and work with data in R. How
+to manage factor variables.</em></p>
 </div>
-<div id="week-3-wrangling-data-and-intro-to-graphing" class="section level3">
-<h3><a href="wk3.html" target="_blank">Week 3: Wrangling data and Intro to graphing</a></h3>
-<p><em>Lectures 07-08: Streamline your data processing steps so you can get to making pretty pictures to win friends and influence people.</em></p>
+<div id="week-3-wrangling-data-and-intro-to-graphing"
+class="section level3">
+<h3><a href="wk3.html" target="_blank">Week 3: Wrangling data and Intro
+to graphing</a></h3>
+<p><em>Lectures 07-08: Streamline your data processing steps so you can
+get to making pretty pictures to win friends and influence
+people.</em></p>
 </div>
-<div id="week-4-intermediate-graphing-importing-external-data" class="section level3">
-<h3><a href="wk4.html" target="_blank">Week 4: Intermediate graphing &amp; Importing external data</a></h3>
-<p><em>Lectures 09-10: Interesting data doesn’t live inside R. Lets get data from an external file into R, and learn how to make more complex plots.</em></p>
+<div id="week-4-intermediate-graphing-importing-external-data"
+class="section level3">
+<h3><a href="wk4.html" target="_blank">Week 4: Intermediate graphing
+&amp; Importing external data</a></h3>
+<p><em>Lectures 09-10: Interesting data doesn’t live inside R. Lets get
+data from an external file into R, and learn how to make more complex
+plots.</em></p>
 </div>
-<div id="week-5-putting-it-all-together-exploratory-project" class="section level3">
-<h3><a href="wk5.html" target="_blank">Week 5: Putting it all together: Exploratory Project</a></h3>
-<p><em>Now it’s time to put your new 1337 skillz to the test! You will conduct an exploratory data analysis project.</em></p>
+<div id="week-5-putting-it-all-together-exploratory-project"
+class="section level3">
+<h3><a href="wk5.html" target="_blank">Week 5: Putting it all together:
+Exploratory Project</a></h3>
+<p><em>Now it’s time to put your new 1337 skillz to the test! You will
+conduct an exploratory data analysis project.</em></p>
 <hr />
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This content was developed by <a href="https://www.norcalbiostat.com">Robin Donatello</a> and <a href="https://www.csuchico.edu/math/people/faculty/lytal-nicholas.shtml">Nicholas Lytal</a> and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This
+content was developed by <a href="https://www.norcalbiostat.com">Robin
+Donatello</a> and
+<a href="https://www.csuchico.edu/math/people/faculty/lytal-nicholas.shtml">Nicholas
+Lytal</a> and is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative
+Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 </div>
 </div>
 

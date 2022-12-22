@@ -5,10 +5,6 @@
 \documentclass[
   11pt,
 ]{article}
-\title{Math 130: Introduction to R - Fall 22}
-\author{}
-\date{\vspace{-2.5em}}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -38,13 +34,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Math 130: Introduction to R - Fall 22},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
@@ -79,6 +68,17 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Math 130: Introduction to R - Spring 23},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Math 130: Introduction to R - Spring 23}
+\author{}
+\date{\vspace{-2.5em}}
 
 \begin{document}
 \maketitle
@@ -114,27 +114,45 @@ pre-specified data set or your data set of choice.
   \textbf{Discord Server:} \url{https://discord.gg/ck497bJty5}
 \end{itemize}
 
-\begin{longtable}[]{@{}lcc@{}}
-\toprule
-& Section 01 & Section 02 \\
-\midrule
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3243}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3378}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3378}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Section 01
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Section 02
+\end{minipage} \\
+\midrule()
 \endhead
-\textbf{Meeting Days} & 08/22/22 - 09/23/22 & 08/22/22 - 09/23/22 \\
-\textbf{Meeting Times} & MWF 9 - 9:50 am & MWF 10 - 10:50 am \\
-\textbf{Meeting Location} & Holt 291 & Holt 291 \\
-\textbf{Instructor} & Nicholas Lytal & Nicholas Lytal \\
-\textbf{Office Location} & Holt 106 & Holt 106 \\
+\textbf{Meeting Days} & 01/23/23 - 02/24/23 & 01/23/23 - 02/24/23 \\
+\textbf{Meeting Times} & No set meeting pattern & No set meeting
+pattern \\
+\textbf{Meeting Location} & Online & Online \\
+\textbf{Instructor} & Jane Guo & Jane Guo \\
+\textbf{Office Location} & Holt 150 & Holt 150 \\
 \textbf{E-mail} &
-\href{mailto:nlytal@csuchico.edu}{\nolinkurl{nlytal@csuchico.edu}} &
-\href{mailto:nlytal@csuchico.edu}{\nolinkurl{nlytal@csuchico.edu}} \\
-\bottomrule
+\href{mailto:jguo2@csuchico.edu}{\nolinkurl{jguo2@csuchico.edu}} &
+\href{mailto:jguo2@csuchico.edu}{\nolinkurl{jguo2@csuchico.edu}} \\
+\bottomrule()
 \end{longtable}
 
-\hypertarget{blackboard-learn-useage}{%
-\subsection{Blackboard Learn Useage}\label{blackboard-learn-useage}}
+\hypertarget{asynchronous-sections}{%
+\subsection{Asynchronous sections}\label{asynchronous-sections}}
 
-See the welcome page for your section in Blackboard Learn for specific
-information on how BBL will be used for your section.
+There are no set meeting times, but assignments still have due dates.
+Lectures are all pre-recorded and linked from the class website.
+Students work through the material and complete assignments at their own
+pace. See \href{notes/01b_async_protocol.html}{{[}this page{]}} for more
+details on the course format.
+
+\hypertarget{canvas-usage}{%
+\subsection{Canvas Usage}\label{canvas-usage}}
+
+See the welcome page for your section in Canvas for specific information
+on how Canvas will be used for your section.
 
 \hypertarget{student-support}{%
 \subsection{Student Support}\label{student-support}}
@@ -323,8 +341,8 @@ where you can continue to learn and improve.
 \section{Grading}\label{grading}}
 
 Credit / No Credit. There are 100 points available in this course. You
-must earn 75 points to receive credit for the course. See Blackboard
-Learn for instructions on how to submit your work and due dates.
+must earn \textbf{75} points to receive credit for the course. See
+Canvas for instructions on how to submit your work and due dates.
 
 \begin{itemize}
 \tightlist

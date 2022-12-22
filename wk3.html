@@ -13,7 +13,7 @@
 
 <title>Week 3</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -47,6 +47,7 @@
 
 
 
+
 <link rel="stylesheet" href="../css/yeti.css" type="text/css" />
 
 
@@ -71,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -128,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -161,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -170,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -223,7 +224,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -287,29 +288,41 @@ $(document).ready(function () {
 </div>
 
 
-<div id="introduction-to-wrangling-data-and-graphing." class="section level1">
+<div id="introduction-to-wrangling-data-and-graphing."
+class="section level1">
 <h1>Introduction to wrangling data and graphing.</h1>
-<p>This week you’ll learn how to streamline your data processing steps so you can get to making pretty pictures to win friends and influence people faster, and more effectively.</p>
+<p>This week you’ll learn how to streamline your data processing steps
+so you can get to making pretty pictures to win friends and influence
+people faster, and more effectively.</p>
 <hr />
 </div>
 <div id="prepare" class="section level1">
 <h1>📝 Prepare:</h1>
 <ul>
-<li>Download (<em>Right click, save as</em>) the RMD notes for both lessons and save into your <code>Math130/notes</code> folder.</li>
+<li>Download (<em>Right click, save as</em>) the RMD notes for both
+lessons and save into your <code>Math130/notes</code> folder.</li>
 </ul>
 <p><br></p>
 </div>
 <div id="notes" class="section level1">
 <h1>📚 Notes:</h1>
 <ul>
-<li>lec07 - Basic Graphing using <code>ggplot2</code> <a href="notes/07_plots.html">[HTML]</a> <a href="notes/07_plots.pdf">[PDF]</a> <a href="notes/07_plots_notes.Rmd">[RMD]</a></li>
-<li>lec08 - More data management and aggregation <code>dplyr</code> <a href="notes/08_dplyr.html">[HTML]</a> <a href="notes/08_dplyr.pdf">[PDF]</a> <a href="notes/08_dplyr_notes.Rmd">[RMD]</a></li>
+<li>lec07 - Basic Graphing using <code>ggplot2</code> <a
+href="notes/07_plots.html">[HTML]</a> <a
+href="notes/07_plots.pdf">[PDF]</a> <a
+href="notes/07_plots_notes.Rmd">[RMD]</a></li>
+<li>lec08 - More data management and aggregation <code>dplyr</code> <a
+href="notes/08_dplyr.html">[HTML]</a> <a
+href="notes/08_dplyr.pdf">[PDF]</a> <a
+href="notes/08_dplyr_notes.Rmd">[RMD]</a></li>
 </ul>
 <p><br></p>
 </div>
 <div id="assignment" class="section level1">
 <h1>✏️ Assignment:</h1>
-<p>Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.</p>
+<p>Right click and save these files in your Math 130 folder. You will
+write your answers directly in them and submit your assignment as
+instructed by the due date.</p>
 <ul>
 <li><a href="hw/hw3.Rmd">HW 3</a></li>
 <li><a href="notes/07_plots_notes.Rmd">Lec07 notes</a></li>
@@ -322,25 +335,56 @@ $(document).ready(function () {
 <ul>
 <li><p><code>ggplot</code></p>
 <ul>
-<li><p>Hands on learning with R Primers: Visualization Basics <a href="https://rstudio.cloud/learn/primers/1.1" class="uri">https://rstudio.cloud/learn/primers/1.1</a></p></li>
-<li><p><a href="https://rstudio.cloud/learn/cheat-sheets">ggplot2 cheat sheet</a>: Relevant sheet is <strong>Data Visualization</strong></p></li>
-<li><p>For a <strong>full</strong> , and comprehensive reference guide on how to do nearly anything in ggplot – this is by far my favorite reference <a href="http://www.cookbook-r.com/Graphs/" class="uri">http://www.cookbook-r.com/Graphs/</a> I reference things in there (like how to remove or change the title of a legend) constantly.</p></li>
-<li><p><a href="https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html">[The full set of lecture notes from which these notes were extracted.]</a>.</p></li>
-<li><p><a href="https://www.r-graph-gallery.com/">R graph gallery</a> Hundreds of charts with fully reproducible code to help inspire your visualizations.</p></li>
-<li><p>STHDA: Statistical tools for high-throughput data analysis. <a href="http://www.sthda.com/english/" class="uri">http://www.sthda.com/english/</a></p></li>
+<li><p>Hands on learning with R Primers: Visualization Basics <a
+href="https://rstudio.cloud/learn/primers/1.1"
+class="uri">https://rstudio.cloud/learn/primers/1.1</a></p></li>
+<li><p><a href="https://rstudio.cloud/learn/cheat-sheets">ggplot2 cheat
+sheet</a>: Relevant sheet is <strong>Data
+Visualization</strong></p></li>
+<li><p>For a <strong>full</strong> , and comprehensive reference guide
+on how to do nearly anything in ggplot – this is by far my favorite
+reference <a href="http://www.cookbook-r.com/Graphs/"
+class="uri">http://www.cookbook-r.com/Graphs/</a> I reference things in
+there (like how to remove or change the title of a legend)
+constantly.</p></li>
+<li><p><a
+href="https://norcalbiostat.github.io/AppliedStatistics_notes/data-viz.html">[The
+full set of lecture notes from which these notes were
+extracted.]</a>.</p></li>
+<li><p><a href="https://www.r-graph-gallery.com/">R graph gallery</a>
+Hundreds of charts with fully reproducible code to help inspire your
+visualizations.</p></li>
+<li><p>STHDA: Statistical tools for high-throughput data analysis. <a
+href="http://www.sthda.com/english/"
+class="uri">http://www.sthda.com/english/</a></p></li>
 </ul></li>
-<li><p><code>dplyr</code>: The ability to manipulate, arrange and clean up data is an extremely important skill to have. It is advised that you review at least one other tutorial method for using dplyr. Remember, it is all about practice. The more you use it the easier it will become!</p>
+<li><p><code>dplyr</code>: The ability to manipulate, arrange and clean
+up data is an extremely important skill to have. It is advised that you
+review at least one other tutorial method for using dplyr. Remember, it
+is all about practice. The more you use it the easier it will
+become!</p>
 <ul>
-<li>A colorful and in-progress look at using dplyr with penguin data (by Allison Horst): <a href="https://allisonhorst.shinyapps.io/dplyr-learnr/" class="uri">https://allisonhorst.shinyapps.io/dplyr-learnr/</a></li>
-<li>Hands on learning with R Primers: Isolating data with dplyr: <a href="https://rstudio.cloud/learn/primers/2.2" class="uri">https://rstudio.cloud/learn/primers/2.2</a></li>
-<li><a href="https://rstudio.cloud/learn/cheat-sheets">dplyr cheat sheets</a>: Relevant sheet is <strong>Data Transformation</strong></li>
-<li><a href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html">Dplyr vignette</a></li>
-<li><a href="https://www.youtube.com/watch?v=jWjqLW-u3hc">Hands-on dplyr tutorial for faster data manipulation in R</a> You Tube video by Data School</li>
-<li>UBC STAT 545 (this class is awesome!) <a href="http://stat545.com" class="uri">http://stat545.com</a></li>
+<li>A colorful and in-progress look at using dplyr with penguin data (by
+Allison Horst): <a
+href="https://allisonhorst.shinyapps.io/dplyr-learnr/"
+class="uri">https://allisonhorst.shinyapps.io/dplyr-learnr/</a></li>
+<li>Hands on learning with R Primers: Isolating data with dplyr: <a
+href="https://rstudio.cloud/learn/primers/2.2"
+class="uri">https://rstudio.cloud/learn/primers/2.2</a></li>
+<li><a href="https://rstudio.cloud/learn/cheat-sheets">dplyr cheat
+sheets</a>: Relevant sheet is <strong>Data Transformation</strong></li>
+<li><a
+href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html">Dplyr
+vignette</a></li>
+<li><a href="https://www.youtube.com/watch?v=jWjqLW-u3hc">Hands-on dplyr
+tutorial for faster data manipulation in R</a> You Tube video by Data
+School</li>
+<li>UBC STAT 545 (this class is awesome!) <a href="http://stat545.com"
+class="uri">http://stat545.com</a></li>
 </ul></li>
 </ul>
 <hr />
-<p><em>Last Updated 2022-01-09</em></p>
+<p><em>Last Updated 2022-12-22</em></p>
 </div>
 
 

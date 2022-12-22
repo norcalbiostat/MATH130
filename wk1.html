@@ -13,7 +13,7 @@
 
 <title>Week 1</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -47,6 +47,7 @@
 
 
 
+
 <link rel="stylesheet" href="../css/yeti.css" type="text/css" />
 
 
@@ -71,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -128,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -161,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -170,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -223,7 +224,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -289,26 +290,38 @@ $(document).ready(function () {
 
 <div id="getting-started-with-r-and-r-studio" class="section level1">
 <h1>Getting started with R and R Studio</h1>
-<p>This week we will introduce you to this short course, and how to use your new tools R and R Markdown.</p>
+<p>This week we will introduce you to this short course, and how to use
+your new tools R and R Markdown.</p>
 <hr />
 </div>
 <div id="notes" class="section level1">
 <h1>📚 Notes</h1>
 <ul>
-<li>lec01-Introduction to the class <a href="notes/01_intro_slides.html">[Slides]</a><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+01/1_aabrfqyh">[Video]</a></li>
-<li>lec02-Introduction to your new tools <a href="notes/02_setup_slides.html">[Slides]</a><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+02/1_raxre60u">[Video]</a></li>
-<li>lec03-Introduction to R Markdown <a href="notes/03_rmd_slides.html">[Slides]</a><a href="https://media.csuchico.edu/media/MATH+130+-+Lecture+03/1_8mgzdu9h">[Video]</a></li>
-<li>lec04-Introduction to R <a href="notes/04_r.html">[HTML]</a><a href="notes/04_r_notes.Rmd">[RMD notes]</a></li>
+<li>lec01-Introduction to the class <a
+href="notes/01_intro_slides.html">[Slides]</a><a
+href="https://media.csuchico.edu/media/MATH+130+-+Lecture+01/1_aabrfqyh">[Video]</a></li>
+<li>lec02-Introduction to your new tools <a
+href="notes/02_setup_slides.html">[Slides]</a><a
+href="https://media.csuchico.edu/media/MATH+130+-+Lecture+02/1_raxre60u">[Video]</a></li>
+<li>lec03-Introduction to R Markdown <a
+href="notes/03_rmd_slides.html">[Slides]</a><a
+href="https://media.csuchico.edu/media/MATH+130+-+Lecture+03/1_8mgzdu9h">[Video]</a></li>
+<li>lec04-Introduction to R <a href="notes/04_r.html">[HTML]</a><a
+href="notes/04_r_notes.Rmd">[RMD notes]</a></li>
 </ul>
 <p><br></p>
 </div>
 <div id="assignments" class="section level1">
 <h1>✏️ Assignments</h1>
-<p>Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.</p>
+<p>Right click and save these files in your Math 130 folder. You will
+write your answers directly in them and submit your assignment as
+instructed by the due date.</p>
 <ul>
 <li><a href="hw/hw1.Rmd">Homework 1</a>
 <ul>
-<li>Need help getting started? <a href="https://media.csuchico.edu/media/MATH130%20-%20Extra%20Video%20(Jan%2029)/1_9nsoxdy9">Dr. Lytals help video</a></li>
+<li>Need help getting started? <a
+href="https://media.csuchico.edu/media/MATH130%20-%20Extra%20Video%20(Jan%2029)/1_9nsoxdy9">Dr. Lytals
+help video</a></li>
 </ul></li>
 <li><a href="notes/04_r_notes.Rmd">Lecture 04 notes</a></li>
 </ul>
@@ -316,22 +329,44 @@ $(document).ready(function () {
 </div>
 <div id="bonus-material" class="section level1">
 <h1>🏆 Bonus Material</h1>
-<p>If you are simultaneously taking MATH 130 and another stats course (e.g. Math 315, or Math 615), it will save you a bit of headache to keep your R work for these two classes separate. You can use R Projects to act as containers where you can work on one project/class at a time.</p>
+<p>If you are simultaneously taking MATH 130 and another stats course
+(e.g. Math 315, or Math 615), it will save you a bit of headache to keep
+your R work for these two classes separate. You can use R Projects to
+act as containers where you can work on one project/class at a time.</p>
 <ul>
-<li><a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">Article from RStudio</a></li>
-<li><a href="https://media.csuchico.edu/media/218-MATH130-02-1766/1_98rasme3">Dr. D’s walk through from Fall 21 🎦</a></li>
+<li><a
+href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">Article
+from RStudio</a></li>
+<li><a
+href="https://media.csuchico.edu/media/218-MATH130-02-1766/1_98rasme3">Dr. D’s
+walk through from Fall 21 🎦</a></li>
 </ul>
 </div>
 <div id="additional-resources" class="section level1">
 <h1>🤔 Additional Resources</h1>
 <ul>
-<li><p>R Markdown from R Studio <a href="http://rmarkdown.rstudio.com/lesson-1.html" class="uri">http://rmarkdown.rstudio.com/lesson-1.html</a></p></li>
-<li><p>R Primer: Programming Basics <a href="https://rstudio.cloud/learn/primers/1.2" class="uri">https://rstudio.cloud/learn/primers/1.2</a></p></li>
-<li><p>Cheat Sheets for <a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf">RStudio</a>, <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf">R Markdown</a>, and <a href="http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf">Base R</a>. <em>Need a translated version? See the bottom of the <a href="https://rstudio.com/resources/cheatsheets/">RStudio resources page</a></em></p></li>
-<li><p>A paper on <a href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a> concepts. Important read for graduate students or any student doing their own research.</p></li>
+<li><p>R Markdown from R Studio <a
+href="http://rmarkdown.rstudio.com/lesson-1.html"
+class="uri">http://rmarkdown.rstudio.com/lesson-1.html</a></p></li>
+<li><p>R Primer: Programming Basics <a
+href="https://rstudio.cloud/learn/primers/1.2"
+class="uri">https://rstudio.cloud/learn/primers/1.2</a></p></li>
+<li><p>Cheat Sheets for <a
+href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf">RStudio</a>,
+<a
+href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf">R
+Markdown</a>, and <a
+href="http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf">Base
+R</a>. <em>Need a translated version? See the bottom of the <a
+href="https://rstudio.com/resources/cheatsheets/">RStudio resources
+page</a></em></p></li>
+<li><p>A paper on <a
+href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a>
+concepts. Important read for graduate students or any student doing
+their own research.</p></li>
 </ul>
 <hr />
-<p><em>Last Updated 2022-01-22</em></p>
+<p><em>Last Updated 2022-12-22</em></p>
 </div>
 
 
