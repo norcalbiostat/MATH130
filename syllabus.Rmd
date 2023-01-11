@@ -14,7 +14,7 @@ header-includes:
 [[Download this syllabus as a PDF]](syllabus.pdf)
 
 # Course Description
-This course is designed as a primer to get the complete novice up and running with the basic knowledge of how to use the statistical programming language R in an environment that emphasizes reproducible research and literate programming for data analysis. The target audience is anyone who wants to do their own data analysis. The course will cumulate with an peer-evaluated exploratory data analysis on either a pre-specified data set or your data set of choice.
+This course is designed as a primer to get the complete novice up and running with the basic knowledge of how to use the statistical programming language R in an environment that emphasizes reproducible research and literate programming for data analysis. The target audience is anyone who wants to do their own data analysis. The course will cumulate with a peer-evaluated exploratory data analysis on either a pre-specified data set or your data set of choice.
 
 
 # Logistics
