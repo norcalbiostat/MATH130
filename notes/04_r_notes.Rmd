@@ -61,7 +61,7 @@ Let's look into the `round` function.
 
 ```
 
-We see that if we want a different number of digits, we cantype `digits = 2` or however many we want.
+We see that if we want a different number of digits, we can type `digits = 2` or however many we want.
 
 ```{r}
 
@@ -126,7 +126,7 @@ You can use the function `class()` to see what data type a vector is.
 
 ```
 
-If you combine letters and numbers, everything will be treated as a number. 
+If you combine letters and numbers, everything will be treated as characters. 
 ```{r}
 
 ```
