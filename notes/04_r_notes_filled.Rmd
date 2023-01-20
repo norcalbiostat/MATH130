@@ -131,7 +131,7 @@ class(weight_g)
 class(animals)
 ```
 
-If you combine letters and numbers, everything will be treated as a number. 
+If you combine letters and numbers, everything will be treated as a character. 
 ```{r}
 (mix_match <- c(weight_g, animals))
 class(mix_match)
