@@ -57,33 +57,6 @@ Any other data sets require instructor approval. Data sets such as the `plants` 
 * Upload your final project as directed by your instructor. 
 
 
-
-
-# Peer Review
-
-After the submission deadline, your analysis projects will be randomly assigned to two other people to peer review and score. This means you will also score and provide feedback on 2 reports. Your instructor will also score all projects for your class section.
-
-
-How to do your reviews: 
-
-> update this to make it more generic and not in google drive
-
-1. The morning after the due date you will be emailed a link to the peer review spreadsheet in Google Drive. This is where you can find the names of the people you are assigned to review. 
-2. Go to the [[project page]](https://norcalbiostat.github.io/peer_review/math130_eda.html) and download the projects you are assigned to review. 
-3. Using the commenting feature provide 4 comments for each project.
-    - Two positive: What specific features did they include that you liked or found helpful?
-    - Two improvements: What can they do different or better next time? Did you find a bug in their code?
-4. Score each project using this [[Google Form]](https://forms.gle/UJKJReDdjQh5Chvp8).
-    - This data entry form follows the scoring rubric printed below in this document.
-    - You will upload your review to this form as well.
-
-> How to add comments
-
-> * [MS Word](https://support.microsoft.com/en-us/office/insert-delete-or-change-a-comment-5cb1af25-4dfe-4484-9713-2c80391ecf12)
-
-> * [Adobe Reader](https://helpx.adobe.com/acrobat/using/commenting-pdfs.html)
-
-
 # Guidelines
 
 * Knit early and often. As often as every time you include a new R code chunk.
@@ -93,16 +66,9 @@ How to do your reviews:
 * This is to be independent work. Papers that are too similar will receive no credit.
 * Look at the grading rubric to help you decide the level of detail required.
 
-# Grading
-* Your final project grade will be a weighted average of 30% peer reviews ($\bar{PR}$) and 70% instructor review ($IR$): $(.3*\bar{PR} + .7*IR)$.
-* Your submission is worth 20 points, the peer review is 5 pts.
 
-
-\newpage
-
-## Scoring Rubric
-The criteria below is what you will be graded on. Below each criteria is an example of the points awarded for the level of competency. Use this criteria when you score your peers reports.
-
+# Scoring Rubric
+The criteria below is what you will be graded on. 
 
 1. **Data Description**: Provide a description of the data set and the variables of interest.
     - (Novice) There is no description or the description is a copy of the help file.

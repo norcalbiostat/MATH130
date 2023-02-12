@@ -9,7 +9,7 @@ output:
 
 # Exploratory Data Analysis
 
-Now it's time to put your new 1337 skillz to the test! You will conduct an exploratory data analysis project. 
+Now it's time to put your new 1337 skillz to the test! You will conduct an exploratory data analysis project (EDA). When doing an EDA you are _only_ looking at (exploring) the data and learning about the data and possible relationships between variables. Describe only, no stats!
 
 ---
 
@@ -17,10 +17,12 @@ Now it's time to put your new 1337 skillz to the test! You will conduct an explo
 
 # `r emo::ji("pencil2")` Assignment
 
-Exploratory Data Analysis Project - With Peer Review
 
 
-[[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf). 
+<!---
+Exploratory Data Analysis Project - With Peer Review [[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf)
+--->
+Exploratory Data Analysis Project [[HTML]](hw/EDA_instructions_noPR.html) [[PDF]](hw/EDA_instructions_noPR.pdf)
 
 <br>
 
