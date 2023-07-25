@@ -1,6 +1,6 @@
 ---
 title: "Homework 2"
-author: "NAME"
+author: "PUT YOUR NAME HERE"
 date: "DATE"
 output:
   pdf_document: default
