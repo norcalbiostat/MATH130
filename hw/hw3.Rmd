@@ -1,6 +1,6 @@
 ---
 title: "Homework 3"
-author: "NAME"
+author: "ENTER STUDENT ID"
 date: "DATE"
 output:
   html_document: default
