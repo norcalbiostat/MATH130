@@ -1,6 +1,6 @@
 ---
 title: "Homework 1"
-author: "NAME"
+author: "ENTER STUDENT ID"
 date: "DATE"
 output:
   pdf_document: default
