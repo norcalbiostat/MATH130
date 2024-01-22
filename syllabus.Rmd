@@ -1,10 +1,10 @@
 ---
-title: "Math 130: Introduction to R - Spring 23"
+title: "Math 130: Introduction to R - Spring 24"
 fontsize: 11pt
 output:
-  html_document: default
   pdf_document:
     keep_tex: yes
+  html_document: default
 header-includes:
   - \RequirePackage{accsupp}
   - \RequirePackage{pdfcomment}
@@ -14,7 +14,7 @@ header-includes:
 [[Download this syllabus as a PDF]](syllabus.pdf)
 
 # Course Description
-This course is designed as a primer to get the complete novice up and running with the basic knowledge of how to use the statistical programming language R in an environment that emphasizes reproducible research and literate programming for data analysis. The target audience is anyone who wants to do their own data analysis. The course will cumulate with a peer-evaluated exploratory data analysis on either a pre-specified data set or your data set of choice.
+This course is designed as a primer to get the complete novice up and running with the basic knowledge of how to use the statistical programming language R in an environment that emphasizes reproducible research and literate programming for data analysis. The target audience is anyone who wants to do their own data analysis. The course will culminate with a peer-evaluated exploratory data analysis on either a pre-specified data set or your data set of choice.
 
 
 # Logistics
@@ -26,16 +26,16 @@ This course is designed as a primer to get the complete novice up and running wi
 
 |                        |        Section 01       |       Section 02        |
 |:-----------------------|:-----------------------:|:-----------------------:|
-| **Meeting Days**       | 01/23/23 - 02/24/23     |  01/23/23 - 02/24/23    |
-| **Meeting Times**      | No set meeting pattern  |  No set meeting pattern |
-| **Meeting Location**   | Online                |  Online                 |
-| **Instructor**         | Jane Guo                |  Jane Guo       |
-| **Office Location**    | Holt 150                |  Holt 150               |
-| **E-mail**             | jguo2@csuchico.edu     |  jguo2@csuchico.edu |
+| **Meeting Days**       | 01/22/24 - 02/23/24     |  01/22/23 - 02/23/24    |
+| **Meeting Times**      | (Asynchronous)          |  (Asynchronous) |
+| **Meeting Location**   | (Asynchronous)              |  (Asynchronous)                |
+| **Instructor**         | Nick Lytal               |  Nick Lytal       |
+| **Office Location**    | Holt 106                |  Holt 106               |
+| **E-mail**             | nlytal@csuchico.edu     |  nlytal@csuchico.edu |
 
 ## Asynchronous sections
-<!-- At least one section of this class is fully online, asynchronous. --> 
-There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01c_async_protocol.html) for more details on the course format.  
+Both sections of this class are fully online, asynchronous.
+There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01c_async_protocol.html) for more details on the course format.
 
 ## Canvas Usage
 See the welcome page for your section in Canvas for specific information on how Canvas will be used for your section. 
@@ -92,8 +92,8 @@ The general outline of topics is listed below. A detailed most up to date schedu
 #### Software
 If you have your own PC/Mac/*nix computer, you are advised to install  R and R Studio on your personal computer. That way you can take what you've learned in this class and apply it to other classes. Both are free. Walk through installation instructions can be found here: https://norcalbiostat.netlify.com/post/software-overview/
 
-* R version 4.1.0 or later. Download from https://cran.r-project.org/
-* R Studio version 1.40 or later. Download the desktop version from https://www.rstudio.com/products/rstudio/download/#download
+* R version 4.3.2 or later. Download from https://cran.r-project.org/
+* R Studio version 2023.12.0-369 or later. Download the desktop version from https://www.rstudio.com/products/rstudio/download/#download
 
 Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the [Wildcat virtual lab](https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333), or sign up for R Studio Cloud (https://rstudio.cloud/). The free or $5/month plan should be sufficient.  
 
@@ -133,25 +133,27 @@ We would like to create a learning environment that supports a diversity of thou
 
 _Adapted from [Monica Linden at Brown University](https://www.brown.edu/sheridan/teaching-learning-resources/inclusive-teaching/statements)_.
 
-Furthermore, we would like to acknowledge that we are meeting on the traditional lands of the Mechoopda people. Without them, we would not have access to this campus or our education.
-
+We acknowledge and are mindful that Chico State stands on lands that were originally oc-
+cupied by the first people of this area, the Mechoopda, and we recognize their distinctive
+spiritual relationship with this land, the flora, the fauna, and the waters that run through
+campus. We are humbled that our campus resides upon sacred lands that since time immemorial have sustained the Mechoopda people and continue to do so today.
 
 ----
 
 # University Policies and Campus Resources
 
 ### Adding and Dropping the course
-This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/2/22. No adds or drops are allowed after 9/16/22 without a serious and compelling reason approved by the instructor, department chair, and college dean.
+This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 2/2/24. No adds or drops are allowed after 2/16/24 without a serious and compelling reason approved by the instructor, department chair, and college dean.
 
 ### Academic Integrity
 Students are expected to be familiar with the University’s Academic Integrity Policy. Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. Faculty members are required to report all infractions to the Office of Student Judicial Affairs. The policy on academic integrity and other resources related to student conduct can be found on the Student Judicial Affairs web site at http://www.csuchico.edu/sjd/integrity.shtml.
 
+### AI and ChatGPT Policy
+AI writing tools are not permitted for any stage or phase of work in this class. If you use these tools, your actions will be considered academically dishonest, and a violation of Chico State's Integrity Policy and you may be reported to the Office of Students Rights and Responsibilities.
 
 ### IT Support Services
 
 Computer labs for student use are located on the first and fourth floor of the Meriam Library, Room 116 and 450, Tehama Hall Room 131, and the Bell Memorial Union (BMU) basement. You can get help using your computer from IT Support Services; contact them through the ITSS web site at http://www.csuchico.edu/itss. Additional labs may be available to students in your department or college.
-
-**Due to the ongoing COVID-19 pandemic, students should check online for any hour restrictions in place for access to the Library or ITSS.**
 
 
 
