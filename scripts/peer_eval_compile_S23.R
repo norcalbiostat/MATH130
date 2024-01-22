@@ -4,14 +4,13 @@ library(dplyr)
 # New users may have to authorize googlesheets4 to access the GDrive API first. 
 
 # read the data into a data frame
-pr_raw <- read_sheet("https://docs.google.com/spreadsheets/d/11nc5-7z2cS0mLbhP-Va9C3xJZX-16mr5an2cJ-Dm2dM/edit#gid=607569915")
+pr_raw <- read_sheet("https://docs.google.com/spreadsheets/d/17VhpLa9AZOkeOUYtxyog5NwXL389HLKP7v8VqVmDdSU/edit#gid=1340211106")
 
 # rename to usable names
-names(pr_raw) <- c("timestamp", "email", "author", "desc", "univ", "bivar","org","upload")
-
+names(pr_raw) <- c("timestamp", "author", "repro", "desc", "univ", "univ2", "bivar", "summary", "org", "email", "blank", "upload")
 
 # drop all but this semester (update timestamps where needed)
-pr <- pr_raw %>% filter(as.Date(timestamp) > "2023-08-01" & as.Date(timestamp) < "2023-12-04") 
+pr <- pr_raw %>% filter(as.Date(timestamp) > "2022-08-01" & as.Date(timestamp) < "2022-12-01") 
 
 
 # Identify instructor review vs peer review
@@ -19,7 +18,7 @@ pr$IR <- ifelse(grepl("rdonatello|nlytal|eroualdes|klgray", pr$email), "Instruct
 pr$IR[is.na(pr$IR)] <- "Peer Review"
 
 # average score per review
-pr <- pr %>% mutate(score = rowMeans(pr[,c('desc', 'univ', 'bivar', 'org')], 
+pr <- pr %>% mutate(score = rowMeans(pr[,c('repro', 'desc', 'univ', 'bivar', 'org')], 
                                      na.rm=TRUE), 
                     author = tolower(author))
 

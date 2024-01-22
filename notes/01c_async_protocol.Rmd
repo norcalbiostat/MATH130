@@ -1,7 +1,7 @@
 ---
 title: "Lesson 01c"
 subtitle: "Asynchronous class protocol"
-author: "Math 130 - Dr. Robin Donatello, Dr. Jane Guo (updated for spring 2023)"
+author: "Math 130 - Dr. Nick Lytal (updated for spring 2024)"
 date: "_Last updated: `r format(Sys.Date(), '%b %d, %Y')`_"
 output:
   xaringan::moon_reader:
