@@ -35,7 +35,7 @@ This course is designed as a primer to get the complete novice up and running wi
 
 ## Asynchronous sections
 Both sections of this class are fully online, asynchronous.
-There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01c_async_protocol.html) for more details on the course format.
+There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](https://norcalbiostat.github.io/MATH130/notes/01c_async_protocol.html) for more details on the course format.
 
 ## Canvas Usage
 See the welcome page for your section in Canvas for specific information on how Canvas will be used for your section. 
