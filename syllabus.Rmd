@@ -2,9 +2,9 @@
 title: "Math 130: Introduction to R - Spring 24"
 fontsize: 11pt
 output:
+  html_document: default
   pdf_document:
     keep_tex: yes
-  html_document: default
 header-includes:
   - \RequirePackage{accsupp}
   - \RequirePackage{pdfcomment}
