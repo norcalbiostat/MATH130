@@ -110,7 +110,7 @@ class(tricky)
     - Thursday you lost $350
     - Friday you won $10
 
-_Hint: If I won $30 on monday and lost $20 on tuesday, my vector would look like `c(30, -20)`_
+_Hint: If I won $30 on Monday and lost $20 on Tuesday, my vector would look like `c(30, -20)`_
 
 ```{r}
 weekday <- c("mon", "tue", "wed", "thu", "fri")
@@ -127,7 +127,7 @@ sum(poker) > sum(roulette)
 ```
 * We gained `$230` on poker and lost `$314` on roulette. We did better on poker game.   
 
-4. Add the results of both vectors together, then calculate your net gain over the weekend. Did you come out ahead?
+4. Add the results of both vectors together, then calculate your net gain over the week. Did you gain or lose money in the end?
 
 ```{r}
 sum(poker+roulette)
