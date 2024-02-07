@@ -13,6 +13,7 @@ If it does not, try to understand what the error message is telling you. Refer t
 ```{r}
 library(forcats)
 email <- openintro::email
+ff <- openintro::fastfood
 ```
 
 ----
