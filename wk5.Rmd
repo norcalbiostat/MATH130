@@ -19,11 +19,11 @@ Now it's time to put your new 1337 skillz to the test! You will conduct an explo
 
 
 
-<!---
-Exploratory Data Analysis Project - With Peer Review [[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf)
---->
-Exploratory Data Analysis Project [[HTML]](hw/EDA_instructions_noPR.html) [[PDF]](hw/EDA_instructions_noPR.pdf)
 
+Exploratory Data Analysis Project - With Peer Review [[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf)
+<!---
+Exploratory Data Analysis Project [[HTML]](hw/EDA_instructions_noPR.html) [[PDF]](hw/EDA_instructions_noPR.pdf)
+--->
 <br>
 
 Examples of previous class projects can be seen [[here]](https://norcalbiostat.github.io/peer_review/math130_eda.html).
