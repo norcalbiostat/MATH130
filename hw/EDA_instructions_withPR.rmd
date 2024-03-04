@@ -1,14 +1,14 @@
 ---
 title: "Exploratory Data Analysis Project"
 output:
-  pdf_document:
-    toc: no
   html_document:
     css: ../css/yeti.css
     highlight: tango
     theme: yeti
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: no
 ---
 
 Time to put everything you learned in this class into action. In an exploratory data analysis (EDA) you are just looking at (exploring) the data and learning about the data and possible relationships between variables. This is not a formal statistical analysis, you cannot make any claims about groups being statistically different. This is just descriptive. You are allowed and encouraged to hypothesize why you observe certain relationships or data characteristics, just be sure not to draw any conclusions from the data.
@@ -54,7 +54,7 @@ Any other data sets require instructor approval. Data sets such as the `plants` 
 * To allow for adequate time for peer grading the submission deadline is a strict cutoff. Really late assignments won't be accepted.
 * You must name your file **EDA_username** and knit to PDF. 
     - **If you knit to HTML, you must open & save the resulting file as PDF so it can be commented on.**
-* Upload your final project as directed by your instructor. 
+* Upload your final project to this [Google Drive folder](https://drive.google.com/drive/folders/1E82ApqD9rnLcpCaCsYaYnFPZDs5NSVVS?usp=sharing) by the due date.
 
 
 
