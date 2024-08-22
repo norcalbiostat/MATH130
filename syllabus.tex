@@ -6,16 +6,19 @@
   11pt,
 ]{article}
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -68,9 +71,9 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Math 130: Introduction to R - Spring 24},
   hidelinks,
@@ -85,8 +88,7 @@
 
 \href{syllabus.pdf}{{[}Download this syllabus as a PDF{]}}
 
-\hypertarget{course-description}{%
-\section{Course Description}\label{course-description}}
+\section{Course Description}\label{course-description}
 
 This course is designed as a primer to get the complete novice up and
 running with the basic knowledge of how to use the statistical
@@ -96,8 +98,7 @@ is anyone who wants to do their own data analysis. The course will
 culminate with a peer-evaluated exploratory data analysis on either a
 pre-specified data set or your data set of choice.
 
-\hypertarget{logistics}{%
-\section{Logistics}\label{logistics}}
+\section{Logistics}\label{logistics}
 
 \begin{itemize}
 \tightlist
@@ -114,51 +115,38 @@ pre-specified data set or your data set of choice.
   \textbf{Discord Server:} \url{https://discord.gg/ck497bJty5}
 \end{itemize}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3243}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3378}}
-  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3378}}@{}}
-\toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Section 01
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Section 02
-\end{minipage} \\
-\midrule()
+\begin{longtable}[]{@{}lc@{}}
+\toprule\noalign{}
+& Section 01 \\
+\midrule\noalign{}
 \endhead
-\textbf{Meeting Days} & 01/22/24 - 02/23/24 & 01/22/23 - 02/23/24 \\
-\textbf{Meeting Times} & (Asynchronous) & (Asynchronous) \\
-\textbf{Meeting Location} & (Asynchronous) & (Asynchronous) \\
-\textbf{Instructor} & Nick Lytal & Nick Lytal \\
-\textbf{Office Location} & Holt 106 & Holt 106 \\
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Meeting Days} & 01/22/24 - 02/23/24 \\
+\textbf{Meeting Times} & MWF 9:00 am - 9:50 am \\
+\textbf{Meeting Location} & Holt 185 \\
+\textbf{Instructor} & Jing (Jane) Guo \\
+\textbf{Office Location} & Holt 150 \\
 \textbf{E-mail} &
-\href{mailto:nlytal@csuchico.edu}{\nolinkurl{nlytal@csuchico.edu}} &
-\href{mailto:nlytal@csuchico.edu}{\nolinkurl{nlytal@csuchico.edu}} \\
-\bottomrule()
+\href{mailto:jguo2@csuchico.edu}{\nolinkurl{jguo2@csuchico.edu}} \\
 \end{longtable}
 
-\hypertarget{asynchronous-sections}{%
-\subsection{Asynchronous sections}\label{asynchronous-sections}}
+\subsection{Course structure}\label{course-structure}
 
-Both sections of this class are fully online, asynchronous. There are no
-set meeting times, but assignments still have due dates. Lectures are
-all pre-recorded and linked from the class website. Students work
-through the material and complete assignments at their own pace. See
-\href{https://norcalbiostat.github.io/MATH130/notes/01c_async_protocol.html}{{[}this
-page{]}} for more details on the course format.
+This is a flipped classroom. Before set meeting times, students are
+expected to watch the video lectures. Lectures are all pre-recorded and
+linked from the class website. During class meeting time, students
+complete assignments at their own pace and ask the instructor questions
+when needed.
 
-\hypertarget{canvas-usage}{%
-\subsection{Canvas Usage}\label{canvas-usage}}
+\subsection{Canvas Usage}\label{canvas-usage}
 
 See the welcome page for your section in Canvas for specific information
 on how Canvas will be used for your section.
 
-\hypertarget{student-support}{%
-\subsection{Student Support}\label{student-support}}
+\subsection{Student Support}\label{student-support}
 
-\hypertarget{discord}{%
-\subsubsection{Discord}\label{discord}}
+\subsubsection{Discord}\label{discord}
 
 To facilitate peer to peer and effective instructor to peer assistance
 Discord will be used for discussion and questions outside of class. This
@@ -182,8 +170,7 @@ classes, with a specific channel for all sections of Math 130.
   to use Discord in week 1.
 \end{enumerate}
 
-\hypertarget{community-coding.}{%
-\subsubsection{Community Coding.}\label{community-coding.}}
+\subsubsection{Community Coding.}\label{community-coding.}
 
 Similar to drop in Mathematics tutoring hours, students, staff, faculty,
 and the public are invited to join our Community Coding sessions. Bring
@@ -198,8 +185,7 @@ direct instructor assistance.
   \url{https://www.csuchico.edu/datascience/community-coding.shtml}
 \end{itemize}
 
-\hypertarget{learning-outcomes}{%
-\section{Learning Outcomes}\label{learning-outcomes}}
+\section{Learning Outcomes}\label{learning-outcomes}
 
 By the end of the course, students will be able to
 
@@ -223,8 +209,7 @@ By the end of the course, students will be able to
   Conduct an exploratory data analysis in a reproducible manner.
 \end{itemize}
 
-\hypertarget{schedule-of-topics}{%
-\section{Schedule of Topics}\label{schedule-of-topics}}
+\section{Schedule of Topics}\label{schedule-of-topics}
 
 The general outline of topics is listed below. A detailed most up to
 date schedule can be found on the course website.
@@ -276,8 +261,7 @@ date schedule can be found on the course website.
   Week 5: Exploratory Data Analysis (individual project)
 \end{itemize}
 
-\hypertarget{required-materials}{%
-\section{Required Materials}\label{required-materials}}
+\section{Required Materials}\label{required-materials}
 
 \begin{itemize}
 \tightlist
@@ -288,8 +272,7 @@ date schedule can be found on the course website.
   Reliable internet connection while on and off campus.
 \end{itemize}
 
-\hypertarget{software}{%
-\paragraph{Software}\label{software}}
+\paragraph{Software}\label{software}
 
 If you have your own PC/Mac/*nix computer, you are advised to install R
 and R Studio on your personal computer. That way you can take what
@@ -315,8 +298,7 @@ virtual lab}, or sign up for R Studio Cloud
 (\url{https://rstudio.cloud/}). The free or \$5/month plan should be
 sufficient.
 
-\hypertarget{time-commitment}{%
-\section{Time Commitment}\label{time-commitment}}
+\section{Time Commitment}\label{time-commitment}
 
 \begin{quote}
 For all CSU degree programs and courses bearing academic credit, the
@@ -338,8 +320,7 @@ learn everything there is to know about R, nor likely not feel
 proficient by the time you are done. But you will be solidly on the path
 where you can continue to learn and improve.
 
-\hypertarget{grading}{%
-\section{Grading}\label{grading}}
+\section{Grading}\label{grading}
 
 Credit / No Credit. There are 100 points available in this course. You
 must earn \textbf{75} points to receive credit for the course. See
@@ -365,12 +346,10 @@ Canvas for instructions on how to submit your work and due dates.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{class-policies-and-statements}{%
 \section{Class Policies and
-statements}\label{class-policies-and-statements}}
+statements}\label{class-policies-and-statements}
 
-\hypertarget{everyone-is-welcome-here}{%
-\subsection{Everyone is welcome here}\label{everyone-is-welcome-here}}
+\subsection{Everyone is welcome here}\label{everyone-is-welcome-here}
 
 It is our intent that students from all diverse backgrounds and
 perspectives be well-served by this course, that students' learning
@@ -425,23 +404,20 @@ to do so today.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{university-policies-and-campus-resources}{%
 \section{University Policies and Campus
-Resources}\label{university-policies-and-campus-resources}}
+Resources}\label{university-policies-and-campus-resources}
 
-\hypertarget{adding-and-dropping-the-course}{%
 \subsubsection{Adding and Dropping the
-course}\label{adding-and-dropping-the-course}}
+course}\label{adding-and-dropping-the-course}
 
 This course only runs for a few weeks and all materials are available on
 the course website. It will be difficult to get caught up if you add the
 class after the first week. The last day to add or drop classes without
-special permission by the instructor is 2/2/24. No adds or drops are
-allowed after 2/16/24 without a serious and compelling reason approved
-by the instructor, department chair, and college dean.
+special permission by the instructor is 9/6/24. No adds or drops are
+allowed after 9/6/24 without a serious and compelling reason approved by
+the instructor, department chair, and college dean.
 
-\hypertarget{academic-integrity}{%
-\subsubsection{Academic Integrity}\label{academic-integrity}}
+\subsubsection{Academic Integrity}\label{academic-integrity}
 
 Students are expected to be familiar with the University's Academic
 Integrity Policy. Your own commitment to learning, as evidenced by your
@@ -453,8 +429,7 @@ and other resources related to student conduct can be found on the
 Student Judicial Affairs web site at
 \url{http://www.csuchico.edu/sjd/integrity.shtml}.
 
-\hypertarget{ai-and-chatgpt-policy}{%
-\subsubsection{AI and ChatGPT Policy}\label{ai-and-chatgpt-policy}}
+\subsubsection{AI and ChatGPT Policy}\label{ai-and-chatgpt-policy}
 
 AI writing tools are not permitted for any stage or phase of work in
 this class. If you use these tools, your actions will be considered
@@ -462,8 +437,7 @@ academically dishonest, and a violation of Chico State's Integrity
 Policy and you may be reported to the Office of Students Rights and
 Responsibilities.
 
-\hypertarget{it-support-services}{%
-\subsubsection{IT Support Services}\label{it-support-services}}
+\subsubsection{IT Support Services}\label{it-support-services}
 
 Computer labs for student use are located on the first and fourth floor
 of the Meriam Library, Room 116 and 450, Tehama Hall Room 131, and the
@@ -472,9 +446,8 @@ from IT Support Services; contact them through the ITSS web site at
 \url{http://www.csuchico.edu/itss}. Additional labs may be available to
 students in your department or college.
 
-\hypertarget{americans-with-disabilities-act}{%
 \subsubsection{Americans with Disabilities
-Act}\label{americans-with-disabilities-act}}
+Act}\label{americans-with-disabilities-act}
 
 If you need course adaptations or accommodations because of a disability
 or chronic illness, or if you need to make special arrangements in case
@@ -491,9 +464,8 @@ Accessibility Resource Center 530-898-5959 Student Services Center 170
 \href{mailto:arcdept@csuchico.edu}{\nolinkurl{arcdept@csuchico.edu}}
 \url{http://www.csuchico.edu/arc}
 
-\hypertarget{chico-state-basic-needs-project}{%
 \subsubsection{Chico State Basic Needs
-Project}\label{chico-state-basic-needs-project}}
+Project}\label{chico-state-basic-needs-project}
 
 The \textbf{Hungry Wildcat Food Pantry} provides supplemental food,
 fresh produce, CalFresh application assistance and basic needs referral
@@ -504,9 +476,8 @@ Service Center 196. Check the website for a location map and for the
 most up to date information on open hours:
 \url{https://www.csuchico.edu/basic-needs/pantry.shtml} .
 
-\hypertarget{confidentiality-and-mandatory-reporting}{%
 \subsection{Confidentiality and Mandatory
-Reporting}\label{confidentiality-and-mandatory-reporting}}
+Reporting}\label{confidentiality-and-mandatory-reporting}
 
 As an instructor, one of my responsibilities is to help create a safe
 learning environment on our campus. I also have a mandatory reporting

@@ -2,9 +2,9 @@
 title: "Math 130: Introduction to R - Spring 24"
 fontsize: 11pt
 output:
-  html_document: default
   pdf_document:
     keep_tex: yes
+  html_document: default
 header-includes:
   - \RequirePackage{accsupp}
   - \RequirePackage{pdfcomment}
@@ -24,18 +24,33 @@ This course is designed as a primer to get the complete novice up and running wi
 * **Workshop style:** This workshop style class runs for 5 weeks only. See expectations for time commitment during these 5 weeks below.  
 * **Discord Server:** https://discord.gg/ck497bJty5 
 
-|                        |        Section 01       |       Section 02        |
-|:-----------------------|:-----------------------:|:-----------------------:|
-| **Meeting Days**       | 01/22/24 - 02/23/24     |  01/22/23 - 02/23/24    |
-| **Meeting Times**      | (Asynchronous)          |  (Asynchronous) |
-| **Meeting Location**   | (Asynchronous)              |  (Asynchronous)                |
-| **Instructor**         | Nick Lytal               |  Nick Lytal       |
-| **Office Location**    | Holt 106                |  Holt 106               |
-| **E-mail**             | nlytal@csuchico.edu     |  nlytal@csuchico.edu |
+<!-- |                        |        Section 01       |       Section 02        | -->
+<!-- |:-----------------------|:-----------------------:|:-----------------------:| -->
+<!-- | **Meeting Days**       | 01/22/24 - 02/23/24     |  01/22/23 - 02/23/24    | -->
+<!-- | **Meeting Times**      | (Asynchronous)          |  (Asynchronous) | -->
+<!-- | **Meeting Location**   | (Asynchronous)              |  (Asynchronous)                | -->
+<!-- | **Instructor**         | Nick Lytal               |  Nick Lytal       | -->
+<!-- | **Office Location**    | Holt 106                |  Holt 106               | -->
+<!-- | **E-mail**             | nlytal@csuchico.edu     |  nlytal@csuchico.edu | -->
 
-## Asynchronous sections
-Both sections of this class are fully online, asynchronous.
-There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](https://norcalbiostat.github.io/MATH130/notes/01c_async_protocol.html) for more details on the course format.
+
+|                        |        Section 01       | 
+|:-----------------------|:-----------------------:|
+| **Meeting Days**       | 01/22/24 - 02/23/24     | 
+| **Meeting Times**      |  MWF 9:00 am - 9:50 am  |  
+| **Meeting Location**   |     Holt 185      |  
+| **Instructor**         | Jing (Jane) Guo              |  
+| **Office Location**    | Holt 150                |  
+| **E-mail**             | jguo2@csuchico.edu     |  
+
+<!-- ## Asynchronous sections -->
+<!-- Both sections of this class are fully online, asynchronous. -->
+<!-- There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](https://norcalbiostat.github.io/MATH130/notes/01c_async_protocol.html) for more details on the course format. -->
+
+## Course structure
+
+This is a flipped classroom. Before set meeting times, students are expected to watch the video lectures. Lectures are all pre-recorded and linked from the class website. During class meeting time, students complete assignments at their own pace and ask the instructor questions when needed.
+
 
 ## Canvas Usage
 See the welcome page for your section in Canvas for specific information on how Canvas will be used for your section. 
@@ -140,7 +155,7 @@ We acknowledge and are mindful that Chico State stands on lands that were origin
 # University Policies and Campus Resources
 
 ### Adding and Dropping the course
-This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 2/2/24. No adds or drops are allowed after 2/16/24 without a serious and compelling reason approved by the instructor, department chair, and college dean.
+This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/6/24. No adds or drops are allowed after 9/6/24 without a serious and compelling reason approved by the instructor, department chair, and college dean.
 
 ### Academic Integrity
 Students are expected to be familiar with the University’s Academic Integrity Policy. Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. Faculty members are required to report all infractions to the Office of Student Judicial Affairs. The policy on academic integrity and other resources related to student conduct can be found on the Student Judicial Affairs web site at http://www.csuchico.edu/sjd/integrity.shtml.
