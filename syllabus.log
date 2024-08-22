@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.21)  22 AUG 2024 07:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.21)  22 AUG 2024 07:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,7 +667,7 @@ Here is how much of TeX's memory you used:
  36 hyphenation exceptions out of 8191
  77i,5n,81p,1005b,596s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on syllabus.pdf (6 pages, 179053 bytes).
+Output written on syllabus.pdf (6 pages, 179055 bytes).
 PDF statistics:
  189 PDF objects out of 1000 (max. 8388607)
  166 compressed objects within 2 object streams
