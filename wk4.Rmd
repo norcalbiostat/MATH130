@@ -24,9 +24,9 @@ Interesting data doesn't live inside R. Lets get data from an external file into
 `r emo::ji("sign")` **DO NOT RENAME ANYTHING** If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder. 
 
 
-* [NCBirths](https://norcalbiostat.netlify.com/data/NCbirths.csv)
-* [email](https://norcalbiostat.netlify.com/data/email.txt)
-* [Police Shootings](https://norcalbiostat.netlify.com/data/fatal-police-shootings-data.xlsx)
+* [NCBirths](https://www.norcalbiostat.com/data/NCbirths.csv)
+* [email](https://www.norcalbiostat.com/data/email.txt)
+* [Police Shootings](https://www.norcalbiostat.com/data/fatal-police-shootings-data.xlsx)
 
 <br>
 
