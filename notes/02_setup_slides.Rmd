@@ -34,13 +34,17 @@ After completing this lesson learners will be able to:
 
 # `r emo::ji("warning")` A note about R and RStudio:
 
-If you are using a tablet, Chromebook or otherwise do not have a computer that you can install programs on, you can use R Studio Cloud for this class. Make an account at http://rstudio.cloud, start a new project, then go to [slide #6](#intro_rstudio) to learn how to navigate RStudio. 
+If you are using a tablet, Chromebook or otherwise do not have a computer that you can install programs on, you can use Posit Cloud for this class. 
 
-The **Cloud Free** account allows for 25 project hours/month, which may not be enough for this class. If you run into time limits or you are using this for another class you will have to upgrade to the **Cloud Plus** plan which is $5/month. 
+* Make a **Cloud FREE** account at https://posit.cloud/plans/free
+* Start a new project by clicking on the button in the top right corner
+* Then go to [slide #6](#intro_rstudio) to learn how to navigate RStudio. 
 
-While the cloud is easier to initially setup, I want you to only use it if you absolutely have to. Having your own installation on your computer ensures that
+The free account allows for 25 project hours/month, which may not be enough for this class. If you run into time limits or you are using this for another class you will have to upgrade to the **Cloud Student** plan which is $5/month. 
 
-* you likely want to customize your programs
+Using the cloud is easier to initially setup, but having your own installation on your computer ensures that
+
+* you want to keep the program free forever
 * you will be able to put your files under version control
 * you always have access to your code even with unstable or no internet
 
@@ -51,10 +55,10 @@ background-size: 180px 150px
 
 # Download and install R 
 
-## `r emo::ji("arrow_down_small")` Download R v 4.1+
+## `r emo::ji("arrow_down_small")` Download R v 4.3+
 * Windows 10 https://cran.r-project.org/bin/windows/base/ 
 * Mac OS X page - https://cran.r-project.org/bin/macosx/ 
-  - First link under "Latest Release" and looks like **R-4.1.2.pkg**. 
+  - First link under "Latest Release" and looks like **R-4.3.1.pkg**. 
   - `r emo::ji("warning")` You may later get a message about needing *X11* or *XQuartz*. The download for that program is also on this page. (Mac only)
 * Choose to save the file, do not open or run. 
     
@@ -65,20 +69,20 @@ background-size: 180px 150px
 
 
 ## `r emo::ji("cinema")` Video Tutorials for both R and R Studio. 
-* [Windows](https://www.youtube.com/watch?v=gx7A7C_wdyE)
-* [Mac](https://www.youtube.com/watch?v=Y20P3u3c_1c)
+* [Windows](https://youtu.be/KAeHFzxbHTA?si=xpeDGqt7gurg_rFR)
+* [Mac](https://youtu.be/ay25o485YXs?si=7r4qmmvtD15RM_eS)
 
 
 ---
 background-image: url('../static/img/RStudio.png')
 background-position: top right
 background-size: 180px 150px
-
+ 
 # Download and install R Studio
 
-## `r emo::ji("arrow_down_small")` Download v1.4 + 
-* [Download R Studio (v 1.4+)](https://www.rstudio.com/products/rstudio/download/#download) 
-* Choose the download link that corresponds to your operating system. 
+## `r emo::ji("arrow_down_small")` Download the most recent version from
+* [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/) 
+* Your operating system should be automatically detected. If not, scroll down and choose your version.
 
 ## `r emo::ji("pencil2")` Install
 * Windows: Double click on the downloaded file to run the installer program. 
@@ -90,13 +94,13 @@ name: intro_rstudio
 
 # Navigating R Studio
 
-`r emo::ji("pencil2")` Watch the following short video to learn how to navigate R Studio.
+We will be interacting with the programming language R _only_ through R Studio. Not by itself. There are four panes, or windows, in R Studio. 
 
-<br><br>
+`r emo::ji("cinema")` Watch one of the following short videos to learn how to navigate R Studio.
 
-.center[
-<a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij"><img src="https://embedwistia-a.akamaihd.net/deliveries/260e6e980f526abaedf8ef3378270c899da74f08.jpg?origin_v2=1&amp;image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=71a5d4e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij">RStudio IDE Overview</a>
-]
+* [R Girls on YouTube](https://youtu.be/vx4SPeNvols?si=1iSqsH1uNLFkB7yF&t=239)
+* [Dr. D's overview](https://media.csuchico.edu/media/t/1_93i6jwy8)
+
 
 
 ---
@@ -407,36 +411,32 @@ If you check Stack Overflow, search using the `[r]` tag. Most questions have alr
 
 
 ---
-# "In Person" help
+# In Person help
 
-For Spring 21 help is available both in person, and online. 
-
-* For in-person sections ask the person sitting next to you! Don't hesitate to talk to your neighbor, compare your answers, and ask for help.
-* Ask in [Discord](https://discord.gg/ck497bJty5 ) - we have a dedicated channel just for this class but a lot of students in the server know how to use R. 
+* Start by ask the person sitting next to you! Don't hesitate to talk to your neighbor, compare your answers, and ask for help.
+* Ask in the Math & Statistics [Discord server](https://discord.gg/ck497bJty5) - we have a dedicated channel just for this class but a lot of students in the server know how to use R. 
 * Attend [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml). 
   - Drop in work session & dedicated space to work on coding projects.
   - Collaborate with your peers and learn from experts.
   - Some hours are held over Zoom
-* The [R Users Meetup group](https://www.meetup.com/Chico-R-Users-Group/) useful if you want to stay connected to the community and learn about upcoming events.
 
 ---
 # Other Online
 
-* In RStudio go to `Help` --> `Cheatsheets`   
-* R Studio Cloud interactive lessons: https://rstudio.cloud/learn/primers
+* In RStudio go to `Help` --> `Cheatsheets` or to this URL https://posit.co/resources/cheatsheets/
 * [Stack Overflow](http://stackoverflow.com/questions/tagged/r): if your question
   hasn't been answered before and is well crafted, chances are you will get an
   answer in less than 5 min. Remember to follow their guidelines on [how to ask
   a good question](http://stackoverflow.com/help/how-to-ask).
 * [Chico R Users Google Group](https://groups.google.com/forum/#!forum/chico-rug). 
-* The [R-Studio Community](https://community.rstudio.com/): it is
-  read by a lot of people and is more welcoming to new users than the R list-serv. 
+* The [Posit Community](https://forum.posit.co/): it is
+  read by a lot of people and is welcoming to new users. 
 * If your question is about a specific package, see if there is a mailing list
   for it. Usually it's included in the DESCRIPTION file of the package that can
   be accessed using `packageDescription("name-of-package")`. You may also want
   to try to email the author of the package directly, or open an issue on the
   code repository (e.g., GitHub).
-* Twitter: [#rstats](https://twitter.com/search?q=%23rstats&src=typed_query&f=top) [@Rstudio](https://twitter.com/rstudio)
+
 
 ---
 # Written
