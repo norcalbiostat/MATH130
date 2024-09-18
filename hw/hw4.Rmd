@@ -1,6 +1,6 @@
 ---
 title: 'Homework 4: Data Import and Enhanced Graphics'
-author: "NAME"
+author: "ENTER STUDENT ID"
 date: "DATE"
 output: html_document
 ---
