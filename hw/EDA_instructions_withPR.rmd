@@ -1,14 +1,14 @@
 ---
 title: "Exploratory Data Analysis Project"
 output:
+  pdf_document:
+    toc: no
   html_document:
     css: ../css/yeti.css
     highlight: tango
     theme: yeti
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: no
 ---
 
 Time to put everything you learned in this class into action. In an exploratory data analysis (EDA) you are just looking at (exploring) the data and learning about the data and possible relationships between variables. This is not a formal statistical analysis, you cannot make any claims about groups being statistically different. This is just descriptive. You are allowed and encouraged to hypothesize why you observe certain relationships or data characteristics, just be sure not to draw any conclusions from the data.
@@ -66,7 +66,7 @@ After the submission deadline, your analysis projects will be randomly assigned 
 
 How to do your reviews: 
 
-> update this to make it more generic and not in google drive
+<!-- > update this to make it more generic and not in google drive -->
 
 1. The morning after the due date you will be emailed a link to the peer review spreadsheet in Google Drive. This is where you can find the names of the people you are assigned to review. 
 2. Go to the [[project page]](https://norcalbiostat.github.io/peer_review/math130_eda.html) and download the projects you are assigned to review. 
