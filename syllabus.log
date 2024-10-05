@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.21)  24 AUG 2024 14:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.23)  5 OCT 2024 07:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **syllabus.tex
 (./syllabus.tex
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-07-20>
+L3 programming layer <2024-08-30>
 (c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2024/02/08 v1.4n Standard LaTeX document class
 (c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size11.clo
@@ -655,19 +655,19 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (./syllabus.upa))
  ***********
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-07-20>
+L3 programming layer <2024-08-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
  18356 strings out of 475495
  326562 string characters out of 5774534
- 1938960 words of memory out of 5000000
+ 751122 words of memory out of 5000000
  40589 multiletter control sequences out of 15000+600000
  606437 words of font info for 125 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  77i,5n,81p,1005b,596s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/jguo2/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on syllabus.pdf (6 pages, 179055 bytes).
+Output written on syllabus.pdf (6 pages, 178557 bytes).
 PDF statistics:
  189 PDF objects out of 1000 (max. 8388607)
  166 compressed objects within 2 object streams

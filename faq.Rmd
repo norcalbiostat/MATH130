@@ -118,7 +118,7 @@ For Fall 22 help is available both in person, and online.
   hasn't been answered before and is well crafted, chances are you will get an
   answer in less than 5 min. Remember to follow their guidelines on [how to ask
   a good question](http://stackoverflow.com/help/how-to-ask).
-* [Chico R Users Google Group](https://groups.google.com/forum/#!forum/chico-rug). 
+* [Join the discord server]( https://discord.gg/ck497bJty5). 
 * The [R-Studio Community](https://community.rstudio.com/): it is
   read by a lot of people and is more welcoming to new users than the R list-serv. 
 * If your question is about a specific package, see if there is a mailing list
