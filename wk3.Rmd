@@ -58,4 +58,4 @@ Right click and save these files in your Math 130 folder. You will write your an
 
 
 ---
-_Last Updated `r Sys.Date()`_
+_Last Updated: `r format(Sys.Date(), '%m/%d/%Y')` _

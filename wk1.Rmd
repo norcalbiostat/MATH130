@@ -48,4 +48,4 @@ If you are simultaneously taking MATH 130 and another stats course (e.g. Math 31
 * A paper on [Tidy Data](https://www.jstatsoft.org/article/view/v059i10) concepts. Important read for graduate students or any student doing their own research. 
 
 ---
-_Last Updated `r Sys.Date()`_
+_Last Updated: `r format(Sys.Date(), '%m/%d/%Y')` _

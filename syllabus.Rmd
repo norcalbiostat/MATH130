@@ -1,5 +1,5 @@
 ---
-title: "Math 130: Introduction to R - Fall 24"
+title: "Math 130: Introduction to R - Spring 2025"
 fontsize: 11pt
 output:
   pdf_document:
@@ -21,54 +21,56 @@ This course is designed as a primer to get the complete novice up and running wi
 
 * **Course Website:** https://norcalbiostat.github.io/MATH130/
 * **Prerequisites:** Basic computer literacy
-* **Workshop style:** This workshop style class runs for 5 weeks only. See expectations for time commitment during these 5 weeks below.  
-* **Discord Server:** https://discord.gg/ck497bJty5 
+* **Workshop style:** This workshop style class runs for 5 weeks only. See expectations for time commitment during these 5 weeks below.
+* **Discord Server:** https://discord.gg/ck497bJty5
 
-<!-- |                        |        Section 01       |       Section 02        | -->
-<!-- |:-----------------------|:-----------------------:|:-----------------------:| -->
-<!-- | **Meeting Days**       | 01/22/24 - 02/23/24     |  01/22/23 - 02/23/24    | -->
-<!-- | **Meeting Times**      | (Asynchronous)          |  (Asynchronous) | -->
-<!-- | **Meeting Location**   | (Asynchronous)              |  (Asynchronous)                | -->
-<!-- | **Instructor**         | Nick Lytal               |  Nick Lytal       | -->
-<!-- | **Office Location**    | Holt 106                |  Holt 106               | -->
-<!-- | **E-mail**             | nlytal@csuchico.edu     |  nlytal@csuchico.edu | -->
-
-
-|                        |        Section 01       | 
+|                        |        Section 01       |
 |:-----------------------|:-----------------------:|
-| **Meeting Days**       | 08/26/24 - 09/27/24     | 
-| **Meeting Times**      |  MWF 9:00 am - 9:50 am  |  
-| **Meeting Location**   |     Holt 185      |  
-| **Instructor**         | Jing (Jane) Guo              |  
-| **Office Location**    | Holt 150                |  
-| **E-mail**             | jguo2@csuchico.edu     |  
+| **Meeting Days**       | 01/21/25 - 02/21/25     |
+| **Meeting Times**      | (Asynchronous)          |
+| **Meeting Location**   | (Asynchronous)          |
+| **Instructor**         | Edward Roualdes              |
+| **Office Location**    | Holt 204                |
+| **E-mail**             | eroualdes@csuchico.edu     |
 
-<!-- ## Asynchronous sections -->
-<!-- Both sections of this class are fully online, asynchronous. -->
-<!-- There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](https://norcalbiostat.github.io/MATH130/notes/01c_async_protocol.html) for more details on the course format. -->
+
+<!-- |                        |        Section 01       |  -->
+<!-- |:-----------------------|:-----------------------:| -->
+<!-- | **Meeting Days**       | 08/26/24 - 09/27/24     |  -->
+<!-- | **Meeting Times**      |  MWF 9:00 am - 9:50 am  |   -->
+<!-- | **Meeting Location**   |     Holt 185      |   -->
+<!-- | **Instructor**         | Jing (Jane) Guo              |   -->
+<!-- | **Office Location**    | Holt 150                |   -->
+<!-- | **E-mail**             | jguo2@csuchico.edu     |   -->
+
+
 
 ## Course structure
 
-This is a flipped classroom. Before set meeting times, students are expected to watch the video lectures. Lectures are all pre-recorded and linked from the class website. During class meeting time, students complete assignments at their own pace and ask the instructor questions when needed.
+**Asynchronous**: this class is fully online and asynchronous.
+
+There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](https://norcalbiostat.github.io/MATH130/notes/01c_async_protocol.html) for more details on the course format.
+
+<!-- This is a flipped classroom. Before set meeting times, students are expected to watch the video lectures. Lectures are all pre-recorded and linked from the class website. During class meeting time, students complete assignments at their own pace and ask the instructor questions when needed. -->
 
 
 ## Canvas Usage
-See the welcome page for your section in Canvas for specific information on how Canvas will be used for your section. 
+See the welcome page for your section in Canvas for specific information on how Canvas will be used for your section.
 
 ## Student Support
 
-### Discord 
-To facilitate peer to peer and effective instructor to peer assistance Discord will be used for discussion and questions outside of class. This server hosts students across multiple Statistics and Data Science classes, with a specific channel for all sections of Math 130. 
+### Discord
+To facilitate peer to peer and effective instructor to peer assistance Discord will be used for discussion and questions outside of class. This server hosts students across multiple Statistics and Data Science classes, with a specific channel for all sections of Math 130.
 
 1. Click this link to join the server: https://discord.gg/ck497bJty5
 2. Verify your email and agree to the rules and code of conduct. This helps create a safe learning environment.
-3. Go to the `#get-roles` text channel in the left sidebar, choose your pronouns (optional but helpful), and click the RStudio icon emoji under the second post to self-assign you to the Math-130 role. this will let you see and access the class channels! More on how to use Discord in week 1. 
+3. Go to the `#get-roles` text channel in the left sidebar, choose your pronouns (optional but helpful), and click the RStudio icon emoji under the second post to self-assign you to the Math-130 role. this will let you see and access the class channels! More on how to use Discord in week 1.
 
-### Community Coding. 
-Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. For asynchronous sections, this is the best way to get direct instructor assistance.  
+### Community Coding.
+Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. For asynchronous sections, this is the best way to get direct instructor assistance.
 
-* Schedule and info found at https://www.csuchico.edu/datascience/community-coding.shtml 
-    
+* Schedule and info found at https://www.csuchico.edu/datascience/community-coding.shtml
+
 # Learning Outcomes
 By the end of the course, students will be able to
 
@@ -110,7 +112,7 @@ If you have your own PC/Mac/*nix computer, you are advised to install  R and R S
 * R version 4.3.2 or later. Download from https://cran.r-project.org/
 * R Studio version 2023.12.0-369 or later. Download the desktop version from https://www.rstudio.com/products/rstudio/download/#download
 
-Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the [Wildcat virtual lab](https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333), or sign up for R Studio Cloud (https://rstudio.cloud/). The free or $5/month plan should be sufficient.  
+Students who do not have a computer that they install programs on (i.e. a iPad or Chromebook) can use the [Wildcat virtual lab](https://support.csuchico.edu/TDClient/1984/Portal/KB/ArticleDet?ID=112333), or sign up for R Studio Cloud (https://rstudio.cloud/). The free or $5/month plan should be sufficient.
 
 
 # Time Commitment
@@ -122,7 +124,7 @@ This adds up to 15 hours in class, and 30 hours outside of class during these 5 
 You will get out of this class what you put into it. Recall this is just a co-curriculuar or supplemental basic introductory class. You will not learn everything there is to know about R, nor likely not feel proficient by the time you are done. But you will be solidly on the path where you can continue to learn and improve.
 
 # Grading
-Credit / No Credit. There are 100 points available in this course. You must earn **75** points to receive credit for the course. See Canvas for instructions on how to submit your work and due dates. 
+Credit / No Credit. There are 100 points available in this course. You must earn **75** points to receive credit for the course. See Canvas for instructions on how to submit your work and due dates.
 
 * Assignments: 4 @ 10 pts each.
 * Fill out course notes: 7 @ 5 pts each
@@ -141,7 +143,7 @@ It is our intent that students from all diverse backgrounds and perspectives be 
 We would like to create a learning environment that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:
 
 * If you have a name and/or set of pronouns that differ from those that appear in your official Chico records, please let us know!
-* If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with us. We want to be a resource for you. Remember that you can also submit anonymous feedback (which may lead to a general announcement to the class, if necessary to address the concerns). 
+* If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with us. We want to be a resource for you. Remember that you can also submit anonymous feedback (which may lead to a general announcement to the class, if necessary to address the concerns).
 * If you prefer to speak with someone outside of the course, the Office of Diversity and Inclusion is here to assist. Their number is 530-898-4764, and email diversityoffice@csuchico.edu
 * We (like many people) are still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. (Again, anonymous feedback is always an option).
 
@@ -155,7 +157,7 @@ We acknowledge and are mindful that Chico State stands on lands that were origin
 # University Policies and Campus Resources
 
 ### Adding and Dropping the course
-This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/6/24. No adds or drops are allowed after 9/6/24 without a serious and compelling reason approved by the instructor, department chair, and college dean.
+This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 1/31/25. No adds or drops are allowed after 1/31/25 without a serious and compelling reason approved by the instructor, department chair, and college dean.
 
 ### Academic Integrity
 Students are expected to be familiar with the University’s Academic Integrity Policy. Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. Faculty members are required to report all infractions to the Office of Student Judicial Affairs. The policy on academic integrity and other resources related to student conduct can be found on the Student Judicial Affairs web site at http://www.csuchico.edu/sjd/integrity.shtml.

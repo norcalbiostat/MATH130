@@ -1,6 +1,6 @@
 ---
 title: "Frequently Asked Questions"
-date: "Last Updated `r Sys.time()`"
+date: "Last Updated `r format(Sys.Date(), '%m/%d/%Y')`"
 output: 
   html_document: 
     toc: yes
@@ -95,20 +95,19 @@ else has already asked your question.
 
 ## From a real live person
 
-For Fall 22 help is available both in person, and online. 
+For Spring 2025 help is available both in person and online. 
 
-* The person sitting next to you. Don't hesitate to talk to your neighbor, 
-  compare your answers, and ask for help. (as applicable)
-* Your friendly classmates: if you know someone with more experience than you,
-  they might be able and willing to help you.
+<!-- * The person sitting next to you. Don't hesitate to talk to your neighbor,  -->
+<!--   compare your answers, and ask for help. (as applicable) -->
+<!-- * Your friendly classmates: if you know someone with more experience than you, -->
+<!--   they might be able and willing to help you. -->
 * Attend [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml). 
   - Drop in work session & dedicated space to work on coding projects.
   - Collaborate with your peers and learn from experts.
   - Some hours are held over Zoom
-* The [R Users Meetup group](https://www.meetup.com/Chico-R-Users-Group/) useful if you want to stay connected to the community and learn about upcoming events.
-    - https://www.meetup.com/Chico-R-Users-Group/
-
-
+* The [Discord Server](https://discord.gg/ck497bJty5)
+  - There is a specific channel for MATH 130
+  - See [Syllabus: Student Support](syllabus.html) for details
 
 ## Online from people
 

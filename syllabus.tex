@@ -1,11 +1,13 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-%
 \documentclass[
   11pt,
 ]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -36,8 +38,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\usepackage[margin=1in]{geometry}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -50,36 +50,34 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \RequirePackage{accsupp}
 \RequirePackage{pdfcomment}
 \newcommand{\AccTool}[2]{\BeginAccSupp{method=pdfstringdef,unicode,Alt={{#1}}}\pdftooltip{{#2}}{{#1}}\EndAccSupp{}}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Math 130: Introduction to R - Fall 24},
+  pdftitle={Math 130: Introduction to R - Spring 2025},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Math 130: Introduction to R - Fall 24}
+\title{Math 130: Introduction to R - Spring 2025}
 \author{}
 \date{\vspace{-2.5em}}
 
@@ -109,8 +107,7 @@ pre-specified data set or your data set of choice.
   \textbf{Prerequisites:} Basic computer literacy
 \item
   \textbf{Workshop style:} This workshop style class runs for 5 weeks
-  only. See expectations for time commitment during these 5 weeks
-  below.\\
+  only. See expectations for time commitment during these 5 weeks below.
 \item
   \textbf{Discord Server:} \url{https://discord.gg/ck497bJty5}
 \end{itemize}
@@ -122,22 +119,25 @@ pre-specified data set or your data set of choice.
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{Meeting Days} & 08/26/24 - 09/27/24 \\
-\textbf{Meeting Times} & MWF 9:00 am - 9:50 am \\
-\textbf{Meeting Location} & Holt 185 \\
-\textbf{Instructor} & Jing (Jane) Guo \\
-\textbf{Office Location} & Holt 150 \\
+\textbf{Meeting Days} & 01/21/25 - 02/21/25 \\
+\textbf{Meeting Times} & (Asynchronous) \\
+\textbf{Meeting Location} & (Asynchronous) \\
+\textbf{Instructor} & Edward Roualdes \\
+\textbf{Office Location} & Holt 204 \\
 \textbf{E-mail} &
-\href{mailto:jguo2@csuchico.edu}{\nolinkurl{jguo2@csuchico.edu}} \\
+\href{mailto:eroualdes@csuchico.edu}{\nolinkurl{eroualdes@csuchico.edu}} \\
 \end{longtable}
 
 \subsection{Course structure}\label{course-structure}
 
-This is a flipped classroom. Before set meeting times, students are
-expected to watch the video lectures. Lectures are all pre-recorded and
-linked from the class website. During class meeting time, students
-complete assignments at their own pace and ask the instructor questions
-when needed.
+\textbf{Asynchronous}: this class is fully online and asynchronous.
+
+There are no set meeting times, but assignments still have due dates.
+Lectures are all pre-recorded and linked from the class website.
+Students work through the material and complete assignments at their own
+pace. See
+\href{https://norcalbiostat.github.io/MATH130/notes/01c_async_protocol.html}{{[}this
+page{]}} for more details on the course format.
 
 \subsection{Canvas Usage}\label{canvas-usage}
 
@@ -413,9 +413,9 @@ course}\label{adding-and-dropping-the-course}
 This course only runs for a few weeks and all materials are available on
 the course website. It will be difficult to get caught up if you add the
 class after the first week. The last day to add or drop classes without
-special permission by the instructor is 9/6/24. No adds or drops are
-allowed after 9/6/24 without a serious and compelling reason approved by
-the instructor, department chair, and college dean.
+special permission by the instructor is 1/31/25. No adds or drops are
+allowed after 1/31/25 without a serious and compelling reason approved
+by the instructor, department chair, and college dean.
 
 \subsubsection{Academic Integrity}\label{academic-integrity}
 
