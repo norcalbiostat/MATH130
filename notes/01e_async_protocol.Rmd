@@ -1,0 +1,164 @@
+---
+title: "Asynchronous class protocol"
+author: "Math 130/131 - Edward (updated for spring 2025)"
+date: "_Last updated: `r format(Sys.Date(), '%b %d, %Y')`_"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, metropolis, metropolis-fonts]
+    contentSlideClass: ["left", "center"]
+    nature:
+      highlightStyle: zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+# So you signed up for an asynchronous class
+
+* What does asynchronous mean? 
+
+* How will it work for this class? 
+
+* How do I ...
+    - turn in homework
+    - talk to the instructor
+    - get help
+    - see my grade
+
+---
+
+# What does asynchronous mean?
+
+* No scheduled class times where we meet all together at the same time and place. 
+
+* Self-paced work, but still with due dates. Each week's assignments are due by Sunday at midnight.
+
+* More self-regulation on your part to watch the videos and **reach out for help when needed**
+
+```{r, echo = FALSE, fig.show = "hold", fig.alt = "a person typing vigorously", out.width="50%", fig.align="center"}
+knitr::include_graphics("https://media.giphy.com/media/1C8bHHJturSx2/giphy.gif")
+```
+
+---
+
+# Do I have to watch the videos? 
+
+Can't I just google it? 
+
+* You could, but it's easy to get lost as a new language learner. 
+* This course was specifically designed to teach new learners specific pieces of how to work with data in R that will lead to success (and less headache) in later classes. 
+* Watching the videos walks you through filling out the course notes, which directly translates to the homework. So you'll end up doing much more work if you go the google route. 
+
+---
+
+# Asynchronous $\neq$ no community
+
+It's an overused statement now due to Covid, but we really are all in this together. You are not alone in your learning journey and challenging yourself by learning new things is most effective in a community. 
+
+This is one reason I'm asking you to join Discord for this class. 
+
+* Coding is a social activity!
+* Faster response time to get a question answered
+* Helping others reinforces your learning - a learning technique not to be undervalued!
+
+
+---
+
+# Asynchronous $\neq$ no instructor!
+<!-- updateme -->
+
+I'm still here for you! I'm just letting you lead your learning. 
+
+I will have several hours each week specifically dedicated to student help and learning.  For the first five weeks of the semester (1/21/2025 - 2/21/2025), my office hours will be in the [Meriam Library Innovation Lab](https://library.csuchico.edu/innovation-lab):
+
+* Mondays 1pm - 2.30pm
+* Tuesdays 1pm - 2.30pm
+* Thursdays 11am - 11.50am
+* Fridays 2pm - 3.45pm
+
+If none of those times work for you, please email me so that we can find a time that works for us both: eroualdes@csuchico.edu
+
+---
+
+## Ways to contact me: 
+<!-- updateme -->
+
+* Meet with me in person during office hours
+* [Discord](https://discord.gg/ck497bJty5); details on next slide
+* Come to [Community Coding](https://www.csuchico.edu/datascience/community-coding.shtml)
+    - Great resource to get help from people other than me
+* Email: eroualdes@csuchico.edu
+
+
+---
+
+# Join Discord
+This is the defacto method of communication for this class. 
+
+Click this link to join the server: https://discord.gg/ck497bJty5
+
+1. Verify your email and agree to the rules and code of conduct. This helps create a safe learning environment.
+
+2. Go to the `#class-selection` text channel in the left sidebar, choose your pronouns (optional but helpful), and click the RStudio icon emoji under the any post to self-assign you to the Math-130 role.  This will let you see and access the class channels.
+
+3. Post a question or 10.
+
+
+---
+
+# Tips for success
+
+* Set aside specific time during the week as you would any class to work on this material. 
+
+* You get out of this class what you put into it. If you don't try to learn the _why_, you won't be able to do the harder but more important work. 
+
+* Robin's rule - do not spend more than 20 minutes stuck before you ask for help. 
+
+* Find a study buddy. Someone to sit down and work on this material with you.  
+
+* Come hang out in Discord or at Community Coding. Ask all the questions, get all the helps. Seriously, make that your "class" time. Join a voice channel in Discord, a CC zoom room or a room in person and just sit and do your work. That way someone is right there when you have a question. 
+
+* Don't be afraid if you don't know, that's part of the learning process. None of us is born knowing things. Knowledge comes from experience. Period.  
+
+* You CAN'T break R/Python. I promise. The worst that'll happen is that you have to reinstall it. nbd.
+
+---
+
+# Submitting assignments
+<!-- updateme -->
+
+* Assignments are due after each week, Sunday by midnight.
+
+* Any assignment can be submit as late within the week after it is due
+for a one point deduction.
+
+* Assignments are submit by uploading the appropriate files to a Google
+Drive shared notebook, which I will create for you.  The shared Google
+Drive folder will be named MATH 130 Assignments for
+[student-username], where [student-username] is your student username.
+Only, specifically, you, me, and the course graders will have access
+to this folder.
+    
+* To ensure your file is graded you must: 
+  1. make sure it runs without error
+  2. file name is renamed properly with the assignment name and number; e.g. hw_01.Rmd or notes_01.ipynb
+
+---
+
+# Final comments
+
+* Do not skip the videos. Open up the course notes to fill out when you are reading through the lessons and watching the videos. Then work on the homework assignment. 
+
+* Expect a total of at least 50 hours total on this course if you are a novice in R/Python. I would recommend 2 hours per day to make steady progress and not forget what you learn. 
+
+* Be sure to ask for help when needed. You may also use office hours to work on your homework so that when you have questions, it could be easily solved. 
+
+
+
+
+
+
+
+
+
+

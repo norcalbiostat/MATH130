@@ -94,6 +94,7 @@ else has already asked your question.
 
 
 ## From a real live person
+<!-- updateme -->
 
 For Spring 2025 help is available both in person and online. 
 
@@ -106,7 +107,7 @@ For Spring 2025 help is available both in person and online.
   - Collaborate with your peers and learn from experts.
   - Some hours are held over Zoom
 * The [Discord Server](https://discord.gg/ck497bJty5)
-  - There is a specific channel for MATH 130
+  -  Go to the `#class-selection` text channel in the left sidebar, and click the RStudio icon emoji under the second post to self-assign you to the Math-130 role, or click on the Snake icon emoji to self-assign you to the Math-131 role.  This will let you see and access the class channels.
   - See [Syllabus: Student Support](syllabus.html) for details
 
 ## Online from people

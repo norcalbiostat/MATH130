@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.26)  16 JAN 2025 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.26)  20 JAN 2025 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -680,7 +680,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 al/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/202
 4/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-66.
+89.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2] [3] [4] [5] [6] (./syllabus.aux * soulpos - computing points - it may tak
@@ -694,23 +694,23 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18738 strings out of 474116
- 329096 string characters out of 5743682
+ 18744 strings out of 474116
+ 329155 string characters out of 5743682
  1940187 words of memory out of 5000000
- 40666 multiletter control sequences out of 15000+600000
- 606354 words of font info for 124 fonts, out of 8000000 for 9000
+ 40668 multiletter control sequences out of 15000+600000
+ 606437 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,5n,89p,1005b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,5n,89p,1005b,529s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texm
 f-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/font
 s/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
 blic/lm/lmtt10.pfb>
-Output written on syllabus.pdf (6 pages, 179460 bytes).
+Output written on syllabus.pdf (6 pages, 181643 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 26801 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 26809 words of extra memory for PDF output out of 29859 (max. 10000000)
 

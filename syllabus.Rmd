@@ -18,6 +18,7 @@ This course is designed as a primer to get the complete novice up and running wi
 
 
 # Logistics
+<!-- updateme -->
 
 * **Course Website:** https://norcalbiostat.github.io/MATH130/
 * **Prerequisites:** Basic computer literacy
@@ -46,16 +47,32 @@ This course is designed as a primer to get the complete novice up and running wi
 
 
 ## Course structure
+<!-- updateme -->
 
 **Asynchronous**: this class is fully online and asynchronous.
 
-There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](https://norcalbiostat.github.io/MATH130/notes/01c_async_protocol.html) for more details on the course format.
+There are no set meeting times, but assignments still have due dates. Lectures are all pre-recorded and linked from the class website. Students work through the material and complete assignments at their own pace. See [[this page]](notes/01e_async_protocol.html) for more details on the course format.
 
 <!-- This is a flipped classroom. Before set meeting times, students are expected to watch the video lectures. Lectures are all pre-recorded and linked from the class website. During class meeting time, students complete assignments at their own pace and ask the instructor questions when needed. -->
 
+## Office Hours
+<!-- updateme -->
+
+For the first five weeks of the semester (1/21/2025 - 2/21/2025), my office hours will be in the [Meriam Library Innovation Lab](https://library.csuchico.edu/innovation-lab):
+
+* Mondays 1pm - 2.30pm
+* Tuesdays 1pm - 2.30pm
+* Thursdays 11am - 11.50am
+* Fridays 2pm - 3.45pm
+
+If none of those times work for you, please email me so that we can find a time that works for us both: eroualdes@csuchico.edu
 
 ## Canvas Usage
-See the welcome page for your section in Canvas for specific information on how Canvas will be used for your section.
+<!-- updateme -->
+
+Generally speaking, this course website will be used instead of
+Canvas.  A link in Canvas leads to this website.  Canvas will only be
+used for announcements and friendly reminders to the class.
 
 ## Student Support
 
@@ -64,7 +81,8 @@ To facilitate peer to peer and effective instructor to peer assistance Discord w
 
 1. Click this link to join the server: https://discord.gg/ck497bJty5
 2. Verify your email and agree to the rules and code of conduct. This helps create a safe learning environment.
-3. Go to the `#get-roles` text channel in the left sidebar, choose your pronouns (optional but helpful), and click the RStudio icon emoji under the second post to self-assign you to the Math-130 role. this will let you see and access the class channels! More on how to use Discord in week 1.
+3. Go to the `#class-selection` text channel in the left sidebar, and click the RStudio icon emoji under the any post to self-assign you to the Math-130 role.  This will let you see and access the class channels.
+4. Post a question or 10 to the Math-130 channel.
 
 ### Community Coding.
 Similar to drop in Mathematics tutoring hours, students, staff, faculty, and the public are invited to join our Community Coding sessions. Bring your computer, coding projects, and your questions to this open working environment. For asynchronous sections, this is the best way to get direct instructor assistance.
@@ -81,7 +99,6 @@ By the end of the course, students will be able to
 * Create informative data visualizations and tables.
 * Create a reproducible research document.
 * Conduct an exploratory data analysis in a reproducible manner.
-
 
 # Schedule of Topics
 The general outline of topics is listed below. A detailed most up to date schedule can be found on the course website.
@@ -124,6 +141,8 @@ This adds up to 15 hours in class, and 30 hours outside of class during these 5 
 You will get out of this class what you put into it. Recall this is just a co-curriculuar or supplemental basic introductory class. You will not learn everything there is to know about R, nor likely not feel proficient by the time you are done. But you will be solidly on the path where you can continue to learn and improve.
 
 # Grading
+<!-- updateme -->
+
 Credit / No Credit. There are 100 points available in this course. You must earn **75** points to receive credit for the course. See Canvas for instructions on how to submit your work and due dates.
 
 * Assignments: 4 @ 10 pts each.
@@ -131,6 +150,18 @@ Credit / No Credit. There are 100 points available in this course. You must earn
 * Project:
     - Exploratory Data Analysis (20 pts)
     - Peer Review (5 pts)
+    
+Assignments are due after each week, Sunday by midnight.
+
+Any assignment can be submit as late within the week after it is due
+for a one point deduction.
+
+Assignments are submit by uploading the appropriate files to a Google
+Drive shared notebook, which I will create for you.  The shared Google
+Drive folder will be named MATH 130 Assignments for
+[student-username], where [student-username] is your student username.
+Only, specifically, you, me, and the course graders will have access
+to this folder.
 
 ----
 
