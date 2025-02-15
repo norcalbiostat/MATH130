@@ -54,34 +54,35 @@ Any other data sets require instructor approval. Data sets such as the `plants` 
 * To allow for adequate time for peer grading the submission deadline is a strict cutoff. Really late assignments won't be accepted.
 * You must name your file **EDA_username** and knit to PDF. 
     - **If you knit to HTML, you must open & save the resulting file as PDF so it can be commented on.**
-* Upload your final project to this [Google Drive folder](https://drive.google.com/drive/folders/11iQlwwePp6i7THGoDRFsCuEH0jUDejgj?usp=drive_link) by the due date.
+* Upload and share your project:
+  - upload your final project to your MATH 130 assignments for [student-username] folder (same place you've been uploading all MATH 130 assignments), 
+  - share the your project with the peer reviewers for your project listed on this spreadsheet titled [EDA Project: peer reviews](https://docs.google.com/spreadsheets/d/1JkNSm_og2oP429Hot1Ragbkkm4M2BjxTOG_hsghQLtQ/edit?usp=sharing). To share your file, right click on it in Google Drive, click Share, and then add the student emails found on the [EDA Project: peer reviews](https://docs.google.com/spreadsheets/d/1JkNSm_og2oP429Hot1Ragbkkm4M2BjxTOG_hsghQLtQ/edit?usp=sharing) spreadsheet.
 
-
+<!-- this [Google Drive folder](https://drive.google.com/drive/folders/11iQlwwePp6i7THGoDRFsCuEH0jUDejgj?usp=drive_link) by the due date. -->
 
 
 # Peer Review
 
-After the submission deadline, your analysis projects will be randomly assigned to two other people to peer review and score. This means you will also score and provide feedback on 2 reports. Your instructor will also score all projects for your class section.
+You will also score and provide feedback on 2 reports. Your instructor will also score all projects for your class section.
 
-
-How to do your reviews: 
+**How to do your reviews**: 
 
 <!-- > update this to make it more generic and not in google drive -->
 
-1. The morning after the due date you will be emailed a link to the peer review spreadsheet in Google Drive. This is where you can find the names of the people you are assigned to review. 
-2. Go to the [[project page]](https://norcalbiostat.github.io/peer_review/math130_eda.html) and download the projects you are assigned to review. 
-3. Using the commenting feature provide 4 comments for each project.
+1. Find your name listed (twice) in each of the columns *peer reviewer 1* and *peer reviewer 2* in the [EDA Project: peer reviews](https://docs.google.com/spreadsheets/d/1JkNSm_og2oP429Hot1Ragbkkm4M2BjxTOG_hsghQLtQ/edit?usp=sharing) spreadsheet.
+2. Click the URL of the corresponding Author's project.
+3. Using appropriate commenting feature (details next) provide 4 comments for each project.
     - Two positive: What specific features did they include that you liked or found helpful?
     - Two improvements: What can they do different or better next time? Did you find a bug in their code?
-4. Score each project using this [[Google Form]](https://forms.gle/UJKJReDdjQh5Chvp8).
+4. Score each project using this [Google Form](https://forms.gle/EG8PDyoKa6VcwCGT8).
     - This data entry form follows the scoring rubric printed below in this document.
     - You will upload your review to this form as well.
 
-> How to add comments
+**How to add comments**: 
 
-> * [MS Word](https://support.microsoft.com/en-us/office/insert-delete-or-change-a-comment-5cb1af25-4dfe-4484-9713-2c80391ecf12)
+* [MS Word](https://support.microsoft.com/en-us/office/insert-delete-or-change-a-comment-5cb1af25-4dfe-4484-9713-2c80391ecf12)
 
-> * [Adobe Reader](https://helpx.adobe.com/acrobat/using/commenting-pdfs.html)
+* [Adobe Reader](https://helpx.adobe.com/acrobat/using/commenting-pdfs.html)
 
 
 # Guidelines
@@ -96,7 +97,6 @@ How to do your reviews:
 # Grading
 * Your final project grade will be a weighted average of 30% peer reviews ($\bar{PR}$) and 70% instructor review ($IR$): $(.3*\bar{PR} + .7*IR)$.
 * Your submission is worth 20 points, the peer review is 5 pts.
-
 
 \newpage
 
