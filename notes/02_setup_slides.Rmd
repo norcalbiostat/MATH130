@@ -55,10 +55,10 @@ background-size: 180px 150px
 
 # Download and install R 
 
-## `r emo::ji("arrow_down_small")` Download R v 4.3+
+## `r emo::ji("arrow_down_small")` Download R v 4.5+
 * Windows 10 https://cran.r-project.org/bin/windows/base/ 
 * Mac OS X page - https://cran.r-project.org/bin/macosx/ 
-  - First link under "Latest Release" and looks like **R-4.3.1.pkg**. 
+  - First link under "Latest Release" and looks like **R-4.5.0.pkg**. 
   - `r emo::ji("warning")` You may later get a message about needing *X11* or *XQuartz*. The download for that program is also on this page. (Mac only)
 * Choose to save the file, do not open or run. 
     

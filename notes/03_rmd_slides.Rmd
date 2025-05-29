@@ -33,8 +33,7 @@ R Markdown is an example of literate programming where the explanation of the pr
 
 <br>
 
-`r emo::ji("cinema")` Watch this 1 minute video on [What is R Markdown?](http://rmarkdown.rstudio.com/lesson-1.html)
-
+The following page lays out the format of an RMarkdown document with several details included.
   
 .left-column[.footnote[*Image credit on next page: Data Visualization by Kieran Healy. Available at http://socviz.co/*]]
 
@@ -106,6 +105,6 @@ You are now ready to start the first assignment.
 
 # Additional Resources
 
-* On the same page as the video you watched earlier, there are additional lessons on using R Markdown. If you want to learn more from this site, here is the full URL http://rmarkdown.rstudio.com/lesson-1.html
+* While the introductory video no longer works, there are additional lessons on using R Markdown at the following site: http://rmarkdown.rstudio.com/lesson-1.html
     - Relevant portions in this tutorial are "How it works", "Code Chunks", and "Output Formats"
 * Gallery of the vast range of output and product types that you can create using R Markdown including PDF reports, interactive dashboards, maps, webpages like this one and more:  https://rmarkdown.rstudio.com/gallery.html

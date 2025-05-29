@@ -3,7 +3,7 @@
   <head>
     <title>Lesson 02</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.26/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.28/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -19,7 +19,7 @@ class: center, middle, inverse, title-slide
 ## Introduction to your new tools
 ]
 .date[
-### <em>Last updated: 2024-09-18</em>
+### <em>Last updated: 2025-05-28</em>
 ]
 
 ---
@@ -67,10 +67,10 @@ background-size: 180px 150px
 
 # Download and install R 
 
-## 🔽 Download R v 4.3+
+## 🔽 Download R v 4.5+
 * Windows 10 https://cran.r-project.org/bin/windows/base/ 
 * Mac OS X page - https://cran.r-project.org/bin/macosx/ 
-  - First link under "Latest Release" and looks like **R-4.3.1.pkg**. 
+  - First link under "Latest Release" and looks like **R-4.5.0.pkg**. 
   - ⚠️ You may later get a message about needing *X11* or *XQuartz*. The download for that program is also on this page. (Mac only)
 * Choose to save the file, do not open or run. 
     
@@ -202,7 +202,7 @@ You can type commands directly into the console and press &lt;kbd&gt;`Enter`&lt;
 In these notes, code is displayed like this: 
 
 
-```r
+``` r
 2+2
 ```
 
@@ -218,7 +218,7 @@ where the output or result of the code is displayed with two pound signs (`##`)
 ✏️ In the console type the following code, then press `Enter`.
 
 
-```r
+``` r
 2+2
 ```
 
@@ -229,7 +229,7 @@ where the output or result of the code is displayed with two pound signs (`##`)
 Now try a more complicated equation. 
 
 
-```r
+``` r
 2 + 5*(8^3)- 3*log10)
 ```
 
@@ -395,14 +395,14 @@ One of the fastest ways to get help is to use the RStudio help interface. This p
 If you need help with a specific function, let's say `barplot()`, you can type:
 
 
-```r
+``` r
 ?barplot
 ```
 
 If you just need to remind yourself of the names of the arguments, you can use:
 
 
-```r
+``` r
 args(lm)
 ```
 
@@ -417,7 +417,7 @@ However, this only looks through the installed packages for help pages with a
 match to your search request
 
 
-```r
+``` r
 ??kruskal
 ```
 

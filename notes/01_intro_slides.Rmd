@@ -52,7 +52,7 @@ The target audience is anyone who wants to do their own data analysis. The cours
 * The [syllabus](../syllabus.html) provides specific details on points per assignment.
 
 ### Time Commitment
-* Fast paced, we're hitting the ground running and only have 5 weeks. 
+* Fast paced, we're hitting the ground running and only have 4 weeks. 
 * Expect to spend at least 10h/week on this class. 
 * Not designed to teach you everything about R, just enough to get going. 
 * Daily practice will pay off, results can be very rewarding
