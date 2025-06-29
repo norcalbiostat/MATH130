@@ -1,7 +1,9 @@
 ---
 title: "Lesson 04 - Getting Started with R (notes)"
 author: "PUT YOUR NAME HERE"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 # Creating objects in R
