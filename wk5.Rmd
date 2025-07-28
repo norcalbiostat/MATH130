@@ -9,25 +9,20 @@ output:
 
 # Exploratory Data Analysis
 
-Now it's time to put your new 1337 skillz to the test! You will conduct an exploratory data analysis project (EDA). When doing an EDA you are _only_ looking at (exploring) the data and learning about the data and possible relationships between variables. Describe only, no stats!
+Now it's time to put your new 1337 skillz to the test! You will conduct an exploratory data analysis project (EDA). When doing an EDA you are *only* looking at (exploring) the data and learning about the data and possible relationships between variables. Describe only, no stats!
 
----
+------------------------------------------------------------------------
 
 <br>
 
-# `r emo::ji("pencil2")` Assignment
+# ✏️Assignment
 
-
-
-
-Exploratory Data Analysis Project - With Peer Review [[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf)
-<!---
+Exploratory Data Analysis Project - With Peer Review [[HTML]](hw/EDA_instructions_withPR.html) [[PDF]](hw/EDA_instructions_withPR.pdf) <!---
 Exploratory Data Analysis Project [[HTML]](hw/EDA_instructions_noPR.html) [[PDF]](hw/EDA_instructions_noPR.pdf)
---->
-<br>
+---> <br>
 
 Examples of previous class projects can be seen [[here]](https://norcalbiostat.github.io/peer_review/math130_eda.html).
 
----
-_Last Updated: `r format(Sys.Date(), '%m/%d/%Y')` _
+------------------------------------------------------------------------
 
+*Last Updated: `r format(Sys.Date(), '%m/%d/%Y')`*

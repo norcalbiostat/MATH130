@@ -1,51 +1,50 @@
 ---
 title: "Week 1"
-output:
-  html_document:
-    highlight: tango
-    theme: yeti
-    css: ../css/yeti.css
+output: html_document
 ---
 
 # Getting started with R and R Studio
 
-This week we will introduce you to this short course, and how to use your new tools R and R Markdown. 
+This week we will introduce you to this short course, and how to use your new tools R and R Markdown.
 
----
+------------------------------------------------------------------------
 
-# `r emo::ji("books")` Notes
+# 📚Notes
 
-* lec01-Introduction to the class   [[Slides]](notes/01_intro_slides.html)[[Video]](https://media.csuchico.edu/media/MATH+130+-+Lecture+01/1_aabrfqyh)
-* lec02-Introduction to your new tools  [[Slides]](notes/02_setup_slides.html)[[Video]](https://media.csuchico.edu/media/MATH+130+-+Lecture+02/1_raxre60u)
-* lec03-Introduction to R Markdown  [[Slides]](notes/03_rmd_slides.html)[[Video]](https://media.csuchico.edu/media/MATH+130+-+Lecture+03/1_8mgzdu9h)
-* lec04-Introduction to R           [[HTML]](notes/04_r.html)[[RMD notes]](notes/04_r_notes.Rmd)
+-   lec01-Introduction to the class [[Slides]](notes/01_intro_slides.html)[[Video]](https://media.csuchico.edu/media/MATH+130+-+Lecture+01/1_aabrfqyh)
+-   lec02-Introduction to your new tools [[Slides]](notes/02_setup_slides.html)[[Video]](https://media.csuchico.edu/media/MATH+130+-+Lecture+02/1_raxre60u)
+-   lec03-Introduction to R Markdown [[Slides]](notes/03_rmd_slides.html)[[Video]](https://media.csuchico.edu/media/MATH+130+-+Lecture+03/1_8mgzdu9h)
+-   lec04-Introduction to R [[HTML]](notes/04_r.html)[[RMD notes]](notes/04_r_notes.Rmd)
 
-<br> 
+<br>
 
-# `r emo::ji("pencil2")` Assignments
+# ✏️Assignments
 
 Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.
 
-* [Homework 1](hw/hw1.Rmd)
-    - Need help getting started? [Dr. Lytals help video](https://media.csuchico.edu/media/MATH130%20-%20Extra%20Video%20(Jan%2029)/1_9nsoxdy9)
-* [Lecture 04 notes](notes/04_r_notes.Rmd)
+-   [Homework 1](hw/hw1.Rmd)
+    -   Need help getting started? [Dr. Lytals help video](https://media.csuchico.edu/media/MATH130%20-%20Extra%20Video%20(Jan%2029)/1_9nsoxdy9)
+-   [Lecture 04 notes](notes/04_r_notes.Rmd)
 
-<br> 
+<br>
 
-# `r emo::ji("trophy")` Bonus Material
+# 🏆Bonus Material
+
 If you are simultaneously taking MATH 130 and another stats course (e.g. Math 315, or Math 615), it will save you a bit of headache to keep your R work for these two classes separate. You can use R Projects to act as containers where you can work on one project/class at a time.
 
-* [Article from RStudio](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
-* [Dr. D's walk through from Fall 21 `r emo::ji("cinema")`]( https://media.csuchico.edu/media/218-MATH130-02-1766/1_98rasme3)
+-   [Article from RStudio](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
+-   [Dr. D's walk through from Fall 21](https://media.csuchico.edu/media/218-MATH130-02-1766/1_98rasme3) 🎦
 
+# 🤔Additional Resources
 
-# `r emo::ji("thinking_face")` Additional Resources
+-   R Markdown from R Studio <http://rmarkdown.rstudio.com/lesson-1.html>
 
-* R Markdown from R Studio http://rmarkdown.rstudio.com/lesson-1.html
-* R Primer: Programming Basics https://rstudio.cloud/learn/primers/1.2
-* Cheat Sheets for [RStudio](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf), [R Markdown](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf), and [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf). _Need a translated version? See the bottom of the [RStudio resources page](https://rstudio.com/resources/cheatsheets/)_
-    
-* A paper on [Tidy Data](https://www.jstatsoft.org/article/view/v059i10) concepts. Important read for graduate students or any student doing their own research. 
+-   R Primer: Programming Basics <https://rstudio.cloud/learn/primers/1.2>
 
----
-_Last Updated: `r format(Sys.Date(), '%m/%d/%Y')` _
+-   Cheat Sheets for [RStudio](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf), [R Markdown](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf), and [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf). *Need a translated version? See the bottom of the [RStudio resources page](https://rstudio.com/resources/cheatsheets/)*
+
+-   A paper on [Tidy Data](https://www.jstatsoft.org/article/view/v059i10) concepts. Important read for graduate students or any student doing their own research.
+
+------------------------------------------------------------------------
+
+*Last Updated: `r format(Sys.Date(), '%m/%d/%Y')`*

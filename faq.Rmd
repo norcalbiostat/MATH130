@@ -47,7 +47,7 @@ Start by googling the error message. However, this doesn't always work very well
 
 If you check Stack Overflow, search using the `[r]` tag. Most questions have already been answered, but the challenge is to use the right words in the search to find the answers: [http://stackoverflow.com/questions/tagged/r](http://stackoverflow.com/questions/tagged/r)
 
-`r emo::ji("warning")` Development of R moves pretty fast. When at all possible, use results from the past 1-2 years. Anything over 5 years old for packages such as `ggplot`, `dplyr`, and `forcats` are likely obsolete. 
+:warning: Development of R moves pretty fast. When at all possible, use results from the past 1-2 years. Anything over 5 years old for packages such as `ggplot`, `dplyr`, and `forcats` are likely obsolete. 
 
 
 ----

@@ -1,48 +1,44 @@
 ---
 title: "Week 2"
-output:
-  html_document:
-    highlight: tango
-    theme: yeti
-    css: ../css/yeti.css
+output: html_document
 ---
 
 # Introduction to working with data in R and wrangling factors
 
-This week we'll learn how to work with spreadsheet-like data in R. We'll also spend some time on how to be the boss of your factors. 
+This week we'll learn how to work with spreadsheet-like data in R. We'll also spend some time on how to be the boss of your factors.
 
----
+------------------------------------------------------------------------
 
-# `r emo::ji("memo")` Prepare:
+# 📝Prepare:
 
-* Make sure all packages that were listed in ([lesson 02](https://norcalbiostat.github.io/MATH130/notes/02_setup_slides.html#19)) are installed. You can check this by typing `library(packagename)` in the console -- but replace `packagename` with the package name that you are checking 
-
-<br>
-
-# `r emo::ji("books")` Notes:
- 
-* lec05 - Working with data  [[HTML]](notes/05_dm.html)      [[PDF]](notes/05_dm.pdf)      [[RMD]](notes/05_dm_notes.Rmd)
-* lec06 - Wrangling factors  [[HTML]](notes/06_factors.html) [[PDF]](notes/06_factors.pdf) [[RMD]](notes/06_factors_notes.Rmd) 
+-   Make sure all packages that were listed in ([lesson 02](https://norcalbiostat.github.io/MATH130/notes/02_setup_slides.html#19)) are installed. You can check this by typing `library(packagename)` in the console -- but replace `packagename` with the package name that you are checking
 
 <br>
 
-# `r emo::ji("pencil2")` Assignments
+# 📚Notes:
+
+-   lec05 - Working with data [[HTML]](notes/05_dm.html) [[PDF]](notes/05_dm.pdf) [[RMD]](notes/05_dm_notes.Rmd)
+-   lec06 - Wrangling factors [[HTML]](notes/06_factors.html) [[PDF]](notes/06_factors.pdf) [[RMD]](notes/06_factors_notes.Rmd)
+
+<br>
+
+# ✏️Assignments
 
 Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.
 
-* [HW 2](hw/hw2.Rmd) 
-* [Lec05 notes](notes/05_dm_notes.Rmd)
-* [Lec06 notes](notes/06_factors_notes.Rmd)
+-   [HW 2](hw/hw2.Rmd)
+-   [Lec05 notes](notes/05_dm_notes.Rmd)
+-   [Lec06 notes](notes/06_factors_notes.Rmd)
 
 <br>
 
-# `r emo::ji("thinking_face")` Additional Resources: 
+# 🤔 Additional Resources:
 
-* Cheat Sheet for [Forcats](https://github.com/rstudio/cheatsheets/raw/master/factors.pdf). _Need a translated version? See the bottom of the [RStudio resources page](https://rstudio.com/resources/cheatsheets/)_
-* STAT 133 UC Berkeley https://www.stat.berkeley.edu/classes/s133/factors.html
-* Be the boss of your factors using `dplyr` and `forcats`  http://stat545.com/block029_factors.html
-* R for Data Science - chapter on factors https://r4ds.had.co.nz/factors.html 
+-   Cheat Sheet for [Forcats](https://github.com/rstudio/cheatsheets/raw/master/factors.pdf). *Need a translated version? See the bottom of the [RStudio resources page](https://rstudio.com/resources/cheatsheets/)*
+-   STAT 133 UC Berkeley <https://www.stat.berkeley.edu/classes/s133/factors.html>
+-   Be the boss of your factors using `dplyr` and `forcats` <http://stat545.com/block029_factors.html>
+-   R for Data Science - chapter on factors <https://r4ds.had.co.nz/factors.html>
 
+------------------------------------------------------------------------
 
----
-_Last Updated: `r format(Sys.Date(), '%m/%d/%Y')` _
+*Last Updated: `r format(Sys.Date(), '%m/%d/%Y')`*

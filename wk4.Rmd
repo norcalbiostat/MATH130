@@ -1,76 +1,67 @@
 ---
 title: "Week 4"
-output:
-  html_document:
-    css: ../css/yeti.css
-    highlight: tango
-    theme: yeti
+output: html_document 
 ---
 
 # Importing data into R and Intermediate Plotting
 
-Interesting data doesn't live inside R. Lets get data from an external file into R, and learn how to make more complex plots. 
+Interesting data doesn't live inside R. Lets get data from an external file into R, and learn how to make more complex plots.
 
-----
-
-<br>
-
-# `r emo::ji("memo")` Prepare:
-
-* Install the following packages: `gridExtra`, `RColorBrewer` and `sjPlot`.
-* Download the notes files for the two lessons into your `Math130/notes` folder. 
-* Right click each link and save the following data sets into your `Math130/data` folder.
-
-`r emo::ji("sign")` **DO NOT RENAME ANYTHING** If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder. 
-
-
-* [NCBirths](https://www.norcalbiostat.com/data/NCbirths.csv)
-* [email](https://www.norcalbiostat.com/data/email.txt)
-* [Police Shootings](https://www.norcalbiostat.com/data/fatal-police-shootings-data.xlsx)
+------------------------------------------------------------------------
 
 <br>
 
-# `r emo::ji("books")` Notes:
+# 📝 Prepare:
 
-* lec09 - Getting data into R       [[HTML]](notes/09_import.html) [[PDF]](notes/09_import.pdf) [[RMD]](notes/09_import_notes.Rmd)
-* lec10 - Graphing Enhancements     [[HTML]](notes/10_plots2.html) [[PDF]](notes/10_plots2.pdf) [[RMD]](notes/10_plots2_notes.Rmd)
+-   Install the following packages: `gridExtra`, `RColorBrewer` and `sjPlot`.
+-   Download the notes files for the two lessons into your `Math130/notes` folder.
+-   Right click each link and save the following data sets into your `Math130/data` folder.
+
+🛑**DO NOT RENAME ANYTHING** If you download multiple copies of the data, do not keep the versions that have a (1) or some number in the name. Do not leave these files in your downloads folder.
+
+-   [NCBirths](https://www.norcalbiostat.com/data/NCbirths.csv)
+-   [email](https://www.norcalbiostat.com/data/email.txt)
+-   [Police Shootings](https://www.norcalbiostat.com/data/fatal-police-shootings-data.xlsx)
 
 <br>
 
-# `r emo::ji("pencil2")` Assignment
+# 📚Notes:
+
+-   lec09 - Getting data into R [[HTML]](notes/09_import.html) [[PDF]](notes/09_import.pdf) [[RMD]](notes/09_import_notes.Rmd)
+-   lec10 - Graphing Enhancements [[HTML]](notes/10_plots2.html) [[PDF]](notes/10_plots2.pdf) [[RMD]](notes/10_plots2_notes.Rmd)
+
+<br>
+
+# ✏️Assignment
 
 Right click and save these files in your Math 130 folder. You will write your answers directly in them and submit your assignment as instructed by the due date.
 
-* [HW 4](hw/hw4.Rmd) 
-* [Lec09 notes](notes/09_import_notes.Rmd)
-* [Lec10 notes](notes/10_plots2_notes.Rmd)
-
+-   [HW 4](hw/hw4.Rmd)
+-   [Lec09 notes](notes/09_import_notes.Rmd)
+-   [Lec10 notes](notes/10_plots2_notes.Rmd)
 
 <br>
 
-# `r emo::ji("thinking_face")` Additional Resources: 
+# 🤔 Additional Resources:
 
-* Data Import
-  * [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Import**
-  * Marin Stats Lectures
-    - Import Data, Copy Data from Excel to R CSV & TXT Files https://www.youtube.com/watch?v=qPk0YEKhqB8
-    - Importing , Checking and Working with Data in R https://www.youtube.com/watch?v=U4-RnTW5dfw
-  * Computing for the Social Sciences: https://cfss.uchicago.edu/notes/importing-data/
-  * Importing Data with R Studio https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio
+-   Data Import
+    -   [Cheat Sheets](https://rstudio.cloud/learn/cheat-sheets): Relevant sheet is **Data Import**
+    -   Marin Stats Lectures
+        -   Import Data, Copy Data from Excel to R CSV & TXT Files <https://www.youtube.com/watch?v=qPk0YEKhqB8>
+        -   Importing , Checking and Working with Data in R <https://www.youtube.com/watch?v=U4-RnTW5dfw>
+    -   Computing for the Social Sciences: <https://cfss.uchicago.edu/notes/importing-data/>
+    -   Importing Data with R Studio <https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio>
+-   Graphing
+    -   `sjPlot`: Data Visualization for Statistics in Social Science [vignette](https://strengejacke.github.io/sjPlot/)
+    -   R Graphics cookbook: <http://www.cookbook-r.com/Graphs/>
+    -   R Graph Gallery: <https://www.r-graph-gallery.com/>
+    -   STHDA - Visualization: <http://www.sthda.com/english/wiki/data-visualization>
+    -   Colorblind-friendly palettes for plots: [http://www.cookbook-r.com/Graphs/Colors\_(ggplot2)/#a-colorblind-friendly-palette](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette){.uri}
+    -   Guidance on colors
+        -   <https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf>
+        -   <http://www.sthda.com/english/wiki/colors-in-r>
+        -   <https://www.stat.ubc.ca/~jenny/STAT545A/block14_colors.html>
 
-* Graphing
-  * `sjPlot`: Data Visualization for Statistics in Social Science [vignette](https://strengejacke.github.io/sjPlot/)
-  * R Graphics cookbook: http://www.cookbook-r.com/Graphs/
-  * R Graph Gallery: https://www.r-graph-gallery.com/
-  * STHDA - Visualization: http://www.sthda.com/english/wiki/data-visualization
-  * Colorblind-friendly palettes for plots:
-  http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette
-  * Guidance on colors 
-    * https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf
-    * http://www.sthda.com/english/wiki/colors-in-r
-    * https://www.stat.ubc.ca/~jenny/STAT545A/block14_colors.html
+------------------------------------------------------------------------
 
-  
----
-
-_Last Updated: `r format(Sys.Date(), '%m/%d/%Y')` _
+*Last Updated: `r format(Sys.Date(), '%m/%d/%Y')`*
