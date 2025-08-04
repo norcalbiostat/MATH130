@@ -149,11 +149,11 @@ You will get out of this class what you put into it. Recall this is just a co-cu
 
 Credit / No Credit. There are 100 points available in this course. You must earn **75** points to receive credit for the course. 
 
+* Onboarding & setup tasks: 5 pts
 * Assignments: 4 @ 10 pts each.
 * Fill out course notes: 7 @ 5 pts each
 * Project:
     - Exploratory Data Analysis (20 pts)
-    - Peer Review (5 pts)
     
 Assignments are due after each week, Sunday by midnight. Follow along lecture
 notes are due on Wednesday & Friday - generally 1-2 days after that lesson is complete. 
@@ -174,6 +174,16 @@ for a one point deduction.
 ----
 
 # Class Policies and statements
+
+## Academic Integrity
+Students are expected to be familiar with the University’s Policy on Student Academic Integrity[https://www.csuchico.edu/pres/_assets/documents/em-25-015.pdf](https://www.csuchico.edu/pres/_assets/documents/em-25-015.pdf). Specific sections of this policy are highlighted below as they pertain to this class. Refer to the linked document for definitions. 
+
+* **AI and ChatGPT Usage:** AI writing or coding tools are not permitted for any stage or phase of work in this class. Using AI to help debug, or suggest coding approaches is a useful tool for any coder - but only once you have a solid foundation. 
+* **Collaboration**: You are _highly encouraged_ to work together with a classmate to learn the materials in this class. However your work must be 100% a product of your personal effort. Coding styles are similar to writing styles, each person will have their own unique voice and style. 
+* **Plagiarism and Self-Plagiarism**: Plagiarism from the course notes and from your prior work are _highly encouraged_. Don't try to start from scratch each time. If you've done something before and need it again - find it and copy/paste/adjust. The biggest benefit to programming in a language such as R is to automate repetitive tasks, and ensure your work is reproducible. Self-plagiarism is a hallmark of a good programmer.
+
+Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. If you act against these policies your actions will be considered academically dishonest, and a violation of Chico State's Integrity Policy and you may be reported to the Office of Students Rights and Responsibilities.Faculty members are required to report all infractions to the Office of Student Judicial Affairs. 
+
 
 ## Everyone is welcome here
 
@@ -197,12 +207,6 @@ We acknowledge and are mindful that Chico State stands on lands that were origin
 
 ### Adding and Dropping the course
 This course only runs for a few weeks and all materials are available on the course website. It will be difficult to get caught up if you add the class after the first week. The last day to add or drop classes without special permission by the instructor is 9/6/25. No adds or drops are allowed after 9/6/25 without a serious and compelling reason approved by the instructor, department chair, and college dean.
-
-### Academic Integrity
-Students are expected to be familiar with the University’s Academic Integrity Policy. Your own commitment to learning, as evidenced by your enrollment at California State University, Chico, and the University’s Academic Integrity Policy requires you to be honest in all your academic course work. Faculty members are required to report all infractions to the Office of Student Judicial Affairs. The policy on academic integrity and other resources related to student conduct can be found on the Student Judicial Affairs web site at http://www.csuchico.edu/sjd/integrity.shtml.
-
-### AI and ChatGPT Policy
-AI writing tools are not permitted for any stage or phase of work in this class. If you use these tools, your actions will be considered academically dishonest, and a violation of Chico State's Integrity Policy and you may be reported to the Office of Students Rights and Responsibilities.
 
 ### IT Support Services
 
