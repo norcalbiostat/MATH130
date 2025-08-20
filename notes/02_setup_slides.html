@@ -3,7 +3,7 @@
   <head>
     <title>Lesson 02</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.28/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.29/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -19,7 +19,7 @@ class: center, middle, inverse, title-slide
 ## Introduction to your new tools
 ]
 .date[
-### <em>Last updated: 2025-05-28</em>
+### <em>Last updated: 2025-08-20</em>
 ]
 
 ---
@@ -234,7 +234,7 @@ Now try a more complicated equation.
 ```
 
 ```
-## Error: &lt;text&gt;:1:21: unexpected ')'
+## Error in parse(text = input): &lt;text&gt;:1:21: unexpected ')'
 ## 1: 2 + 5*(8^3)- 3*log10)
 ##                         ^
 ```
@@ -328,6 +328,7 @@ Now that you're a package installing pro, go ahead and install the following pac
 ✏️ Install the list of packages to the left one at a time and wait for it to finish before entering the next command.
 
 * `tidyverse`
+* `here`
 * `rmarkdown`
 * `openintro`
 * `tinytex`
@@ -340,7 +341,7 @@ Now that you're a package installing pro, go ahead and install the following pac
 # One more thing..
 
 
-To write fancy math in your homework, or to turn your work into a nice looking PDF, you need a typesetting program called `\(\LaTeX\)` (pronounced "lay-tek" or "lah-tex"). It's a super neat program, but also nearly 4Gb. Too big for our needs. That's where the `tinytex` package came from. we're going to use it to install a lightweight version of `\(\LaTeX\)`. This will let us write math equations in R Markdown, and create PDF's of your homework.
+To turn your work into a nice looking PDF, you need a typesetting program called `\(\LaTeX\)` (pronounced "lay-tek" or "lah-tex"). It's a super neat program, but also nearly 4Gb. Too big for our needs. That's where the `tinytex` package came from. we're going to use it to install a lightweight version of `\(\LaTeX\)`. This will let us write math equations in R Markdown, and create PDF's of your homework.
 
 In your console type the following and hit **Enter**
 
@@ -512,9 +513,9 @@ Some of this material is a derivation from work that is Copyright © Software Ca
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "zenburn",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "zenburn",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

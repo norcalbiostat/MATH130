@@ -299,6 +299,7 @@ Now that you're a package installing pro, go ahead and install the following pac
 `r emo::ji("pencil2")` Install the list of packages to the left one at a time and wait for it to finish before entering the next command.
 
 * `tidyverse`
+* `here`
 * `rmarkdown`
 * `openintro`
 * `tinytex`
@@ -311,7 +312,7 @@ Now that you're a package installing pro, go ahead and install the following pac
 # One more thing..
 
 
-To write fancy math in your homework, or to turn your work into a nice looking PDF, you need a typesetting program called $\LaTeX$ (pronounced "lay-tek" or "lah-tex"). It's a super neat program, but also nearly 4Gb. Too big for our needs. That's where the `tinytex` package came from. we're going to use it to install a lightweight version of $\LaTeX$. This will let us write math equations in R Markdown, and create PDF's of your homework.
+To turn your work into a nice looking PDF, you need a typesetting program called $\LaTeX$ (pronounced "lay-tek" or "lah-tex"). It's a super neat program, but also nearly 4Gb. Too big for our needs. That's where the `tinytex` package came from. we're going to use it to install a lightweight version of $\LaTeX$. This will let us write math equations in R Markdown, and create PDF's of your homework.
 
 In your console type the following and hit **Enter**
 

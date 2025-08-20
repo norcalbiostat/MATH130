@@ -3,7 +3,7 @@
   <head>
     <title>Lesson 03</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs-2.28/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.29/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -19,7 +19,7 @@ class: center, middle, inverse, title-slide
 ## Introduction to R Markdown
 ]
 .date[
-### <em>Last updated: 2025-05-28</em>
+### <em>Last updated: 2025-08-20</em>
 ]
 
 ---
@@ -36,6 +36,17 @@ After completing this lesson learners will be able to create a new R markdown do
 ## Pre-requisites
 * Have R and R Studio installed
 * Have the following packages installed: `rmarkdown`
+
+---
+
+# Quarto
+
+Some instructors may require you to use **Quarto** instead of **R Markdown**. Quarto is the next generation of Rmarkdown files.  
+
+You are welcome to use either in this class. Functionally they act the same, Quarto just has more nifty features. 
+
+This class continues to teach RMarkdown but will be upgrading soon.
+
 
 ---
 
@@ -120,13 +131,14 @@ You are now ready to start the first assignment.
 * While the introductory video no longer works, there are additional lessons on using R Markdown at the following site: http://rmarkdown.rstudio.com/lesson-1.html
     - Relevant portions in this tutorial are "How it works", "Code Chunks", and "Output Formats"
 * Gallery of the vast range of output and product types that you can create using R Markdown including PDF reports, interactive dashboards, maps, webpages like this one and more:  https://rmarkdown.rstudio.com/gallery.html
+* Learn more about Quarto at https://quarto.org/docs/get-started/hello/rstudio.html 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "zenburn",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "zenburn",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
